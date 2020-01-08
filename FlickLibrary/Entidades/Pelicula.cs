@@ -7,5 +7,6 @@ namespace FlickLibrary.Entidades
     class Pelicula
     {
         private string pelicula_titulo;
+        private string pelicula_titulo_original;
     }
 }
