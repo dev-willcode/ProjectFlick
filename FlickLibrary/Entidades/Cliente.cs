@@ -2,6 +2,10 @@
 {
     public class Cliente
     {
+        public Cliente()
+        {
+        }
+
         public int id { get; set; }
 
         public string cliente_cedula { get; set; }
