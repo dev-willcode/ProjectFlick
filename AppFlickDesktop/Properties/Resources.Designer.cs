@@ -83,6 +83,16 @@ namespace AppFlickDesktop.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_down {
+            get {
+                object obj = ResourceManager.GetObject("icon_down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap landing_page_min {
             get {
                 object obj = ResourceManager.GetObject("landing_page_min", resourceCulture);
