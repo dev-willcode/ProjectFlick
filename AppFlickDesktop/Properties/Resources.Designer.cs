@@ -63,6 +63,16 @@ namespace AppFlickDesktop.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flick {
+            get {
+                object obj = ResourceManager.GetObject("flick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_cerrar {
             get {
                 object obj = ResourceManager.GetObject("icon_cerrar", resourceCulture);

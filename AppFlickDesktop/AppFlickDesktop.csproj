@@ -90,7 +90,9 @@
     <Folder Include="Vistas\Forms\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\icons\icon.ico" />
     <Content Include="Resources\icons\icon_cerrar.png" />
+    <Content Include="Resources\images\flick.png" />
     <None Include="Resources\images\landing-page_min.jpg" />
     <None Include="Resources\images\landing-page2.jpg" />
     <None Include="Resources\images\landing-page.jpg" />
