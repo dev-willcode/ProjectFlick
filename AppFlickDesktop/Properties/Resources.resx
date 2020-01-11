@@ -121,13 +121,70 @@
   <data name="flick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\images\flick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_about" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_about.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_boletos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_boletos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_buscar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_buscar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icons\icon_cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_clientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_clientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_comprar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_comprar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\icons\icon_down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_empleado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_empleado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_etiqueta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_etiqueta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_etiqueta_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_etiqueta_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_facturacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_facturacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_funciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_funciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_horario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_horario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_peliculas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_peliculas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tarjetas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_tarjetas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_trailer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_trailer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\icons\icon_usuario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="landing_page_min" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images\landing-page_min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pelicula_muestra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\images\pelicula_muestra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuario_muestra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\images\usuario_muestra.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

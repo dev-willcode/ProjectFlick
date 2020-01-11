@@ -62,6 +62,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vistas\Init\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Init\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Init\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vistas\Init\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Init\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,9 +111,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\icons\icon.ico" />
+    <Content Include="Resources\icons\icon_buscar.png" />
+    <Content Include="Resources\icons\icon_etiqueta_verde.png" />
+    <Content Include="Resources\icons\icon_comprar.png" />
+    <Content Include="Resources\icons\icon_etiqueta.png" />
+    <Content Include="Resources\icons\icon_trailer.png" />
+    <Content Include="Resources\icons\icon_tarjetas.png" />
+    <Content Include="Resources\icons\icon_home.png" />
+    <Content Include="Resources\icons\icon_dashboard.png" />
+    <Content Include="Resources\icons\icon_horario.png" />
+    <Content Include="Resources\icons\icon_about.png" />
+    <Content Include="Resources\icons\icon_usuario.png" />
+    <Content Include="Resources\icons\icon_facturacion.png" />
+    <Content Include="Resources\icons\icon_funciones.png" />
+    <Content Include="Resources\icons\icon_boletos.png" />
+    <Content Include="Resources\icons\icon_clientes.png" />
+    <Content Include="Resources\icons\icon_empleado.png" />
+    <Content Include="Resources\icons\icon_peliculas.png" />
     <Content Include="Resources\icons\icon_down.png" />
     <Content Include="Resources\icons\icon_cerrar.png" />
     <Content Include="Resources\images\flick.png" />
+    <Content Include="Resources\images\pelicula_muestra.jpg" />
+    <Content Include="Resources\images\usuario_muestra.jpg" />
     <None Include="Resources\images\landing-page_min.jpg" />
     <None Include="Resources\images\landing-page2.jpg" />
     <None Include="Resources\images\landing-page.jpg" />

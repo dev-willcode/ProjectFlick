@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using AnimateForms.Core;
+using AppFlickDesktop.Vistas.Init;
 
 namespace AppFlickDesktop
 {
@@ -35,7 +36,8 @@ namespace AppFlickDesktop
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            Dashboard dashboard = new Dashboard();            
+            dashboard.Show();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
