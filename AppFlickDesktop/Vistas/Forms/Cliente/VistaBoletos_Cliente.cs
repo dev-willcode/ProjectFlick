@@ -19,7 +19,7 @@ namespace AppFlickDesktop.Vistas.Forms.Cliente
         }
         private void rellenarBoletos()
         {
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 3; i++)
             {
                 Elem_boleto elemento = new Elem_boleto();
                 tablaBoletos.Controls.Add(elemento);

@@ -233,6 +233,26 @@ namespace AppFlickDesktop.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_mas {
+            get {
+                object obj = ResourceManager.GetObject("icon_mas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_menos {
+            get {
+                object obj = ResourceManager.GetObject("icon_menos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_peliculas {
             get {
                 object obj = ResourceManager.GetObject("icon_peliculas", resourceCulture);
@@ -286,6 +306,26 @@ namespace AppFlickDesktop.Properties {
         internal static System.Drawing.Bitmap pelicula_muestra {
             get {
                 object obj = ResourceManager.GetObject("pelicula_muestra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tarjeta_imagen {
+            get {
+                object obj = ResourceManager.GetObject("tarjeta_imagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tarjeta_nueva {
+            get {
+                object obj = ResourceManager.GetObject("tarjeta_nueva", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

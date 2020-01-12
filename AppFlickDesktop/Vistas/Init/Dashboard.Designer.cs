@@ -97,8 +97,8 @@
             // 
             // panelPrincipal
             // 
-            this.panelPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panelPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.animacionLogo.SetDecoration(this.panelPrincipal, Guna.UI.Animation.DecorationType.None);
             this.panelPrincipal.Location = new System.Drawing.Point(33, 70);
@@ -108,7 +108,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 5;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -265,7 +265,7 @@
             this.btnTarjetas.OnPressedColor = System.Drawing.Color.Black;
             this.btnTarjetas.Size = new System.Drawing.Size(119, 39);
             this.btnTarjetas.TabIndex = 66;
-            this.btnTarjetas.Text = "Tarjetas";
+            this.btnTarjetas.Text = "Facturas";
             this.btnTarjetas.TextOffsetX = 4;
             this.btnTarjetas.Click += new System.EventHandler(this.btnTarjetas_Click);
             // 
@@ -879,7 +879,7 @@
             animation1.TransparencyCoeff = 0F;
             this.animacionLogo.DefaultAnimation = animation1;
             // 
-            // Dashboard_cliente
+            // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -888,7 +888,7 @@
             this.Controls.Add(this.panel2);
             this.animacionLogo.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
             this.DoubleBuffered = true;
-            this.Name = "Dashboard_cliente";
+            this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.panel2.ResumeLayout(false);

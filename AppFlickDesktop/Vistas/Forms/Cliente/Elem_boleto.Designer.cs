@@ -168,7 +168,7 @@
             this.var_censura1.CausesValidation = false;
             this.var_censura1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_censura1.ForeColor = System.Drawing.Color.White;
-            this.var_censura1.Location = new System.Drawing.Point(70, 74);
+            this.var_censura1.Location = new System.Drawing.Point(70, 87);
             this.var_censura1.Name = "var_censura1";
             this.var_censura1.Size = new System.Drawing.Size(132, 20);
             this.var_censura1.TabIndex = 30;
@@ -195,7 +195,7 @@
             this.var_duracion_pelicula1.CausesValidation = false;
             this.var_duracion_pelicula1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_duracion_pelicula1.ForeColor = System.Drawing.Color.White;
-            this.var_duracion_pelicula1.Location = new System.Drawing.Point(70, 94);
+            this.var_duracion_pelicula1.Location = new System.Drawing.Point(70, 107);
             this.var_duracion_pelicula1.Name = "var_duracion_pelicula1";
             this.var_duracion_pelicula1.Size = new System.Drawing.Size(109, 20);
             this.var_duracion_pelicula1.TabIndex = 31;
@@ -206,11 +206,11 @@
             this.gunaLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.CausesValidation = false;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel1.Location = new System.Drawing.Point(266, 91);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(105, 20);
+            this.gunaLabel1.Size = new System.Drawing.Size(105, 25);
             this.gunaLabel1.TabIndex = 59;
             this.gunaLabel1.Text = "$5,90";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,11 +220,11 @@
             this.var_titulo_original1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.var_titulo_original1.BackColor = System.Drawing.Color.Transparent;
             this.var_titulo_original1.CausesValidation = false;
-            this.var_titulo_original1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.var_titulo_original1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_titulo_original1.ForeColor = System.Drawing.Color.White;
-            this.var_titulo_original1.Location = new System.Drawing.Point(266, 71);
+            this.var_titulo_original1.Location = new System.Drawing.Point(266, 60);
             this.var_titulo_original1.Name = "var_titulo_original1";
-            this.var_titulo_original1.Size = new System.Drawing.Size(105, 20);
+            this.var_titulo_original1.Size = new System.Drawing.Size(105, 31);
             this.var_titulo_original1.TabIndex = 25;
             this.var_titulo_original1.Text = "Valor";
             this.var_titulo_original1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

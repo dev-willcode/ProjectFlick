@@ -59,6 +59,7 @@ namespace AppFlickDesktop.Vistas.Init
         private void btnMiCuenta_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelCuenta);
+            pintarPantalla(new VistaCuenta_Cliente());
         }
 
         private void pintarLabelMenu(Label seleccionado)
