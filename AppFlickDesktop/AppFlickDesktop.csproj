@@ -62,11 +62,23 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Vistas\Forms\Cliente\Funciones_Cliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Cliente\Funciones_Cliente.Designer.cs">
+      <DependentUpon>Funciones_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Init\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Init\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Cliente\elem_funcion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Cliente\elem_funcion.Designer.cs">
+      <DependentUpon>elem_funcion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Init\Login.cs">
       <SubType>Form</SubType>
@@ -76,8 +88,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Vistas\Forms\Cliente\Funciones_Cliente.resx">
+      <DependentUpon>Funciones_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Init\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Cliente\elem_funcion.resx">
+      <DependentUpon>elem_funcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Init\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -107,7 +125,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utils\" />
-    <Folder Include="Vistas\Forms\" />
+    <Folder Include="Vistas\Forms\Administrador\" />
+    <Folder Include="Vistas\Forms\Empleado\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\icons\icon.ico" />
