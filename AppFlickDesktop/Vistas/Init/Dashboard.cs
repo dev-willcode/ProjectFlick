@@ -42,12 +42,13 @@ namespace AppFlickDesktop.Vistas.Init
         private void btnFunciones_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelFunciones);
-            pintarPantalla(new Funciones_Cliente());
+            pintarPantalla(new VistaFunciones_Cliente());
         }
 
         private void btnBoletos_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelBoletos);
+            pintarPantalla(new VistaBoletos_Cliente());
         }
 
         private void btnTarjetas_Click(object sender, EventArgs e)

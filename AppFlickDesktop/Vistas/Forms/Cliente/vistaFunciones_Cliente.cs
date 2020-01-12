@@ -5,10 +5,10 @@ using Guna.UI.Lib.ScrollBar;
 
 namespace AppFlickDesktop.Vistas.Forms.Cliente
 {
-    public partial class Funciones_Cliente : UserControl
+    public partial class VistaFunciones_Cliente : UserControl
     {
         PanelScrollHelper scroll;
-        public Funciones_Cliente()
+        public VistaFunciones_Cliente()
         {
             InitializeComponent();
             rellenarFunciones();

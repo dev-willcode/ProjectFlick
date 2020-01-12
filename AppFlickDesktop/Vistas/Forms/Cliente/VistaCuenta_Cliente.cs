@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AppFlickDesktop.Vistas.Init
+namespace AppFlickDesktop.Vistas.Forms.Cliente
 {
-    public partial class Elem_funcion : UserControl
+    public partial class VistaCuenta_Cliente : UserControl
     {
-        public Elem_funcion()
+        public VistaCuenta_Cliente()
         {
             InitializeComponent();
-        }
-
-        private void on_paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -29,36 +29,36 @@
         private void InitializeComponent()
         {
             this.container_funcion = new System.Windows.Forms.Panel();
-            this.var_imagen_pelicula1 = new Guna.UI.WinForms.GunaPictureBox();
+            this.var_titulo_original1 = new Guna.UI.WinForms.GunaLabel();
+            this.var_censura1 = new Guna.UI.WinForms.GunaLabel();
+            this.var_duracion_pelicula1 = new Guna.UI.WinForms.GunaLabel();
+            this.var_categoria1 = new Guna.UI.WinForms.GunaLabel();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.gunaElipsePanel5 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.var_funcion_sala_dob3d1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaElipsePanel4 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.var_funcion_sala_dob2d1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaElipsePanel3 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.var_funcion_sala_sub2d1 = new Guna.UI.WinForms.GunaLabel();
+            this.container_pelicula1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.btnComprar1 = new Guna.UI.WinForms.GunaButton();
             this.btnMas1 = new Guna.UI.WinForms.GunaButton();
             this.btnTrailer1 = new Guna.UI.WinForms.GunaButton();
-            this.container_pelicula1 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.gunaElipsePanel3 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.var_funcion_sala_sub2d1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaCirclePictureBox2 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaElipsePanel4 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.var_funcion_sala_dob2d1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaCirclePictureBox3 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaElipsePanel5 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.var_funcion_sala_dob3d1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaCirclePictureBox4 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.var_categoria1 = new Guna.UI.WinForms.GunaLabel();
-            this.var_duracion_pelicula1 = new Guna.UI.WinForms.GunaLabel();
-            this.var_censura1 = new Guna.UI.WinForms.GunaLabel();
-            this.var_titulo_original1 = new Guna.UI.WinForms.GunaLabel();
+            this.var_imagen_pelicula1 = new Guna.UI.WinForms.GunaPictureBox();
             this.var_titulo1 = new Guna.UI.WinForms.GunaLabel();
             this.container_funcion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula1)).BeginInit();
-            this.container_pelicula1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.gunaElipsePanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
-            this.gunaElipsePanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).BeginInit();
             this.gunaElipsePanel5.SuspendLayout();
+            this.gunaElipsePanel4.SuspendLayout();
+            this.gunaElipsePanel3.SuspendLayout();
+            this.container_pelicula1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula1)).BeginInit();
             this.SuspendLayout();
             // 
             // container_funcion
@@ -75,18 +75,175 @@
             this.container_funcion.Size = new System.Drawing.Size(950, 200);
             this.container_funcion.TabIndex = 69;
             // 
-            // var_imagen_pelicula1
+            // var_titulo_original1
             // 
-            this.var_imagen_pelicula1.BackColor = System.Drawing.Color.Transparent;
-            this.var_imagen_pelicula1.BaseColor = System.Drawing.Color.White;
-            this.var_imagen_pelicula1.Image = global::AppFlickDesktop.Properties.Resources.pelicula_muestra;
-            this.var_imagen_pelicula1.Location = new System.Drawing.Point(22, -1);
-            this.var_imagen_pelicula1.Name = "var_imagen_pelicula1";
-            this.var_imagen_pelicula1.Size = new System.Drawing.Size(131, 188);
-            this.var_imagen_pelicula1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.var_imagen_pelicula1.TabIndex = 53;
-            this.var_imagen_pelicula1.TabStop = false;
-            this.var_imagen_pelicula1.UseTransfarantBackground = true;
+            this.var_titulo_original1.AutoSize = true;
+            this.var_titulo_original1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.var_titulo_original1.CausesValidation = false;
+            this.var_titulo_original1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.var_titulo_original1.ForeColor = System.Drawing.Color.LightGray;
+            this.var_titulo_original1.Location = new System.Drawing.Point(177, 34);
+            this.var_titulo_original1.Name = "var_titulo_original1";
+            this.var_titulo_original1.Size = new System.Drawing.Size(169, 20);
+            this.var_titulo_original1.TabIndex = 25;
+            this.var_titulo_original1.Text = "AVENGERS: ENDGAME";
+            // 
+            // var_censura1
+            // 
+            this.var_censura1.AutoSize = true;
+            this.var_censura1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.var_censura1.CausesValidation = false;
+            this.var_censura1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.var_censura1.ForeColor = System.Drawing.Color.White;
+            this.var_censura1.Location = new System.Drawing.Point(417, 34);
+            this.var_censura1.Name = "var_censura1";
+            this.var_censura1.Size = new System.Drawing.Size(107, 15);
+            this.var_censura1.TabIndex = 30;
+            this.var_censura1.Text = "Censura: + 16 años";
+            // 
+            // var_duracion_pelicula1
+            // 
+            this.var_duracion_pelicula1.AutoSize = true;
+            this.var_duracion_pelicula1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.var_duracion_pelicula1.CausesValidation = false;
+            this.var_duracion_pelicula1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.var_duracion_pelicula1.ForeColor = System.Drawing.Color.White;
+            this.var_duracion_pelicula1.Location = new System.Drawing.Point(549, 34);
+            this.var_duracion_pelicula1.Name = "var_duracion_pelicula1";
+            this.var_duracion_pelicula1.Size = new System.Drawing.Size(106, 15);
+            this.var_duracion_pelicula1.TabIndex = 31;
+            this.var_duracion_pelicula1.Text = "Duración: 180 min.";
+            // 
+            // var_categoria1
+            // 
+            this.var_categoria1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.var_categoria1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.var_categoria1.CausesValidation = false;
+            this.var_categoria1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.var_categoria1.ForeColor = System.Drawing.Color.White;
+            this.var_categoria1.Location = new System.Drawing.Point(670, 34);
+            this.var_categoria1.Name = "var_categoria1";
+            this.var_categoria1.Size = new System.Drawing.Size(241, 50);
+            this.var_categoria1.TabIndex = 32;
+            this.var_categoria1.Text = "Categoría: Acción, Superheroes, Ficción";
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.tableLayoutPanel6.ColumnCount = 4;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel6.Controls.Add(this.gunaElipsePanel3, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.gunaElipsePanel4, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.gunaElipsePanel5, 2, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(180, 57);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(475, 34);
+            this.tableLayoutPanel6.TabIndex = 52;
+            // 
+            // gunaElipsePanel5
+            // 
+            this.gunaElipsePanel5.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel5.BaseColor = System.Drawing.Color.Orange;
+            this.gunaElipsePanel5.Controls.Add(this.var_funcion_sala_dob3d1);
+            this.gunaElipsePanel5.Controls.Add(this.gunaCirclePictureBox4);
+            this.gunaElipsePanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaElipsePanel5.Location = new System.Drawing.Point(239, 3);
+            this.gunaElipsePanel5.Name = "gunaElipsePanel5";
+            this.gunaElipsePanel5.Padding = new System.Windows.Forms.Padding(3);
+            this.gunaElipsePanel5.Radius = 8;
+            this.gunaElipsePanel5.Size = new System.Drawing.Size(112, 28);
+            this.gunaElipsePanel5.TabIndex = 29;
+            // 
+            // var_funcion_sala_dob3d1
+            // 
+            this.var_funcion_sala_dob3d1.CausesValidation = false;
+            this.var_funcion_sala_dob3d1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.var_funcion_sala_dob3d1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.var_funcion_sala_dob3d1.ForeColor = System.Drawing.Color.White;
+            this.var_funcion_sala_dob3d1.Location = new System.Drawing.Point(41, 3);
+            this.var_funcion_sala_dob3d1.Name = "var_funcion_sala_dob3d1";
+            this.var_funcion_sala_dob3d1.Size = new System.Drawing.Size(68, 22);
+            this.var_funcion_sala_dob3d1.TabIndex = 26;
+            this.var_funcion_sala_dob3d1.Text = "DOB 3D";
+            this.var_funcion_sala_dob3d1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gunaElipsePanel4
+            // 
+            this.gunaElipsePanel4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel4.BaseColor = System.Drawing.Color.Orange;
+            this.gunaElipsePanel4.Controls.Add(this.var_funcion_sala_dob2d1);
+            this.gunaElipsePanel4.Controls.Add(this.gunaCirclePictureBox3);
+            this.gunaElipsePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaElipsePanel4.Location = new System.Drawing.Point(121, 3);
+            this.gunaElipsePanel4.Name = "gunaElipsePanel4";
+            this.gunaElipsePanel4.Padding = new System.Windows.Forms.Padding(3);
+            this.gunaElipsePanel4.Radius = 8;
+            this.gunaElipsePanel4.Size = new System.Drawing.Size(112, 28);
+            this.gunaElipsePanel4.TabIndex = 27;
+            // 
+            // var_funcion_sala_dob2d1
+            // 
+            this.var_funcion_sala_dob2d1.CausesValidation = false;
+            this.var_funcion_sala_dob2d1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.var_funcion_sala_dob2d1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.var_funcion_sala_dob2d1.ForeColor = System.Drawing.Color.White;
+            this.var_funcion_sala_dob2d1.Location = new System.Drawing.Point(41, 3);
+            this.var_funcion_sala_dob2d1.Name = "var_funcion_sala_dob2d1";
+            this.var_funcion_sala_dob2d1.Size = new System.Drawing.Size(68, 22);
+            this.var_funcion_sala_dob2d1.TabIndex = 26;
+            this.var_funcion_sala_dob2d1.Text = "DOB 2D";
+            this.var_funcion_sala_dob2d1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gunaElipsePanel3
+            // 
+            this.gunaElipsePanel3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel3.BaseColor = System.Drawing.Color.Orange;
+            this.gunaElipsePanel3.Controls.Add(this.var_funcion_sala_sub2d1);
+            this.gunaElipsePanel3.Controls.Add(this.gunaCirclePictureBox2);
+            this.gunaElipsePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaElipsePanel3.Location = new System.Drawing.Point(3, 3);
+            this.gunaElipsePanel3.Name = "gunaElipsePanel3";
+            this.gunaElipsePanel3.Padding = new System.Windows.Forms.Padding(3);
+            this.gunaElipsePanel3.Radius = 8;
+            this.gunaElipsePanel3.Size = new System.Drawing.Size(112, 28);
+            this.gunaElipsePanel3.TabIndex = 26;
+            // 
+            // var_funcion_sala_sub2d1
+            // 
+            this.var_funcion_sala_sub2d1.CausesValidation = false;
+            this.var_funcion_sala_sub2d1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.var_funcion_sala_sub2d1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.var_funcion_sala_sub2d1.ForeColor = System.Drawing.Color.White;
+            this.var_funcion_sala_sub2d1.Location = new System.Drawing.Point(41, 3);
+            this.var_funcion_sala_sub2d1.Name = "var_funcion_sala_sub2d1";
+            this.var_funcion_sala_sub2d1.Size = new System.Drawing.Size(68, 22);
+            this.var_funcion_sala_sub2d1.TabIndex = 26;
+            this.var_funcion_sala_sub2d1.Text = "SUB 2D";
+            this.var_funcion_sala_sub2d1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // container_pelicula1
+            // 
+            this.container_pelicula1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.container_pelicula1.BackColor = System.Drawing.Color.Transparent;
+            this.container_pelicula1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.container_pelicula1.Controls.Add(this.tableLayoutPanel6);
+            this.container_pelicula1.Controls.Add(this.var_categoria1);
+            this.container_pelicula1.Controls.Add(this.var_duracion_pelicula1);
+            this.container_pelicula1.Controls.Add(this.var_censura1);
+            this.container_pelicula1.Controls.Add(this.var_titulo_original1);
+            this.container_pelicula1.Controls.Add(this.var_titulo1);
+            this.container_pelicula1.Location = new System.Drawing.Point(12, 29);
+            this.container_pelicula1.Name = "container_pelicula1";
+            this.container_pelicula1.Radius = 15;
+            this.container_pelicula1.Size = new System.Drawing.Size(923, 121);
+            this.container_pelicula1.TabIndex = 52;
             // 
             // btnComprar1
             // 
@@ -180,69 +337,6 @@
             this.btnTrailer1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTrailer1.UseTransfarantBackground = true;
             // 
-            // container_pelicula1
-            // 
-            this.container_pelicula1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.container_pelicula1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.container_pelicula1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.container_pelicula1.Controls.Add(this.tableLayoutPanel6);
-            this.container_pelicula1.Controls.Add(this.var_categoria1);
-            this.container_pelicula1.Controls.Add(this.var_duracion_pelicula1);
-            this.container_pelicula1.Controls.Add(this.var_censura1);
-            this.container_pelicula1.Controls.Add(this.var_titulo_original1);
-            this.container_pelicula1.Controls.Add(this.var_titulo1);
-            this.container_pelicula1.Location = new System.Drawing.Point(12, 29);
-            this.container_pelicula1.Name = "container_pelicula1";
-            this.container_pelicula1.Radius = 15;
-            this.container_pelicula1.Size = new System.Drawing.Size(923, 121);
-            this.container_pelicula1.TabIndex = 52;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.tableLayoutPanel6.ColumnCount = 4;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel6.Controls.Add(this.gunaElipsePanel3, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.gunaElipsePanel4, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.gunaElipsePanel5, 2, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(180, 57);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(475, 34);
-            this.tableLayoutPanel6.TabIndex = 52;
-            // 
-            // gunaElipsePanel3
-            // 
-            this.gunaElipsePanel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel3.BaseColor = System.Drawing.Color.Orange;
-            this.gunaElipsePanel3.Controls.Add(this.var_funcion_sala_sub2d1);
-            this.gunaElipsePanel3.Controls.Add(this.gunaCirclePictureBox2);
-            this.gunaElipsePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaElipsePanel3.Location = new System.Drawing.Point(3, 3);
-            this.gunaElipsePanel3.Name = "gunaElipsePanel3";
-            this.gunaElipsePanel3.Padding = new System.Windows.Forms.Padding(3);
-            this.gunaElipsePanel3.Radius = 8;
-            this.gunaElipsePanel3.Size = new System.Drawing.Size(112, 28);
-            this.gunaElipsePanel3.TabIndex = 26;
-            // 
-            // var_funcion_sala_sub2d1
-            // 
-            this.var_funcion_sala_sub2d1.CausesValidation = false;
-            this.var_funcion_sala_sub2d1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.var_funcion_sala_sub2d1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.var_funcion_sala_sub2d1.ForeColor = System.Drawing.Color.White;
-            this.var_funcion_sala_sub2d1.Location = new System.Drawing.Point(41, 3);
-            this.var_funcion_sala_sub2d1.Name = "var_funcion_sala_sub2d1";
-            this.var_funcion_sala_sub2d1.Size = new System.Drawing.Size(68, 22);
-            this.var_funcion_sala_sub2d1.TabIndex = 26;
-            this.var_funcion_sala_sub2d1.Text = "SUB 2D";
-            this.var_funcion_sala_sub2d1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // gunaCirclePictureBox2
             // 
             this.gunaCirclePictureBox2.BaseColor = System.Drawing.Color.White;
@@ -255,33 +349,6 @@
             this.gunaCirclePictureBox2.TabIndex = 28;
             this.gunaCirclePictureBox2.TabStop = false;
             this.gunaCirclePictureBox2.UseTransfarantBackground = false;
-            // 
-            // gunaElipsePanel4
-            // 
-            this.gunaElipsePanel4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel4.BaseColor = System.Drawing.Color.Orange;
-            this.gunaElipsePanel4.Controls.Add(this.var_funcion_sala_dob2d1);
-            this.gunaElipsePanel4.Controls.Add(this.gunaCirclePictureBox3);
-            this.gunaElipsePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaElipsePanel4.Location = new System.Drawing.Point(121, 3);
-            this.gunaElipsePanel4.Name = "gunaElipsePanel4";
-            this.gunaElipsePanel4.Padding = new System.Windows.Forms.Padding(3);
-            this.gunaElipsePanel4.Radius = 8;
-            this.gunaElipsePanel4.Size = new System.Drawing.Size(112, 28);
-            this.gunaElipsePanel4.TabIndex = 27;
-            // 
-            // var_funcion_sala_dob2d1
-            // 
-            this.var_funcion_sala_dob2d1.CausesValidation = false;
-            this.var_funcion_sala_dob2d1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.var_funcion_sala_dob2d1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.var_funcion_sala_dob2d1.ForeColor = System.Drawing.Color.White;
-            this.var_funcion_sala_dob2d1.Location = new System.Drawing.Point(41, 3);
-            this.var_funcion_sala_dob2d1.Name = "var_funcion_sala_dob2d1";
-            this.var_funcion_sala_dob2d1.Size = new System.Drawing.Size(68, 22);
-            this.var_funcion_sala_dob2d1.TabIndex = 26;
-            this.var_funcion_sala_dob2d1.Text = "DOB 2D";
-            this.var_funcion_sala_dob2d1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gunaCirclePictureBox3
             // 
@@ -296,33 +363,6 @@
             this.gunaCirclePictureBox3.TabStop = false;
             this.gunaCirclePictureBox3.UseTransfarantBackground = false;
             // 
-            // gunaElipsePanel5
-            // 
-            this.gunaElipsePanel5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaElipsePanel5.BaseColor = System.Drawing.Color.Orange;
-            this.gunaElipsePanel5.Controls.Add(this.var_funcion_sala_dob3d1);
-            this.gunaElipsePanel5.Controls.Add(this.gunaCirclePictureBox4);
-            this.gunaElipsePanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaElipsePanel5.Location = new System.Drawing.Point(239, 3);
-            this.gunaElipsePanel5.Name = "gunaElipsePanel5";
-            this.gunaElipsePanel5.Padding = new System.Windows.Forms.Padding(3);
-            this.gunaElipsePanel5.Radius = 8;
-            this.gunaElipsePanel5.Size = new System.Drawing.Size(112, 28);
-            this.gunaElipsePanel5.TabIndex = 29;
-            // 
-            // var_funcion_sala_dob3d1
-            // 
-            this.var_funcion_sala_dob3d1.CausesValidation = false;
-            this.var_funcion_sala_dob3d1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.var_funcion_sala_dob3d1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.var_funcion_sala_dob3d1.ForeColor = System.Drawing.Color.White;
-            this.var_funcion_sala_dob3d1.Location = new System.Drawing.Point(41, 3);
-            this.var_funcion_sala_dob3d1.Name = "var_funcion_sala_dob3d1";
-            this.var_funcion_sala_dob3d1.Size = new System.Drawing.Size(68, 22);
-            this.var_funcion_sala_dob3d1.TabIndex = 26;
-            this.var_funcion_sala_dob3d1.Text = "DOB 3D";
-            this.var_funcion_sala_dob3d1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // gunaCirclePictureBox4
             // 
             this.gunaCirclePictureBox4.BaseColor = System.Drawing.Color.White;
@@ -336,58 +376,18 @@
             this.gunaCirclePictureBox4.TabStop = false;
             this.gunaCirclePictureBox4.UseTransfarantBackground = false;
             // 
-            // var_categoria1
+            // var_imagen_pelicula1
             // 
-            this.var_categoria1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.var_categoria1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.var_categoria1.CausesValidation = false;
-            this.var_categoria1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.var_categoria1.ForeColor = System.Drawing.Color.White;
-            this.var_categoria1.Location = new System.Drawing.Point(670, 34);
-            this.var_categoria1.Name = "var_categoria1";
-            this.var_categoria1.Size = new System.Drawing.Size(241, 50);
-            this.var_categoria1.TabIndex = 32;
-            this.var_categoria1.Text = "Categoría: Acción, Superheroes, Ficción";
-            // 
-            // var_duracion_pelicula1
-            // 
-            this.var_duracion_pelicula1.AutoSize = true;
-            this.var_duracion_pelicula1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.var_duracion_pelicula1.CausesValidation = false;
-            this.var_duracion_pelicula1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.var_duracion_pelicula1.ForeColor = System.Drawing.Color.White;
-            this.var_duracion_pelicula1.Location = new System.Drawing.Point(549, 34);
-            this.var_duracion_pelicula1.Name = "var_duracion_pelicula1";
-            this.var_duracion_pelicula1.Size = new System.Drawing.Size(106, 15);
-            this.var_duracion_pelicula1.TabIndex = 31;
-            this.var_duracion_pelicula1.Text = "Duración: 180 min.";
-            // 
-            // var_censura1
-            // 
-            this.var_censura1.AutoSize = true;
-            this.var_censura1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.var_censura1.CausesValidation = false;
-            this.var_censura1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.var_censura1.ForeColor = System.Drawing.Color.White;
-            this.var_censura1.Location = new System.Drawing.Point(417, 34);
-            this.var_censura1.Name = "var_censura1";
-            this.var_censura1.Size = new System.Drawing.Size(107, 15);
-            this.var_censura1.TabIndex = 30;
-            this.var_censura1.Text = "Censura: + 16 años";
-            // 
-            // var_titulo_original1
-            // 
-            this.var_titulo_original1.AutoSize = true;
-            this.var_titulo_original1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.var_titulo_original1.CausesValidation = false;
-            this.var_titulo_original1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.var_titulo_original1.ForeColor = System.Drawing.Color.LightGray;
-            this.var_titulo_original1.Location = new System.Drawing.Point(177, 34);
-            this.var_titulo_original1.Name = "var_titulo_original1";
-            this.var_titulo_original1.Size = new System.Drawing.Size(169, 20);
-            this.var_titulo_original1.TabIndex = 25;
-            this.var_titulo_original1.Text = "AVENGERS: ENDGAME";
+            this.var_imagen_pelicula1.BackColor = System.Drawing.Color.Transparent;
+            this.var_imagen_pelicula1.BaseColor = System.Drawing.Color.White;
+            this.var_imagen_pelicula1.Image = global::AppFlickDesktop.Properties.Resources.pelicula_muestra;
+            this.var_imagen_pelicula1.Location = new System.Drawing.Point(22, -1);
+            this.var_imagen_pelicula1.Name = "var_imagen_pelicula1";
+            this.var_imagen_pelicula1.Size = new System.Drawing.Size(131, 188);
+            this.var_imagen_pelicula1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.var_imagen_pelicula1.TabIndex = 53;
+            this.var_imagen_pelicula1.TabStop = false;
+            this.var_imagen_pelicula1.UseTransfarantBackground = true;
             // 
             // var_titulo1
             // 
@@ -412,16 +412,16 @@
             this.Name = "Elem_funcion";
             this.Size = new System.Drawing.Size(950, 200);
             this.container_funcion.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula1)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.gunaElipsePanel5.ResumeLayout(false);
+            this.gunaElipsePanel4.ResumeLayout(false);
+            this.gunaElipsePanel3.ResumeLayout(false);
             this.container_pelicula1.ResumeLayout(false);
             this.container_pelicula1.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.gunaElipsePanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox2)).EndInit();
-            this.gunaElipsePanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox3)).EndInit();
-            this.gunaElipsePanel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,7 +429,6 @@
         #endregion
 
         private System.Windows.Forms.Panel container_funcion;
-        private Guna.UI.WinForms.GunaPictureBox var_imagen_pelicula1;
         private Guna.UI.WinForms.GunaButton btnComprar1;
         private Guna.UI.WinForms.GunaButton btnMas1;
         private Guna.UI.WinForms.GunaButton btnTrailer1;
@@ -448,6 +447,7 @@
         private Guna.UI.WinForms.GunaLabel var_duracion_pelicula1;
         private Guna.UI.WinForms.GunaLabel var_censura1;
         private Guna.UI.WinForms.GunaLabel var_titulo_original1;
+        private Guna.UI.WinForms.GunaPictureBox var_imagen_pelicula1;
         private Guna.UI.WinForms.GunaLabel var_titulo1;
     }
 }
