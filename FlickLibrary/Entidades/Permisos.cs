@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FlickLibrary.Entidades
+﻿namespace FlickLibrary.Entidades
 {
-    class Permisos
+    public class Permisos
     {
         public Permisos()
         {

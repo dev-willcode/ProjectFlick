@@ -45,10 +45,10 @@
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.scrollBar = new Guna.UI.WinForms.GunaHScrollBar();
+            this.btnRegistro = new Guna.UI.WinForms.GunaButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
             this.var_imagen_usuario = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.btnRegistro = new Guna.UI.WinForms.GunaButton();
             this.panelPrincipal.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -306,6 +306,34 @@
             this.scrollBar.ThumbHoverColor = System.Drawing.Color.Gray;
             this.scrollBar.ThumbPressedColor = System.Drawing.Color.DarkGray;
             // 
+            // btnRegistro
+            // 
+            this.btnRegistro.Animated = true;
+            this.btnRegistro.AnimationHoverSpeed = 0.07F;
+            this.btnRegistro.AnimationSpeed = 0.03F;
+            this.btnRegistro.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegistro.BaseColor = System.Drawing.Color.Transparent;
+            this.btnRegistro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnRegistro.BorderSize = 1;
+            this.btnRegistro.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRegistro.FocusedColor = System.Drawing.Color.Empty;
+            this.btnRegistro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistro.ForeColor = System.Drawing.Color.White;
+            this.btnRegistro.Image = null;
+            this.btnRegistro.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnRegistro.Location = new System.Drawing.Point(542, 231);
+            this.btnRegistro.Name = "btnRegistro";
+            this.btnRegistro.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnRegistro.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnRegistro.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnRegistro.OnHoverImage = null;
+            this.btnRegistro.OnPressedColor = System.Drawing.Color.Black;
+            this.btnRegistro.Radius = 10;
+            this.btnRegistro.Size = new System.Drawing.Size(236, 30);
+            this.btnRegistro.TabIndex = 84;
+            this.btnRegistro.Text = "Actualizar datos";
+            this.btnRegistro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // panel2
             // 
             this.panel2.BackgroundImage = global::AppFlickDesktop.Properties.Resources.tarjeta_nueva;
@@ -350,34 +378,6 @@
             this.var_imagen_usuario.TabIndex = 66;
             this.var_imagen_usuario.TabStop = false;
             this.var_imagen_usuario.UseTransfarantBackground = false;
-            // 
-            // btnRegistro
-            // 
-            this.btnRegistro.Animated = true;
-            this.btnRegistro.AnimationHoverSpeed = 0.07F;
-            this.btnRegistro.AnimationSpeed = 0.03F;
-            this.btnRegistro.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegistro.BaseColor = System.Drawing.Color.Transparent;
-            this.btnRegistro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.btnRegistro.BorderSize = 1;
-            this.btnRegistro.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnRegistro.FocusedColor = System.Drawing.Color.Empty;
-            this.btnRegistro.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistro.ForeColor = System.Drawing.Color.White;
-            this.btnRegistro.Image = null;
-            this.btnRegistro.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegistro.Location = new System.Drawing.Point(542, 231);
-            this.btnRegistro.Name = "btnRegistro";
-            this.btnRegistro.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.btnRegistro.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.btnRegistro.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnRegistro.OnHoverImage = null;
-            this.btnRegistro.OnPressedColor = System.Drawing.Color.Black;
-            this.btnRegistro.Radius = 10;
-            this.btnRegistro.Size = new System.Drawing.Size(236, 30);
-            this.btnRegistro.TabIndex = 84;
-            this.btnRegistro.Text = "Actualizar datos";
-            this.btnRegistro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // VistaCuenta_Cliente
             // 

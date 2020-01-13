@@ -129,7 +129,7 @@
             this.scrollBar.ThumbHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.scrollBar.ThumbPressedColor = System.Drawing.Color.DarkGray;
             // 
-            // Funciones_Cliente
+            // VistaFunciones_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -138,7 +138,7 @@
             this.Controls.Add(this.btnBuscarFuncion);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.txtBuscarFuncion);
-            this.Name = "Funciones_Cliente";
+            this.Name = "VistaFunciones_Cliente";
             this.Size = new System.Drawing.Size(974, 506);
             this.container.ResumeLayout(false);
             this.ResumeLayout(false);

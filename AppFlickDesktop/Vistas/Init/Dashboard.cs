@@ -18,7 +18,7 @@ namespace AppFlickDesktop.Vistas.Init
         {
             listaLabelsMenu = new List<Label>()
             {
-                labelInicio,labelFunciones,labelBoletos,labelTarjetas, labelCuenta
+                labelInicio,labelFunciones,labelBoletos,labelFacturas, labelCuenta
             };
         }
         private void animacion_logo(object sender, EventArgs e)
@@ -51,9 +51,10 @@ namespace AppFlickDesktop.Vistas.Init
             pintarPantalla(new VistaBoletos_Cliente());
         }
 
-        private void btnTarjetas_Click(object sender, EventArgs e)
+        private void btnFacturas_Click(object sender, EventArgs e)
         {
-            pintarLabelMenu(labelTarjetas);
+            pintarLabelMenu(labelFacturas);
+            pintarPantalla(new VistaFacturas_Cliente());
         }
 
         private void btnMiCuenta_Click(object sender, EventArgs e)

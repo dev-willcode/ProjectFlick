@@ -35,7 +35,7 @@
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.labelCuenta = new System.Windows.Forms.Label();
-            this.labelTarjetas = new System.Windows.Forms.Label();
+            this.labelFacturas = new System.Windows.Forms.Label();
             this.labelBoletos = new System.Windows.Forms.Label();
             this.labelFunciones = new System.Windows.Forms.Label();
             this.labelInicio = new System.Windows.Forms.Label();
@@ -117,7 +117,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Controls.Add(this.labelCuenta, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.labelTarjetas, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelFacturas, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelBoletos, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelFunciones, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelInicio, 0, 1);
@@ -147,13 +147,13 @@
             // 
             // labelTarjetas
             // 
-            this.animacionLogo.SetDecoration(this.labelTarjetas, Guna.UI.Animation.DecorationType.None);
-            this.labelTarjetas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelTarjetas.Location = new System.Drawing.Point(357, 39);
-            this.labelTarjetas.Margin = new System.Windows.Forms.Padding(0);
-            this.labelTarjetas.Name = "labelTarjetas";
-            this.labelTarjetas.Size = new System.Drawing.Size(119, 3);
-            this.labelTarjetas.TabIndex = 73;
+            this.animacionLogo.SetDecoration(this.labelFacturas, Guna.UI.Animation.DecorationType.None);
+            this.labelFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelFacturas.Location = new System.Drawing.Point(357, 39);
+            this.labelFacturas.Margin = new System.Windows.Forms.Padding(0);
+            this.labelFacturas.Name = "labelTarjetas";
+            this.labelFacturas.Size = new System.Drawing.Size(119, 3);
+            this.labelFacturas.TabIndex = 73;
             // 
             // labelBoletos
             // 
@@ -267,7 +267,7 @@
             this.btnTarjetas.TabIndex = 66;
             this.btnTarjetas.Text = "Facturas";
             this.btnTarjetas.TextOffsetX = 4;
-            this.btnTarjetas.Click += new System.EventHandler(this.btnTarjetas_Click);
+            this.btnTarjetas.Click += new System.EventHandler(this.btnFacturas_Click);
             // 
             // btnInicio
             // 
@@ -936,7 +936,7 @@
         private Guna.UI.WinForms.GunaButton btnBoletos;
         private Guna.UI.WinForms.GunaTransition animacionLogo;
         private System.Windows.Forms.Label labelCuenta;
-        private System.Windows.Forms.Label labelTarjetas;
+        private System.Windows.Forms.Label labelFacturas;
         private System.Windows.Forms.Label labelBoletos;
         private System.Windows.Forms.Label labelFunciones;
         private System.Windows.Forms.Label labelInicio;

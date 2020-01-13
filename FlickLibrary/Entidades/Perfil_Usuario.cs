@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FlickLibrary.Entidades
+﻿namespace FlickLibrary.Entidades
 {
-    class Perfil_Usuario
+    public class Perfil_Usuario
     {
         public Perfil_Usuario()
         {

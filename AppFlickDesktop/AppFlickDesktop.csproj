@@ -36,9 +36,6 @@
     <Reference Include="AnimateForms.Core">
       <HintPath>..\libs\AnimateForms.Core.dll</HintPath>
     </Reference>
-    <Reference Include="FlickLibrary">
-      <HintPath>..\FlickLibrary\bin\Debug\netstandard2.0\FlickLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="Guna.UI">
       <HintPath>..\libs\Guna.UI.dll</HintPath>
     </Reference>
@@ -68,6 +65,12 @@
     <Compile Include="Vistas\Forms\Cliente\Elem_boleto.Designer.cs">
       <DependentUpon>Elem_boleto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Forms\Cliente\Elem_Factura_Cliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Cliente\Elem_Factura_Cliente.Designer.cs">
+      <DependentUpon>Elem_Factura_Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\Cliente\Elem_tarjeta.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +88,12 @@
     </Compile>
     <Compile Include="Vistas\Forms\Cliente\VistaCuenta_Cliente.Designer.cs">
       <DependentUpon>VistaCuenta_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Cliente\VistaFacturas_Cliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Cliente\VistaFacturas_Cliente.Designer.cs">
+      <DependentUpon>VistaFacturas_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Forms\Cliente\VistaFunciones_Cliente.cs">
       <SubType>UserControl</SubType>
@@ -115,6 +124,9 @@
     <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_boleto.resx">
       <DependentUpon>Elem_boleto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_Factura_Cliente.resx">
+      <DependentUpon>Elem_Factura_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_tarjeta.resx">
       <DependentUpon>Elem_tarjeta.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Cliente\VistaCuenta_Cliente.resx">
       <DependentUpon>VistaCuenta_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Cliente\VistaFacturas_Cliente.resx">
+      <DependentUpon>VistaFacturas_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Cliente\VistaFunciones_Cliente.resx">
       <DependentUpon>VistaFunciones_Cliente.cs</DependentUpon>
@@ -160,6 +175,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
     <Folder Include="Utils\" />
     <Folder Include="Vistas\Forms\Administrador\" />
     <Folder Include="Vistas\Forms\Empleado\" />
@@ -196,6 +212,12 @@
     <None Include="Resources\images\landing-page_min.jpg" />
     <None Include="Resources\images\landing-page2.jpg" />
     <None Include="Resources\images\landing-page.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlickLibrary\FlickLibrary.csproj">
+      <Project>{6722cc3a-f21e-460e-9a94-701385bd021d}</Project>
+      <Name>FlickLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
