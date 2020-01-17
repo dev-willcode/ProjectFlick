@@ -7,18 +7,6 @@ namespace FlickLib.Entidades
         {
         }
 
-        public Cliente(string cliente_cedula, string cliente_apellidos, string cliente_nombres, 
-            string cliente_telefono, string cliente_email, string cliente_direccion, int cliente_usuario)
-        {
-            this.cliente_cedula = cliente_cedula;
-            this.cliente_apellidos = cliente_apellidos;
-            this.cliente_nombres = cliente_nombres;
-            this.cliente_telefono = cliente_telefono;
-            this.cliente_email = cliente_email;
-            this.cliente_direccion = cliente_direccion;
-            this.cliente_usuario = cliente_usuario;
-        }
-
         public Cliente(IDataReader data)
         {
             id = (int)data["id"];
