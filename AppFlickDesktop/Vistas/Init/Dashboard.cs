@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Forms.Cliente;
+using FlickLib.Entidades;
 
 namespace AppFlickDesktop.Vistas.Init
 {
     public partial class Dashboard : Form
     {
+        private Cliente cliente;
         List<Label> listaLabelsMenu;
+
         public Dashboard()
         {
             InitializeComponent();
@@ -70,6 +73,11 @@ namespace AppFlickDesktop.Vistas.Init
                 label.BackColor = Color.FromArgb(29, 29, 29);
             }
             seleccionado.BackColor = Color.FromArgb(12, 109, 237);
+        }
+
+        internal void asignarUsuario(FlickLib.Entidades.Cliente cliente)
+        {
+            this.cliente = cliente;
         }
     }
 }

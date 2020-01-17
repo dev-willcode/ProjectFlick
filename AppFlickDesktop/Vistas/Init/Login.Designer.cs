@@ -94,14 +94,14 @@
             this.container.Size = new System.Drawing.Size(825, 500);
             this.container.TabIndex = 22;
             // 
-            // pictureBox3
+            // logoImagen
             // 
             this.logoImagen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.logoImagen.BackColor = System.Drawing.Color.Transparent;
             this.efecto.SetDecoration(this.logoImagen, Guna.UI.Animation.DecorationType.None);
             this.logoImagen.Image = global::AppFlickDesktop.Properties.Resources.flick;
             this.logoImagen.Location = new System.Drawing.Point(68, 98);
-            this.logoImagen.Name = "pictureBox3";
+            this.logoImagen.Name = "logoImagen";
             this.logoImagen.Size = new System.Drawing.Size(232, 83);
             this.logoImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.logoImagen.TabIndex = 19;
@@ -600,6 +600,7 @@
             this.btnRegistrar.TabIndex = 13;
             this.btnRegistrar.Text = "Registrarse ahora";
             this.btnRegistrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtnCedula
             // 

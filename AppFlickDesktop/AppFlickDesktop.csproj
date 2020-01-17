@@ -121,6 +121,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vistas\Notificaciones\Notificar.cs" />
     <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_boleto.resx">
       <DependentUpon>Elem_boleto.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,8 +178,6 @@
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
     <Folder Include="Utils\" />
-    <Folder Include="Vistas\Forms\Administrador\" />
-    <Folder Include="Vistas\Forms\Empleado\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\icons\icon.ico" />
@@ -214,9 +213,9 @@
     <None Include="Resources\images\landing-page.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FlickLibrary\FlickLibrary.csproj">
-      <Project>{6722cc3a-f21e-460e-9a94-701385bd021d}</Project>
-      <Name>FlickLibrary</Name>
+    <ProjectReference Include="..\FlickLib\FlickLib.csproj">
+      <Project>{c218d634-0130-4f45-b068-9cf3374ed564}</Project>
+      <Name>FlickLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

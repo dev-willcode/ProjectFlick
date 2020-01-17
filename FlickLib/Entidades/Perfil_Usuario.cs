@@ -1,4 +1,4 @@
-﻿namespace FlickLibrary.Entidades
+﻿namespace FlickLib.Entidades
 {
     public class Perfil_Usuario
     {

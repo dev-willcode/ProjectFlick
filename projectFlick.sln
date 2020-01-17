@@ -4,11 +4,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickDesktop", "AppFlickDesktop\AppFlickDesktop.csproj", "{150D7B97-48EE-4FAF-BAFF-F63C24568628}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6722CC3A-F21E-460E-9A94-701385BD021D} = {6722CC3A-F21E-460E-9A94-701385BD021D}
-	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlickLibrary", "FlickLibrary\FlickLibrary.csproj", "{6722CC3A-F21E-460E-9A94-701385BD021D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlickLib", "FlickLib\FlickLib.csproj", "{C218D634-0130-4F45-B068-9CF3374ED564}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,10 +17,10 @@ Global
 		{150D7B97-48EE-4FAF-BAFF-F63C24568628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{150D7B97-48EE-4FAF-BAFF-F63C24568628}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{150D7B97-48EE-4FAF-BAFF-F63C24568628}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6722CC3A-F21E-460E-9A94-701385BD021D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6722CC3A-F21E-460E-9A94-701385BD021D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6722CC3A-F21E-460E-9A94-701385BD021D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6722CC3A-F21E-460E-9A94-701385BD021D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C218D634-0130-4F45-B068-9CF3374ED564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C218D634-0130-4F45-B068-9CF3374ED564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C218D634-0130-4F45-B068-9CF3374ED564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C218D634-0130-4F45-B068-9CF3374ED564}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

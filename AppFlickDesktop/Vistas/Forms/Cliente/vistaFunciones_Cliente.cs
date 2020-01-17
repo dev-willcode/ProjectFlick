@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Init;
-using FlickLibrary.Entidades;
 using Guna.UI.Lib.ScrollBar;
 
 namespace AppFlickDesktop.Vistas.Forms.Cliente
@@ -28,7 +27,6 @@ namespace AppFlickDesktop.Vistas.Forms.Cliente
                 Elem_funcion elemento = new Elem_funcion();
                 panelFunciones.Controls.Add(elemento);
                 elemento.Dock = DockStyle.Top;
-                Factura fact = new Factura();
             }
         }
     }
