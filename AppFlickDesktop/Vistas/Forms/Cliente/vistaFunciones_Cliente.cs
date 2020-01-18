@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Init;
+using FlickLib.DAO.Vistas;
+using FlickLib.Entidades.Vistas;
 using Guna.UI.Lib.ScrollBar;
 
 namespace AppFlickDesktop.Vistas.Forms.Cliente
@@ -8,6 +11,7 @@ namespace AppFlickDesktop.Vistas.Forms.Cliente
     public partial class VistaFunciones_Cliente : UserControl
     {
         PanelScrollHelper scroll;
+        private FuncionesActivasDAO daoFunciones = new FuncionesActivasDAO();
         public VistaFunciones_Cliente()
         {
             InitializeComponent();
@@ -22,9 +26,10 @@ namespace AppFlickDesktop.Vistas.Forms.Cliente
 
         private void rellenarFunciones()
         {
-            for (int i = 0; i < 10; i++)
+            List<FuncionesActivas> listaFuncionesActivas = daoFunciones.GetAll();
+            for (int i = 0; i < listaFuncionesActivas.Count; i++)
             {
-                Elem_funcion elemento = new Elem_funcion();
+                Elem_funcion elemento = new Elem_funcion(listaFuncionesActivas[i]);
                 panelFunciones.Controls.Add(elemento);
                 elemento.Dock = DockStyle.Top;
             }
