@@ -36,18 +36,62 @@ namespace FlickLib.DAO.Vistas
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "SP_FuncionesActivas";
 
+                FuncionesActivas funcion;
                 List<FuncionesActivas> listado = new List<FuncionesActivas>();
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        listado.Add(new FuncionesActivas(reader));
+                        funcion = new FuncionesActivas(reader);
+                        listado.Add(funcion);
                     }
                 }
-               
+                foreach (FuncionesActivas item in listado)
+                {
+                    item.nombre_categoria = asignar(item.id_pelicula, "SP_CategoriasPelicula");
+                    item.idioma_abreviatura = asignar(item.id_pelicula, "SP_IdiomasPelicula");
+                    item.pelicula_imagen = devolverImagen(item.id_pelicula);
+                }
                 return listado;
             }
-            
+
+        }
+
+        private byte[] devolverImagen(int id_pelicula)
+        {
+            byte[] imagen = null;
+            using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
+            {
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT Pelicula.pelicula_imagen FROM Pelicula " +
+                "WHERE Pelicula.id = " + id_pelicula;
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read() && reader[0].GetType() != typeof(DBNull))
+                        imagen = (byte[])reader[0];
+                }
+            }
+
+            return imagen;
+        }
+
+        private List<string> asignar(int id_pelicula, string procedimiento)
+        {
+            List<string> listado = new List<string>();
+            using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = procedimiento;
+                cmd.Parameters.AddWithValue("@id", id_pelicula);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        listado.Add(reader[0].ToString());
+                    }
+                }
+            }
+            return listado;
         }
     }
 }

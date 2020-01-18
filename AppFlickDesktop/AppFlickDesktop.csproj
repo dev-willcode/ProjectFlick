@@ -71,6 +71,12 @@
     <Compile Include="Vistas\Forms\Cliente\Elem_Factura_Cliente.Designer.cs">
       <DependentUpon>Elem_Factura_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Forms\Cliente\Elem_idioma_funcion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Cliente\Elem_idioma_funcion.Designer.cs">
+      <DependentUpon>Elem_idioma_funcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\Cliente\Elem_tarjeta.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_Factura_Cliente.resx">
       <DependentUpon>Elem_Factura_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_idioma_funcion.resx">
+      <DependentUpon>Elem_idioma_funcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_tarjeta.resx">
       <DependentUpon>Elem_tarjeta.cs</DependentUpon>

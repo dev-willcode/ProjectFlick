@@ -1,5 +1,7 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
+using AppFlickDesktop.Vistas.Forms.Cliente;
 using FlickLib.Entidades.Vistas;
 
 namespace AppFlickDesktop.Vistas.Init
@@ -26,9 +28,31 @@ namespace AppFlickDesktop.Vistas.Init
             var_titulo_original.Text = Funcion.pelicula_titulo_original;
             var_censura.Text = "Censura: " + Funcion.pelicula_tipo_censura;
             var_duracion_pelicula.Text = "Duración: " + Funcion.pelicula_duracion;
+            var_categoria.Text = "Categoria: " + obtenerCategorias();
+            rellenarIdiomas();
             btnTrailer.Click += new System.EventHandler((o, arg) =>
                 Process.Start(Funcion.pelicula_url_trailer)
             );
+        }
+
+        private void rellenarIdiomas()
+        {
+            foreach (string idioma in Funcion.idioma_abreviatura)
+            {
+                Elem_idioma_funcion elem = new Elem_idioma_funcion(idioma);
+                container_idiomas.Controls.Add(elem);
+                elem.Dock = DockStyle.Fill;
+            }
+        }
+
+        private string obtenerCategorias()
+        {
+            string resultado = "";
+            foreach (string categoria in Funcion.nombre_categoria)
+            {
+                resultado += categoria + ", ";
+            }
+            return resultado.Substring(0, resultado.Length - 2);
         }
     }
 }

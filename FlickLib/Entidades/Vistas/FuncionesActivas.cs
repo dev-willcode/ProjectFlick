@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 
 namespace FlickLib.Entidades.Vistas
@@ -21,7 +22,7 @@ namespace FlickLib.Entidades.Vistas
 
         public int id_pelicula { get; private set; }
 
-        public byte[] pelicula_imagen { get; private set; }
+        public byte[] pelicula_imagen { get; set; }
 
         public string pelicula_titulo { get; private set; }
 
@@ -35,8 +36,8 @@ namespace FlickLib.Entidades.Vistas
 
         public string funcion_estado { get; private set; }
 
-        public string[] nombre_categoria { get; private set; }
+        public List<string> nombre_categoria { get; set; }
 
-        public string[] idioma_abreviatura { get; private set; }
+        public List<string> idioma_abreviatura { get; set; }
     }
 }
