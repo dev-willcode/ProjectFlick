@@ -12,6 +12,7 @@ namespace FlickLib.Entidades
             id = (int)data["id"];
             cliente_cedula = data["cliente_cedula"].ToString();
             cliente_apellidos = data["cliente_apellidos"].ToString();
+            cliente_nombres = data["cliente_nombres"].ToString();
             cliente_telefono = data["cliente_telefono"].ToString();
             cliente_email = data["cliente_email"].ToString();
             cliente_direccion = data["cliente_direccion"].ToString();

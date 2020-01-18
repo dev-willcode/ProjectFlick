@@ -159,7 +159,7 @@
             this.txtCedula_usuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula_usuario.ForeColor = System.Drawing.Color.White;
             this.txtCedula_usuario.Location = new System.Drawing.Point(591, 63);
-            this.txtCedula_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCedula_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtCedula_usuario.Name = "txtCedula_usuario";
             this.txtCedula_usuario.PasswordChar = '\0';
             this.txtCedula_usuario.Radius = 10;
@@ -180,7 +180,7 @@
             this.txtApellidos_usuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellidos_usuario.ForeColor = System.Drawing.Color.White;
             this.txtApellidos_usuario.Location = new System.Drawing.Point(591, 107);
-            this.txtApellidos_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtApellidos_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellidos_usuario.Name = "txtApellidos_usuario";
             this.txtApellidos_usuario.PasswordChar = '\0';
             this.txtApellidos_usuario.Radius = 10;
@@ -201,7 +201,7 @@
             this.txtTelefono_usuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono_usuario.ForeColor = System.Drawing.Color.White;
             this.txtTelefono_usuario.Location = new System.Drawing.Point(591, 196);
-            this.txtTelefono_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono_usuario.Name = "txtTelefono_usuario";
             this.txtTelefono_usuario.PasswordChar = '\0';
             this.txtTelefono_usuario.Radius = 10;
@@ -222,7 +222,7 @@
             this.txtNombres_usuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombres_usuario.ForeColor = System.Drawing.Color.White;
             this.txtNombres_usuario.Location = new System.Drawing.Point(591, 151);
-            this.txtNombres_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombres_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombres_usuario.Name = "txtNombres_usuario";
             this.txtNombres_usuario.PasswordChar = '\0';
             this.txtNombres_usuario.Radius = 10;
@@ -243,7 +243,7 @@
             this.txtDireccion_usuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion_usuario.ForeColor = System.Drawing.Color.White;
             this.txtDireccion_usuario.Location = new System.Drawing.Point(591, 240);
-            this.txtDireccion_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDireccion_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtDireccion_usuario.Name = "txtDireccion_usuario";
             this.txtDireccion_usuario.PasswordChar = '\0';
             this.txtDireccion_usuario.Radius = 10;
@@ -264,7 +264,7 @@
             this.txtEmail_usuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail_usuario.ForeColor = System.Drawing.Color.White;
             this.txtEmail_usuario.Location = new System.Drawing.Point(913, 196);
-            this.txtEmail_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail_usuario.Name = "txtEmail_usuario";
             this.txtEmail_usuario.PasswordChar = '\0';
             this.txtEmail_usuario.Radius = 10;
@@ -290,7 +290,7 @@
             this.panelPrincipal.Controls.Add(this.panel2);
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
-            this.panelPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelPrincipal.Margin = new System.Windows.Forms.Padding(4);
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(1200, 229);
             this.panelPrincipal.TabIndex = 82;
@@ -302,7 +302,7 @@
             this.panel2.Controls.Add(this.btnMasTarjetas);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(385, 229);
             this.panel2.TabIndex = 0;
@@ -320,7 +320,7 @@
             this.btnMasTarjetas.Image = global::AppFlickDesktop.Properties.Resources.icon_mas;
             this.btnMasTarjetas.ImageSize = new System.Drawing.Size(38, 38);
             this.btnMasTarjetas.Location = new System.Drawing.Point(137, 69);
-            this.btnMasTarjetas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMasTarjetas.Margin = new System.Windows.Forms.Padding(4);
             this.btnMasTarjetas.Name = "btnMasTarjetas";
             this.btnMasTarjetas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnMasTarjetas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -337,7 +337,7 @@
             this.panel1.Controls.Add(this.panelPrincipal);
             this.panel1.Controls.Add(this.scrollBar);
             this.panel1.Location = new System.Drawing.Point(35, 359);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1200, 241);
             this.panel1.TabIndex = 83;
@@ -348,7 +348,7 @@
             this.scrollBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.scrollBar.LargeChange = 10;
             this.scrollBar.Location = new System.Drawing.Point(0, 229);
-            this.scrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scrollBar.Margin = new System.Windows.Forms.Padding(4);
             this.scrollBar.Maximum = 100;
             this.scrollBar.Name = "scrollBar";
             this.scrollBar.ScrollIdleColor = System.Drawing.Color.Silver;
@@ -374,7 +374,7 @@
             this.btnActualizarDatos.Image = null;
             this.btnActualizarDatos.ImageSize = new System.Drawing.Size(20, 20);
             this.btnActualizarDatos.Location = new System.Drawing.Point(723, 284);
-            this.btnActualizarDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizarDatos.Margin = new System.Windows.Forms.Padding(4);
             this.btnActualizarDatos.Name = "btnActualizarDatos";
             this.btnActualizarDatos.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnActualizarDatos.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -386,13 +386,14 @@
             this.btnActualizarDatos.TabIndex = 84;
             this.btnActualizarDatos.Text = "Actualizar datos";
             this.btnActualizarDatos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnActualizarDatos.Click += new System.EventHandler(this.btnActualizarDatos_Click);
             // 
             // var_imagen_usuario
             // 
             this.var_imagen_usuario.BaseColor = System.Drawing.Color.White;
             this.var_imagen_usuario.Image = global::AppFlickDesktop.Properties.Resources.usuario_muestra;
             this.var_imagen_usuario.Location = new System.Drawing.Point(180, 69);
-            this.var_imagen_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.var_imagen_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.var_imagen_usuario.Name = "var_imagen_usuario";
             this.var_imagen_usuario.Size = new System.Drawing.Size(240, 222);
             this.var_imagen_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -422,7 +423,7 @@
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.var_imagen_usuario);
             this.Controls.Add(this.gunaLabel5);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VistaCuenta_Cliente";
             this.Size = new System.Drawing.Size(1299, 623);
             this.panelPrincipal.ResumeLayout(false);
