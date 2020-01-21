@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -83,6 +85,12 @@
     <Compile Include="Vistas\Forms\Cliente\Elem_tarjeta.Designer.cs">
       <DependentUpon>Elem_tarjeta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Forms\Cliente\Form_Trailer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Cliente\Form_Trailer.Designer.cs">
+      <DependentUpon>Form_Trailer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\Cliente\VistaBoletos_Cliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_tarjeta.resx">
       <DependentUpon>Elem_tarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Cliente\Form_Trailer.resx">
+      <DependentUpon>Form_Trailer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Cliente\VistaBoletos_Cliente.resx">
       <DependentUpon>VistaBoletos_Cliente.cs</DependentUpon>
@@ -226,6 +237,25 @@
       <Project>{c218d634-0130-4f45-b068-9cf3374ed564}</Project>
       <Name>FlickLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

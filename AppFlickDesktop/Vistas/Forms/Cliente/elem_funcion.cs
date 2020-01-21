@@ -8,7 +8,7 @@ namespace AppFlickDesktop.Vistas.Init
 {
     public partial class Elem_funcion : UserControl
     {
-        private FuncionesActivas Funcion;
+        internal FuncionesActivas Funcion;
 
         public Elem_funcion()
         {
@@ -30,9 +30,7 @@ namespace AppFlickDesktop.Vistas.Init
             var_duracion_pelicula.Text = "Duración: " + Funcion.pelicula_duracion;
             var_categoria.Text = "Categoria: " + obtenerCategorias();
             rellenarIdiomas();
-            btnTrailer.Click += new System.EventHandler((o, arg) =>
-                Process.Start(Funcion.pelicula_url_trailer)
-            );
+            ;
         }
 
         private void rellenarIdiomas()
@@ -45,7 +43,7 @@ namespace AppFlickDesktop.Vistas.Init
             }
         }
 
-        private string obtenerCategorias()
+        internal string obtenerCategorias()
         {
             string resultado = "";
             foreach (string categoria in Funcion.nombre_categoria)
@@ -53,6 +51,13 @@ namespace AppFlickDesktop.Vistas.Init
                 resultado += categoria + ", ";
             }
             return resultado.Substring(0, resultado.Length - 2);
+        }
+
+        private void btnTrailer_Click(object sender, EventArgs e)
+        {
+            //Process.Start(Funcion.pelicula_url_trailer)
+            Form_Trailer form_Trailer = new Form_Trailer(this);
+            form_Trailer.ShowDialog();
         }
     }
 }

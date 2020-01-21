@@ -64,6 +64,7 @@ namespace AppFlickDesktop
             Dashboard dashboard = new Dashboard();
             dashboard.asignarUsuario(cliente);
             dashboard.Show();
+            Close();
         }
 
         private bool validarCamposLogin()

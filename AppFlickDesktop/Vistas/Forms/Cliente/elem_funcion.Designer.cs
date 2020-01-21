@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.container_funcion = new System.Windows.Forms.Panel();
+            this.var_imagen_pelicula = new Guna.UI.WinForms.GunaPictureBox();
+            this.btnComprar = new Guna.UI.WinForms.GunaButton();
+            this.btnMas = new Guna.UI.WinForms.GunaButton();
+            this.btnTrailer = new Guna.UI.WinForms.GunaButton();
             this.container_pelicula = new Guna.UI.WinForms.GunaElipsePanel();
             this.container_idiomas = new System.Windows.Forms.TableLayoutPanel();
             this.var_categoria = new Guna.UI.WinForms.GunaLabel();
@@ -36,13 +40,9 @@
             this.var_censura = new Guna.UI.WinForms.GunaLabel();
             this.var_titulo_original = new Guna.UI.WinForms.GunaLabel();
             this.var_titulo = new Guna.UI.WinForms.GunaLabel();
-            this.var_imagen_pelicula = new Guna.UI.WinForms.GunaPictureBox();
-            this.btnComprar = new Guna.UI.WinForms.GunaButton();
-            this.btnMas = new Guna.UI.WinForms.GunaButton();
-            this.btnTrailer = new Guna.UI.WinForms.GunaButton();
             this.container_funcion.SuspendLayout();
-            this.container_pelicula.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula)).BeginInit();
+            this.container_pelicula.SuspendLayout();
             this.SuspendLayout();
             // 
             // container_funcion
@@ -58,100 +58,6 @@
             this.container_funcion.Name = "container_funcion";
             this.container_funcion.Size = new System.Drawing.Size(950, 200);
             this.container_funcion.TabIndex = 69;
-            // 
-            // container_pelicula
-            // 
-            this.container_pelicula.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.container_pelicula.BackColor = System.Drawing.Color.Transparent;
-            this.container_pelicula.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.container_pelicula.Controls.Add(this.container_idiomas);
-            this.container_pelicula.Controls.Add(this.var_categoria);
-            this.container_pelicula.Controls.Add(this.var_duracion_pelicula);
-            this.container_pelicula.Controls.Add(this.var_censura);
-            this.container_pelicula.Controls.Add(this.var_titulo_original);
-            this.container_pelicula.Controls.Add(this.var_titulo);
-            this.container_pelicula.Location = new System.Drawing.Point(12, 29);
-            this.container_pelicula.Name = "container_pelicula";
-            this.container_pelicula.Radius = 15;
-            this.container_pelicula.Size = new System.Drawing.Size(923, 121);
-            this.container_pelicula.TabIndex = 52;
-            // 
-            // container_idiomas
-            // 
-            this.container_idiomas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.container_idiomas.ColumnCount = 4;
-            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.container_idiomas.Location = new System.Drawing.Point(180, 57);
-            this.container_idiomas.Name = "container_idiomas";
-            this.container_idiomas.RowCount = 1;
-            this.container_idiomas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.container_idiomas.Size = new System.Drawing.Size(475, 34);
-            this.container_idiomas.TabIndex = 52;
-            // 
-            // var_categoria
-            // 
-            this.var_categoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.var_categoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.var_categoria.CausesValidation = false;
-            this.var_categoria.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.var_categoria.ForeColor = System.Drawing.Color.White;
-            this.var_categoria.Location = new System.Drawing.Point(670, 34);
-            this.var_categoria.Name = "var_categoria";
-            this.var_categoria.Size = new System.Drawing.Size(241, 50);
-            this.var_categoria.TabIndex = 32;
-            // 
-            // var_duracion_pelicula
-            // 
-            this.var_duracion_pelicula.AutoSize = true;
-            this.var_duracion_pelicula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.var_duracion_pelicula.CausesValidation = false;
-            this.var_duracion_pelicula.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.var_duracion_pelicula.ForeColor = System.Drawing.Color.White;
-            this.var_duracion_pelicula.Location = new System.Drawing.Point(549, 34);
-            this.var_duracion_pelicula.Name = "var_duracion_pelicula";
-            this.var_duracion_pelicula.Size = new System.Drawing.Size(0, 15);
-            this.var_duracion_pelicula.TabIndex = 31;
-            // 
-            // var_censura
-            // 
-            this.var_censura.AutoSize = true;
-            this.var_censura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.var_censura.CausesValidation = false;
-            this.var_censura.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.var_censura.ForeColor = System.Drawing.Color.White;
-            this.var_censura.Location = new System.Drawing.Point(417, 34);
-            this.var_censura.Name = "var_censura";
-            this.var_censura.Size = new System.Drawing.Size(0, 15);
-            this.var_censura.TabIndex = 30;
-            // 
-            // var_titulo_original
-            // 
-            this.var_titulo_original.AutoSize = true;
-            this.var_titulo_original.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.var_titulo_original.CausesValidation = false;
-            this.var_titulo_original.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.var_titulo_original.ForeColor = System.Drawing.Color.LightGray;
-            this.var_titulo_original.Location = new System.Drawing.Point(177, 34);
-            this.var_titulo_original.Name = "var_titulo_original";
-            this.var_titulo_original.Size = new System.Drawing.Size(0, 20);
-            this.var_titulo_original.TabIndex = 25;
-            // 
-            // var_titulo
-            // 
-            this.var_titulo.AutoSize = true;
-            this.var_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.var_titulo.CausesValidation = false;
-            this.var_titulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.var_titulo.ForeColor = System.Drawing.Color.White;
-            this.var_titulo.Location = new System.Drawing.Point(175, 9);
-            this.var_titulo.Name = "var_titulo";
-            this.var_titulo.Size = new System.Drawing.Size(0, 25);
-            this.var_titulo.TabIndex = 23;
             // 
             // var_imagen_pelicula
             // 
@@ -257,6 +163,101 @@
             this.btnTrailer.Text = "Trailer";
             this.btnTrailer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTrailer.UseTransfarantBackground = true;
+            this.btnTrailer.Click += new System.EventHandler(this.btnTrailer_Click);
+            // 
+            // container_pelicula
+            // 
+            this.container_pelicula.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.container_pelicula.BackColor = System.Drawing.Color.Transparent;
+            this.container_pelicula.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.container_pelicula.Controls.Add(this.container_idiomas);
+            this.container_pelicula.Controls.Add(this.var_categoria);
+            this.container_pelicula.Controls.Add(this.var_duracion_pelicula);
+            this.container_pelicula.Controls.Add(this.var_censura);
+            this.container_pelicula.Controls.Add(this.var_titulo_original);
+            this.container_pelicula.Controls.Add(this.var_titulo);
+            this.container_pelicula.Location = new System.Drawing.Point(12, 29);
+            this.container_pelicula.Name = "container_pelicula";
+            this.container_pelicula.Radius = 15;
+            this.container_pelicula.Size = new System.Drawing.Size(923, 121);
+            this.container_pelicula.TabIndex = 52;
+            // 
+            // container_idiomas
+            // 
+            this.container_idiomas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.container_idiomas.ColumnCount = 4;
+            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.container_idiomas.Location = new System.Drawing.Point(180, 57);
+            this.container_idiomas.Name = "container_idiomas";
+            this.container_idiomas.RowCount = 1;
+            this.container_idiomas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.container_idiomas.Size = new System.Drawing.Size(475, 34);
+            this.container_idiomas.TabIndex = 52;
+            // 
+            // var_categoria
+            // 
+            this.var_categoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.var_categoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.var_categoria.CausesValidation = false;
+            this.var_categoria.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.var_categoria.ForeColor = System.Drawing.Color.White;
+            this.var_categoria.Location = new System.Drawing.Point(670, 34);
+            this.var_categoria.Name = "var_categoria";
+            this.var_categoria.Size = new System.Drawing.Size(241, 50);
+            this.var_categoria.TabIndex = 32;
+            // 
+            // var_duracion_pelicula
+            // 
+            this.var_duracion_pelicula.AutoSize = true;
+            this.var_duracion_pelicula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.var_duracion_pelicula.CausesValidation = false;
+            this.var_duracion_pelicula.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.var_duracion_pelicula.ForeColor = System.Drawing.Color.White;
+            this.var_duracion_pelicula.Location = new System.Drawing.Point(549, 34);
+            this.var_duracion_pelicula.Name = "var_duracion_pelicula";
+            this.var_duracion_pelicula.Size = new System.Drawing.Size(0, 15);
+            this.var_duracion_pelicula.TabIndex = 31;
+            // 
+            // var_censura
+            // 
+            this.var_censura.AutoSize = true;
+            this.var_censura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.var_censura.CausesValidation = false;
+            this.var_censura.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.var_censura.ForeColor = System.Drawing.Color.White;
+            this.var_censura.Location = new System.Drawing.Point(417, 34);
+            this.var_censura.Name = "var_censura";
+            this.var_censura.Size = new System.Drawing.Size(0, 15);
+            this.var_censura.TabIndex = 30;
+            // 
+            // var_titulo_original
+            // 
+            this.var_titulo_original.AutoSize = true;
+            this.var_titulo_original.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.var_titulo_original.CausesValidation = false;
+            this.var_titulo_original.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.var_titulo_original.ForeColor = System.Drawing.Color.LightGray;
+            this.var_titulo_original.Location = new System.Drawing.Point(177, 34);
+            this.var_titulo_original.Name = "var_titulo_original";
+            this.var_titulo_original.Size = new System.Drawing.Size(0, 20);
+            this.var_titulo_original.TabIndex = 25;
+            // 
+            // var_titulo
+            // 
+            this.var_titulo.AutoSize = true;
+            this.var_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.var_titulo.CausesValidation = false;
+            this.var_titulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.var_titulo.ForeColor = System.Drawing.Color.White;
+            this.var_titulo.Location = new System.Drawing.Point(175, 9);
+            this.var_titulo.Name = "var_titulo";
+            this.var_titulo.Size = new System.Drawing.Size(0, 25);
+            this.var_titulo.TabIndex = 23;
             // 
             // Elem_funcion
             // 
@@ -268,9 +269,9 @@
             this.Name = "Elem_funcion";
             this.Size = new System.Drawing.Size(950, 200);
             this.container_funcion.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula)).EndInit();
             this.container_pelicula.ResumeLayout(false);
             this.container_pelicula.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula)).EndInit();
             this.ResumeLayout(false);
 
         }
