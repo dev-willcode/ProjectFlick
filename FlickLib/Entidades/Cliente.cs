@@ -34,5 +34,18 @@ namespace FlickLib.Entidades
         public string cliente_direccion { get; set; }
 
         public int cliente_usuario { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            Cliente cliente = (Cliente)obj;
+            return this.id == cliente.id ||
+                this.cliente_cedula == cliente.cliente_cedula ||
+                this.cliente_apellidos == cliente.cliente_apellidos ||
+                this.cliente_nombres == cliente.cliente_nombres ||
+                this.cliente_telefono == cliente.cliente_telefono ||
+                this.cliente_email == cliente.cliente_email ||
+                this.cliente_direccion == cliente.cliente_direccion ||
+                this.cliente_usuario == cliente.cliente_usuario;
+        }
     }
 }

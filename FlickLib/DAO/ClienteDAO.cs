@@ -7,7 +7,7 @@ using FlickLib.Utilidades;
 
 namespace FlickLib.DAO
 {
-    class ClienteDAO : IDataAccess<Cliente>
+    public class ClienteDAO : IDataAccess<Cliente>
     {
         UtilsProcedimientos proced = new UtilsProcedimientos();
         public int Create(Cliente Entidad)
@@ -49,9 +49,35 @@ namespace FlickLib.DAO
             throw new NotImplementedException();
         }
 
-        public bool Update(int id, Cliente Entidad)
+        public bool Update(Cliente Entidad)
         {
-            throw new NotImplementedException();
+            using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SP_ActualizarCliente";
+                proced.agregarParametros(cmd,
+                    new List<object>() {
+                        "@id",
+                        "@cliente_cedula",
+                        "@cliente_apellidos",
+                        "@cliente_nombres",
+                        "@cliente_telefono",
+                        "@cliente_email",
+                        "@cliente_direccion",
+                        "@cliente_usuario" },
+                    new List<object>() {
+                        Entidad.id,
+                        Entidad.cliente_cedula,
+                        Entidad.cliente_apellidos,
+                        Entidad.cliente_nombres,
+                        Entidad.cliente_telefono,
+                        Entidad.cliente_email,
+                        Entidad.cliente_direccion,
+                        Entidad.cliente_usuario, }
+                    );
+
+                return proced.evaluarActualizacion(cmd);
+            }
         }
     }
 }

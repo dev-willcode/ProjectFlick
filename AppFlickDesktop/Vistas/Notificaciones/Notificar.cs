@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace AppFlickDesktop.Vistas.Notificaciones
 {
-    class Notificar
+    public class Notificar
     {
         internal void notificarCorrecto(string ttitulo, string mensaje)
         {

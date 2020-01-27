@@ -67,7 +67,7 @@ namespace FlickLib.DAO
             throw new NotImplementedException();
         }
 
-        public bool Update(int id, Usuario Entidad)
+        public bool Update(Usuario Entidad)
         {
             throw new NotImplementedException();
         }

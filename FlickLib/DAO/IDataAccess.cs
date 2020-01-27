@@ -8,7 +8,7 @@
     {
         int Create(T Entidad);
         T Get(int id);
-        bool Update(int id, T Entidad);
+        bool Update(T Entidad);
         bool Delete(int id);
     }
 }

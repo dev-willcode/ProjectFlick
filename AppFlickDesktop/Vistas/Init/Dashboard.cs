@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Forms.Cliente;
+using AppFlickDesktop.Vistas.Notificaciones;
 using FlickLib.Entidades;
 
 namespace AppFlickDesktop.Vistas.Init
@@ -11,6 +12,8 @@ namespace AppFlickDesktop.Vistas.Init
     {
         private Cliente cliente;
         List<Label> listaLabelsMenu;
+
+        public static Notificar Notificar { get; set; }
 
         public Dashboard()
         {

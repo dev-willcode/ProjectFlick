@@ -44,5 +44,10 @@ namespace FlickLib.Utilidades
                 }
             }
         }
+
+        internal bool evaluarActualizacion(SqlCommand cmd)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

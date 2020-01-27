@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI.Lib.ScrollBar;
+using FlickLib.DAO;
+using AppFlickDesktop.Vistas.Init;
 
 namespace AppFlickDesktop.Vistas.Forms.Cliente
 {
@@ -15,6 +17,7 @@ namespace AppFlickDesktop.Vistas.Forms.Cliente
     {
         PanelScrollHelper scroll;
         private FlickLib.Entidades.Cliente cliente;
+        private ClienteDAO daoClientes = new ClienteDAO();
 
 
 
@@ -55,7 +58,30 @@ namespace AppFlickDesktop.Vistas.Forms.Cliente
 
         private void btnActualizarDatos_Click(object sender, EventArgs e)
         {
-            // actualizar here
+            FlickLib.Entidades.Cliente clienteTemp = generarCliente();
+            if (!clienteTemp.Equals(cliente))
+            {
+                if (daoClientes.Update(clienteTemp))
+                    Dashboard.Notificar.notificarCorrecto("Actualizado", 
+                        "Informacion personal actualizada correctamente");
+                else
+                    Dashboard.Notificar.notificarCorrecto("No se consiguio actualizar", 
+                        "Error al actualizar su informacion personal");
+            }
+        }
+
+        private FlickLib.Entidades.Cliente generarCliente()
+        {
+            FlickLib.Entidades.Cliente cliente = new FlickLib.Entidades.Cliente();
+            cliente.cliente_cedula = txtCedula_usuario.Text;
+            cliente.cliente_nombres = txtNombres_usuario.Text;
+            cliente.cliente_apellidos = txtApellidos_usuario.Text;
+            cliente.cliente_email = txtEmail_usuario.Text;
+            cliente.cliente_direccion = txtDireccion_usuario.Text;
+            cliente.cliente_telefono = txtTelefono_usuario.Text;
+            cliente.id = this.cliente.id;
+            return cliente;
+
         }
     }
 }
