@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using AppFlickDesktop.Vistas.Forms.Cliente;
+using AppFlickDesktop.Vistas.Forms;
 using AppFlickDesktop.Vistas.Notificaciones;
-using FlickLib.Entidades;
+using Entity.Entidades;
 
 namespace AppFlickDesktop.Vistas.Init
 {
@@ -12,8 +12,6 @@ namespace AppFlickDesktop.Vistas.Init
     {
         private Cliente cliente;
         List<Label> listaLabelsMenu;
-
-        public static Notificar Notificar { get; set; }
 
         public Dashboard()
         {
@@ -78,7 +76,7 @@ namespace AppFlickDesktop.Vistas.Init
             seleccionado.BackColor = Color.FromArgb(12, 109, 237);
         }
 
-        internal void asignarUsuario(FlickLib.Entidades.Cliente cliente)
+        internal void asignarUsuario(Entity.Entidades.Cliente cliente)
         {
             this.cliente = cliente;
         }

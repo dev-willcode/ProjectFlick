@@ -4,14 +4,14 @@ using System.Windows.Forms;
 using AnimateForms.Core;
 using AppFlickDesktop.Vistas.Init;
 using AppFlickDesktop.Vistas.Notificaciones;
-using FlickLib.Entidades;
-using FlickLib.Funcionalidades;
+using Controllers.DTO;
+using Entity.Entidades;
 
 namespace AppFlickDesktop
 {
     public partial class Login : Form
     {
-        private FuncLogin funcLogin = new FuncLogin();
+        private UsuarioDTO usuarioDTO = Utils.PropiedadesGenerales.UsuarioDTO;
         private readonly Animate animate = new Animate();
         private Notificar notificar = new Notificar();
         public Login()
@@ -47,16 +47,22 @@ namespace AppFlickDesktop
 
             if (validarCamposLogin())
             {
-                Cliente cliente = funcLogin.IniciarSesionCliente(usuario);
+                Cliente cliente = usuarioDTO.IniciarSesion(usuario);
                 if (cliente != null)
+                {
                     abrirDashboard(cliente);
+                }
                 else
+                {
                     notificar.notificarFallo("Error al iniciar sesión",
                         "No se consiguió iniciar la sesión, usuario o contraseña incorrectos.");
+                }
             }
             else
+            {
                 notificar.notificarFallo("Error al iniciar sesión",
                     "verifique que ha llenado los campos de usuario y contraseña!");
+            }
         }
 
         private void abrirDashboard(Cliente cliente)
@@ -91,7 +97,7 @@ namespace AppFlickDesktop
                 usuario.usuario_username = txtnUsuario.Text;
                 usuario.usuario_password = txtnContrasena.Text;
 
-                if (!funcLogin.UsuarioEstaRepetido(usuario))
+                if (!usuarioDTO.UsuarioEstaRepetido(usuario))
                 {
                     Cliente cliente = new Cliente();
                     cliente.cliente_cedula = txtnCedula.Text;
@@ -101,7 +107,7 @@ namespace AppFlickDesktop
                     cliente.cliente_email = txtnEmail.Text;
                     cliente.cliente_direccion = txtnDireccion.Text;
 
-                    if (funcLogin.RegistrarCliente(usuario, cliente))
+                    if (usuarioDTO.RegistrarNuevoCliente(usuario, cliente))
                     {
                         notificar.notificarCorrecto("Completado", "registro correcto");
                         abrirDashboard(cliente);
@@ -117,18 +123,52 @@ namespace AppFlickDesktop
         private bool validarCamposRegistro()
         {
             string errores = "";
-            if (string.IsNullOrEmpty(txtnUsuario.Text)) errores += " - Inserte un nombre de usuario" + Environment.NewLine;
-            if (string.IsNullOrEmpty(txtnContrasena.Text)) errores += " - Inserte una contraseña" + Environment.NewLine;
-            if (string.IsNullOrEmpty(txtnApellidos.Text)) errores += " - Inserte un apellido" + Environment.NewLine;
-            if (string.IsNullOrEmpty(txtnNombres.Text)) errores += " - Inserte un nombre" + Environment.NewLine;
-            if (string.IsNullOrEmpty(txtnCedula.Text)) errores += " - Inserte una cédula" + Environment.NewLine;
-            if (string.IsNullOrEmpty(txtnTelefono.Text)) errores += " - Inserte un telefono de contacto" + Environment.NewLine;
-            if (string.IsNullOrEmpty(txtnEmail.Text)) errores += " - Inserte un email" + Environment.NewLine;
-            if (string.IsNullOrEmpty(txtnDireccion.Text)) errores += " - Inserte una direccion" + Environment.NewLine;
+            if (string.IsNullOrEmpty(txtnUsuario.Text))
+            {
+                errores += " - Inserte un nombre de usuario" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(txtnContrasena.Text))
+            {
+                errores += " - Inserte una contraseña" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(txtnApellidos.Text))
+            {
+                errores += " - Inserte un apellido" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(txtnNombres.Text))
+            {
+                errores += " - Inserte un nombre" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(txtnCedula.Text))
+            {
+                errores += " - Inserte una cédula" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(txtnTelefono.Text))
+            {
+                errores += " - Inserte un telefono de contacto" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(txtnEmail.Text))
+            {
+                errores += " - Inserte un email" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(txtnDireccion.Text))
+            {
+                errores += " - Inserte una direccion" + Environment.NewLine;
+            }
 
             if (!string.IsNullOrEmpty(errores))
-                notificar.notificarFallo("Revise el formulario", 
+            {
+                notificar.notificarFallo("Revise el formulario",
                     "revise los siguientes errores: " + Environment.NewLine + errores);
+            }
+
             return string.IsNullOrEmpty(errores);
         }
     }

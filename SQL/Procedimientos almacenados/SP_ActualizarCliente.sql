@@ -5,8 +5,7 @@ CREATE PROCEDURE SP_ActualizarCliente
 @cliente_nombres varchar(50),
 @cliente_telefono varchar(50),
 @cliente_email varchar(50),
-@cliente_direccion varchar(50),
-@cliente_usuario int
+@cliente_direccion varchar(50)
 AS
 BEGIN
 UPDATE [Cliente]
@@ -15,8 +14,8 @@ set [cliente_cedula] = @cliente_cedula,
 [cliente_nombres] = @cliente_nombres,
 [cliente_telefono] = @cliente_telefono,
 [cliente_email] = @cliente_email,
-[cliente_direccion] = @cliente_direccion,
-[cliente_usuario] = @cliente_usuario
+[cliente_direccion] = @cliente_direccion
+OUTPUT 'CORRECTO' AS 'RESPONSE'
 WHERE [id] = @id 
 END
 GO

@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("AppFlickDesktop")]
+[assembly: AssemblyTitle("Controllers")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AppFlickDesktop")]
+[assembly: AssemblyProduct("Controllers")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("150d7b97-48ee-4faf-baff-f63c24568628")]
+[assembly: Guid("a117b98b-a93c-4d27-9062-b54ba2c40e50")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

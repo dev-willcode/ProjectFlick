@@ -61,58 +61,65 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Vistas\Forms\Cliente\Elem_boleto.cs">
+    <Compile Include="Utils\PropiedadesGenerales.cs" />
+    <Compile Include="Vistas\Forms\Elem_boleto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Elem_boleto.Designer.cs">
+    <Compile Include="Vistas\Forms\Elem_boleto.Designer.cs">
       <DependentUpon>Elem_boleto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Elem_Factura_Cliente.cs">
+    <Compile Include="Vistas\Forms\Elem_Factura_Cliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Elem_Factura_Cliente.Designer.cs">
+    <Compile Include="Vistas\Forms\Elem_Factura_Cliente.Designer.cs">
       <DependentUpon>Elem_Factura_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Elem_idioma_funcion.cs">
+    <Compile Include="Vistas\Forms\Elem_idioma_funcion.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Elem_idioma_funcion.Designer.cs">
+    <Compile Include="Vistas\Forms\Elem_idioma_funcion.Designer.cs">
       <DependentUpon>Elem_idioma_funcion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Elem_tarjeta.cs">
+    <Compile Include="Vistas\Forms\Elem_tarjeta.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Elem_tarjeta.Designer.cs">
+    <Compile Include="Vistas\Forms\Elem_tarjeta.Designer.cs">
       <DependentUpon>Elem_tarjeta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Form_Trailer.cs">
+    <Compile Include="Vistas\Forms\Form_Detalle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Form_Trailer.Designer.cs">
+    <Compile Include="Vistas\Forms\Form_Detalle.Designer.cs">
+      <DependentUpon>Form_Detalle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Form_Trailer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Form_Trailer.Designer.cs">
       <DependentUpon>Form_Trailer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\VistaBoletos_Cliente.cs">
+    <Compile Include="Vistas\Forms\VistaBoletos_Cliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\VistaBoletos_Cliente.Designer.cs">
+    <Compile Include="Vistas\Forms\VistaBoletos_Cliente.Designer.cs">
       <DependentUpon>VistaBoletos_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\VistaCuenta_Cliente.cs">
+    <Compile Include="Vistas\Forms\VistaCuenta_Cliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\VistaCuenta_Cliente.Designer.cs">
+    <Compile Include="Vistas\Forms\VistaCuenta_Cliente.Designer.cs">
       <DependentUpon>VistaCuenta_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\VistaFacturas_Cliente.cs">
+    <Compile Include="Vistas\Forms\VistaFacturas_Cliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\VistaFacturas_Cliente.Designer.cs">
+    <Compile Include="Vistas\Forms\VistaFacturas_Cliente.Designer.cs">
       <DependentUpon>VistaFacturas_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\VistaFunciones_Cliente.cs">
+    <Compile Include="Vistas\Forms\VistaFunciones_Cliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\VistaFunciones_Cliente.Designer.cs">
+    <Compile Include="Vistas\Forms\VistaFunciones_Cliente.Designer.cs">
       <DependentUpon>VistaFunciones_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Init\Dashboard.cs">
@@ -121,10 +128,10 @@
     <Compile Include="Vistas\Init\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Elem_Funcion.cs">
+    <Compile Include="Vistas\Forms\Elem_Funcion.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Cliente\Elem_Funcion.Designer.cs">
+    <Compile Include="Vistas\Forms\Elem_Funcion.Designer.cs">
       <DependentUpon>Elem_Funcion.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Init\Login.cs">
@@ -136,37 +143,40 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\Notificaciones\Notificar.cs" />
-    <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_boleto.resx">
+    <EmbeddedResource Include="Vistas\Forms\Elem_boleto.resx">
       <DependentUpon>Elem_boleto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_Factura_Cliente.resx">
+    <EmbeddedResource Include="Vistas\Forms\Elem_Factura_Cliente.resx">
       <DependentUpon>Elem_Factura_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_idioma_funcion.resx">
+    <EmbeddedResource Include="Vistas\Forms\Elem_idioma_funcion.resx">
       <DependentUpon>Elem_idioma_funcion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_tarjeta.resx">
+    <EmbeddedResource Include="Vistas\Forms\Elem_tarjeta.resx">
       <DependentUpon>Elem_tarjeta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\Cliente\Form_Trailer.resx">
+    <EmbeddedResource Include="Vistas\Forms\Form_Detalle.resx">
+      <DependentUpon>Form_Detalle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Form_Trailer.resx">
       <DependentUpon>Form_Trailer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\Cliente\VistaBoletos_Cliente.resx">
+    <EmbeddedResource Include="Vistas\Forms\VistaBoletos_Cliente.resx">
       <DependentUpon>VistaBoletos_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\Cliente\VistaCuenta_Cliente.resx">
+    <EmbeddedResource Include="Vistas\Forms\VistaCuenta_Cliente.resx">
       <DependentUpon>VistaCuenta_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\Cliente\VistaFacturas_Cliente.resx">
+    <EmbeddedResource Include="Vistas\Forms\VistaFacturas_Cliente.resx">
       <DependentUpon>VistaFacturas_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\Cliente\VistaFunciones_Cliente.resx">
+    <EmbeddedResource Include="Vistas\Forms\VistaFunciones_Cliente.resx">
       <DependentUpon>VistaFunciones_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Init\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\Cliente\Elem_Funcion.resx">
+    <EmbeddedResource Include="Vistas\Forms\Elem_Funcion.resx">
       <DependentUpon>Elem_Funcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Init\Login.resx">
@@ -197,7 +207,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
-    <Folder Include="Utils\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\icons\icon.ico" />
@@ -233,29 +242,14 @@
     <None Include="Resources\images\landing-page.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FlickLib\FlickLib.csproj">
-      <Project>{c218d634-0130-4f45-b068-9cf3374ed564}</Project>
-      <Name>FlickLib</Name>
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{A117B98B-A93C-4D27-9062-B54BA2C40E50}</Project>
+      <Name>Controllers</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <COMReference Include="AxWMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="WMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{997d0bfd-c9ab-4376-9e0a-cc0d10c0860f}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
