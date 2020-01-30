@@ -1,13 +1,13 @@
-﻿using DataAccess.DAO;
+﻿using Controllers.DAO;
 using Entity.Entidades;
 
-namespace Controllers.DTO
+namespace Controllers.Controller
 {
-    public class ClienteDTO
+    public class ClienteController : IController
     {
         public ClienteDAO ClienteDAO { get; set; }
 
-        public ClienteDTO()
+        public ClienteController()
         {
             ClienteDAO = new ClienteDAO();
         }

@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using DataAccess.DAO.Vistas;
+﻿using System.Collections.Generic;
+using Controllers.DAO.Vistas;
 using Entity.Entidades.Vistas;
 
-namespace Controllers.DTO
+namespace Controllers.Controller
 {
-    public class FuncionesDTO
+    public class FuncionesController : IController
     {
         private FuncionesActivasDAO FuncionesActivasDAO { get; set; }
 
-        public FuncionesDTO()
+        public FuncionesController()
         {
             FuncionesActivasDAO = new FuncionesActivasDAO();
         }

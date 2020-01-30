@@ -41,10 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\ClienteDTO.cs" />
-    <Compile Include="DTO\FuncionesDTO.cs" />
-    <Compile Include="DTO\TarjetasDTO.cs" />
-    <Compile Include="DTO\UsuarioDTO.cs" />
+    <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\FuncionesController.cs" />
+    <Compile Include="IController.cs" />
+    <Compile Include="Controller\TarjetasController.cs" />
+    <Compile Include="Controller\UsuarioController.cs" />
+    <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="IDataAccess.cs" />
+    <Compile Include="DAO\TarjetasDAO.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="DAO\Vistas\FuncionesActivasDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

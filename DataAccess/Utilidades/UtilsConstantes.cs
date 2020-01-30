@@ -1,4 +1,4 @@
-﻿namespace DataAccess.Utilidades
+﻿namespace Controllers.Utilidades
 {
     class UtilsConstantes
     {

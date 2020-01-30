@@ -38,7 +38,9 @@ namespace Entity.Entidades
         public override bool Equals(object obj)
         {
             if (obj == null || GetType() != obj.GetType())
+            {
                 return false;
+            }
 
             Cliente cliente = obj as Cliente;
             return cliente_cedula == cliente.cliente_cedula &&

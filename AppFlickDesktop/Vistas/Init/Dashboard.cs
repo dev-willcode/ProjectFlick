@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Forms;
-using AppFlickDesktop.Vistas.Notificaciones;
 using Entity.Entidades;
 
 namespace AppFlickDesktop.Vistas.Init

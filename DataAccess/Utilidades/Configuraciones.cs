@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Data.SqlClient;
-namespace DataAccess.Utilidades
+
+namespace Controllers.Utilidades
 {
-    class Configuraciones
+    public class Configuraciones
     {
         public static SqlConnection connect = crearConexion(UtilsConstantes.cadenaConexionLocal);
 

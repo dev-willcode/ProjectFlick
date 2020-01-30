@@ -1,4 +1,4 @@
-﻿namespace DataAccess.DAO
+﻿namespace Controllers.DAO
 {
     /*
      *  Interface DAO para todos los controladores de Entidad 

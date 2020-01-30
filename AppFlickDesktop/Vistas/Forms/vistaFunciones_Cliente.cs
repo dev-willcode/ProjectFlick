@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Init;
-using Controllers.DTO;
+using Controllers.Controller;
 using Entity.Entidades.Vistas;
 using Guna.UI.Lib.ScrollBar;
 
@@ -11,7 +11,7 @@ namespace AppFlickDesktop.Vistas.Forms
 {
     public partial class VistaFunciones_Cliente : UserControl
     {
-        private FuncionesDTO funcionesDTO = Utils.PropiedadesGenerales.FuncionesDTO;
+        private FuncionesController funcionesDTO = Utils.PropiedadesGenerales.FuncionesDTO;
         private PanelScrollHelper scroll;
         private List<Control> listaControles;
         private Label labelSinFunciones;

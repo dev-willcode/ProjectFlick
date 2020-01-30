@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using DataAccess.Utilidades;
+using Controllers.Controller;
+using Controllers.Utilidades;
 using Entity.Entidades;
 
-namespace DataAccess.DAO
+namespace Controllers.DAO
 {
-    public class ClienteDAO : IDataAccess<Cliente>
+    public class ClienteDAO : IController, IDataAccess<Cliente>
     {
-        UtilsProcedimientos proced = new UtilsProcedimientos();
         public int Create(Cliente Entidad)
         {
             using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "SP_CrearCliente";
-                proced.agregarParametros(cmd,
+                Procedimientos.agregarParametros(cmd,
                     new List<object>() {
                         "@cliente_cedula",
                         "@cliente_apellidos",
@@ -35,7 +35,7 @@ namespace DataAccess.DAO
                         Entidad.cliente_usuario, }
                     );
 
-                return proced.evaluarInsercción(cmd);
+                return Procedimientos.evaluarInsercción(cmd);
             }
         }
 
@@ -55,7 +55,7 @@ namespace DataAccess.DAO
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "SP_ActualizarCliente";
-                proced.agregarParametros(cmd,
+                Procedimientos.agregarParametros(cmd,
                     new List<object>() {
                         "@id",
                         "@cliente_cedula",
@@ -74,7 +74,7 @@ namespace DataAccess.DAO
                         Entidad.cliente_direccion}
                     );
 
-                return proced.evaluarActualizacion(cmd);
+                return Procedimientos.evaluarActualizacion(cmd);
             }
         }
     }

@@ -1,6 +1,5 @@
-﻿using Entity.Entidades;
-using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using Entity.Entidades;
 
 namespace AppFlickDesktop.Vistas.Forms
 {
@@ -25,10 +24,10 @@ namespace AppFlickDesktop.Vistas.Forms
             var_nombre_banco.Text = tarjetas.tarjeta_nombre_banco;
             var_tarjeta_ano.Text = tarjetas.tarjeta_ano.ToString();
             var_tarjeta_propietario.Text = tarjetas.tarjeta_propietario;
-            var_tarjeta_numero.Text = "XXX XXXX XXXX " +
-                tarjetas.tarjeta_numero.Substring(tarjetas.tarjeta_numero.Length - 4, tarjetas.tarjeta_numero.Length - 1);
-            var_mes_dia.Text = tarjetas.tarjeta_mes+"/"+ tarjetas.tarjeta_dia;
-         
+            var_tarjeta_numero.Text = "XXX XXXX XXXX " + tarjetas.tarjeta_numero
+                .Substring(tarjetas.tarjeta_numero.Length - 4);
+            var_mes_dia.Text = tarjetas.tarjeta_mes + "/" + tarjetas.tarjeta_dia;
+
         }
     }
 }

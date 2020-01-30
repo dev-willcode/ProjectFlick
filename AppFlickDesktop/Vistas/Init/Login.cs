@@ -4,14 +4,14 @@ using System.Windows.Forms;
 using AnimateForms.Core;
 using AppFlickDesktop.Vistas.Init;
 using AppFlickDesktop.Vistas.Notificaciones;
-using Controllers.DTO;
+using Controllers.Controller;
 using Entity.Entidades;
 
 namespace AppFlickDesktop
 {
     public partial class Login : Form
     {
-        private UsuarioDTO usuarioDTO = Utils.PropiedadesGenerales.UsuarioDTO;
+        private UsuarioController usuarioDTO = Utils.PropiedadesGenerales.UsuarioDTO;
         private readonly Animate animate = new Animate();
         private Notificar notificar = new Notificar();
         public Login()

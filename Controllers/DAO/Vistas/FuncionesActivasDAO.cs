@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using DataAccess.Utilidades;
+using Controllers.Controller;
+using Controllers.Utilidades;
 using Entity.Entidades.Vistas;
 
-namespace DataAccess.DAO.Vistas
+namespace Controllers.DAO.Vistas
 {
-    public class FuncionesActivasDAO : IDataAccess<FuncionesActivas>
+    public class FuncionesActivasDAO : IController, IDataAccess<FuncionesActivas>
     {
         public int Create(FuncionesActivas Entidad)
         {

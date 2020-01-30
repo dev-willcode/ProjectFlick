@@ -1,26 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AppFlickDesktop.Vistas.Notificaciones;
-using Controllers.DTO;
+﻿using AppFlickDesktop.Vistas.Notificaciones;
+using Controllers.Controller;
 
 namespace Utils
 {
     public static class PropiedadesGenerales
     {
-        static ClienteDTO clienteDTO = new ClienteDTO();
-        static UsuarioDTO usuarioDTO = new UsuarioDTO();
-        static FuncionesDTO funcionesDTO = new FuncionesDTO();
-        static TarjetasDTO tarjetasDTO = new TarjetasDTO();
+        static ClienteController clienteDTO = new ClienteController();
+        static UsuarioController usuarioDTO = new UsuarioController();
+        static FuncionesController funcionesDTO = new FuncionesController();
+        static TarjetasController tarjetasDTO = new TarjetasController();
         private static Notificar notificar = new Notificar();
 
-        public static ClienteDTO ClienteDTO { get => clienteDTO; set => clienteDTO = value; }
-        public static UsuarioDTO UsuarioDTO { get => usuarioDTO; set => usuarioDTO = value; }
-        public static FuncionesDTO FuncionesDTO { get => funcionesDTO; set => funcionesDTO = value; }
+        public static ClienteController ClienteDTO { get => clienteDTO; set => clienteDTO = value; }
+        public static UsuarioController UsuarioDTO { get => usuarioDTO; set => usuarioDTO = value; }
+        public static FuncionesController FuncionesDTO { get => funcionesDTO; set => funcionesDTO = value; }
 
         public static Notificar Notificar { get => notificar; set => notificar = value; }
-        public static TarjetasDTO TarjetasDTO { get => tarjetasDTO; set => tarjetasDTO = value; }
+        public static TarjetasController TarjetasDTO { get => tarjetasDTO; set => tarjetasDTO = value; }
     }
 }

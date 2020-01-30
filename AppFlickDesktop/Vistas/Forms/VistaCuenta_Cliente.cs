@@ -1,17 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Notificaciones;
+using Controllers.Controller;
 using Entity.Entidades;
-using Controllers.DTO;
 using Guna.UI.Lib.ScrollBar;
-using System.Collections.Generic;
 
 namespace AppFlickDesktop.Vistas.Forms
 {
     public partial class VistaCuenta_Cliente : UserControl
     {
-        private ClienteDTO clienteDTO = Utils.PropiedadesGenerales.ClienteDTO;
-        private TarjetasDTO tarjetaDTO = Utils.PropiedadesGenerales.TarjetasDTO;
+        private ClienteController clienteDTO = Utils.PropiedadesGenerales.ClienteDTO;
+        private TarjetasController tarjetaDTO = Utils.PropiedadesGenerales.TarjetasDTO;
         private Notificar Notificar = Utils.PropiedadesGenerales.Notificar;
         private PanelScrollHelper scroll;
         private Cliente cliente;
@@ -67,7 +67,8 @@ namespace AppFlickDesktop.Vistas.Forms
                     Notificar.notificarFallo("No se consiguio actualizar",
                         "Error al actualizar su informacion personal");
                 }
-            } else
+            }
+            else
             {
                 Notificar.notificarFallo("No se consiguio actualizar",
                         "No cambio ningun dato!");

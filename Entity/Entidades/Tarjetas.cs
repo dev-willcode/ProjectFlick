@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace Entity.Entidades
 {
     public class Tarjetas
     {
 
-        public Tarjetas (IDataReader data) 
+        public Tarjetas(IDataReader data)
         {
             id = (int)data["id"];
             tarjeta_cliente = (int)data["tarjeta_cliente"];
@@ -26,12 +20,12 @@ namespace Entity.Entidades
 
         public int id { get; set; }
         public int tarjeta_cliente { get; set; }
-        public string tarjeta_nombre_banco { get;  set; }
-        public string tarjeta_numero { get;  set; }   
-        public string tarjeta_ccv { get;  set; }       
-        public int tarjeta_ano { get;  set; }     
-        public int tarjeta_mes { get;  set; }    
-        public int tarjeta_dia { get;  set; } 
-        public string tarjeta_propietario { get;  set; }
+        public string tarjeta_nombre_banco { get; set; }
+        public string tarjeta_numero { get; set; }
+        public string tarjeta_ccv { get; set; }
+        public int tarjeta_ano { get; set; }
+        public int tarjeta_mes { get; set; }
+        public int tarjeta_dia { get; set; }
+        public string tarjeta_propietario { get; set; }
     }
 }
