@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DTO\ClienteDTO.cs" />
     <Compile Include="DTO\FuncionesDTO.cs" />
+    <Compile Include="DTO\TarjetasDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

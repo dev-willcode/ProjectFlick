@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\IDataAccess.cs" />
+    <Compile Include="DAO\TarjetasDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\Vistas\FuncionesActivasDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

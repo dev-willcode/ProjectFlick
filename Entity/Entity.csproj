@@ -55,6 +55,7 @@
     <Compile Include="Entidades\Perfil_Usuario.cs" />
     <Compile Include="Entidades\Permisos.cs" />
     <Compile Include="Entidades\Sala_Cine.cs" />
+    <Compile Include="Entidades\Tarjetas.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Entidades\Vistas\FuncionesActivas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

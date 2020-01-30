@@ -4,12 +4,14 @@ using AppFlickDesktop.Vistas.Notificaciones;
 using Entity.Entidades;
 using Controllers.DTO;
 using Guna.UI.Lib.ScrollBar;
+using System.Collections.Generic;
 
 namespace AppFlickDesktop.Vistas.Forms
 {
     public partial class VistaCuenta_Cliente : UserControl
     {
         private ClienteDTO clienteDTO = Utils.PropiedadesGenerales.ClienteDTO;
+        private TarjetasDTO tarjetaDTO = Utils.PropiedadesGenerales.TarjetasDTO;
         private Notificar Notificar = Utils.PropiedadesGenerales.Notificar;
         private PanelScrollHelper scroll;
         private Cliente cliente;
@@ -18,8 +20,8 @@ namespace AppFlickDesktop.Vistas.Forms
         {
             InitializeComponent();
             propiedadesScroll();
-            rellenarTarjetas();
             this.cliente = cliente;
+            rellenarTarjetas();
             cargarDatos();
         }
 
@@ -41,9 +43,10 @@ namespace AppFlickDesktop.Vistas.Forms
         }
         private void rellenarTarjetas()
         {
-            for (int i = 0; i < 2; i++)
+            List<Tarjetas> listaTarjeta = tarjetaDTO.ObtenerTarjetasCliente(cliente.id);
+            for (int i = 0; i < listaTarjeta.Count; i++)
             {
-                Elem_tarjeta elemento = new Elem_tarjeta();
+                Elem_tarjeta elemento = new Elem_tarjeta(listaTarjeta[i]);
                 panelPrincipal.Controls.Add(elemento);
                 elemento.Dock = DockStyle.Left;
             }

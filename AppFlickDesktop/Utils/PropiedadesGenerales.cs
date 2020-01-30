@@ -13,6 +13,7 @@ namespace Utils
         static ClienteDTO clienteDTO = new ClienteDTO();
         static UsuarioDTO usuarioDTO = new UsuarioDTO();
         static FuncionesDTO funcionesDTO = new FuncionesDTO();
+        static TarjetasDTO tarjetasDTO = new TarjetasDTO();
         private static Notificar notificar = new Notificar();
 
         public static ClienteDTO ClienteDTO { get => clienteDTO; set => clienteDTO = value; }
@@ -20,5 +21,6 @@ namespace Utils
         public static FuncionesDTO FuncionesDTO { get => funcionesDTO; set => funcionesDTO = value; }
 
         public static Notificar Notificar { get => notificar; set => notificar = value; }
+        public static TarjetasDTO TarjetasDTO { get => tarjetasDTO; set => tarjetasDTO = value; }
     }
 }
