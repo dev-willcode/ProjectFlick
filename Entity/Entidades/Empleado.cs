@@ -1,6 +1,6 @@
 ﻿namespace Entity.Entidades
 {
-    public class Empleado
+    public class Empleado : Entidad
     {
 
         public Empleado()

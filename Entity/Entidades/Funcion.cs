@@ -2,7 +2,7 @@
 
 namespace Entity.Entidades
 {
-    public class Funcion
+    public class Funcion : Entidad
     {
         public Funcion()
         {

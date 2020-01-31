@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using AppFlickDesktop.Vistas.Forms.Elementos;
 using AppFlickDesktop.Vistas.Notificaciones;
 using Controllers.Controller;
 using Entity.Entidades;
@@ -10,8 +11,8 @@ namespace AppFlickDesktop.Vistas.Forms
 {
     public partial class VistaCuenta_Cliente : UserControl
     {
-        private ClienteController clienteDTO = Utils.PropiedadesGenerales.ClienteDTO;
-        private TarjetasController tarjetaDTO = Utils.PropiedadesGenerales.TarjetasDTO;
+        private ClienteController clienteController = Utils.PropiedadesGenerales.ClienteController;
+        private TarjetasController tarjetasController = Utils.PropiedadesGenerales.TarjetasController;
         private Notificar Notificar = Utils.PropiedadesGenerales.Notificar;
         private PanelScrollHelper scroll;
         private Cliente cliente;
@@ -43,7 +44,7 @@ namespace AppFlickDesktop.Vistas.Forms
         }
         private void rellenarTarjetas()
         {
-            List<Tarjetas> listaTarjeta = tarjetaDTO.ObtenerTarjetasCliente(cliente.id);
+            List<Tarjetas> listaTarjeta = tarjetasController.ListarTarjetas(cliente.id);
             for (int i = 0; i < listaTarjeta.Count; i++)
             {
                 Elem_tarjeta elemento = new Elem_tarjeta(listaTarjeta[i]);
@@ -57,7 +58,7 @@ namespace AppFlickDesktop.Vistas.Forms
             Cliente clienteTemp = generarCliente();
             if (!clienteTemp.Equals(cliente))
             {
-                if (clienteDTO.ActualizarCliente(clienteTemp))
+                if (clienteController.Update(clienteTemp))
                 {
                     Notificar.notificarCorrecto("Actualizado",
                         "Informacion personal actualizada correctamente");
@@ -87,6 +88,12 @@ namespace AppFlickDesktop.Vistas.Forms
             cliente.id = this.cliente.id;
             return cliente;
 
+        }
+
+        private void btnMasTarjetas_Click(object sender, EventArgs e)
+        {
+            Form_Tarjeta form = new Form_Tarjeta();
+            form.ShowDialog();
         }
     }
 }

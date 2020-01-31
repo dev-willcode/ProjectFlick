@@ -1,6 +1,6 @@
 ﻿namespace Entity.Entidades
 {
-    public class Boleto
+    public class Boleto : Entidad
     {
 
         public Boleto()

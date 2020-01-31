@@ -1,10 +1,14 @@
 ﻿using System;
+using System.Data;
 
 namespace Entity.Entidades
 {
-    public class Factura
+    public class Factura : Entidad
     {
         public Factura()
+        {
+        }
+        public Factura(IDataReader data)
         {
         }
 

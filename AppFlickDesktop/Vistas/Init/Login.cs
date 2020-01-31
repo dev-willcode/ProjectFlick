@@ -11,7 +11,7 @@ namespace AppFlickDesktop
 {
     public partial class Login : Form
     {
-        private UsuarioController usuarioDTO = Utils.PropiedadesGenerales.UsuarioDTO;
+        private UsuarioController usuarioController = Utils.PropiedadesGenerales.UsuarioController;
         private readonly Animate animate = new Animate();
         private Notificar notificar = new Notificar();
         public Login()
@@ -47,7 +47,7 @@ namespace AppFlickDesktop
 
             if (validarCamposLogin())
             {
-                Cliente cliente = usuarioDTO.IniciarSesion(usuario);
+                Cliente cliente = usuarioController.IniciarSesion(usuario);
                 if (cliente != null)
                 {
                     abrirDashboard(cliente);
@@ -97,7 +97,7 @@ namespace AppFlickDesktop
                 usuario.usuario_username = txtnUsuario.Text;
                 usuario.usuario_password = txtnContrasena.Text;
 
-                if (!usuarioDTO.UsuarioEstaRepetido(usuario))
+                if (!usuarioController.UsuarioEstaRepetido(usuario))
                 {
                     Cliente cliente = new Cliente();
                     cliente.cliente_cedula = txtnCedula.Text;
@@ -107,7 +107,7 @@ namespace AppFlickDesktop
                     cliente.cliente_email = txtnEmail.Text;
                     cliente.cliente_direccion = txtnDireccion.Text;
 
-                    if (usuarioDTO.RegistrarNuevoCliente(usuario, cliente))
+                    if (usuarioController.RegistrarNuevoCliente(usuario, cliente))
                     {
                         notificar.notificarCorrecto("Completado", "registro correcto");
                         abrirDashboard(cliente);

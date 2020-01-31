@@ -1,14 +1,23 @@
-﻿namespace Controllers.DAO
+﻿using Controllers.Utilidades;
+
+namespace Controllers.DAO
 {
     /*
      *  Interface DAO para todos los controladores de Entidad 
      *  que necesiten implementar las operaciones CRUD
      */
-    interface IDataAccess<T>
+    public abstract class IDataAccess<T>
     {
-        int Create(T Entidad);
-        T Get(int id);
-        bool Update(T Entidad);
-        bool Delete(int id);
+        public UtilsProcedimientos Procedimientos { get; set; }
+
+        protected IDataAccess()
+        {
+            Procedimientos = new UtilsProcedimientos();
+        }
+
+        public abstract int Create(T Entidad);
+        public abstract T Get(int id);
+        public abstract bool Update(T Entidad);
+        public abstract bool Delete(int id);
     }
 }

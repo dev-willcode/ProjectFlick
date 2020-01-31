@@ -1,5 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using Entity.Entidades;
 
 namespace Controllers.Utilidades
 {
@@ -13,7 +18,7 @@ namespace Controllers.Utilidades
             }
         }
 
-        public int contar(SqlCommand cmd)
+        public int retornarConteo(SqlCommand cmd)
         {
             using (SqlDataReader reader = cmd.ExecuteReader())
             {
@@ -26,6 +31,39 @@ namespace Controllers.Utilidades
                     return 0;
                 }
             }
+        }
+
+        public SqlCommand CrearComandoSP(string procedimientoAlmacenado)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = procedimientoAlmacenado;
+            cmd.Connection = Configuraciones.connect;
+            return cmd;
+        }
+
+        public Entidad DevolverEntidad<T>(SqlCommand cmd)
+        {
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    return Activator.CreateInstance(typeof(T), reader) as Entidad;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
+        public SqlCommand CrearComandoQ(string comando)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = comando;
+            cmd.Connection = Configuraciones.connect;
+            return cmd;
         }
 
         public int evaluarInsercción(SqlCommand cmd)
@@ -55,6 +93,22 @@ namespace Controllers.Utilidades
                 }
                 return false;
             }
+        }
+
+        public List<T> ListarEntidades<T>(SqlCommand cmd)
+        {
+            Entidad entidad;
+            ArrayList listado = new ArrayList();
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    entidad = Activator.CreateInstance(typeof(T), reader) as Entidad;
+                    listado.Add(entidad);
+                }
+            }
+            return listado.Cast<T>().ToList();
         }
     }
 }

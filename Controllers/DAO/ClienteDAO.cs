@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using Controllers.Controller;
 using Controllers.Utilidades;
 using Entity.Entidades;
 
 namespace Controllers.DAO
 {
-    public class ClienteDAO : IController, IDataAccess<Cliente>
+    public class ClienteDAO : IDataAccess<Cliente>
     {
-        public int Create(Cliente Entidad)
+        public override int Create(Cliente Entidad)
         {
             using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
             {
@@ -39,17 +38,17 @@ namespace Controllers.DAO
             }
         }
 
-        public bool Delete(int id)
+        public override bool Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Cliente Get(int id)
+        public override Cliente Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public bool Update(Cliente Entidad)
+        public override bool Update(Cliente Entidad)
         {
             using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
             {

@@ -1,6 +1,6 @@
 ﻿namespace Entity.Entidades
 {
-    public class Sala_Cine
+    public class Sala_Cine : Entidad
     {
         public Sala_Cine()
         {

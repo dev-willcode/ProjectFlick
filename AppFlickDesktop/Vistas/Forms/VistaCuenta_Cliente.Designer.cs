@@ -314,6 +314,7 @@
             this.btnMasTarjetas.OnPressedColor = System.Drawing.Color.Black;
             this.btnMasTarjetas.Size = new System.Drawing.Size(80, 80);
             this.btnMasTarjetas.TabIndex = 0;
+            this.btnMasTarjetas.Click += new System.EventHandler(this.btnMasTarjetas_Click);
             // 
             // panel1
             // 

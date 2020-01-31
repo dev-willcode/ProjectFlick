@@ -2,7 +2,7 @@
 
 namespace Entity.Entidades
 {
-    public class Horarios
+    public class Horarios : Entidad
     {
         public Horarios()
         {

@@ -42,11 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\FacturaController.cs" />
     <Compile Include="Controller\FuncionesController.cs" />
-    <Compile Include="IController.cs" />
+    <Compile Include="Controller\FuncionesDAO.cs" />
     <Compile Include="Controller\TarjetasController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\FacturaDAO.cs" />
     <Compile Include="IDataAccess.cs" />
     <Compile Include="DAO\TarjetasDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />

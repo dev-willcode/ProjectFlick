@@ -75,7 +75,7 @@ namespace AppFlickDesktop.Vistas.Init
             seleccionado.BackColor = Color.FromArgb(12, 109, 237);
         }
 
-        internal void asignarUsuario(Entity.Entidades.Cliente cliente)
+        internal void asignarUsuario(Cliente cliente)
         {
             this.cliente = cliente;
         }

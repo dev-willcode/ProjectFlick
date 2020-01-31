@@ -1,7 +1,7 @@
 ﻿using System.Data;
 namespace Entity.Entidades
 {
-    public class Cliente
+    public class Cliente : Entidad
     {
         public Cliente()
         {

@@ -11,7 +11,7 @@ namespace AppFlickDesktop.Vistas.Forms
 {
     public partial class VistaFunciones_Cliente : UserControl
     {
-        private FuncionesController funcionesDTO = Utils.PropiedadesGenerales.FuncionesDTO;
+        private FuncionesController funcionesController = Utils.PropiedadesGenerales.FuncionesController;
         private PanelScrollHelper scroll;
         private List<Control> listaControles;
         private Label labelSinFunciones;
@@ -41,7 +41,7 @@ namespace AppFlickDesktop.Vistas.Forms
 
         private void RellenarFunciones()
         {
-            List<FuncionesActivas> listaFuncionesActivas = funcionesDTO.ListarFuncionesActivas();
+            List<FuncionesActivas> listaFuncionesActivas = funcionesController.ListarFuncionesActivas();
             listaControles = new List<Control>();
             for (int i = 0; i < listaFuncionesActivas.Count; i++)
             {

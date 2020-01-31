@@ -2,7 +2,7 @@
 
 namespace Entity.Entidades
 {
-    public class Tarjetas
+    public class Tarjetas : Entidad
     {
 
         public Tarjetas(IDataReader data)

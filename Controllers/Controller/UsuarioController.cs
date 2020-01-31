@@ -1,30 +1,16 @@
 ﻿using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
 using Controllers.DAO;
-using Controllers.Utilidades;
 using Entity.Entidades;
 
 namespace Controllers.Controller
 {
-    public class UsuarioController : IController
+    public class UsuarioController : UsuarioDAO
     {
-        public UsuarioDAO UsuarioDAO { get; set; }
-        public ClienteDAO ClienteDAO { get; set; }
-
-        public UsuarioController()
-        {
-            UsuarioDAO = new UsuarioDAO();
-            ClienteDAO = new ClienteDAO();
-        }
-
         public Cliente IniciarSesion(Usuario usuario)
         {
-            using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
+            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_IniciarSesion"))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "SP_IniciarSesion";
-
                 Procedimientos.agregarParametros(cmd,
                     new List<object>() {
                         "@usuario_username",
@@ -35,17 +21,7 @@ namespace Controllers.Controller
                         usuario.usuario_password,
                     }
                     );
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        return new Cliente(reader);
-                    }
-                    else
-                    {
-                        return null;
-                    }
-                }
+                return Procedimientos.DevolverEntidad<Cliente>(cmd) as Cliente;
             }
         }
 
@@ -56,6 +32,8 @@ namespace Controllers.Controller
 
         public bool RegistrarNuevoCliente(Usuario usuario, Cliente cliente)
         {
+            UsuarioDAO UsuarioDAO = new UsuarioDAO();
+            ClienteDAO ClienteDAO = new ClienteDAO();
             usuario.usuario_perfil = 0; // Perfil nulo para clientes
             int idInsertada = UsuarioDAO.Create(usuario); // Crea el usuario y devuelve la id generada.
 
@@ -74,12 +52,11 @@ namespace Controllers.Controller
 
         private int ContarRepetidos(string usuario_username)
         {
-            using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
-            {
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT COUNT(*) AS 'count' FROM [Usuario] usuario " +
+            string consulta = "SELECT COUNT(*) AS 'count' FROM [Usuario] usuario " +
                     "WHERE usuario.usuario_username = '" + usuario_username + "'";
-                return Procedimientos.contar(cmd);
+            using (SqlCommand cmd = Procedimientos.CrearComandoQ(consulta))
+            {
+                return Procedimientos.retornarConteo(cmd);
             }
         }
     }

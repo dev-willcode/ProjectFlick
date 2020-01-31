@@ -1,6 +1,6 @@
 ﻿namespace Entity.Entidades
 {
-    public class Categoria
+    public class Categoria : Entidad
     {
         public Categoria()
         {

@@ -3,7 +3,7 @@ using System.Data;
 
 namespace Entity.Entidades.Vistas
 {
-    public class FuncionesActivas
+    public class FuncionesActivas : Entidad
     {
         public FuncionesActivas()
         {
