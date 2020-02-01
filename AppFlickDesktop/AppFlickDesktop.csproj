@@ -68,6 +68,24 @@
     <Compile Include="Vistas\Forms\Elementos\Elem_boleto.Designer.cs">
       <DependentUpon>Elem_boleto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_CompraDos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_CompraDos.Designer.cs">
+      <DependentUpon>Elem_CompraDos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_CompraTres.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_CompraTres.Designer.cs">
+      <DependentUpon>Elem_CompraTres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_CompraUno.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_CompraUno.Designer.cs">
+      <DependentUpon>Elem_CompraUno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_Factura_Cliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +103,12 @@
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_tarjeta.Designer.cs">
       <DependentUpon>Elem_tarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Form_Comprar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Form_Comprar.Designer.cs">
+      <DependentUpon>Form_Comprar.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Form_Detalle.cs">
       <SubType>Form</SubType>
@@ -152,6 +176,15 @@
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_boleto.resx">
       <DependentUpon>Elem_boleto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_CompraDos.resx">
+      <DependentUpon>Elem_CompraDos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_CompraTres.resx">
+      <DependentUpon>Elem_CompraTres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_CompraUno.resx">
+      <DependentUpon>Elem_CompraUno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Factura_Cliente.resx">
       <DependentUpon>Elem_Factura_Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_tarjeta.resx">
       <DependentUpon>Elem_tarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Comprar.resx">
+      <DependentUpon>Form_Comprar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Detalle.resx">
       <DependentUpon>Form_Detalle.cs</DependentUpon>

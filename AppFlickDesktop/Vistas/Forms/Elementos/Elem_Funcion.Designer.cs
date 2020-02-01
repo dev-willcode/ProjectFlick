@@ -101,6 +101,7 @@
             this.btnComprar.Text = "Comprar!";
             this.btnComprar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnComprar.UseTransfarantBackground = true;
+            this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
             // 
             // btnMas
             // 

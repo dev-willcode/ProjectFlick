@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Forms;
+using AppFlickDesktop.Vistas.Forms.Elementos;
 using Entity.Entidades.Vistas;
 
 namespace AppFlickDesktop.Vistas.Init
@@ -62,6 +63,13 @@ namespace AppFlickDesktop.Vistas.Init
         {
             Form_Detalle form_detalle = new Form_Detalle(this);
             form_detalle.ShowDialog();
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            Form_Comprar form = new Form_Comprar();
+            form.ShowDialog();
+
         }
     }
 }
