@@ -27,7 +27,6 @@ namespace AppFlickDesktop.Vistas.Forms
             var_tarjeta_numero.Text = "XXX XXXX XXXX " + tarjetas.tarjeta_numero
                 .Substring(tarjetas.tarjeta_numero.Length - 4);
             var_mes_dia.Text = tarjetas.tarjeta_mes + "/" + tarjetas.tarjeta_dia;
-
         }
     }
 }

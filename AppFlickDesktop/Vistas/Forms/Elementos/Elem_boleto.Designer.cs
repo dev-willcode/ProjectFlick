@@ -30,11 +30,11 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnFactura = new Guna.UI.WinForms.GunaButton();
-            this.var_titulo = new Guna.UI.WinForms.GunaLabel();
+            this.var_funcion = new Guna.UI.WinForms.GunaLabel();
             this.gunaElipsePanel5 = new Guna.UI.WinForms.GunaElipsePanel();
             this.var_funcion_sala_dob3d1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaCirclePictureBox4 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.var_asientos = new Guna.UI.WinForms.GunaLabel();
+            this.var_boleto_asiento = new Guna.UI.WinForms.GunaLabel();
             this.var_fecha_actual = new Guna.UI.WinForms.GunaLabel();
             this.label_asientos = new Guna.UI.WinForms.GunaLabel();
             this.var_hora_actual = new Guna.UI.WinForms.GunaLabel();
@@ -50,9 +50,9 @@
             this.panel1.BackgroundImage = global::AppFlickDesktop.Properties.Resources.boleto_imagen;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Controls.Add(this.btnFactura);
-            this.panel1.Controls.Add(this.var_titulo);
+            this.panel1.Controls.Add(this.var_funcion);
             this.panel1.Controls.Add(this.gunaElipsePanel5);
-            this.panel1.Controls.Add(this.var_asientos);
+            this.panel1.Controls.Add(this.var_boleto_asiento);
             this.panel1.Controls.Add(this.var_fecha_actual);
             this.panel1.Controls.Add(this.label_asientos);
             this.panel1.Controls.Add(this.var_hora_actual);
@@ -60,7 +60,7 @@
             this.panel1.Controls.Add(this.label_valor);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(595, 244);
             this.panel1.TabIndex = 62;
@@ -82,7 +82,7 @@
             this.btnFactura.Image = null;
             this.btnFactura.ImageSize = new System.Drawing.Size(20, 20);
             this.btnFactura.Location = new System.Drawing.Point(356, 181);
-            this.btnFactura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFactura.Margin = new System.Windows.Forms.Padding(4);
             this.btnFactura.Name = "btnFactura";
             this.btnFactura.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnFactura.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -95,20 +95,20 @@
             this.btnFactura.Text = "Factura";
             this.btnFactura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // var_titulo
+            // var_funcion
             // 
-            this.var_titulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.var_titulo.BackColor = System.Drawing.Color.Transparent;
-            this.var_titulo.CausesValidation = false;
-            this.var_titulo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.var_titulo.ForeColor = System.Drawing.Color.White;
-            this.var_titulo.Location = new System.Drawing.Point(93, 15);
-            this.var_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.var_titulo.Name = "var_titulo";
-            this.var_titulo.Size = new System.Drawing.Size(407, 59);
-            this.var_titulo.TabIndex = 23;
-            this.var_titulo.Text = "AVENGERS: ENDGAME ";
-            this.var_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.var_funcion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.var_funcion.BackColor = System.Drawing.Color.Transparent;
+            this.var_funcion.CausesValidation = false;
+            this.var_funcion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.var_funcion.ForeColor = System.Drawing.Color.White;
+            this.var_funcion.Location = new System.Drawing.Point(93, 15);
+            this.var_funcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.var_funcion.Name = "var_funcion";
+            this.var_funcion.Size = new System.Drawing.Size(407, 59);
+            this.var_funcion.TabIndex = 23;
+            this.var_funcion.Text = "AVENGERS: ENDGAME ";
+            this.var_funcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gunaElipsePanel5
             // 
@@ -118,9 +118,9 @@
             this.gunaElipsePanel5.Controls.Add(this.var_funcion_sala_dob3d1);
             this.gunaElipsePanel5.Controls.Add(this.gunaCirclePictureBox4);
             this.gunaElipsePanel5.Location = new System.Drawing.Point(356, 143);
-            this.gunaElipsePanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaElipsePanel5.Margin = new System.Windows.Forms.Padding(4);
             this.gunaElipsePanel5.Name = "gunaElipsePanel5";
-            this.gunaElipsePanel5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaElipsePanel5.Padding = new System.Windows.Forms.Padding(4);
             this.gunaElipsePanel5.Radius = 8;
             this.gunaElipsePanel5.Size = new System.Drawing.Size(144, 34);
             this.gunaElipsePanel5.TabIndex = 29;
@@ -145,7 +145,7 @@
             this.gunaCirclePictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
             this.gunaCirclePictureBox4.Image = global::AppFlickDesktop.Properties.Resources.icon_boletos;
             this.gunaCirclePictureBox4.Location = new System.Drawing.Point(4, 4);
-            this.gunaCirclePictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaCirclePictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.gunaCirclePictureBox4.Name = "gunaCirclePictureBox4";
             this.gunaCirclePictureBox4.Size = new System.Drawing.Size(51, 26);
             this.gunaCirclePictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,19 +153,19 @@
             this.gunaCirclePictureBox4.TabStop = false;
             this.gunaCirclePictureBox4.UseTransfarantBackground = false;
             // 
-            // var_asientos
+            // var_boleto_asiento
             // 
-            this.var_asientos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.var_asientos.BackColor = System.Drawing.Color.Transparent;
-            this.var_asientos.CausesValidation = false;
-            this.var_asientos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.var_asientos.ForeColor = System.Drawing.Color.White;
-            this.var_asientos.Location = new System.Drawing.Point(95, 178);
-            this.var_asientos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.var_asientos.Name = "var_asientos";
-            this.var_asientos.Size = new System.Drawing.Size(225, 38);
-            this.var_asientos.TabIndex = 61;
-            this.var_asientos.Text = "A12,A13,A14,A12,A13,A14,A12,A13,A14,A12,A13,A14";
+            this.var_boleto_asiento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.var_boleto_asiento.BackColor = System.Drawing.Color.Transparent;
+            this.var_boleto_asiento.CausesValidation = false;
+            this.var_boleto_asiento.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.var_boleto_asiento.ForeColor = System.Drawing.Color.White;
+            this.var_boleto_asiento.Location = new System.Drawing.Point(95, 178);
+            this.var_boleto_asiento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.var_boleto_asiento.Name = "var_boleto_asiento";
+            this.var_boleto_asiento.Size = new System.Drawing.Size(225, 38);
+            this.var_boleto_asiento.TabIndex = 61;
+            this.var_boleto_asiento.Text = "A12,A13,A14,A12,A13,A14,A12,A13,A14,A12,A13,A14";
             // 
             // var_fecha_actual
             // 
@@ -247,7 +247,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Elem_boleto";
             this.Size = new System.Drawing.Size(595, 244);
             this.panel1.ResumeLayout(false);
@@ -265,10 +265,10 @@
         private Guna.UI.WinForms.GunaLabel var_hora_actual;
         private Guna.UI.WinForms.GunaLabel var_fecha_actual;
         private Guna.UI.WinForms.GunaLabel label_valor;
-        private Guna.UI.WinForms.GunaLabel var_titulo;
+        private Guna.UI.WinForms.GunaLabel var_funcion;
         private Guna.UI.WinForms.GunaLabel var_costo_boleto;
         private Guna.UI.WinForms.GunaLabel label_asientos;
-        private Guna.UI.WinForms.GunaLabel var_asientos;
+        private Guna.UI.WinForms.GunaLabel var_boleto_asiento;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaButton btnFactura;
     }

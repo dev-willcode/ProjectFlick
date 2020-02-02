@@ -116,6 +116,7 @@
             this.btnBuscarBoleto.OnPressedColor = System.Drawing.Color.Black;
             this.btnBuscarBoleto.Size = new System.Drawing.Size(40, 39);
             this.btnBuscarBoleto.TabIndex = 69;
+            this.btnBuscarBoleto.Click += new System.EventHandler(this.btnBuscarBoleto_Click);
             // 
             // label_boletos
             // 

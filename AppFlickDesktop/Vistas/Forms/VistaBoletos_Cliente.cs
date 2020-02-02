@@ -30,10 +30,15 @@ namespace AppFlickDesktop.Vistas.Forms
             List<Boleto> listaBoleto = boletoController.listarBoletos(cliente.id);
             for (int i = 0; i < listaBoleto.Count; i++)
             {
-                Elem_boleto elemento = new Elem_boleto();
+                Elem_boleto elemento = new Elem_boleto(listaBoleto[i]);
                 tablaBoletos.Controls.Add(elemento);
                 elemento.Dock = DockStyle.Fill;
             }
+        }
+
+        private void btnBuscarBoleto_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }
