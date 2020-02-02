@@ -44,7 +44,7 @@ namespace AppFlickDesktop.Vistas.Forms
         }
         private void rellenarTarjetas()
         {
-            List<Tarjetas> listaTarjeta = tarjetasController.ListarTarjetas(cliente.id);
+            List<Tarjetas> listaTarjeta = tarjetasController.listarTarjetas(cliente.id);
             for (int i = 0; i < listaTarjeta.Count; i++)
             {
                 Elem_tarjeta elemento = new Elem_tarjeta(listaTarjeta[i]);

@@ -51,7 +51,7 @@ namespace AppFlickDesktop.Vistas.Init
         private void btnBoletos_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelBoletos);
-            pintarPantalla(new VistaBoletos_Cliente());
+            pintarPantalla(new VistaBoletos_Cliente(cliente));
         }
 
         private void btnFacturas_Click(object sender, EventArgs e)

@@ -8,7 +8,7 @@ namespace Controllers.Controller
 
     public class TarjetasController : TarjetasDAO
     {
-        public List<Tarjetas> ListarTarjetas(int idCliente)
+        public List<Tarjetas> listarTarjetas(int idCliente)
         {
             using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BuscarTarjetas"))
             {
