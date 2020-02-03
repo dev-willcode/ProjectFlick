@@ -1,18 +1,14 @@
 ﻿using System.Windows.Forms;
+using Entity.Entidades;
 
 namespace AppFlickDesktop.Vistas.Forms
 {
     public partial class Elem_idioma_funcion : UserControl
     {
-        public Elem_idioma_funcion()
+        public Elem_idioma_funcion(Idioma idioma)
         {
             InitializeComponent();
-        }
-
-        public Elem_idioma_funcion(string idioma)
-        {
-            InitializeComponent();
-            var_idioma.Text = idioma;
+            var_idioma.Text = idioma.idioma_abreviatura;
         }
     }
 }

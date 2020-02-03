@@ -33,16 +33,16 @@
             this.btnCompraTres = new Guna.UI.WinForms.GunaCircleButton();
             this.btnCompraDos = new Guna.UI.WinForms.GunaCircleButton();
             this.btnCompraUno = new Guna.UI.WinForms.GunaCircleButton();
-            this.gunaLinePanel2 = new Guna.UI.WinForms.GunaLinePanel();
-            this.gunaLinePanel1 = new Guna.UI.WinForms.GunaLinePanel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.Principal = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.LineaSuperior = new System.Windows.Forms.Panel();
-            this.btnCerrar = new Guna.UI.WinForms.GunaImageButton();
             this.contenedor = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new Guna.UI.WinForms.GunaImageButton();
+            this.LineaSuperior = new System.Windows.Forms.Panel();
+            this.slide1 = new AppFlickDesktop.Vistas.Forms.Elementos.Control_slidebar();
+            this.slide2 = new AppFlickDesktop.Vistas.Forms.Elementos.Control_slidebar();
             this.Footer.SuspendLayout();
             this.Principal.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -67,11 +67,11 @@
             this.Footer.Controls.Add(this.btnCompraTres);
             this.Footer.Controls.Add(this.btnCompraDos);
             this.Footer.Controls.Add(this.btnCompraUno);
-            this.Footer.Controls.Add(this.gunaLinePanel2);
-            this.Footer.Controls.Add(this.gunaLinePanel1);
             this.Footer.Controls.Add(this.gunaLabel3);
             this.Footer.Controls.Add(this.gunaLabel2);
             this.Footer.Controls.Add(this.gunaLabel1);
+            this.Footer.Controls.Add(this.slide1);
+            this.Footer.Controls.Add(this.slide2);
             this.Footer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Footer.Location = new System.Drawing.Point(0, 437);
             this.Footer.Name = "Footer";
@@ -84,26 +84,26 @@
             this.btnCompraTres.AnimationHoverSpeed = 0.07F;
             this.btnCompraTres.AnimationSpeed = 0.03F;
             this.btnCompraTres.BackColor = System.Drawing.Color.Transparent;
-            this.btnCompraTres.BaseColor = System.Drawing.Color.White;
+            this.btnCompraTres.BaseColor = System.Drawing.Color.Silver;
             this.btnCompraTres.BorderColor = System.Drawing.Color.Black;
             this.btnCompraTres.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCompraTres.Enabled = false;
             this.btnCompraTres.FocusedColor = System.Drawing.Color.Empty;
             this.btnCompraTres.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCompraTres.ForeColor = System.Drawing.Color.Black;
+            this.btnCompraTres.ForeColor = System.Drawing.Color.White;
             this.btnCompraTres.Image = null;
             this.btnCompraTres.ImageSize = new System.Drawing.Size(52, 52);
             this.btnCompraTres.Location = new System.Drawing.Point(685, 21);
             this.btnCompraTres.Name = "btnCompraTres";
-            this.btnCompraTres.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnCompraTres.OnHoverBaseColor = System.Drawing.Color.White;
             this.btnCompraTres.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnCompraTres.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCompraTres.OnHoverForeColor = System.Drawing.Color.Black;
             this.btnCompraTres.OnHoverImage = null;
             this.btnCompraTres.OnPressedColor = System.Drawing.Color.Black;
             this.btnCompraTres.Size = new System.Drawing.Size(42, 42);
             this.btnCompraTres.TabIndex = 88;
             this.btnCompraTres.Text = "3";
             this.btnCompraTres.UseTransfarantBackground = true;
-            this.btnCompraTres.Click += new System.EventHandler(this.btnCompraTres_Click);
             // 
             // btnCompraDos
             // 
@@ -111,26 +111,26 @@
             this.btnCompraDos.AnimationHoverSpeed = 0.07F;
             this.btnCompraDos.AnimationSpeed = 0.03F;
             this.btnCompraDos.BackColor = System.Drawing.Color.Transparent;
-            this.btnCompraDos.BaseColor = System.Drawing.Color.White;
+            this.btnCompraDos.BaseColor = System.Drawing.Color.Silver;
             this.btnCompraDos.BorderColor = System.Drawing.Color.Black;
             this.btnCompraDos.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCompraDos.Enabled = false;
             this.btnCompraDos.FocusedColor = System.Drawing.Color.Empty;
             this.btnCompraDos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCompraDos.ForeColor = System.Drawing.Color.Black;
+            this.btnCompraDos.ForeColor = System.Drawing.Color.White;
             this.btnCompraDos.Image = null;
             this.btnCompraDos.ImageSize = new System.Drawing.Size(52, 52);
             this.btnCompraDos.Location = new System.Drawing.Point(466, 21);
             this.btnCompraDos.Name = "btnCompraDos";
-            this.btnCompraDos.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnCompraDos.OnHoverBaseColor = System.Drawing.Color.White;
             this.btnCompraDos.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnCompraDos.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCompraDos.OnHoverForeColor = System.Drawing.Color.Black;
             this.btnCompraDos.OnHoverImage = null;
             this.btnCompraDos.OnPressedColor = System.Drawing.Color.Black;
             this.btnCompraDos.Size = new System.Drawing.Size(42, 42);
             this.btnCompraDos.TabIndex = 86;
             this.btnCompraDos.Text = "2";
             this.btnCompraDos.UseTransfarantBackground = true;
-            this.btnCompraDos.Click += new System.EventHandler(this.btnCompraDos_Click);
             // 
             // btnCompraUno
             // 
@@ -141,6 +141,7 @@
             this.btnCompraUno.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnCompraUno.BorderColor = System.Drawing.Color.Black;
             this.btnCompraUno.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCompraUno.Enabled = false;
             this.btnCompraUno.FocusedColor = System.Drawing.Color.Empty;
             this.btnCompraUno.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCompraUno.ForeColor = System.Drawing.Color.White;
@@ -157,29 +158,6 @@
             this.btnCompraUno.TabIndex = 0;
             this.btnCompraUno.Text = "1";
             this.btnCompraUno.UseTransfarantBackground = true;
-            this.btnCompraUno.Click += new System.EventHandler(this.btnCompraUno_Click);
-            // 
-            // gunaLinePanel2
-            // 
-            this.gunaLinePanel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaLinePanel2.BackColor = System.Drawing.Color.White;
-            this.gunaLinePanel2.LineColor = System.Drawing.Color.Black;
-            this.gunaLinePanel2.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel2.Location = new System.Drawing.Point(492, 38);
-            this.gunaLinePanel2.Name = "gunaLinePanel2";
-            this.gunaLinePanel2.Size = new System.Drawing.Size(213, 10);
-            this.gunaLinePanel2.TabIndex = 87;
-            // 
-            // gunaLinePanel1
-            // 
-            this.gunaLinePanel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaLinePanel1.BackColor = System.Drawing.Color.White;
-            this.gunaLinePanel1.LineColor = System.Drawing.Color.Black;
-            this.gunaLinePanel1.LineStyle = System.Windows.Forms.BorderStyle.None;
-            this.gunaLinePanel1.Location = new System.Drawing.Point(273, 38);
-            this.gunaLinePanel1.Name = "gunaLinePanel1";
-            this.gunaLinePanel1.Size = new System.Drawing.Size(213, 10);
-            this.gunaLinePanel1.TabIndex = 85;
             // 
             // gunaLabel3
             // 
@@ -234,6 +212,14 @@
             this.Principal.Size = new System.Drawing.Size(958, 422);
             this.Principal.TabIndex = 107;
             // 
+            // contenedor
+            // 
+            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.Location = new System.Drawing.Point(40, 64);
+            this.contenedor.Name = "contenedor";
+            this.contenedor.Size = new System.Drawing.Size(878, 348);
+            this.contenedor.TabIndex = 108;
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.label1);
@@ -243,15 +229,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(878, 54);
             this.panel7.TabIndex = 107;
-            // 
-            // LineaSuperior
-            // 
-            this.LineaSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.LineaSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LineaSuperior.Location = new System.Drawing.Point(0, 0);
-            this.LineaSuperior.Name = "LineaSuperior";
-            this.LineaSuperior.Size = new System.Drawing.Size(958, 15);
-            this.LineaSuperior.TabIndex = 82;
             // 
             // btnCerrar
             // 
@@ -266,13 +243,30 @@
             this.btnCerrar.Size = new System.Drawing.Size(32, 54);
             this.btnCerrar.TabIndex = 76;
             // 
-            // contenedor
+            // LineaSuperior
             // 
-            this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedor.Location = new System.Drawing.Point(40, 64);
-            this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(878, 348);
-            this.contenedor.TabIndex = 108;
+            this.LineaSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.LineaSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LineaSuperior.Location = new System.Drawing.Point(0, 0);
+            this.LineaSuperior.Name = "LineaSuperior";
+            this.LineaSuperior.Size = new System.Drawing.Size(958, 15);
+            this.LineaSuperior.TabIndex = 82;
+            // 
+            // slide1
+            // 
+            this.slide1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.slide1.Location = new System.Drawing.Point(275, 38);
+            this.slide1.Name = "slide1";
+            this.slide1.Size = new System.Drawing.Size(213, 10);
+            this.slide1.TabIndex = 89;
+            // 
+            // slide2
+            // 
+            this.slide2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.slide2.Location = new System.Drawing.Point(494, 38);
+            this.slide2.Name = "slide2";
+            this.slide2.Size = new System.Drawing.Size(213, 10);
+            this.slide2.TabIndex = 90;
             // 
             // Form_Comprar
             // 
@@ -301,8 +295,6 @@
         private Guna.UI.WinForms.GunaCircleButton btnCompraTres;
         private Guna.UI.WinForms.GunaCircleButton btnCompraDos;
         private Guna.UI.WinForms.GunaCircleButton btnCompraUno;
-        private Guna.UI.WinForms.GunaLinePanel gunaLinePanel2;
-        private Guna.UI.WinForms.GunaLinePanel gunaLinePanel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
@@ -310,5 +302,7 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel LineaSuperior;
         private System.Windows.Forms.Panel contenedor;
+        private Control_slidebar slide1;
+        private Control_slidebar slide2;
     }
 }

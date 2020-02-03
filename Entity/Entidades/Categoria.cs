@@ -1,4 +1,6 @@
-﻿namespace Entity.Entidades
+﻿using System.Data;
+
+namespace Entity.Entidades
 {
     public class Categoria : Entidad
     {
@@ -6,8 +8,14 @@
         {
         }
 
+        public Categoria(IDataReader data)
+        {
+            id = (int)data["id"];
+            categoria_nombre = data["categoria_nombre"].ToString();
+        }
+
         public int id { get; private set; }
 
-        public int categoria_nombre { get; private set; }
+        public string categoria_nombre { get; private set; }
     }
 }

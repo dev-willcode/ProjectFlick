@@ -62,11 +62,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Utils\PropiedadesGenerales.cs" />
+    <Compile Include="Vistas\Forms\Elementos\Control_slidebar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Control_slidebar.Designer.cs">
+      <DependentUpon>Control_slidebar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_boleto.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_boleto.Designer.cs">
       <DependentUpon>Elem_boleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_Compra.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_CompraDos.cs">
       <SubType>UserControl</SubType>
@@ -173,6 +182,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\Notificaciones\Notificar.cs" />
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Control_slidebar.resx">
+      <DependentUpon>Control_slidebar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_boleto.resx">
       <DependentUpon>Elem_boleto.cs</DependentUpon>
     </EmbeddedResource>

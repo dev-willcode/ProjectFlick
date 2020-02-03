@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Init;
 using Controllers.Controller;
-using Entity.Entidades.Vistas;
+using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
 
 namespace AppFlickDesktop.Vistas.Forms
@@ -12,6 +12,7 @@ namespace AppFlickDesktop.Vistas.Forms
     public partial class VistaFunciones_Cliente : UserControl
     {
         private FuncionesController funcionesController = Utils.PropiedadesGenerales.FuncionesController;
+
         private PanelScrollHelper scroll;
         private List<Control> listaControles;
         private Label labelSinFunciones;
@@ -41,7 +42,7 @@ namespace AppFlickDesktop.Vistas.Forms
 
         private void RellenarFunciones()
         {
-            List<FuncionesActivas> listaFuncionesActivas = funcionesController.ListarFuncionesActivas();
+            List<Funcion> listaFuncionesActivas = funcionesController.ListarFuncionesActivas();
             listaControles = new List<Control>();
             for (int i = 0; i < listaFuncionesActivas.Count; i++)
             {
@@ -79,8 +80,8 @@ namespace AppFlickDesktop.Vistas.Forms
             {
                 foreach (Control item in listaControles)
                 {
-                    if (((Elem_funcion)item).Funcion.pelicula_titulo.Contains(txtBuscarFuncion.Text.ToUpper()) ||
-                        ((Elem_funcion)item).Funcion.pelicula_titulo_original.Contains(txtBuscarFuncion.Text.ToUpper()))
+                    if (((Elem_funcion)item).Pelicula.pelicula_titulo.Contains(txtBuscarFuncion.Text.ToUpper()) ||
+                        ((Elem_funcion)item).Pelicula.pelicula_titulo_original.Contains(txtBuscarFuncion.Text.ToUpper()))
                     {
                         panelFunciones.Controls.Add(item);
                     }

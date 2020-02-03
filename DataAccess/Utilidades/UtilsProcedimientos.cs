@@ -82,6 +82,19 @@ namespace Controllers.Utilidades
             }
         }
 
+        public T evaluarObtención<T>(SqlCommand cmd)
+        {
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                Entidad entidad = null;
+                if (reader.Read())
+                {
+                    entidad = Activator.CreateInstance(typeof(T), reader) as Entidad;
+                }
+                return (T)entidad;
+            }
+        }
+
         public bool evaluarActualizacion(SqlCommand cmd)
         {
             // Cuando se actualiza un registro, se habrá actualizaod ocn éxito.

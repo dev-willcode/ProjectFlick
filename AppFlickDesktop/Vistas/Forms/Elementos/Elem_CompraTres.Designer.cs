@@ -38,19 +38,18 @@
             this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
             this.btnConfirmar = new Guna.UI.WinForms.GunaButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel16 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.gunaLabel18 = new Guna.UI.WinForms.GunaLabel();
-            this.var_imagen_pelicula = new Guna.UI.WinForms.GunaPictureBox();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
-            this.elem_idioma_funcion1 = new AppFlickDesktop.Vistas.Forms.Elem_idioma_funcion();
+            this.var_imagen_pelicula = new Guna.UI.WinForms.GunaPictureBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -138,6 +137,7 @@
             this.txtCCV.Name = "txtCCV";
             this.txtCCV.PasswordChar = '\0';
             this.txtCCV.Radius = 10;
+            this.txtCCV.ReadOnly = true;
             this.txtCCV.Size = new System.Drawing.Size(229, 28);
             this.txtCCV.TabIndex = 114;
             this.txtCCV.TextOffsetX = 2;
@@ -252,6 +252,35 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(407, 279);
             this.tableLayoutPanel2.TabIndex = 106;
             // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.gunaLabel5.CausesValidation = false;
+            this.gunaLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel5.Location = new System.Drawing.Point(206, 163);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.tableLayoutPanel2.SetRowSpan(this.gunaLabel5, 2);
+            this.gunaLabel5.Size = new System.Drawing.Size(198, 74);
+            this.gunaLabel5.TabIndex = 114;
+            this.gunaLabel5.Text = "H12,H13";
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.gunaLabel1.CausesValidation = false;
+            this.tableLayoutPanel2.SetColumnSpan(this.gunaLabel1, 2);
+            this.gunaLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.Location = new System.Drawing.Point(3, 37);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(401, 52);
+            this.gunaLabel1.TabIndex = 112;
+            this.gunaLabel1.Text = "Titulo";
+            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // gunaLabel2
             // 
             this.gunaLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -321,22 +350,8 @@
             this.gunaLabel7.TabIndex = 89;
             this.gunaLabel7.Text = "Hora: 13:00 PM";
             // 
-            // gunaLabel10
-            // 
-            this.gunaLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.gunaLabel10.CausesValidation = false;
-            this.gunaLabel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel10.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel10.Location = new System.Drawing.Point(206, 89);
-            this.gunaLabel10.Name = "gunaLabel10";
-            this.gunaLabel10.Size = new System.Drawing.Size(198, 37);
-            this.gunaLabel10.TabIndex = 93;
-            this.gunaLabel10.Text = "Cant. boletos: 2";
-            // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.elem_idioma_funcion1);
             this.panel5.Controls.Add(this.gunaLabel18);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 200);
@@ -359,48 +374,18 @@
             this.gunaLabel18.TabIndex = 105;
             this.gunaLabel18.Text = "Idioma:";
             // 
-            // var_imagen_pelicula
+            // gunaLabel10
             // 
-            this.var_imagen_pelicula.BackColor = System.Drawing.Color.Transparent;
-            this.var_imagen_pelicula.BaseColor = System.Drawing.Color.White;
-            this.var_imagen_pelicula.Dock = System.Windows.Forms.DockStyle.Left;
-            this.var_imagen_pelicula.Image = global::AppFlickDesktop.Properties.Resources.pelicula_muestra;
-            this.var_imagen_pelicula.Location = new System.Drawing.Point(0, 0);
-            this.var_imagen_pelicula.Name = "var_imagen_pelicula";
-            this.var_imagen_pelicula.Size = new System.Drawing.Size(189, 348);
-            this.var_imagen_pelicula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.var_imagen_pelicula.TabIndex = 81;
-            this.var_imagen_pelicula.TabStop = false;
-            this.var_imagen_pelicula.UseTransfarantBackground = true;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.gunaLabel1.CausesValidation = false;
-            this.tableLayoutPanel2.SetColumnSpan(this.gunaLabel1, 2);
-            this.gunaLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(3, 37);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(401, 52);
-            this.gunaLabel1.TabIndex = 112;
-            this.gunaLabel1.Text = "Titulo";
-            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.gunaLabel5.CausesValidation = false;
-            this.gunaLabel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel5.Location = new System.Drawing.Point(206, 163);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.tableLayoutPanel2.SetRowSpan(this.gunaLabel5, 2);
-            this.gunaLabel5.Size = new System.Drawing.Size(198, 74);
-            this.gunaLabel5.TabIndex = 114;
-            this.gunaLabel5.Text = "H12,H13";
+            this.gunaLabel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.gunaLabel10.CausesValidation = false;
+            this.gunaLabel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel10.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel10.Location = new System.Drawing.Point(206, 89);
+            this.gunaLabel10.Name = "gunaLabel10";
+            this.gunaLabel10.Size = new System.Drawing.Size(198, 37);
+            this.gunaLabel10.TabIndex = 93;
+            this.gunaLabel10.Text = "Cant. boletos: 2";
             // 
             // gunaLabel8
             // 
@@ -417,12 +402,19 @@
             this.gunaLabel8.Text = "Asientos";
             this.gunaLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // elem_idioma_funcion1
+            // var_imagen_pelicula
             // 
-            this.elem_idioma_funcion1.Location = new System.Drawing.Point(68, 0);
-            this.elem_idioma_funcion1.Name = "elem_idioma_funcion1";
-            this.elem_idioma_funcion1.Size = new System.Drawing.Size(112, 28);
-            this.elem_idioma_funcion1.TabIndex = 106;
+            this.var_imagen_pelicula.BackColor = System.Drawing.Color.Transparent;
+            this.var_imagen_pelicula.BaseColor = System.Drawing.Color.White;
+            this.var_imagen_pelicula.Dock = System.Windows.Forms.DockStyle.Left;
+            this.var_imagen_pelicula.Image = global::AppFlickDesktop.Properties.Resources.pelicula_muestra;
+            this.var_imagen_pelicula.Location = new System.Drawing.Point(0, 0);
+            this.var_imagen_pelicula.Name = "var_imagen_pelicula";
+            this.var_imagen_pelicula.Size = new System.Drawing.Size(189, 348);
+            this.var_imagen_pelicula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.var_imagen_pelicula.TabIndex = 81;
+            this.var_imagen_pelicula.TabStop = false;
+            this.var_imagen_pelicula.UseTransfarantBackground = true;
             // 
             // Elem_CompraTres
             // 
@@ -456,7 +448,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
         private System.Windows.Forms.Panel panel5;
-        private Elem_idioma_funcion elem_idioma_funcion1;
         private Guna.UI.WinForms.GunaLabel gunaLabel18;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox1;

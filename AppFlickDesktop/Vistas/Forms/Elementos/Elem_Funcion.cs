@@ -1,56 +1,63 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Forms;
 using AppFlickDesktop.Vistas.Forms.Elementos;
-using Entity.Entidades.Vistas;
+using Controllers.Controller;
+using Entity.Entidades;
 
 namespace AppFlickDesktop.Vistas.Init
 {
     public partial class Elem_funcion : UserControl
     {
-        internal FuncionesActivas Funcion;
+        private PeliculaController peliculaController = Utils.PropiedadesGenerales.PeliculaController;
+        private CategoriaController categoriaController = Utils.PropiedadesGenerales.CategoriaController;
+        private IdiomaController idiomaController = Utils.PropiedadesGenerales.IdiomaController;
+
+        internal Funcion Funcion { get; set; }
+        internal Pelicula Pelicula { get; set; }
+        internal Idioma Idioma { get; set; }
 
         public Elem_funcion()
         {
             InitializeComponent();
         }
 
-        public Elem_funcion(FuncionesActivas funcionesActivas)
+        public Elem_funcion(Funcion funciones)
         {
             InitializeComponent();
-            Funcion = funcionesActivas;
+            Funcion = funciones;
             rellenarDatos();
         }
 
         private void rellenarDatos()
         {
-            var_titulo.Text = Funcion.pelicula_titulo;
-            var_titulo_original.Text = Funcion.pelicula_titulo_original;
-            var_censura.Text = "Censura: " + Funcion.pelicula_tipo_censura;
-            var_duracion_pelicula.Text = "Duración: " + Funcion.pelicula_duracion;
+            Pelicula = peliculaController.Get(Funcion.funcion_pelicula);
+            var_titulo.Text = Pelicula.pelicula_titulo;
+            var_titulo_original.Text = Pelicula.pelicula_titulo_original;
+            var_censura.Text = "Censura: " + Pelicula.pelicula_tipo_censura;
+            var_duracion_pelicula.Text = "Duración: " + Pelicula.pelicula_duracion;
             var_categoria.Text = "Categoria: " + obtenerCategorias();
-            rellenarIdiomas();
-            ;
+            rellenarIdioma();
         }
 
-        private void rellenarIdiomas()
+        private void rellenarIdioma()
         {
-            foreach (string idioma in Funcion.idioma_abreviatura)
-            {
-                Elem_idioma_funcion elem = new Elem_idioma_funcion(idioma);
-                container_idiomas.Controls.Add(elem);
-                elem.Dock = DockStyle.Fill;
-            }
+            Idioma = idiomaController.Get(Funcion.funcion_idioma);
+            Elem_idioma_funcion elem = new Elem_idioma_funcion(Idioma);
+            container_idiomas.Controls.Add(elem);
+            elem.Dock = DockStyle.Fill;
         }
 
         internal string obtenerCategorias()
         {
-            string resultado = "";
-            foreach (string categoria in Funcion.nombre_categoria)
+            String resul = "";
+            List<Categoria> listaCategorias = categoriaController.ListarCategorias(Pelicula.id);
+            foreach (Categoria item in listaCategorias)
             {
-                resultado += categoria + ", ";
+                resul += item.categoria_nombre + ", ";
             }
-            return resultado.Substring(0, resultado.Length - 2);
+            return resul.Substring(0, resul.Length - 2);
         }
 
         internal void btnTrailer_Click(object sender, EventArgs e)
@@ -67,9 +74,8 @@ namespace AppFlickDesktop.Vistas.Init
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
-            Form_Comprar form = new Form_Comprar();
+            Form_Comprar form = new Form_Comprar(this);
             form.ShowDialog();
-
         }
     }
 }

@@ -188,16 +188,13 @@
             // container_idiomas
             // 
             this.container_idiomas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
-            this.container_idiomas.ColumnCount = 4;
-            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.container_idiomas.ColumnCount = 1;
             this.container_idiomas.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.container_idiomas.Location = new System.Drawing.Point(180, 57);
             this.container_idiomas.Name = "container_idiomas";
             this.container_idiomas.RowCount = 1;
             this.container_idiomas.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.container_idiomas.Size = new System.Drawing.Size(475, 34);
+            this.container_idiomas.Size = new System.Drawing.Size(139, 34);
             this.container_idiomas.TabIndex = 52;
             // 
             // var_categoria

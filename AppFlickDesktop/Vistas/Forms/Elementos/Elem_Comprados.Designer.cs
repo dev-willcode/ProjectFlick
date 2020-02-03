@@ -173,6 +173,7 @@
             this.btnContinuar.TabIndex = 110;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // tableLayoutPanel1
             // 
