@@ -1,10 +1,23 @@
-﻿namespace Entity.Entidades
+﻿using System.Data;
+
+namespace Entity.Entidades
 {
     public class Empleado : Entidad
     {
 
         public Empleado()
         {
+        }
+
+        public Empleado(IDataReader data)
+        {
+            id = (int)data["id"];
+            empleado_nombres = data["empleado_nombres"].ToString();
+            empleado_apellidos = data["empleado_apellidos"].ToString();
+            empleado_telefono = data["empleado_telefono"].ToString();
+            empleado_email = data["empleado_email"].ToString();
+            empleado_direccion = data["empleado_direccion"].ToString();
+            empleado_usuario = (int)data["empleado_usuario"];
         }
 
         public int id { get; private set; }

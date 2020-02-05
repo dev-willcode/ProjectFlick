@@ -1,9 +1,25 @@
-﻿namespace Entity.Entidades
+﻿using System.Data;
+
+namespace Entity.Entidades
 {
     public class Empresa : Entidad
     {
         public Empresa()
         {
+        }
+
+        public Empresa(IDataReader data)
+        {
+            id = (int)data["id"];
+            empresa_razon_social = data["empresa_razon_social"].ToString();
+            empresa_numero_contribuyente = data["empresa_numero_contribuyente"].ToString();
+            empresa_numero_autorizacion = data["empresa_numero_autorizacion"].ToString();
+            empresa_direccion = data["empresa_direccion"].ToString();
+            empresa_telefono = data["empresa_telefono"].ToString();
+            empresa_email = data["empresa_email"].ToString();
+            empresa_website = data["empresa_website"].ToString();
+            empresa_ambiente = data["empresa_ambiente"].ToString();
+            empresa_contabilidad = (bool)data["empresa_contabilidad"];
         }
 
         public int id { get; private set; }

@@ -10,6 +10,12 @@ namespace Entity.Entidades
         }
         public Factura(IDataReader data)
         {
+            id = (int)data["id"];
+            factura_cliente = (int)data["factura_cliente"];
+            factura_funcion = (int)data["factura_funcion"];
+            factura_numero = data["factura_numero"].ToString();
+            factura_metodo_pago = data["factura_metodo_pago"].ToString();
+            factura_fecha_emision = (DateTime)data["factura_fecha_emision"];
         }
 
         public int id { get; private set; }
