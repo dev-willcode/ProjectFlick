@@ -36,7 +36,7 @@ namespace Entity.Entidades
         public decimal funcion_precio_boleto { get; private set; }
 
         public DateTime funcion_fecha_creacion { get; private set; }
-        
+
         public int funcion_idioma { get; private set; }
     }
 }

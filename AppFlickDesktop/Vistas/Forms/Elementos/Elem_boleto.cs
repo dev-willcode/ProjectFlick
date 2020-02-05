@@ -1,5 +1,5 @@
-﻿using Entity.Entidades;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using Entity.Entidades;
 
 namespace AppFlickDesktop.Vistas.Forms
 {

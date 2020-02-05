@@ -36,14 +36,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.labelCuenta = new System.Windows.Forms.Label();
             this.labelFacturas = new System.Windows.Forms.Label();
-            this.labelBoletos = new System.Windows.Forms.Label();
             this.labelFunciones = new System.Windows.Forms.Label();
             this.labelInicio = new System.Windows.Forms.Label();
             this.btnFunciones = new Guna.UI.WinForms.GunaButton();
             this.btnMiCuenta = new Guna.UI.WinForms.GunaButton();
             this.btnTarjetas = new Guna.UI.WinForms.GunaButton();
             this.btnInicio = new Guna.UI.WinForms.GunaButton();
-            this.btnBoletos = new Guna.UI.WinForms.GunaButton();
             this.panelTemporal = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton17 = new Guna.UI.WinForms.GunaButton();
@@ -110,28 +108,26 @@
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.labelCuenta, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.labelFacturas, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.labelBoletos, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelCuenta, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.labelFacturas, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelFunciones, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelInicio, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnFunciones, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnMiCuenta, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnTarjetas, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnMiCuenta, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnTarjetas, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnInicio, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnBoletos, 2, 0);
             this.animacionLogo.SetDecoration(this.tableLayoutPanel1, Guna.UI.Animation.DecorationType.None);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(195, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(599, 42);
             this.tableLayoutPanel1.TabIndex = 67;
             // 
@@ -139,40 +135,30 @@
             // 
             this.animacionLogo.SetDecoration(this.labelCuenta, Guna.UI.Animation.DecorationType.None);
             this.labelCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCuenta.Location = new System.Drawing.Point(476, 39);
+            this.labelCuenta.Location = new System.Drawing.Point(447, 39);
             this.labelCuenta.Margin = new System.Windows.Forms.Padding(0);
             this.labelCuenta.Name = "labelCuenta";
-            this.labelCuenta.Size = new System.Drawing.Size(123, 3);
-            this.labelCuenta.TabIndex = 74;
+            this.labelCuenta.Size = new System.Drawing.Size(152, 3);
+            this.labelCuenta.TabIndex = 73;
             // 
-            // labelTarjetas
+            // labelFacturas
             // 
             this.animacionLogo.SetDecoration(this.labelFacturas, Guna.UI.Animation.DecorationType.None);
             this.labelFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelFacturas.Location = new System.Drawing.Point(357, 39);
+            this.labelFacturas.Location = new System.Drawing.Point(298, 39);
             this.labelFacturas.Margin = new System.Windows.Forms.Padding(0);
-            this.labelFacturas.Name = "labelTarjetas";
-            this.labelFacturas.Size = new System.Drawing.Size(119, 3);
-            this.labelFacturas.TabIndex = 73;
-            // 
-            // labelBoletos
-            // 
-            this.animacionLogo.SetDecoration(this.labelBoletos, Guna.UI.Animation.DecorationType.None);
-            this.labelBoletos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelBoletos.Location = new System.Drawing.Point(238, 39);
-            this.labelBoletos.Margin = new System.Windows.Forms.Padding(0);
-            this.labelBoletos.Name = "labelBoletos";
-            this.labelBoletos.Size = new System.Drawing.Size(119, 3);
-            this.labelBoletos.TabIndex = 72;
+            this.labelFacturas.Name = "labelFacturas";
+            this.labelFacturas.Size = new System.Drawing.Size(149, 3);
+            this.labelFacturas.TabIndex = 72;
             // 
             // labelFunciones
             // 
             this.animacionLogo.SetDecoration(this.labelFunciones, Guna.UI.Animation.DecorationType.None);
             this.labelFunciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelFunciones.Location = new System.Drawing.Point(119, 39);
+            this.labelFunciones.Location = new System.Drawing.Point(149, 39);
             this.labelFunciones.Margin = new System.Windows.Forms.Padding(0);
             this.labelFunciones.Name = "labelFunciones";
-            this.labelFunciones.Size = new System.Drawing.Size(119, 3);
+            this.labelFunciones.Size = new System.Drawing.Size(149, 3);
             this.labelFunciones.TabIndex = 71;
             // 
             // labelInicio
@@ -182,7 +168,7 @@
             this.labelInicio.Location = new System.Drawing.Point(0, 39);
             this.labelInicio.Margin = new System.Windows.Forms.Padding(0);
             this.labelInicio.Name = "labelInicio";
-            this.labelInicio.Size = new System.Drawing.Size(119, 3);
+            this.labelInicio.Size = new System.Drawing.Size(149, 3);
             this.labelInicio.TabIndex = 70;
             // 
             // btnFunciones
@@ -199,7 +185,7 @@
             this.btnFunciones.ForeColor = System.Drawing.Color.White;
             this.btnFunciones.Image = global::AppFlickDesktop.Properties.Resources.icon_funciones;
             this.btnFunciones.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnFunciones.Location = new System.Drawing.Point(119, 0);
+            this.btnFunciones.Location = new System.Drawing.Point(149, 0);
             this.btnFunciones.Margin = new System.Windows.Forms.Padding(0);
             this.btnFunciones.Name = "btnFunciones";
             this.btnFunciones.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -207,7 +193,7 @@
             this.btnFunciones.OnHoverForeColor = System.Drawing.Color.White;
             this.btnFunciones.OnHoverImage = null;
             this.btnFunciones.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFunciones.Size = new System.Drawing.Size(119, 39);
+            this.btnFunciones.Size = new System.Drawing.Size(149, 39);
             this.btnFunciones.TabIndex = 63;
             this.btnFunciones.Text = "Funciones";
             this.btnFunciones.TextOffsetX = 4;
@@ -227,7 +213,7 @@
             this.btnMiCuenta.ForeColor = System.Drawing.Color.White;
             this.btnMiCuenta.Image = global::AppFlickDesktop.Properties.Resources.icon_usuario;
             this.btnMiCuenta.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnMiCuenta.Location = new System.Drawing.Point(476, 0);
+            this.btnMiCuenta.Location = new System.Drawing.Point(447, 0);
             this.btnMiCuenta.Margin = new System.Windows.Forms.Padding(0);
             this.btnMiCuenta.Name = "btnMiCuenta";
             this.btnMiCuenta.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -235,7 +221,7 @@
             this.btnMiCuenta.OnHoverForeColor = System.Drawing.Color.White;
             this.btnMiCuenta.OnHoverImage = null;
             this.btnMiCuenta.OnPressedColor = System.Drawing.Color.Black;
-            this.btnMiCuenta.Size = new System.Drawing.Size(123, 39);
+            this.btnMiCuenta.Size = new System.Drawing.Size(152, 39);
             this.btnMiCuenta.TabIndex = 65;
             this.btnMiCuenta.Text = "Mi cuenta";
             this.btnMiCuenta.TextOffsetX = 4;
@@ -255,7 +241,7 @@
             this.btnTarjetas.ForeColor = System.Drawing.Color.White;
             this.btnTarjetas.Image = global::AppFlickDesktop.Properties.Resources.icon_tarjetas;
             this.btnTarjetas.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTarjetas.Location = new System.Drawing.Point(357, 0);
+            this.btnTarjetas.Location = new System.Drawing.Point(298, 0);
             this.btnTarjetas.Margin = new System.Windows.Forms.Padding(0);
             this.btnTarjetas.Name = "btnTarjetas";
             this.btnTarjetas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -263,7 +249,7 @@
             this.btnTarjetas.OnHoverForeColor = System.Drawing.Color.White;
             this.btnTarjetas.OnHoverImage = null;
             this.btnTarjetas.OnPressedColor = System.Drawing.Color.Black;
-            this.btnTarjetas.Size = new System.Drawing.Size(119, 39);
+            this.btnTarjetas.Size = new System.Drawing.Size(149, 39);
             this.btnTarjetas.TabIndex = 66;
             this.btnTarjetas.Text = "Facturas";
             this.btnTarjetas.TextOffsetX = 4;
@@ -291,39 +277,11 @@
             this.btnInicio.OnHoverForeColor = System.Drawing.Color.White;
             this.btnInicio.OnHoverImage = null;
             this.btnInicio.OnPressedColor = System.Drawing.Color.Black;
-            this.btnInicio.Size = new System.Drawing.Size(119, 39);
+            this.btnInicio.Size = new System.Drawing.Size(149, 39);
             this.btnInicio.TabIndex = 45;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.TextOffsetX = 4;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // btnBoletos
-            // 
-            this.btnBoletos.AnimationHoverSpeed = 0.07F;
-            this.btnBoletos.AnimationSpeed = 0.03F;
-            this.btnBoletos.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.btnBoletos.BorderColor = System.Drawing.Color.Black;
-            this.animacionLogo.SetDecoration(this.btnBoletos, Guna.UI.Animation.DecorationType.None);
-            this.btnBoletos.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnBoletos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnBoletos.FocusedColor = System.Drawing.Color.Empty;
-            this.btnBoletos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBoletos.ForeColor = System.Drawing.Color.White;
-            this.btnBoletos.Image = global::AppFlickDesktop.Properties.Resources.icon_boletos;
-            this.btnBoletos.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBoletos.Location = new System.Drawing.Point(238, 0);
-            this.btnBoletos.Margin = new System.Windows.Forms.Padding(0);
-            this.btnBoletos.Name = "btnBoletos";
-            this.btnBoletos.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.btnBoletos.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnBoletos.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnBoletos.OnHoverImage = null;
-            this.btnBoletos.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBoletos.Size = new System.Drawing.Size(119, 39);
-            this.btnBoletos.TabIndex = 64;
-            this.btnBoletos.Text = "Boletos";
-            this.btnBoletos.TextOffsetX = 4;
-            this.btnBoletos.Click += new System.EventHandler(this.btnBoletos_Click);
             // 
             // panelTemporal
             // 
@@ -933,11 +891,9 @@
         private Guna.UI.WinForms.GunaButton btnMiCuenta;
         private Guna.UI.WinForms.GunaButton btnTarjetas;
         private Guna.UI.WinForms.GunaButton btnInicio;
-        private Guna.UI.WinForms.GunaButton btnBoletos;
         private Guna.UI.WinForms.GunaTransition animacionLogo;
         private System.Windows.Forms.Label labelCuenta;
         private System.Windows.Forms.Label labelFacturas;
-        private System.Windows.Forms.Label labelBoletos;
         private System.Windows.Forms.Label labelFunciones;
         private System.Windows.Forms.Label labelInicio;
         private System.Windows.Forms.Panel panelPrincipal;

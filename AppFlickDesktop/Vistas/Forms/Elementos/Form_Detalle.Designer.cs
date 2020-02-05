@@ -39,7 +39,6 @@
             this.var_sinopsis = new Guna.UI.WinForms.GunaLabel();
             this.var_directores = new Guna.UI.WinForms.GunaLabel();
             this.var_reparto = new Guna.UI.WinForms.GunaLabel();
-            this.btnTrailer = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,42 +175,12 @@
             this.var_reparto.Size = new System.Drawing.Size(517, 52);
             this.var_reparto.TabIndex = 73;
             // 
-            // btnTrailer
-            // 
-            this.btnTrailer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnTrailer.Animated = true;
-            this.btnTrailer.AnimationHoverSpeed = 0.07F;
-            this.btnTrailer.AnimationSpeed = 0.03F;
-            this.btnTrailer.BackColor = System.Drawing.Color.Transparent;
-            this.btnTrailer.BaseColor = System.Drawing.Color.Transparent;
-            this.btnTrailer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.btnTrailer.BorderSize = 1;
-            this.btnTrailer.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnTrailer.FocusedColor = System.Drawing.Color.Empty;
-            this.btnTrailer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrailer.ForeColor = System.Drawing.Color.White;
-            this.btnTrailer.Image = global::AppFlickDesktop.Properties.Resources.icon_trailer;
-            this.btnTrailer.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTrailer.Location = new System.Drawing.Point(411, 343);
-            this.btnTrailer.Name = "btnTrailer";
-            this.btnTrailer.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.btnTrailer.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.btnTrailer.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnTrailer.OnHoverImage = null;
-            this.btnTrailer.OnPressedColor = System.Drawing.Color.Black;
-            this.btnTrailer.Radius = 10;
-            this.btnTrailer.Size = new System.Drawing.Size(224, 40);
-            this.btnTrailer.TabIndex = 74;
-            this.btnTrailer.Text = "Ver trailer";
-            this.btnTrailer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // Form_Detalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(863, 421);
-            this.Controls.Add(this.btnTrailer);
             this.Controls.Add(this.var_reparto);
             this.Controls.Add(this.var_directores);
             this.Controls.Add(this.var_sinopsis);
@@ -247,6 +216,5 @@
         private Guna.UI.WinForms.GunaLabel var_sinopsis;
         private Guna.UI.WinForms.GunaLabel var_directores;
         private Guna.UI.WinForms.GunaLabel var_reparto;
-        private Guna.UI.WinForms.GunaButton btnTrailer;
     }
 }

@@ -105,7 +105,7 @@
             this.btnCerrar.OnHoverImageOffset = new System.Drawing.Point(0, 0);
             this.btnCerrar.Size = new System.Drawing.Size(32, 32);
             this.btnCerrar.TabIndex = 3;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
             // 
             // var_titulo
             // 

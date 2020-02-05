@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Controllers.DAO;
 using Entity.Entidades;
 
 namespace Controllers.Controller
 {
-    public class CategoriaController: CategoriaDAO
+    public class CategoriaController : CategoriaDAO
     {
         public List<Categoria> ListarCategorias(int id)
         {

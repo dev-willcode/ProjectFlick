@@ -36,13 +36,13 @@
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.slide1 = new AppFlickDesktop.Vistas.Forms.Elementos.Control_slidebar();
+            this.slide2 = new AppFlickDesktop.Vistas.Forms.Elementos.Control_slidebar();
             this.Principal = new System.Windows.Forms.Panel();
             this.contenedor = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnCerrar = new Guna.UI.WinForms.GunaImageButton();
             this.LineaSuperior = new System.Windows.Forms.Panel();
-            this.slide1 = new AppFlickDesktop.Vistas.Forms.Elementos.Control_slidebar();
-            this.slide2 = new AppFlickDesktop.Vistas.Forms.Elementos.Control_slidebar();
             this.Footer.SuspendLayout();
             this.Principal.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -201,6 +201,24 @@
             this.gunaLabel1.TabIndex = 81;
             this.gunaLabel1.Text = "Seleccionar entradas";
             // 
+            // slide1
+            // 
+            this.slide1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.slide1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.slide1.Location = new System.Drawing.Point(275, 38);
+            this.slide1.Name = "slide1";
+            this.slide1.Size = new System.Drawing.Size(213, 10);
+            this.slide1.TabIndex = 89;
+            // 
+            // slide2
+            // 
+            this.slide2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.slide2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.slide2.Location = new System.Drawing.Point(494, 38);
+            this.slide2.Name = "slide2";
+            this.slide2.Size = new System.Drawing.Size(213, 10);
+            this.slide2.TabIndex = 90;
+            // 
             // Principal
             // 
             this.Principal.Controls.Add(this.contenedor);
@@ -251,22 +269,6 @@
             this.LineaSuperior.Name = "LineaSuperior";
             this.LineaSuperior.Size = new System.Drawing.Size(958, 15);
             this.LineaSuperior.TabIndex = 82;
-            // 
-            // slide1
-            // 
-            this.slide1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.slide1.Location = new System.Drawing.Point(275, 38);
-            this.slide1.Name = "slide1";
-            this.slide1.Size = new System.Drawing.Size(213, 10);
-            this.slide1.TabIndex = 89;
-            // 
-            // slide2
-            // 
-            this.slide2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.slide2.Location = new System.Drawing.Point(494, 38);
-            this.slide2.Name = "slide2";
-            this.slide2.Size = new System.Drawing.Size(213, 10);
-            this.slide2.TabIndex = 90;
             // 
             // Form_Comprar
             // 

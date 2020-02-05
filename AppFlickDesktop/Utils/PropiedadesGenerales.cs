@@ -1,5 +1,6 @@
 ﻿using AppFlickDesktop.Vistas.Notificaciones;
 using Controllers.Controller;
+using Entity.Entidades;
 
 namespace Utils
 {
@@ -20,9 +21,10 @@ namespace Utils
         public static FuncionesController FuncionesController { get => funcionesController; set => funcionesController = value; }
         public static PeliculaController PeliculaController { get => peliculaController; set => peliculaController = value; }
         public static TarjetasController TarjetasController { get => tarjetasController; set => tarjetasController = value; }
-        public static BoletoController BoletoController { get => boletoController; set => boletoController = value; }       
+        public static BoletoController BoletoController { get => boletoController; set => boletoController = value; }
         public static Notificar Notificar { get => notificar; set => notificar = value; }
         public static CategoriaController CategoriaController { get => categoriaController; set => categoriaController = value; }
         public static IdiomaController IdiomaController { get => idiomaController; set => idiomaController = value; }
+        public static Cliente ClienteActual { get; internal set; }
     }
 }

@@ -125,7 +125,6 @@
             this.var_titulo.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
             this.var_titulo.Size = new System.Drawing.Size(642, 55);
             this.var_titulo.TabIndex = 79;
-            this.var_titulo.Text = "AVENGERS ENDGAME";
             this.var_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableLayoutPanel2
@@ -155,8 +154,8 @@
             // containerIdioma
             // 
             this.containerIdioma.ColumnCount = 2;
-            this.containerIdioma.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38F));
-            this.containerIdioma.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62F));
+            this.containerIdioma.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.21577F));
+            this.containerIdioma.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.78423F));
             this.containerIdioma.Controls.Add(this.gunaLabel18, 0, 0);
             this.containerIdioma.Dock = System.Windows.Forms.DockStyle.Fill;
             this.containerIdioma.Location = new System.Drawing.Point(3, 136);
@@ -176,7 +175,7 @@
             this.gunaLabel18.Location = new System.Drawing.Point(3, 0);
             this.gunaLabel18.Name = "gunaLabel18";
             this.gunaLabel18.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.gunaLabel18.Size = new System.Drawing.Size(85, 32);
+            this.gunaLabel18.Size = new System.Drawing.Size(62, 32);
             this.gunaLabel18.TabIndex = 106;
             this.gunaLabel18.Text = "Idioma:";
             // 
@@ -191,7 +190,6 @@
             this.var_sala.Name = "var_sala";
             this.var_sala.Size = new System.Drawing.Size(241, 38);
             this.var_sala.TabIndex = 92;
-            this.var_sala.Text = "Lugar: Sala N° 2";
             // 
             // var_fecha
             // 
@@ -204,7 +202,6 @@
             this.var_fecha.Name = "var_fecha";
             this.var_fecha.Size = new System.Drawing.Size(241, 38);
             this.var_fecha.TabIndex = 88;
-            this.var_fecha.Text = "Fecha: Miercoles 12 Dic 2019";
             // 
             // var_censura
             // 
@@ -217,7 +214,6 @@
             this.var_censura.Name = "var_censura";
             this.var_censura.Size = new System.Drawing.Size(241, 40);
             this.var_censura.TabIndex = 90;
-            this.var_censura.Text = "Censura: +18 años";
             // 
             // var_hora
             // 
@@ -230,7 +226,6 @@
             this.var_hora.Name = "var_hora";
             this.var_hora.Size = new System.Drawing.Size(241, 38);
             this.var_hora.TabIndex = 89;
-            this.var_hora.Text = "Hora: 13:00 PM";
             // 
             // var_duracion
             // 
@@ -243,7 +238,6 @@
             this.var_duracion.Name = "var_duracion";
             this.var_duracion.Size = new System.Drawing.Size(241, 38);
             this.var_duracion.TabIndex = 93;
-            this.var_duracion.Text = "Duración: 180 min.";
             // 
             // panel2
             // 
@@ -303,7 +297,6 @@
             this.var_total.Name = "var_total";
             this.var_total.Size = new System.Drawing.Size(89, 82);
             this.var_total.TabIndex = 95;
-            this.var_total.Text = " $ 5.20";
             this.var_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gunaLabel15
@@ -333,7 +326,6 @@
             this.var_precio.Name = "var_precio";
             this.var_precio.Size = new System.Drawing.Size(88, 82);
             this.var_precio.TabIndex = 94;
-            this.var_precio.Text = "x $ 5.20";
             this.var_precio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gunaLabel14

@@ -63,6 +63,36 @@ namespace AppFlickDesktop.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap asiento_cine {
+            get {
+                object obj = ResourceManager.GetObject("asiento_cine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap asiento_cine_ocupado_ {
+            get {
+                object obj = ResourceManager.GetObject("asiento_cine_ocupado_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap asiento_cine_seleccionado_ {
+            get {
+                object obj = ResourceManager.GetObject("asiento_cine_seleccionado_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap boleto_imagen {
             get {
                 object obj = ResourceManager.GetObject("boleto_imagen", resourceCulture);

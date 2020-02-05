@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace Entity.Entidades
 {
@@ -8,10 +9,17 @@ namespace Entity.Entidades
         {
         }
 
+        public Horarios(IDataReader data)
+        {
+            id = (int)data["id"];
+            horario_inicio = (TimeSpan)data["horario_inicio"];
+            horario_fin = (TimeSpan)data["horario_fin"];
+        }
+
         public int id { get; private set; }
 
-        public DateTime horario_inicio { get; private set; }
+        public TimeSpan horario_inicio { get; private set; }
 
-        public DateTime horario_fin { get; private set; }
+        public TimeSpan horario_fin { get; private set; }
     }
 }

@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Init;
-using Controllers.Controller;
 using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
+using Utils;
 
 namespace AppFlickDesktop.Vistas.Forms
 {
     public partial class VistaFunciones_Cliente : UserControl
     {
-        private FuncionesController funcionesController = Utils.PropiedadesGenerales.FuncionesController;
 
         private PanelScrollHelper scroll;
         private List<Control> listaControles;
@@ -19,7 +18,7 @@ namespace AppFlickDesktop.Vistas.Forms
         public VistaFunciones_Cliente()
         {
             InitializeComponent();
-            propiedadesScroll();
+            PropiedadesScroll();
             inicializarLabelSinFunciones();
             RellenarFunciones();
         }
@@ -34,7 +33,7 @@ namespace AppFlickDesktop.Vistas.Forms
             labelSinFunciones.TextAlign = ContentAlignment.MiddleCenter;
         }
 
-        private void propiedadesScroll()
+        private void PropiedadesScroll()
         {
             scroll = new PanelScrollHelper(panelFunciones, scrollBar, true);
             scroll.UpdateScrollBar();
@@ -42,7 +41,7 @@ namespace AppFlickDesktop.Vistas.Forms
 
         private void RellenarFunciones()
         {
-            List<Funcion> listaFuncionesActivas = funcionesController.ListarFuncionesActivas();
+            List<Funcion> listaFuncionesActivas = PropiedadesGenerales.FuncionesController.ListarFuncionesActivas();
             listaControles = new List<Control>();
             for (int i = 0; i < listaFuncionesActivas.Count; i++)
             {
@@ -80,8 +79,8 @@ namespace AppFlickDesktop.Vistas.Forms
             {
                 foreach (Control item in listaControles)
                 {
-                    if (((Elem_funcion)item).Pelicula.pelicula_titulo.Contains(txtBuscarFuncion.Text.ToUpper()) ||
-                        ((Elem_funcion)item).Pelicula.pelicula_titulo_original.Contains(txtBuscarFuncion.Text.ToUpper()))
+                    if (((Elem_funcion)item).CFuncionesController.Pelicula.pelicula_titulo.Contains(txtBuscarFuncion.Text.ToUpper()) ||
+                        ((Elem_funcion)item).CFuncionesController.Pelicula.pelicula_titulo_original.Contains(txtBuscarFuncion.Text.ToUpper()))
                     {
                         panelFunciones.Controls.Add(item);
                     }

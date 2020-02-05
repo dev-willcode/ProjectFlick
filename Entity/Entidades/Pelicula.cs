@@ -20,7 +20,7 @@ namespace Entity.Entidades
             pelicula_director = data["pelicula_director"].ToString();
             pelicula_reparto = data["pelicula_reparto"].ToString();
             pelicula_url_trailer = data["pelicula_url_trailer"].ToString();
-            pelicula_imagen = data["pelicula_imagen"].GetType().Equals(typeof(DBNull)) ? 
+            pelicula_imagen = data["pelicula_imagen"].GetType().Equals(typeof(DBNull)) ?
                 null : (byte[])data["pelicula_imagen"];
         }
 

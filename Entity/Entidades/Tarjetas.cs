@@ -4,6 +4,9 @@ namespace Entity.Entidades
 {
     public class Tarjetas : Entidad
     {
+        public Tarjetas()
+        {
+        }
 
         public Tarjetas(IDataReader data)
         {

@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using AppFlickDesktop.Vistas.Init;
 using AppFlickDesktop.Vistas.Notificaciones;
 using Controllers.Controller;
-using Entity.Entidades;
 using Guna.UI.WinForms;
 using Utils;
 
@@ -12,33 +10,28 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
 
     public partial class Form_Comprar : Form
     {
-        internal FuncionesController FuncionesController = PropiedadesGenerales.FuncionesController;
         private Notificar notificar = PropiedadesGenerales.Notificar;
 
-        internal Funcion Funcion { get; set; }
-        internal Sala_Cine Sala_Cine { get; set; }
-        internal Horarios Horarios { get; set; }
-        internal Pelicula Pelicula { get; set; }
-        internal Idioma Idioma { get; set; }
+        internal double PrecioTotal { get; set; }
+        internal int CantBoletosAComprar { get; set; }
+        internal string AsientosSeleccionados { get; set; }
         internal Elem_CompraUno elem_CompraUno { get; set; }
         internal Elem_CompraDos elem_CompraDos { get; set; }
         internal Elem_CompraTres elem_CompraTres { get; set; }
-        
+        public CustomFuncionesController CFuncionesController { get; set; }
 
-        public Form_Comprar(Elem_funcion elem_funcion)
+        public Form_Comprar(CustomFuncionesController cFuncionesController)
         {
-            Funcion = elem_funcion.Funcion;
-            Pelicula = elem_funcion.Pelicula;
-            Idioma = elem_funcion.Idioma;
+            CFuncionesController = cFuncionesController;
             InitializeComponent();
             InicializarPaneles();
         }
 
         private void InicializarPaneles()
         {
-            elem_CompraUno = new Elem_CompraUno(this);
-            elem_CompraDos = new Elem_CompraDos(this);
             elem_CompraTres = new Elem_CompraTres(this);
+            elem_CompraDos = new Elem_CompraDos(this);
+            elem_CompraUno = new Elem_CompraUno(this);
 
             contenedor.Controls.Add(elem_CompraUno);
             elem_CompraUno.Dock = DockStyle.Fill;

@@ -68,6 +68,9 @@
     <Compile Include="Vistas\Forms\Elementos\Control_slidebar.Designer.cs">
       <DependentUpon>Control_slidebar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_asiento.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_boleto.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,12 +139,6 @@
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Form_Trailer.Designer.cs">
       <DependentUpon>Form_Trailer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Forms\VistaBoletos_Cliente.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Vistas\Forms\VistaBoletos_Cliente.Designer.cs">
-      <DependentUpon>VistaBoletos_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Forms\VistaCuenta_Cliente.cs">
       <SubType>UserControl</SubType>
@@ -218,9 +215,6 @@
     <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Trailer.resx">
       <DependentUpon>Form_Trailer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\VistaBoletos_Cliente.resx">
-      <DependentUpon>VistaBoletos_Cliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\VistaCuenta_Cliente.resx">
       <DependentUpon>VistaCuenta_Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -288,6 +282,9 @@
     <Content Include="Resources\icons\icon_peliculas.png" />
     <Content Include="Resources\icons\icon_down.png" />
     <Content Include="Resources\icons\icon_cerrar.png" />
+    <Content Include="Resources\images\asiento_cine.png" />
+    <Content Include="Resources\images\asiento_cine_ocupado_.png" />
+    <Content Include="Resources\images\asiento_cine_seleccionado_.png" />
     <Content Include="Resources\images\boleto_imagen.png" />
     <Content Include="Resources\images\flick.png" />
     <Content Include="Resources\images\pelicula_muestra.jpg" />

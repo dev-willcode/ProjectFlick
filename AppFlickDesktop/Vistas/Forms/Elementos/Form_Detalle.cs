@@ -1,30 +1,29 @@
 ﻿using System;
 using System.Windows.Forms;
-using AppFlickDesktop.Vistas.Init;
+using Controllers.Controller;
 
 namespace AppFlickDesktop.Vistas.Forms
 {
     public partial class Form_Detalle : Form
     {
-        private Elem_funcion elem_funcion;
+        CustomFuncionesController CFuncionesController { get; set; }
 
-        public Form_Detalle(Elem_funcion elem_funcion)
+        public Form_Detalle(CustomFuncionesController cFuncionesController)
         {
             InitializeComponent();
-            this.elem_funcion = elem_funcion;
+            CFuncionesController = cFuncionesController;
             rellenarDatos();
         }
         private void rellenarDatos()
         {
-            var_titulo.Text = elem_funcion.Pelicula.pelicula_titulo;
-            var_titulo_original.Text = elem_funcion.Pelicula.pelicula_titulo_original;
-            var_censura.Text = "Censura: " + elem_funcion.Pelicula.pelicula_tipo_censura;
-            var_duracion_pelicula.Text = "Duración: " + elem_funcion.Pelicula.pelicula_duracion;
-            var_categoria.Text = "Categoria: " + elem_funcion.obtenerCategorias();
-            var_sinopsis.Text = "Directores: " + elem_funcion.Pelicula.pelicula_sinopsis;
-            var_directores.Text = "Directores: " + elem_funcion.Pelicula.pelicula_director;
-            var_reparto.Text = "Reparto: " + elem_funcion.Pelicula.pelicula_reparto;
-            btnTrailer.Click += new EventHandler(elem_funcion.btnTrailer_Click);
+            var_titulo.Text = CFuncionesController.Pelicula.pelicula_titulo;
+            var_titulo_original.Text = CFuncionesController.Pelicula.pelicula_titulo_original;
+            var_censura.Text = "Censura: " + CFuncionesController.Pelicula.pelicula_tipo_censura;
+            var_duracion_pelicula.Text = "Duración: " + CFuncionesController.Pelicula.pelicula_duracion;
+            var_categoria.Text = "Categoria: " + CFuncionesController.ObtenerCategorias();
+            var_sinopsis.Text = "Directores: " + CFuncionesController.Pelicula.pelicula_sinopsis;
+            var_directores.Text = "Directores: " + CFuncionesController.Pelicula.pelicula_director;
+            var_reparto.Text = "Reparto: " + CFuncionesController.Pelicula.pelicula_reparto;
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

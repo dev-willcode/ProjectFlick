@@ -4,12 +4,12 @@ using System.Drawing;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Forms;
 using Entity.Entidades;
+using Utils;
 
 namespace AppFlickDesktop.Vistas.Init
 {
     public partial class Dashboard : Form
     {
-        private Cliente cliente;
         List<Label> listaLabelsMenu;
 
         public Dashboard()
@@ -21,7 +21,7 @@ namespace AppFlickDesktop.Vistas.Init
         {
             listaLabelsMenu = new List<Label>()
             {
-                labelInicio,labelFunciones,labelBoletos,labelFacturas, labelCuenta
+                labelInicio,labelFunciones,labelFacturas, labelCuenta
             };
         }
         private void animacion_logo(object sender, EventArgs e)
@@ -48,12 +48,6 @@ namespace AppFlickDesktop.Vistas.Init
             pintarPantalla(new VistaFunciones_Cliente());
         }
 
-        private void btnBoletos_Click(object sender, EventArgs e)
-        {
-            pintarLabelMenu(labelBoletos);
-            pintarPantalla(new VistaBoletos_Cliente(cliente));
-        }
-
         private void btnFacturas_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelFacturas);
@@ -63,7 +57,7 @@ namespace AppFlickDesktop.Vistas.Init
         private void btnMiCuenta_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelCuenta);
-            pintarPantalla(new VistaCuenta_Cliente(cliente));
+            pintarPantalla(new VistaCuenta_Cliente());
         }
 
         private void pintarLabelMenu(Label seleccionado)
@@ -77,7 +71,7 @@ namespace AppFlickDesktop.Vistas.Init
 
         internal void asignarUsuario(Cliente cliente)
         {
-            this.cliente = cliente;
+            PropiedadesGenerales.ClienteActual = cliente;
         }
     }
 }
