@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BancoController.cs" />
     <Compile Include="Controller\BoletoController.cs" />
     <Compile Include="Controller\CategoriaController.cs" />
     <Compile Include="Controller\ClienteController.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Controller\Sala_CineController.cs" />
     <Compile Include="Controller\TarjetasController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
+    <Compile Include="DAO\BancoDAO.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\FacturaDAO.cs" />

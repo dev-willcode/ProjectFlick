@@ -12,7 +12,7 @@ namespace Entity.Entidades
         {
             id = (int)data["id"];
             tarjeta_cliente = (int)data["tarjeta_cliente"];
-            tarjeta_nombre_banco = data["tarjeta_nombre_banco"].ToString();
+            tarjeta_banco = (int)data["tarjeta_banco"];
             tarjeta_numero = data["tarjeta_numero"].ToString();
             tarjeta_ccv = data["tarjeta_ccv"].ToString();
             tarjeta_ano = (int)data["tarjeta_ano"];
@@ -23,7 +23,7 @@ namespace Entity.Entidades
 
         public int id { get; set; }
         public int tarjeta_cliente { get; set; }
-        public string tarjeta_nombre_banco { get; set; }
+        public int tarjeta_banco { get; set; }
         public string tarjeta_numero { get; set; }
         public string tarjeta_ccv { get; set; }
         public int tarjeta_ano { get; set; }

@@ -14,6 +14,7 @@ namespace Utils
         private static BoletoController boletoController = new BoletoController();
         private static CategoriaController categoriaController = new CategoriaController();
         private static IdiomaController idiomaController = new IdiomaController();
+        private static BancoController bancoController = new BancoController();
         private static Notificar notificar = new Notificar();
 
         public static ClienteController ClienteController { get => clienteController; set => clienteController = value; }
@@ -26,5 +27,6 @@ namespace Utils
         public static CategoriaController CategoriaController { get => categoriaController; set => categoriaController = value; }
         public static IdiomaController IdiomaController { get => idiomaController; set => idiomaController = value; }
         public static Cliente ClienteActual { get; internal set; }
+        public static BancoController BancoController { get => bancoController; set => bancoController = value; }
     }
 }

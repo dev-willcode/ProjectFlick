@@ -27,7 +27,7 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
             List<Tarjetas> lista = PropiedadesGenerales.TarjetasController
                 .listarTarjetas(PropiedadesGenerales.ClienteActual.id);
             tarjeta.tarjeta_numero = "Seleccione...";
-            tarjeta.tarjeta_nombre_banco = "";
+//            tarjeta.tarjeta_nombre_banco = "";
             lista.Insert(0, tarjeta);
             comboTarjetas.DataSource = lista;
             comboTarjetas.DisplayMember = "tarjeta_numero";
@@ -49,7 +49,7 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
 
         private void comboTarjetas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtBanco.Text = ((Tarjetas)comboTarjetas.Items[comboTarjetas.SelectedIndex]).tarjeta_nombre_banco;
+            //txtBanco.Text = ((Tarjetas)comboTarjetas.Items[comboTarjetas.SelectedIndex]).tarjeta_nombre_banco;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
