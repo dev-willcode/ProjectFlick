@@ -11,10 +11,8 @@ namespace Controllers.DAO
     {
         public override int Create(Cliente Entidad)
         {
-            using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
+            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_CrearCliente"))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "SP_CrearCliente";
                 Procedimientos.agregarParametros(cmd,
                     new List<object>() {
                         "@cliente_cedula",
@@ -50,10 +48,8 @@ namespace Controllers.DAO
 
         public override bool Update(Cliente Entidad)
         {
-            using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
+            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_ActualizarCliente"))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "SP_ActualizarCliente";
                 Procedimientos.agregarParametros(cmd,
                     new List<object>() {
                         "@id",

@@ -35,11 +35,19 @@ namespace Controllers.Utilidades
 
         public SqlCommand CrearComandoSP(string procedimientoAlmacenado)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = procedimientoAlmacenado;
-            cmd.Connection = Configuraciones.connect;
-            return cmd;
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = procedimientoAlmacenado;
+                cmd.Connection = Configuraciones.connect;
+                return cmd;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public Entidad DevolverEntidad<T>(SqlCommand cmd)

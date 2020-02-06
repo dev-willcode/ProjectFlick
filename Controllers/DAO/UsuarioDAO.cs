@@ -11,11 +11,8 @@ namespace Controllers.DAO
     {
         public override int Create(Usuario Entidad)
         {
-            using (SqlCommand cmd = new SqlCommand(null, Configuraciones.connect))
+            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_CrearUsuario"))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "SP_CrearUsuario";
-
                 Procedimientos.agregarParametros(cmd,
                     new List<object>() {
                         "@usuario_username",

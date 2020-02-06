@@ -5,22 +5,27 @@ namespace Controllers.Utilidades
 {
     public class Configuraciones
     {
-        public static SqlConnection connect = crearConexion(UtilsConstantes.cadenaConexionLocal);
+        public static SqlConnection connect = crearConexion();
 
-        private static SqlConnection crearConexion(string cadenaConexion)
+        private static SqlConnection crearConexion()
         {
             try
             {
-                SqlConnection Connection = new SqlConnection(cadenaConexion);
+                SqlConnection Connection = new SqlConnection(UtilsConstantes.cadenaConexion);
                 Connection.Open();
                 Console.WriteLine("Conectado correctamente");
                 return Connection;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 Console.WriteLine("No se logró conectar");
-                return null;
+                throw ex;
             }
+        }
+
+        public static void cerrarconexion()
+        {
+            connect.Close();
         }
     }
 }

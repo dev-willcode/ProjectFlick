@@ -31,7 +31,7 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
             lista.Insert(0, tarjeta);
             comboTarjetas.DataSource = lista;
             comboTarjetas.DisplayMember = "tarjeta_numero";
-            comboTarjetas.ValueMember = "tarjeta_nombre_banco";
+            //comboTarjetas.ValueMember = "tarjeta_nombre_banco";
         }
 
         internal void ActualizarInformacionCompra()
