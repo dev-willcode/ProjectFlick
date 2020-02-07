@@ -40,7 +40,11 @@ namespace Controllers.DAO
 
         public override bool Delete(int id)
         {
-            throw new NotImplementedException();
+            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BorrarTarjeta"))
+            {
+                cmd.Parameters.AddWithValue("@id", id);
+                return Procedimientos.evaluarEliminacion<Tarjetas>(cmd);
+            }
         }
 
         public override Tarjetas Get(int id)

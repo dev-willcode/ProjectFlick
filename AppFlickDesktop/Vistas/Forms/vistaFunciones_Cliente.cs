@@ -43,9 +43,9 @@ namespace AppFlickDesktop.Vistas.Forms
         {
             List<Funcion> listaFuncionesActivas = PropiedadesGenerales.FuncionesController.ListarFuncionesActivas();
             listaControles = new List<Control>();
-            for (int i = 0; i < listaFuncionesActivas.Count; i++)
+            foreach (Funcion funcion in listaFuncionesActivas)
             {
-                Elem_funcion elemento = new Elem_funcion(listaFuncionesActivas[i]);
+                Elem_funcion elemento = new Elem_funcion(funcion);
                 panelFunciones.Controls.Add(elemento);
                 elemento.Dock = DockStyle.Top;
                 listaControles.Add(elemento);

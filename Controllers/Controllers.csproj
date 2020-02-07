@@ -45,6 +45,7 @@
     <Compile Include="Controller\BoletoController.cs" />
     <Compile Include="Controller\CategoriaController.cs" />
     <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\Custom\CustomFacturaController.cs" />
     <Compile Include="Controller\Custom\CustomFuncionesController.cs" />
     <Compile Include="Controller\Empleado.cs" />
     <Compile Include="Controller\FacturaController.cs" />

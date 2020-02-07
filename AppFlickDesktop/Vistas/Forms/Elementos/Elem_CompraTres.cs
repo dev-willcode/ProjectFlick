@@ -65,7 +65,7 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
             {
                 {
                     // Generar los boletos aquí
-                    PropiedadesGenerales.Notificar.notificarWindows("Éxito", "Ha completado correctamente su compra, se ha generado una factura asociada a la compra.");
+                    PropiedadesGenerales.Notificar.notificarCorrecto("Éxito", "Ha completado correctamente su compra, se ha generado una factura asociada a la compra.");
                     FormPadre.Close();
                 }
             }

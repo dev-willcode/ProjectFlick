@@ -98,11 +98,11 @@
     <Compile Include="Vistas\Forms\Elementos\Elem_CompraUno.Designer.cs">
       <DependentUpon>Elem_CompraUno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Forms\Elementos\Elem_Factura_Cliente.cs">
+    <Compile Include="Vistas\Forms\Elementos\Elem_Factura.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Vistas\Forms\Elementos\Elem_Factura_Cliente.Designer.cs">
-      <DependentUpon>Elem_Factura_Cliente.cs</DependentUpon>
+    <Compile Include="Vistas\Forms\Elementos\Elem_Factura.Designer.cs">
+      <DependentUpon>Elem_Factura.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_idioma_funcion.cs">
       <SubType>UserControl</SubType>
@@ -194,8 +194,8 @@
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_CompraUno.resx">
       <DependentUpon>Elem_CompraUno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Factura_Cliente.resx">
-      <DependentUpon>Elem_Factura_Cliente.cs</DependentUpon>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Factura.resx">
+      <DependentUpon>Elem_Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_idioma_funcion.resx">
       <DependentUpon>Elem_idioma_funcion.cs</DependentUpon>
