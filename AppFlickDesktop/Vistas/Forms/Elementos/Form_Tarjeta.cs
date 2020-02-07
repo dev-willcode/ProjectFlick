@@ -112,6 +112,7 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
                     {
                         PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Tarjeta ingresada");
                         VistaCuenta_Cliente.rellenarTarjetas();
+                        this.Close();
                     }
                 }
                 else

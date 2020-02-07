@@ -1,4 +1,6 @@
 ﻿using System.Windows.Forms;
+using Controllers.Controller;
+using Controllers.DAO;
 using Entity.Entidades;
 using Utils;
 
@@ -7,6 +9,10 @@ namespace AppFlickDesktop.Vistas.Forms
     public partial class Elem_tarjeta : UserControl
     {
         private Tarjetas tarjetas;
+
+        private TarjetasController TarjetaController = PropiedadesGenerales.TarjetasController;
+
+        private VistaCuenta_Cliente VistaCuenta_Cliente { get; set; }
 
         public Elem_tarjeta()
         {
@@ -28,6 +34,23 @@ namespace AppFlickDesktop.Vistas.Forms
             var_tarjeta_propietario.Text = tarjetas.tarjeta_propietario;
             var_tarjeta_numero.Text = tarjetas.tarjeta_numero_protegido;
             var_mes_dia.Text = tarjetas.tarjeta_mes;
+        }
+
+        private void btnCerrar_Click(object sender, System.EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("¿Esta seguro de eliminar?", "Eliminar", MessageBoxButtons.YesNo);
+            if (res.ToString().Equals("Yes"))
+            {
+                if (TarjetaController.EliminarTarjeta(tarjetas.id))
+                {
+                    PropiedadesGenerales.Notificar.notificarCorrecto("Completado","Se ha eliminado la tarjeta");
+                    VistaCuenta_Cliente.rellenarTarjetas();
+                }
+                else
+                {
+                    PropiedadesGenerales.Notificar.notificarFallo("Eliminación Cancelada", "No se ha borrado la tarjeta");
+                }
+            }
         }
     }
 }
