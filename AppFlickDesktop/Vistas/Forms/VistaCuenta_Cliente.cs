@@ -38,7 +38,7 @@ namespace AppFlickDesktop.Vistas.Forms
             scroll = new PanelScrollHelper(panelPrincipal, scrollBar, true);
             scroll.UpdateScrollBar();
         }
-        private void rellenarTarjetas()
+        public void rellenarTarjetas()
         {
             List<Tarjetas> listaTarjeta = PropiedadesGenerales.TarjetasController
                 .listarTarjetas(PropiedadesGenerales.ClienteActual.id);
@@ -89,7 +89,7 @@ namespace AppFlickDesktop.Vistas.Forms
 
         private void btnMasTarjetas_Click(object sender, EventArgs e)
         {
-            Form_Tarjeta form = new Form_Tarjeta();
+            Form_Tarjeta form = new Form_Tarjeta(this);
             form.ShowDialog();
         }
     }

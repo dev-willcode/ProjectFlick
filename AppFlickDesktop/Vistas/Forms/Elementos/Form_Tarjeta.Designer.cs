@@ -44,6 +44,8 @@
             this.comboMes = new Guna.UI.WinForms.GunaComboBox();
             this.txtPropietario = new Guna.UI.WinForms.GunaTextBox();
             this.txtCCV = new Guna.UI.WinForms.GunaTextBox();
+            this.comboTipo = new Guna.UI.WinForms.GunaComboBox();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.SuspendLayout();
             // 
             // panel
@@ -51,7 +53,7 @@
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel.Location = new System.Drawing.Point(0, 0);
-            this.panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel.Margin = new System.Windows.Forms.Padding(4);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(899, 18);
             this.panel.TabIndex = 0;
@@ -112,8 +114,8 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = global::AppFlickDesktop.Properties.Resources.icon_mas;
             this.btnGuardar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnGuardar.Location = new System.Drawing.Point(296, 338);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Location = new System.Drawing.Point(297, 418);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnGuardar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -133,7 +135,7 @@
             this.btnCerrar.Image = global::AppFlickDesktop.Properties.Resources.icon_cerrar;
             this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
             this.btnCerrar.Location = new System.Drawing.Point(804, 53);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.OnHoverImage = null;
             this.btnCerrar.OnHoverImageOffset = new System.Drawing.Point(0, 0);
@@ -153,8 +155,8 @@
             this.txtNumeroTarjeta.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtNumeroTarjeta.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumeroTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtNumeroTarjeta.Location = new System.Drawing.Point(67, 271);
-            this.txtNumeroTarjeta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumeroTarjeta.Location = new System.Drawing.Point(67, 352);
+            this.txtNumeroTarjeta.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumeroTarjeta.Name = "txtNumeroTarjeta";
             this.txtNumeroTarjeta.PasswordChar = '\0';
             this.txtNumeroTarjeta.Radius = 10;
@@ -169,7 +171,7 @@
             this.gunaLabel1.CausesValidation = false;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(63, 238);
+            this.gunaLabel1.Location = new System.Drawing.Point(63, 319);
             this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(169, 23);
@@ -235,7 +237,7 @@
             "machala",
             "ue"});
             this.comboBancos.Location = new System.Drawing.Point(67, 188);
-            this.comboBancos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBancos.Margin = new System.Windows.Forms.Padding(4);
             this.comboBancos.Name = "comboBancos";
             this.comboBancos.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.comboBancos.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -260,9 +262,9 @@
             "machala",
             "ue"});
             this.comboAnio.Location = new System.Drawing.Point(464, 188);
-            this.comboAnio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboAnio.Margin = new System.Windows.Forms.Padding(4);
             this.comboAnio.Name = "comboAnio";
-            this.comboAnio.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.comboAnio.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.comboAnio.OnHoverItemForeColor = System.Drawing.Color.White;
             this.comboAnio.Radius = 10;
             this.comboAnio.Size = new System.Drawing.Size(115, 31);
@@ -285,9 +287,9 @@
             "machala",
             "ue"});
             this.comboMes.Location = new System.Drawing.Point(588, 188);
-            this.comboMes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboMes.Margin = new System.Windows.Forms.Padding(4);
             this.comboMes.Name = "comboMes";
-            this.comboMes.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.comboMes.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.comboMes.OnHoverItemForeColor = System.Drawing.Color.White;
             this.comboMes.Radius = 10;
             this.comboMes.Size = new System.Drawing.Size(115, 31);
@@ -306,7 +308,7 @@
             this.txtPropietario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPropietario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtPropietario.Location = new System.Drawing.Point(464, 271);
-            this.txtPropietario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPropietario.Margin = new System.Windows.Forms.Padding(4);
             this.txtPropietario.Name = "txtPropietario";
             this.txtPropietario.PasswordChar = '\0';
             this.txtPropietario.Radius = 10;
@@ -327,7 +329,7 @@
             this.txtCCV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtCCV.Location = new System.Drawing.Point(731, 186);
-            this.txtCCV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCCV.Margin = new System.Windows.Forms.Padding(4);
             this.txtCCV.Name = "txtCCV";
             this.txtCCV.PasswordChar = '\0';
             this.txtCCV.Radius = 10;
@@ -335,12 +337,53 @@
             this.txtCCV.TabIndex = 97;
             this.txtCCV.TextOffsetX = 2;
             // 
+            // comboTipo
+            // 
+            this.comboTipo.BackColor = System.Drawing.Color.Transparent;
+            this.comboTipo.BaseColor = System.Drawing.Color.White;
+            this.comboTipo.BorderColor = System.Drawing.Color.Silver;
+            this.comboTipo.BorderSize = 0;
+            this.comboTipo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboTipo.FocusedColor = System.Drawing.Color.Empty;
+            this.comboTipo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboTipo.ForeColor = System.Drawing.Color.Black;
+            this.comboTipo.FormattingEnabled = true;
+            this.comboTipo.Items.AddRange(new object[] {
+            "DEBITO",
+            "CRÉDITO"});
+            this.comboTipo.Location = new System.Drawing.Point(67, 273);
+            this.comboTipo.Margin = new System.Windows.Forms.Padding(4);
+            this.comboTipo.Name = "comboTipo";
+            this.comboTipo.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.comboTipo.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.comboTipo.Radius = 10;
+            this.comboTipo.Size = new System.Drawing.Size(363, 31);
+            this.comboTipo.StartIndex = 0;
+            this.comboTipo.TabIndex = 99;
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.gunaLabel5.CausesValidation = false;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel5.Location = new System.Drawing.Point(63, 238);
+            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(121, 23);
+            this.gunaLabel5.TabIndex = 98;
+            this.gunaLabel5.Text = "Tipo de tarjeta";
+            // 
             // Form_Tarjeta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(899, 418);
+            this.ClientSize = new System.Drawing.Size(899, 492);
+            this.Controls.Add(this.comboTipo);
+            this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.txtCCV);
             this.Controls.Add(this.txtPropietario);
             this.Controls.Add(this.comboMes);
@@ -358,7 +401,7 @@
             this.Controls.Add(this.var_segundo_titulo);
             this.Controls.Add(this.var_censura);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Tarjeta";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -386,5 +429,7 @@
         private Guna.UI.WinForms.GunaComboBox comboMes;
         private Guna.UI.WinForms.GunaTextBox txtPropietario;
         private Guna.UI.WinForms.GunaTextBox txtCCV;
+        private Guna.UI.WinForms.GunaComboBox comboTipo;
+        private Guna.UI.WinForms.GunaLabel gunaLabel5;
     }
 }

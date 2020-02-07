@@ -1,4 +1,6 @@
-﻿using Entity.Entidades;
+﻿using AppFlickDesktop.Vistas.Notificaciones;
+using Controllers.Controller;
+using Entity.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -8,8 +10,18 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
 {
     public partial class Form_Tarjeta : Form
     {
+
+        private TarjetasController tarjetaController = Utils.PropiedadesGenerales.TarjetasController;
+        private Notificar notificar = new Notificar();
+        private VistaCuenta_Cliente VistaCuenta_Cliente { get; set; }
+
         public Form_Tarjeta()
         {
+        }
+
+        public Form_Tarjeta(VistaCuenta_Cliente vistaCuenta_Cliente)
+        {
+            VistaCuenta_Cliente = vistaCuenta_Cliente;
             InitializeComponent();
             cargarCombos();
         }
@@ -84,7 +96,32 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (validarCamposTarjeta())
+            {
+                Tarjetas tarjeta = new Tarjetas();
+                tarjeta.tarjeta_numero = txtNumeroTarjeta.Text;
 
+                if (!tarjetaController.TarjetaRepetida(tarjeta))
+                {
+                    tarjeta.tarjeta_banco = int.Parse(comboBancos.SelectedValue.ToString());
+                    tarjeta.tarjeta_anio = comboAnio.SelectedValue.ToString();
+                    tarjeta.tarjeta_mes = comboMes.SelectedValue.ToString();
+                    tarjeta.tarjeta_tipo = comboTipo.Text;
+                    tarjeta.tarjeta_ccv = txtCCV.Text;
+                    tarjeta.tarjeta_propietario = txtPropietario.Text;
+                    tarjeta.tarjeta_numero = txtNumeroTarjeta.Text;
+
+                    if (tarjetaController.RegistrarTarjeta(tarjeta))
+                    {
+                        notificar.notificarCorrecto("Completado", "Tarjeta ingresada");
+                        VistaCuenta_Cliente.rellenarTarjetas();
+                    }
+                }
+                else
+                {
+                    notificar.notificarFallo("Error al ingresar tarjeta", "tarjeta ya usada!");
+                }
+            }
         }
     }
 }

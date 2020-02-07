@@ -15,11 +15,11 @@ namespace Entity.Entidades
             tarjeta_tipo = data["tarjeta_tipo"].ToString();
             tarjeta_banco = (int)data["tarjeta_banco"];
             tarjeta_numero = data["tarjeta_numero"].ToString();
-            tarjeta_digitos_control = data["tarjeta_digitos_control"].ToString();
             tarjeta_ccv = data["tarjeta_ccv"].ToString();
             tarjeta_anio = data["tarjeta_ano"].ToString();
             tarjeta_mes = data["tarjeta_mes"].ToString();
             tarjeta_propietario = data["tarjeta_propietario"].ToString();
+            tarjeta_digitos_control = tarjeta_numero.Substring(0, tarjeta_numero.Length - 4);
         }
 
         public int id { get; set; }
