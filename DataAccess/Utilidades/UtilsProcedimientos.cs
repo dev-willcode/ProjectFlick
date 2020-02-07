@@ -116,6 +116,19 @@ namespace Controllers.Utilidades
             }
         }
 
+        public bool evaluarEliminacion<T>(SqlCommand cmd)
+        {
+            // Cuando retorna "ELIMINADO", se habrá eliminado con éxito.
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    return (reader["RESPONSE"].ToString().Equals("ELIMINADO"));
+                }
+                return false;
+            }
+        }
+
         public List<T> ListarEntidades<T>(SqlCommand cmd)
         {
             Entidad entidad;

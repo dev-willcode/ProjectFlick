@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 using Controllers.DAO;
 using Entity.Entidades;
 
@@ -18,7 +19,11 @@ namespace Controllers.Controller
 
         public override Funcion Get(int id)
         {
-            throw new NotImplementedException();
+            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetFuncion"))
+            {
+                cmd.Parameters.AddWithValue("@id", id);
+                return Procedimientos.evaluarObtención<Funcion>(cmd);
+            }
         }
 
         public override bool Update(Funcion Entidad)

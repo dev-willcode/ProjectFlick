@@ -2,11 +2,13 @@
 using System.Windows.Forms;
 using Controllers.Controller;
 using Entity.Entidades;
+using Utils;
 
 namespace AppFlickDesktop.Vistas.Forms
 {
     public partial class VistaFacturas_Cliente : UserControl
     {
+        private List<Control> listaControles;
         public VistaFacturas_Cliente()
         {
             InitializeComponent();
@@ -14,8 +16,15 @@ namespace AppFlickDesktop.Vistas.Forms
 
         private void btnBuscarFactura_Click(object sender, System.EventArgs e)
         {
-            FacturaController factura = new FacturaController();
-            List<Factura> list = factura.ListarFacturas(1);
+            List<Factura> lista = PropiedadesGenerales.FacturaController.ListarFacturas(PropiedadesGenerales.ClienteActual.id);
+            listaControles = new List<Control>();
+            foreach (Factura factura in lista)
+            {
+                Elem_Factura elemento = new Elem_Factura(factura);
+                panelFacturas.Controls.Add(elemento);
+                elemento.Dock = DockStyle.Top;
+                listaControles.Add(elemento);
+            }
         }
     }
 }

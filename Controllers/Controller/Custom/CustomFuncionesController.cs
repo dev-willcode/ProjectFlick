@@ -42,11 +42,15 @@ namespace Controllers.Controller
         {
             String resul = "";
             List<Categoria> listaCategorias = Categorias;
-            foreach (Categoria item in listaCategorias)
+            if (listaCategorias.Count != 0)
             {
-                resul += item.categoria_nombre + ", ";
+                foreach (Categoria item in listaCategorias)
+                {
+                    resul += item.categoria_nombre + ", ";
+                }
+                return resul.Substring(0, resul.Length - 2);
             }
-            return resul.Substring(0, resul.Length - 2);
+            else return resul;
         }
     }
 }
