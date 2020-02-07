@@ -16,12 +16,13 @@ namespace AppFlickDesktop.Vistas.Init
         {
             InitializeComponent();
             inicializarPropiedades();
+            btnFunciones_Click(null,null);
         }
         private void inicializarPropiedades()
         {
             listaLabelsMenu = new List<Label>()
             {
-                labelInicio,labelFunciones,labelFacturas, labelCuenta
+                labelFunciones,labelFacturas, labelCuenta
             };
         }
         private void animacion_logo(object sender, EventArgs e)
@@ -35,11 +36,6 @@ namespace AppFlickDesktop.Vistas.Init
             panelPrincipal.Controls.Clear();
             panelPrincipal.Controls.Add(pantalla);
             pantalla.Dock = DockStyle.Fill;
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-            pintarLabelMenu(labelInicio);
         }
 
         private void btnFunciones_Click(object sender, EventArgs e)

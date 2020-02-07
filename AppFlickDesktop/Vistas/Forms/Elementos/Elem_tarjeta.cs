@@ -22,11 +22,11 @@ namespace AppFlickDesktop.Vistas.Forms
 
         private void cargarDatos()
         {
+            var_tarjeta_tipo.Text = "Tarjeta de " + tarjetas.tarjeta_tipo;
             var_nombre_banco.Text = PropiedadesGenerales.BancoController.Get(tarjetas.tarjeta_banco).banco_nombre;
             var_tarjeta_ano.Text = tarjetas.tarjeta_anio.ToString();
             var_tarjeta_propietario.Text = tarjetas.tarjeta_propietario;
-            var_tarjeta_numero.Text = "XXX XXXX XXXX " + tarjetas.tarjeta_numero
-                .Substring(tarjetas.tarjeta_numero.Length - 4);
+            var_tarjeta_numero.Text = tarjetas.tarjeta_numero_protegido;
             var_mes_dia.Text = tarjetas.tarjeta_mes;
         }
     }

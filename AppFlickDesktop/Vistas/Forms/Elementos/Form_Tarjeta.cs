@@ -1,9 +1,8 @@
-﻿using AppFlickDesktop.Vistas.Notificaciones;
-using Controllers.Controller;
-using Entity.Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Controllers.Controller;
+using Entity.Entidades;
 using Utils;
 
 namespace AppFlickDesktop.Vistas.Forms.Elementos
@@ -11,13 +10,10 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
     public partial class Form_Tarjeta : Form
     {
 
-        private TarjetasController tarjetaController = Utils.PropiedadesGenerales.TarjetasController;
-        private Notificar notificar = new Notificar();
+        private TarjetasController TarjetaController = PropiedadesGenerales.TarjetasController;
         private VistaCuenta_Cliente VistaCuenta_Cliente { get; set; }
 
-        public Form_Tarjeta()
-        {
-        }
+        public Form_Tarjeta() { }
 
         public Form_Tarjeta(VistaCuenta_Cliente vistaCuenta_Cliente)
         {
@@ -42,8 +38,9 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
 
         private void cargarMesAnio()
         {
-            List<string> listaMes = new List<string>{"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre"
-            ,"Octubre","Noviembre","Diciembre"};
+            List<string> listaMes = new List<string>{
+                "Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio",
+                "Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
             comboMes.DataSource = listaMes;
             List<string> listaAnio = new List<string>();
             for (int i = 2017; i < 2030; i++)
@@ -101,7 +98,7 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
                 Tarjetas tarjeta = new Tarjetas();
                 tarjeta.tarjeta_numero = txtNumeroTarjeta.Text;
 
-                if (!tarjetaController.TarjetaRepetida(tarjeta))
+                if (!TarjetaController.TarjetaRepetida(tarjeta))
                 {
                     tarjeta.tarjeta_banco = int.Parse(comboBancos.SelectedValue.ToString());
                     tarjeta.tarjeta_anio = comboAnio.SelectedValue.ToString();
@@ -111,15 +108,15 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
                     tarjeta.tarjeta_propietario = txtPropietario.Text;
                     tarjeta.tarjeta_numero = txtNumeroTarjeta.Text;
 
-                    if (tarjetaController.RegistrarTarjeta(tarjeta))
+                    if (TarjetaController.RegistrarTarjeta(tarjeta))
                     {
-                        notificar.notificarCorrecto("Completado", "Tarjeta ingresada");
+                        PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Tarjeta ingresada");
                         VistaCuenta_Cliente.rellenarTarjetas();
                     }
                 }
                 else
                 {
-                    notificar.notificarFallo("Error al ingresar tarjeta", "tarjeta ya usada!");
+                    PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar tarjeta", "tarjeta ya usada!");
                 }
             }
         }

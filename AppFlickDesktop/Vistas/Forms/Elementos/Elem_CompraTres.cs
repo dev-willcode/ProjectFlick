@@ -26,12 +26,11 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
             Tarjetas tarjeta = new Tarjetas();
             List<Tarjetas> lista = PropiedadesGenerales.TarjetasController
                 .listarTarjetas(PropiedadesGenerales.ClienteActual.id);
-            tarjeta.tarjeta_numero = "Seleccione...";
-//            tarjeta.tarjeta_nombre_banco = "";
+            tarjeta.tarjeta_numero_protegido = "Seleccione...";
             lista.Insert(0, tarjeta);
             comboTarjetas.DataSource = lista;
-            comboTarjetas.DisplayMember = "tarjeta_numero";
-            //comboTarjetas.ValueMember = "tarjeta_nombre_banco";
+            comboTarjetas.DisplayMember = "tarjeta_numero_protegido";
+            comboTarjetas.ValueMember = "id";
         }
 
         internal void ActualizarInformacionCompra()
@@ -44,12 +43,6 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
             containerIdioma.Controls.Add(new Elem_idioma_funcion(CFuncionesController.Idioma));
             var_asientos.Text = FormPadre.AsientosSeleccionados;
             var_precioTotal.Text = "Total a pagar: $" + FormPadre.PrecioTotal;
-
-        }
-
-        private void comboTarjetas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //txtBanco.Text = ((Tarjetas)comboTarjetas.Items[comboTarjetas.SelectedIndex]).tarjeta_nombre_banco;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

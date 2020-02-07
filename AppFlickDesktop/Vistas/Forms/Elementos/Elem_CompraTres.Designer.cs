@@ -32,8 +32,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtCCV = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
-            this.txtBanco = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.comboTarjetas = new Guna.UI.WinForms.GunaComboBox();
             this.btnConfirmar = new Guna.UI.WinForms.GunaButton();
@@ -73,8 +71,6 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.panel4.Controls.Add(this.txtCCV);
             this.panel4.Controls.Add(this.gunaLabel11);
-            this.panel4.Controls.Add(this.txtBanco);
-            this.panel4.Controls.Add(this.gunaLabel4);
             this.panel4.Controls.Add(this.gunaLabel3);
             this.panel4.Controls.Add(this.comboTarjetas);
             this.panel4.Controls.Add(this.btnConfirmar);
@@ -98,7 +94,7 @@
             this.txtCCV.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtCCV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtCCV.Location = new System.Drawing.Point(422, 209);
+            this.txtCCV.Location = new System.Drawing.Point(422, 172);
             this.txtCCV.Name = "txtCCV";
             this.txtCCV.PasswordChar = '\0';
             this.txtCCV.Radius = 10;
@@ -114,47 +110,11 @@
             this.gunaLabel11.CausesValidation = false;
             this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel11.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel11.Location = new System.Drawing.Point(419, 189);
+            this.gunaLabel11.Location = new System.Drawing.Point(419, 152);
             this.gunaLabel11.Name = "gunaLabel11";
             this.gunaLabel11.Size = new System.Drawing.Size(32, 17);
             this.gunaLabel11.TabIndex = 115;
             this.gunaLabel11.Text = "CCV";
-            // 
-            // txtBanco
-            // 
-            this.txtBanco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBanco.BackColor = System.Drawing.Color.Transparent;
-            this.txtBanco.BaseColor = System.Drawing.Color.White;
-            this.txtBanco.BorderColor = System.Drawing.Color.White;
-            this.txtBanco.BorderSize = 0;
-            this.txtBanco.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBanco.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtBanco.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtBanco.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtBanco.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBanco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtBanco.Location = new System.Drawing.Point(422, 148);
-            this.txtBanco.Name = "txtBanco";
-            this.txtBanco.PasswordChar = '\0';
-            this.txtBanco.Radius = 10;
-            this.txtBanco.ReadOnly = true;
-            this.txtBanco.Size = new System.Drawing.Size(229, 28);
-            this.txtBanco.TabIndex = 114;
-            this.txtBanco.TextOffsetX = 2;
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.gunaLabel4.CausesValidation = false;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel4.Location = new System.Drawing.Point(419, 124);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(112, 17);
-            this.gunaLabel4.TabIndex = 113;
-            this.gunaLabel4.Text = "Entidad financiera";
             // 
             // gunaLabel3
             // 
@@ -164,7 +124,7 @@
             this.gunaLabel3.CausesValidation = false;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel3.Location = new System.Drawing.Point(419, 53);
+            this.gunaLabel3.Location = new System.Drawing.Point(419, 80);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(115, 17);
             this.gunaLabel3.TabIndex = 112;
@@ -183,15 +143,13 @@
             this.comboTarjetas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboTarjetas.ForeColor = System.Drawing.Color.White;
             this.comboTarjetas.FormattingEnabled = true;
-            this.comboTarjetas.Location = new System.Drawing.Point(422, 82);
+            this.comboTarjetas.Location = new System.Drawing.Point(422, 109);
             this.comboTarjetas.Name = "comboTarjetas";
             this.comboTarjetas.OnHoverItemBaseColor = System.Drawing.Color.White;
             this.comboTarjetas.OnHoverItemForeColor = System.Drawing.Color.White;
             this.comboTarjetas.Radius = 8;
             this.comboTarjetas.Size = new System.Drawing.Size(229, 30);
-            this.comboTarjetas.StartIndex = 0;
             this.comboTarjetas.TabIndex = 111;
-            this.comboTarjetas.SelectedIndexChanged += new System.EventHandler(this.comboTarjetas_SelectedIndexChanged);
             // 
             // btnConfirmar
             // 
@@ -209,7 +167,7 @@
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.Image = null;
             this.btnConfirmar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnConfirmar.Location = new System.Drawing.Point(422, 268);
+            this.btnConfirmar.Location = new System.Drawing.Point(422, 227);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnConfirmar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -453,8 +411,6 @@
         private Guna.UI.WinForms.GunaLabel var_hora;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaComboBox comboTarjetas;
-        private Guna.UI.WinForms.GunaTextBox txtBanco;
-        private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaTextBox txtCCV;
         private Guna.UI.WinForms.GunaLabel gunaLabel11;
         private Guna.UI.WinForms.GunaLabel var_asientos;

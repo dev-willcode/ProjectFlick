@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.container = new System.Windows.Forms.Panel();
-            this.panelFacturas = new System.Windows.Forms.Panel();
             this.scrollBar = new Guna.UI.WinForms.GunaVScrollBar();
+            this.panelFacturas = new System.Windows.Forms.Panel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.txtBuscarFactura = new Guna.UI.WinForms.GunaTextBox();
             this.btnBuscarFactura = new Guna.UI.WinForms.GunaCircleButton();
             this.tableContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.var_imprimir = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.var_numero_factura = new Guna.UI.WinForms.GunaLabel();
             this.var_costo_total = new Guna.UI.WinForms.GunaLabel();
+            this.var_fecha = new Guna.UI.WinForms.GunaLabel();
             this.var_cant_boletos = new Guna.UI.WinForms.GunaLabel();
             this.var_hora = new Guna.UI.WinForms.GunaLabel();
-            this.var_fecha = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.var_imprimir = new Guna.UI.WinForms.GunaLabel();
             this.container.SuspendLayout();
             this.tableContainer.SuspendLayout();
             this.SuspendLayout();
@@ -51,20 +51,12 @@
             this.container.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.container.Controls.Add(this.panelFacturas);
             this.container.Controls.Add(this.scrollBar);
+            this.container.Controls.Add(this.panelFacturas);
             this.container.Location = new System.Drawing.Point(31, 122);
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(920, 365);
             this.container.TabIndex = 70;
-            // 
-            // panelFacturas
-            // 
-            this.panelFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFacturas.Location = new System.Drawing.Point(0, 0);
-            this.panelFacturas.Name = "panelFacturas";
-            this.panelFacturas.Size = new System.Drawing.Size(903, 365);
-            this.panelFacturas.TabIndex = 70;
             // 
             // scrollBar
             // 
@@ -76,10 +68,18 @@
             this.scrollBar.ScrollbarSize = 12;
             this.scrollBar.ScrollIdleColor = System.Drawing.Color.Silver;
             this.scrollBar.Size = new System.Drawing.Size(17, 365);
-            this.scrollBar.TabIndex = 71;
+            this.scrollBar.TabIndex = 72;
             this.scrollBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.scrollBar.ThumbHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.scrollBar.ThumbPressedColor = System.Drawing.Color.DarkGray;
+            // 
+            // panelFacturas
+            // 
+            this.panelFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFacturas.Location = new System.Drawing.Point(0, 0);
+            this.panelFacturas.Name = "panelFacturas";
+            this.panelFacturas.Size = new System.Drawing.Size(920, 365);
+            this.panelFacturas.TabIndex = 70;
             // 
             // gunaLabel5
             // 
@@ -114,6 +114,9 @@
             this.txtBuscarFactura.TabIndex = 67;
             this.txtBuscarFactura.Text = "Buscar....";
             this.txtBuscarFactura.TextOffsetX = 10;
+            this.txtBuscarFactura.TextChanged += new System.EventHandler(this.txtBuscarFactura_TextChanged);
+            this.txtBuscarFactura.Enter += new System.EventHandler(this.txtBuscarFactura_Enter);
+            this.txtBuscarFactura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarFactura_KeyPress);
             // 
             // btnBuscarFactura
             // 
@@ -165,6 +168,32 @@
             this.tableContainer.Size = new System.Drawing.Size(900, 50);
             this.tableContainer.TabIndex = 89;
             // 
+            // var_imprimir
+            // 
+            this.var_imprimir.CausesValidation = false;
+            this.var_imprimir.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.var_imprimir.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.var_imprimir.ForeColor = System.Drawing.Color.White;
+            this.var_imprimir.Location = new System.Drawing.Point(791, 0);
+            this.var_imprimir.Name = "var_imprimir";
+            this.var_imprimir.Size = new System.Drawing.Size(106, 50);
+            this.var_imprimir.TabIndex = 76;
+            this.var_imprimir.Text = "Factura";
+            this.var_imprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.CausesValidation = false;
+            this.gunaLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.Location = new System.Drawing.Point(79, 0);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(319, 50);
+            this.gunaLabel1.TabIndex = 75;
+            this.gunaLabel1.Text = "Título";
+            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // var_numero_factura
             // 
             this.var_numero_factura.CausesValidation = false;
@@ -190,6 +219,19 @@
             this.var_costo_total.TabIndex = 74;
             this.var_costo_total.Text = "Total";
             this.var_costo_total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // var_fecha
+            // 
+            this.var_fecha.CausesValidation = false;
+            this.var_fecha.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.var_fecha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.var_fecha.ForeColor = System.Drawing.Color.White;
+            this.var_fecha.Location = new System.Drawing.Point(404, 0);
+            this.var_fecha.Name = "var_fecha";
+            this.var_fecha.Size = new System.Drawing.Size(137, 50);
+            this.var_fecha.TabIndex = 71;
+            this.var_fecha.Text = "Fecha";
+            this.var_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // var_cant_boletos
             // 
@@ -217,45 +259,6 @@
             this.var_hora.Text = "Hora";
             this.var_hora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // var_fecha
-            // 
-            this.var_fecha.CausesValidation = false;
-            this.var_fecha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.var_fecha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.var_fecha.ForeColor = System.Drawing.Color.White;
-            this.var_fecha.Location = new System.Drawing.Point(404, 0);
-            this.var_fecha.Name = "var_fecha";
-            this.var_fecha.Size = new System.Drawing.Size(137, 50);
-            this.var_fecha.TabIndex = 71;
-            this.var_fecha.Text = "Fecha";
-            this.var_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.CausesValidation = false;
-            this.gunaLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(79, 0);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(319, 50);
-            this.gunaLabel1.TabIndex = 75;
-            this.gunaLabel1.Text = "Título";
-            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // var_imprimir
-            // 
-            this.var_imprimir.CausesValidation = false;
-            this.var_imprimir.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.var_imprimir.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.var_imprimir.ForeColor = System.Drawing.Color.White;
-            this.var_imprimir.Location = new System.Drawing.Point(791, 0);
-            this.var_imprimir.Name = "var_imprimir";
-            this.var_imprimir.Size = new System.Drawing.Size(106, 50);
-            this.var_imprimir.TabIndex = 76;
-            this.var_imprimir.Text = "Factura";
-            this.var_imprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // VistaFacturas_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,7 +282,6 @@
 
         private System.Windows.Forms.Panel container;
         private System.Windows.Forms.Panel panelFacturas;
-        private Guna.UI.WinForms.GunaVScrollBar scrollBar;
         private Guna.UI.WinForms.GunaCircleButton btnBuscarFactura;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaTextBox txtBuscarFactura;
@@ -291,5 +293,6 @@
         private Guna.UI.WinForms.GunaLabel var_fecha;
         private Guna.UI.WinForms.GunaLabel var_cant_boletos;
         private Guna.UI.WinForms.GunaLabel var_hora;
+        private Guna.UI.WinForms.GunaVScrollBar scrollBar;
     }
 }

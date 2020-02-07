@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using AppFlickDesktop.Vistas.Forms.Elementos;
-using AppFlickDesktop.Vistas.Notificaciones;
-using Controllers.Controller;
 using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
@@ -17,7 +15,7 @@ namespace AppFlickDesktop.Vistas.Forms
         public VistaCuenta_Cliente()
         {
             InitializeComponent();
-            propiedadesScroll();
+            PropiedadesScroll();
             rellenarTarjetas();
             cargarDatos();
         }
@@ -33,9 +31,9 @@ namespace AppFlickDesktop.Vistas.Forms
 
         }
 
-        private void propiedadesScroll()
+        private void PropiedadesScroll()
         {
-            scroll = new PanelScrollHelper(panelPrincipal, scrollBar, true);
+            scroll = new PanelScrollHelper(panelTarjetas, scrollBar, true);
             scroll.UpdateScrollBar();
         }
         public void rellenarTarjetas()
@@ -45,8 +43,8 @@ namespace AppFlickDesktop.Vistas.Forms
             for (int i = 0; i < listaTarjeta.Count; i++)
             {
                 Elem_tarjeta elemento = new Elem_tarjeta(listaTarjeta[i]);
-                panelPrincipal.Controls.Add(elemento);
-                elemento.Dock = DockStyle.Left;
+                panelTarjetas.Controls.Add(elemento);
+                elemento.Dock = DockStyle.Top;
             }
         }
 

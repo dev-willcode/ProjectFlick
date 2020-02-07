@@ -13,24 +13,26 @@ namespace AppFlickDesktop.Vistas.Forms
     {
 
         private PanelScrollHelper scroll;
-        private List<Control> listaControles;
+        private List<Elem_funcion> listaControles;
         private Label labelSinFunciones;
         public VistaFunciones_Cliente()
         {
             InitializeComponent();
             PropiedadesScroll();
-            inicializarLabelSinFunciones();
+            InicializarLabelSinFunciones();
             RellenarFunciones();
         }
 
-        private void inicializarLabelSinFunciones()
+        private void InicializarLabelSinFunciones()
         {
             labelSinFunciones = new Label();
+            labelSinFunciones.Visible = false;
             labelSinFunciones.Dock = DockStyle.Fill;
             labelSinFunciones.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelSinFunciones.ForeColor = Color.FromArgb(69, 69, 69);
             labelSinFunciones.Text = "No se encontraron funciones disponibles actualmente :(";
             labelSinFunciones.TextAlign = ContentAlignment.MiddleCenter;
+            panelFunciones.Controls.Add(labelSinFunciones);
         }
 
         private void PropiedadesScroll()
@@ -41,14 +43,30 @@ namespace AppFlickDesktop.Vistas.Forms
 
         private void RellenarFunciones()
         {
-            List<Funcion> listaFuncionesActivas = PropiedadesGenerales.FuncionesController.ListarFuncionesActivas();
-            listaControles = new List<Control>();
+            List<Funcion> listaFuncionesActivas = PropiedadesGenerales
+                .FuncionesController.ListarFuncionesActivas();
+            listaControles = new List<Elem_funcion>();
             foreach (Funcion funcion in listaFuncionesActivas)
             {
                 Elem_funcion elemento = new Elem_funcion(funcion);
                 panelFunciones.Controls.Add(elemento);
                 elemento.Dock = DockStyle.Top;
                 listaControles.Add(elemento);
+                elemento.VisibleChanged += new EventHandler(EventoOcultar);
+            }
+        }
+
+        private void EventoOcultar(object sender, EventArgs e)
+        {
+            int conteoVisibles = 0;
+            listaControles.ForEach(elemento => { if (elemento.Visible) { conteoVisibles++; } });
+            if (conteoVisibles == 0)
+            {
+                labelSinFunciones.Visible = true;
+            }
+            else
+            {
+                labelSinFunciones.Visible = false;
             }
         }
 
@@ -57,38 +75,42 @@ namespace AppFlickDesktop.Vistas.Forms
             FiltroFunciones();
         }
 
-        private void key_release(object sender, KeyPressEventArgs e)
+        private void FiltroFunciones()
+        {
+            if (string.IsNullOrEmpty(txtBuscarFuncion.Text))
+            {
+                listaControles.ForEach(elemento => elemento.Visible = true);
+            }
+            else
+            {
+                foreach (Elem_funcion elemento in listaControles)
+                {
+                    if (!(elemento.CFuncionesController.Pelicula
+                        .pelicula_titulo.Contains(txtBuscarFuncion.Text.ToUpper()) ||
+                        elemento.CFuncionesController.Pelicula
+                        .pelicula_titulo_original.Contains(txtBuscarFuncion.Text.ToUpper())))
+                    {
+                        elemento.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void TxtBuscarFuncion_TextChanged(object sender, EventArgs e)
+        {
+            FiltroFunciones();
+        }
+
+        private void TxtBuscarFuncion_Enter(object sender, EventArgs e)
+        {
+            txtBuscarFuncion.Text = "";
+        }
+
+        private void txtBuscarFuncion_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Convert.ToChar(Keys.Enter) == e.KeyChar)
             {
                 FiltroFunciones();
-            }
-        }
-
-        private void FiltroFunciones()
-        {
-            panelFunciones.Controls.Clear();
-            if (string.IsNullOrEmpty(txtBuscarFuncion.Text))
-            {
-                foreach (Control item in listaControles)
-                {
-                    panelFunciones.Controls.Add(item);
-                }
-            }
-            else
-            {
-                foreach (Control item in listaControles)
-                {
-                    if (((Elem_funcion)item).CFuncionesController.Pelicula.pelicula_titulo.Contains(txtBuscarFuncion.Text.ToUpper()) ||
-                        ((Elem_funcion)item).CFuncionesController.Pelicula.pelicula_titulo_original.Contains(txtBuscarFuncion.Text.ToUpper()))
-                    {
-                        panelFunciones.Controls.Add(item);
-                    }
-                }
-            }
-            if (panelFunciones.Controls.Count == 0)
-            {
-                panelFunciones.Controls.Add(labelSinFunciones);
             }
         }
     }
