@@ -15,9 +15,8 @@ namespace Entity.Entidades
             tarjeta_banco = (int)data["tarjeta_banco"];
             tarjeta_numero = data["tarjeta_numero"].ToString();
             tarjeta_ccv = data["tarjeta_ccv"].ToString();
-            tarjeta_ano = (int)data["tarjeta_ano"];
-            tarjeta_mes = (int)data["tarjeta_mes"];
-            tarjeta_dia = (int)data["tarjeta_dia"];
+            tarjeta_anio = data["tarjeta_ano"].ToString();
+            tarjeta_mes = data["tarjeta_mes"].ToString();
             tarjeta_propietario = data["tarjeta_propietario"].ToString();
         }
 
@@ -26,9 +25,8 @@ namespace Entity.Entidades
         public int tarjeta_banco { get; set; }
         public string tarjeta_numero { get; set; }
         public string tarjeta_ccv { get; set; }
-        public int tarjeta_ano { get; set; }
-        public int tarjeta_mes { get; set; }
-        public int tarjeta_dia { get; set; }
+        public string tarjeta_anio { get; set; }
+        public string tarjeta_mes { get; set; }
         public string tarjeta_propietario { get; set; }
     }
 }
