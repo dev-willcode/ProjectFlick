@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using Controllers.Utilidades;
 using Entity.Entidades;
 
 namespace Controllers.DAO

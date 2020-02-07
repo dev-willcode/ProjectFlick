@@ -54,7 +54,8 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
             else if (txtCCV.Text.Length < 3)
             {
                 PropiedadesGenerales.Notificar.notificarFallo("Eror al ingresar datos bancarios", "Codigo de seguridad CCV incorrecto");
-            } else
+            }
+            else
             {
                 {
                     // Generar los boletos aquí

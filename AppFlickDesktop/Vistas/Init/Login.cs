@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using AnimateForms.Core;
 using AppFlickDesktop.Vistas.Init;
 using AppFlickDesktop.Vistas.Notificaciones;
 using Controllers.Controller;
@@ -12,7 +11,6 @@ namespace AppFlickDesktop
     public partial class Login : Form
     {
         private UsuarioController usuarioController = Utils.PropiedadesGenerales.UsuarioController;
-        private readonly Animate animate = new Animate();
         private Notificar notificar = new Notificar();
         public Login()
         {
@@ -34,9 +32,9 @@ namespace AppFlickDesktop
             Close();
         }
 
-        private async void btnRegistro_Click(object sender, EventArgs e)
+        private void btnRegistro_Click(object sender, EventArgs e)
         {
-            await animate.Move(movible, Easings.Linear, 1200, new Point(0, 0));
+            timer.Start();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -170,6 +168,18 @@ namespace AppFlickDesktop
             }
 
             return string.IsNullOrEmpty(errores);
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            if (movible.Location.Y > 0)
+            {
+                movible.Location = new Point(movible.Location.X, movible.Location.Y - 5);
+            }
+            else
+            {
+                timer.Stop();
+            }
         }
     }
 }

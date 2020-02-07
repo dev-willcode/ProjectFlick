@@ -35,9 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AnimateForms.Core">
-      <HintPath>..\libs\AnimateForms.Core.dll</HintPath>
-    </Reference>
     <Reference Include="Guna.UI">
       <HintPath>..\libs\Guna.UI.dll</HintPath>
     </Reference>
