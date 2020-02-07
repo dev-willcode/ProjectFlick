@@ -41,6 +41,42 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
             comboAnio.DataSource = listaAnio;
         }
 
+        private bool validarCamposTarjeta()
+        {
+            string errores = "";
+            if (string.IsNullOrEmpty(comboBancos.Text))
+            {
+                errores += " - Seleccion una Entidad Bancaria" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(comboAnio.Text))
+            {
+                errores += " - Seleccione el Año" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(comboMes.Text))
+            {
+                errores += " - Seleccione el Mes" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(txtCCV.Text))
+            {
+                errores += " - Ingrese el CCV" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(txtNumeroTarjeta.Text))
+            {
+                errores += " - Ingrese el número de la tarjeta" + Environment.NewLine;
+            }
+
+            if (string.IsNullOrEmpty(txtPropietario.Text))
+            {
+                errores += " - Ingrese el nombre del Propietario de la tarjeta" + Environment.NewLine;
+            }
+
+            return string.IsNullOrEmpty(errores);
+        }
+
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Close();
