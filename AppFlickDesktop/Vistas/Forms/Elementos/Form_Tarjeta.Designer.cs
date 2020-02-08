@@ -157,6 +157,7 @@
             this.txtNumeroTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtNumeroTarjeta.Location = new System.Drawing.Point(67, 352);
             this.txtNumeroTarjeta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNumeroTarjeta.MaxLength = 16;
             this.txtNumeroTarjeta.Name = "txtNumeroTarjeta";
             this.txtNumeroTarjeta.PasswordChar = '\0';
             this.txtNumeroTarjeta.Radius = 10;
@@ -309,6 +310,7 @@
             this.txtPropietario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtPropietario.Location = new System.Drawing.Point(464, 271);
             this.txtPropietario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPropietario.MaxLength = 3;
             this.txtPropietario.Name = "txtPropietario";
             this.txtPropietario.PasswordChar = '\0';
             this.txtPropietario.Radius = 10;

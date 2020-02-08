@@ -93,5 +93,11 @@ namespace AppFlickDesktop.Vistas.Forms
             return cliente;
 
         }
+
+        private void btnMasTarjetas_Click_1(object sender, EventArgs e)
+        {
+            Form_Tarjeta form = new Form_Tarjeta(this);
+            form.ShowDialog();
+        }
     }
 }

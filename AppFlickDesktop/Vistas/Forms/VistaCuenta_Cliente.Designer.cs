@@ -46,11 +46,11 @@
             this.container = new System.Windows.Forms.Panel();
             this.scrollBar = new Guna.UI.WinForms.GunaVScrollBar();
             this.btnActualizarDatos = new Guna.UI.WinForms.GunaButton();
-            this.var_imagen_usuario = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.var_imagen_usuario = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.container.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.var_imagen_usuario)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.var_imagen_usuario)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaLabel5
@@ -351,20 +351,6 @@
             this.btnActualizarDatos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnActualizarDatos.Click += new System.EventHandler(this.btnActualizarDatos_Click);
             // 
-            // var_imagen_usuario
-            // 
-            this.var_imagen_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.var_imagen_usuario.BaseColor = System.Drawing.Color.White;
-            this.var_imagen_usuario.Image = global::AppFlickDesktop.Properties.Resources.usuario_muestra;
-            this.var_imagen_usuario.Location = new System.Drawing.Point(307, 74);
-            this.var_imagen_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.var_imagen_usuario.Name = "var_imagen_usuario";
-            this.var_imagen_usuario.Size = new System.Drawing.Size(240, 222);
-            this.var_imagen_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.var_imagen_usuario.TabIndex = 66;
-            this.var_imagen_usuario.TabStop = false;
-            this.var_imagen_usuario.UseTransfarantBackground = false;
-            // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -387,6 +373,20 @@
             this.panel3.Size = new System.Drawing.Size(760, 268);
             this.panel3.TabIndex = 85;
             // 
+            // var_imagen_usuario
+            // 
+            this.var_imagen_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.var_imagen_usuario.BaseColor = System.Drawing.Color.White;
+            this.var_imagen_usuario.Image = global::AppFlickDesktop.Properties.Resources.usuario_muestra;
+            this.var_imagen_usuario.Location = new System.Drawing.Point(307, 74);
+            this.var_imagen_usuario.Margin = new System.Windows.Forms.Padding(4);
+            this.var_imagen_usuario.Name = "var_imagen_usuario";
+            this.var_imagen_usuario.Size = new System.Drawing.Size(240, 222);
+            this.var_imagen_usuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.var_imagen_usuario.TabIndex = 66;
+            this.var_imagen_usuario.TabStop = false;
+            this.var_imagen_usuario.UseTransfarantBackground = false;
+            // 
             // VistaCuenta_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -401,8 +401,8 @@
             this.Name = "VistaCuenta_Cliente";
             this.Size = new System.Drawing.Size(1299, 623);
             this.container.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.var_imagen_usuario)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.var_imagen_usuario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
