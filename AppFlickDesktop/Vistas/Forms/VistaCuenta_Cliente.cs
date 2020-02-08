@@ -17,7 +17,6 @@ namespace AppFlickDesktop.Vistas.Forms
             InitializeComponent();
             PropiedadesScroll();
             rellenarTarjetas();
-            anadirTarjetaVacia();
             cargarDatos();
         }
 
@@ -25,6 +24,7 @@ namespace AppFlickDesktop.Vistas.Forms
         {
             Elem_tarjeta_vacia tarjeta_Vacia = new Elem_tarjeta_vacia(this);
             panelTarjetas.Controls.Add(tarjeta_Vacia);
+            tarjeta_Vacia.Dock = DockStyle.Top;
         }
 
         private void cargarDatos()

@@ -12,6 +12,7 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
         public Elem_tarjeta_vacia(VistaCuenta_Cliente vistaCuenta_Cliente)
         {
             VistaCuenta_Cliente = vistaCuenta_Cliente;
+            InitializeComponent();
         }
 
         private void btnMasTarjetas_Click(object sender, EventArgs e)

@@ -310,7 +310,7 @@
             this.txtPropietario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtPropietario.Location = new System.Drawing.Point(464, 271);
             this.txtPropietario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPropietario.MaxLength = 3;
+            this.txtPropietario.MaxLength = 100;
             this.txtPropietario.Name = "txtPropietario";
             this.txtPropietario.PasswordChar = '\0';
             this.txtPropietario.Radius = 10;
@@ -332,6 +332,7 @@
             this.txtCCV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtCCV.Location = new System.Drawing.Point(731, 186);
             this.txtCCV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCCV.MaxLength = 3;
             this.txtCCV.Name = "txtCCV";
             this.txtCCV.PasswordChar = '\0';
             this.txtCCV.Radius = 10;

@@ -21,7 +21,8 @@ namespace AppFlickDesktop.Vistas.Notificaciones
 
         internal bool Preguntar(string titulo, string pregunta)
         {
-            return MessageBox.Show(pregunta, titulo, MessageBoxButtons.YesNo).Equals(MessageBoxButtons.OK);
+            DialogResult res = MessageBox.Show(pregunta, titulo, MessageBoxButtons.YesNo);
+            return res.ToString().Equals("Yes");
         }
     }
 }
