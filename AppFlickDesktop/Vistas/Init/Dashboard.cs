@@ -16,7 +16,7 @@ namespace AppFlickDesktop.Vistas.Init
         {
             InitializeComponent();
             inicializarPropiedades();
-            btnFunciones_Click(null,null);
+            btnFunciones_Click(null, null);
         }
         private void inicializarPropiedades()
         {

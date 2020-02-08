@@ -25,8 +25,14 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
 
         private void asignarPropiedades()
         {
-            if (Disponible) BackgroundImage = Properties.Resources.asiento_cine;
-            else BackgroundImage = Properties.Resources.asiento_cine_ocupado_;
+            if (Disponible)
+            {
+                BackgroundImage = Properties.Resources.asiento_cine;
+            }
+            else
+            {
+                BackgroundImage = Properties.Resources.asiento_cine_ocupado_;
+            }
 
             BackgroundImageLayout = ImageLayout.Zoom;
             Dock = DockStyle.Fill;

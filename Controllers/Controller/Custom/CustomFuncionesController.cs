@@ -50,7 +50,10 @@ namespace Controllers.Controller
                 }
                 return resul.Substring(0, resul.Length - 2);
             }
-            else return resul;
+            else
+            {
+                return resul;
+            }
         }
     }
 }
