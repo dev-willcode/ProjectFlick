@@ -116,6 +116,12 @@
     <Compile Include="Vistas\Forms\Elementos\Elem_tarjeta.Designer.cs">
       <DependentUpon>Elem_tarjeta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_tarjeta_vacia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_tarjeta_vacia.Designer.cs">
+      <DependentUpon>Elem_tarjeta_vacia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\Elementos\Form_Comprar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_tarjeta.resx">
       <DependentUpon>Elem_tarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_tarjeta_vacia.resx">
+      <DependentUpon>Elem_tarjeta_vacia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Comprar.resx">
       <DependentUpon>Form_Comprar.cs</DependentUpon>

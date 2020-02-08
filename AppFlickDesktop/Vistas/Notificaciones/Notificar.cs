@@ -1,4 +1,4 @@
-﻿using System.Windows;
+﻿using System.Windows.Forms;
 
 namespace AppFlickDesktop.Vistas.Notificaciones
 {
@@ -17,6 +17,11 @@ namespace AppFlickDesktop.Vistas.Notificaciones
         internal void notificarWindows(string ttitulo, string mensaje)
         {
 
+        }
+
+        internal bool Preguntar(string titulo, string pregunta)
+        {
+            return MessageBox.Show(pregunta, titulo, MessageBoxButtons.YesNo).Equals(MessageBoxButtons.OK);
         }
     }
 }

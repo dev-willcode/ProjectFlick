@@ -17,7 +17,14 @@ namespace AppFlickDesktop.Vistas.Forms
             InitializeComponent();
             PropiedadesScroll();
             rellenarTarjetas();
+            anadirTarjetaVacia();
             cargarDatos();
+        }
+
+        private void anadirTarjetaVacia()
+        {
+            Elem_tarjeta_vacia tarjeta_Vacia = new Elem_tarjeta_vacia(this);
+            panelTarjetas.Controls.Add(tarjeta_Vacia);
         }
 
         private void cargarDatos()
@@ -38,14 +45,16 @@ namespace AppFlickDesktop.Vistas.Forms
         }
         public void rellenarTarjetas()
         {
+            panelTarjetas.Controls.Clear();
             List<Tarjetas> listaTarjeta = PropiedadesGenerales.TarjetasController
                 .listarTarjetas(PropiedadesGenerales.ClienteActual.id);
-            for (int i = 0; i < listaTarjeta.Count; i++)
+            listaTarjeta.ForEach(tarjeta =>
             {
-                Elem_tarjeta elemento = new Elem_tarjeta(listaTarjeta[i]);
+                Elem_tarjeta elemento = new Elem_tarjeta(this, tarjeta);
                 panelTarjetas.Controls.Add(elemento);
                 elemento.Dock = DockStyle.Top;
-            }
+            });
+            anadirTarjetaVacia();
         }
 
         private void btnActualizarDatos_Click(object sender, EventArgs e)
@@ -83,12 +92,6 @@ namespace AppFlickDesktop.Vistas.Forms
             cliente.id = PropiedadesGenerales.ClienteActual.id;
             return cliente;
 
-        }
-
-        private void btnMasTarjetas_Click(object sender, EventArgs e)
-        {
-            Form_Tarjeta form = new Form_Tarjeta(this);
-            form.ShowDialog();
         }
     }
 }

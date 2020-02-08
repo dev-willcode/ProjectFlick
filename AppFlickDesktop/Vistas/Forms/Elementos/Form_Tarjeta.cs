@@ -73,7 +73,7 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
                 errores += " - Ingrese el CCV" + Environment.NewLine;
             }
 
-            if (string.IsNullOrEmpty(txtNumeroTarjeta.Text))
+            if (string.IsNullOrEmpty(txtNumeroTarjeta.Text) && txtNumeroTarjeta.Text.Length == 15)
             {
                 errores += " - Ingrese el número de la tarjeta" + Environment.NewLine;
             }
@@ -100,6 +100,7 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
 
                 if (!TarjetaController.TarjetaRepetida(tarjeta))
                 {
+                    tarjeta.tarjeta_cliente = PropiedadesGenerales.ClienteActual.id;
                     tarjeta.tarjeta_banco = int.Parse(comboBancos.SelectedValue.ToString());
                     tarjeta.tarjeta_anio = comboAnio.SelectedValue.ToString();
                     tarjeta.tarjeta_mes = comboMes.SelectedValue.ToString();
