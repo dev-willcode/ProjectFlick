@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using AppFlickDesktop.Vistas.Forms;
+using AppFlickCliente.Vistas.Forms;
 using Entity.Entidades;
 using Utils;
 
-namespace AppFlickDesktop.Vistas.Init
+namespace AppFlickCliente.Vistas.Init
 {
     public partial class Dashboard : Form
     {

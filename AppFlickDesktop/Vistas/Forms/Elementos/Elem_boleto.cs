@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using Entity.Entidades;
 
-namespace AppFlickDesktop.Vistas.Forms
+namespace AppFlickCliente.Vistas.Forms
 {
     public partial class Elem_boleto : UserControl
     {

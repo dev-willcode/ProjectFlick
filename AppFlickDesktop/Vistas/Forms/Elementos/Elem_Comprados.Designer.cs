@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms.Elementos
+﻿namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     partial class Elem_CompraDos
     {

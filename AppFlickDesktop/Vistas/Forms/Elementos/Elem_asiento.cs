@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using AppFlickDesktop.Vistas.Notificaciones;
+using AppFlickCliente.Vistas.Notificaciones;
 using Utils;
 
-namespace AppFlickDesktop.Vistas.Forms.Elementos
+namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     internal class Elem_asiento : PictureBox
     {

@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms
+﻿namespace AppFlickCliente.Vistas.Forms
 {
     partial class Elem_boleto
     {
@@ -47,7 +47,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::AppFlickDesktop.Properties.Resources.boleto_imagen;
+            this.panel1.BackgroundImage = global::AppFlickCliente.Properties.Resources.boleto_imagen;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel1.Controls.Add(this.btnFactura);
             this.panel1.Controls.Add(this.var_funcion);
@@ -143,7 +143,7 @@
             // 
             this.gunaCirclePictureBox4.BaseColor = System.Drawing.Color.White;
             this.gunaCirclePictureBox4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gunaCirclePictureBox4.Image = global::AppFlickDesktop.Properties.Resources.icon_boletos;
+            this.gunaCirclePictureBox4.Image = global::AppFlickCliente.Properties.Resources.icon_boletos;
             this.gunaCirclePictureBox4.Location = new System.Drawing.Point(4, 4);
             this.gunaCirclePictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.gunaCirclePictureBox4.Name = "gunaCirclePictureBox4";

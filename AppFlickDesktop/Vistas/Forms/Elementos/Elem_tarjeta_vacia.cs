@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace AppFlickDesktop.Vistas.Forms.Elementos
+namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     public partial class Elem_tarjeta_vacia : UserControl
     {

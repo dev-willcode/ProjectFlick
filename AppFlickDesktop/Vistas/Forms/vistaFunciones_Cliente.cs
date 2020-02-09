@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using AppFlickDesktop.Vistas.Init;
+using AppFlickCliente.Vistas.Init;
 using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
 
-namespace AppFlickDesktop.Vistas.Forms
+namespace AppFlickCliente.Vistas.Forms
 {
     public partial class VistaFunciones_Cliente : UserControl
     {

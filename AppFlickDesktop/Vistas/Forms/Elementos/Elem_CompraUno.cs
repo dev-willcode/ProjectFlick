@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AppFlickDesktop.Vistas.Forms.Elementos
+namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     public partial class Elem_CompraUno : Elem_Compra
     {

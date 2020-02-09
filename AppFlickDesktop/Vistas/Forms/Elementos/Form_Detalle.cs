@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using Controllers.Controller;
 
-namespace AppFlickDesktop.Vistas.Forms
+namespace AppFlickCliente.Vistas.Forms
 {
     public partial class Form_Detalle : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms.Elementos
+﻿namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     partial class Form_Tarjeta
     {
@@ -112,7 +112,7 @@
             this.btnGuardar.FocusedColor = System.Drawing.Color.Empty;
             this.btnGuardar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Image = global::AppFlickDesktop.Properties.Resources.icon_mas;
+            this.btnGuardar.Image = global::AppFlickCliente.Properties.Resources.icon_mas;
             this.btnGuardar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnGuardar.Location = new System.Drawing.Point(297, 418);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
@@ -132,7 +132,7 @@
             // btnCerrar
             // 
             this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCerrar.Image = global::AppFlickDesktop.Properties.Resources.icon_cerrar;
+            this.btnCerrar.Image = global::AppFlickCliente.Properties.Resources.icon_cerrar;
             this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
             this.btnCerrar.Location = new System.Drawing.Point(804, 53);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);

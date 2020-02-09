@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Entity.Entidades;
 using Utils;
 
-namespace AppFlickDesktop.Vistas.Forms.Elementos
+namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     public partial class Elem_CompraTres : Elem_Compra
     {

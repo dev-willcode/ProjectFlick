@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms
+﻿namespace AppFlickCliente.Vistas.Forms
 {
     partial class Form_Trailer
     {
@@ -97,7 +97,7 @@
             // btnCerrar
             // 
             this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCerrar.Image = global::AppFlickDesktop.Properties.Resources.icon_cerrar;
+            this.btnCerrar.Image = global::AppFlickCliente.Properties.Resources.icon_cerrar;
             this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
             this.btnCerrar.Location = new System.Drawing.Point(829, 32);
             this.btnCerrar.Name = "btnCerrar";

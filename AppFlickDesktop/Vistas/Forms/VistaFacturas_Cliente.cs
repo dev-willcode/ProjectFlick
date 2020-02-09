@@ -6,7 +6,7 @@ using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
 
-namespace AppFlickDesktop.Vistas.Forms
+namespace AppFlickCliente.Vistas.Forms
 {
     public partial class VistaFacturas_Cliente : UserControl
     {

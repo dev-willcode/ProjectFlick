@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using AppFlickDesktop.Vistas.Notificaciones;
+using AppFlickCliente.Vistas.Notificaciones;
 using Entity.Entidades;
 using Utils;
 
-namespace AppFlickDesktop.Vistas.Forms.Elementos
+namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     public partial class Elem_CompraDos : Elem_Compra
     {

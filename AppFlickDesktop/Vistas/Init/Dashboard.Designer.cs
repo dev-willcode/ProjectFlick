@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Init
+﻿namespace AppFlickCliente.Vistas.Init
 {
     partial class Dashboard
     {
@@ -168,7 +168,7 @@
             this.btnFunciones.FocusedColor = System.Drawing.Color.Empty;
             this.btnFunciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFunciones.ForeColor = System.Drawing.Color.White;
-            this.btnFunciones.Image = global::AppFlickDesktop.Properties.Resources.icon_funciones;
+            this.btnFunciones.Image = global::AppFlickCliente.Properties.Resources.icon_funciones;
             this.btnFunciones.ImageSize = new System.Drawing.Size(20, 20);
             this.btnFunciones.Location = new System.Drawing.Point(0, 0);
             this.btnFunciones.Margin = new System.Windows.Forms.Padding(0);
@@ -196,7 +196,7 @@
             this.btnMiCuenta.FocusedColor = System.Drawing.Color.Empty;
             this.btnMiCuenta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMiCuenta.ForeColor = System.Drawing.Color.White;
-            this.btnMiCuenta.Image = global::AppFlickDesktop.Properties.Resources.icon_usuario;
+            this.btnMiCuenta.Image = global::AppFlickCliente.Properties.Resources.icon_usuario;
             this.btnMiCuenta.ImageSize = new System.Drawing.Size(20, 20);
             this.btnMiCuenta.Location = new System.Drawing.Point(398, 0);
             this.btnMiCuenta.Margin = new System.Windows.Forms.Padding(0);
@@ -224,7 +224,7 @@
             this.btnTarjetas.FocusedColor = System.Drawing.Color.Empty;
             this.btnTarjetas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTarjetas.ForeColor = System.Drawing.Color.White;
-            this.btnTarjetas.Image = global::AppFlickDesktop.Properties.Resources.icon_tarjetas;
+            this.btnTarjetas.Image = global::AppFlickCliente.Properties.Resources.icon_tarjetas;
             this.btnTarjetas.ImageSize = new System.Drawing.Size(20, 20);
             this.btnTarjetas.Location = new System.Drawing.Point(199, 0);
             this.btnTarjetas.Margin = new System.Windows.Forms.Padding(0);
@@ -282,7 +282,7 @@
             this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = global::AppFlickDesktop.Properties.Resources.icon_funciones;
+            this.gunaButton1.Image = global::AppFlickCliente.Properties.Resources.icon_funciones;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton1.Location = new System.Drawing.Point(305, 74);
             this.gunaButton1.Name = "gunaButton1";
@@ -306,7 +306,7 @@
             this.gunaButton17.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton17.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton17.ForeColor = System.Drawing.Color.White;
-            this.gunaButton17.Image = global::AppFlickDesktop.Properties.Resources.icon_tarjetas;
+            this.gunaButton17.Image = global::AppFlickCliente.Properties.Resources.icon_tarjetas;
             this.gunaButton17.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton17.Location = new System.Drawing.Point(305, 218);
             this.gunaButton17.Name = "gunaButton17";
@@ -330,7 +330,7 @@
             this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaButton2.Image = global::AppFlickDesktop.Properties.Resources.icon_boletos;
+            this.gunaButton2.Image = global::AppFlickCliente.Properties.Resources.icon_boletos;
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton2.Location = new System.Drawing.Point(305, 122);
             this.gunaButton2.Name = "gunaButton2";
@@ -354,7 +354,7 @@
             this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaButton3.Image = global::AppFlickDesktop.Properties.Resources.icon_usuario;
+            this.gunaButton3.Image = global::AppFlickCliente.Properties.Resources.icon_usuario;
             this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton3.Location = new System.Drawing.Point(305, 170);
             this.gunaButton3.Name = "gunaButton3";
@@ -378,7 +378,7 @@
             this.gunaButton15.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton15.ForeColor = System.Drawing.Color.White;
-            this.gunaButton15.Image = global::AppFlickDesktop.Properties.Resources.icon_dashboard;
+            this.gunaButton15.Image = global::AppFlickCliente.Properties.Resources.icon_dashboard;
             this.gunaButton15.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton15.Location = new System.Drawing.Point(21, 76);
             this.gunaButton15.Name = "gunaButton15";
@@ -402,7 +402,7 @@
             this.btnAcercaDe.FocusedColor = System.Drawing.Color.Empty;
             this.btnAcercaDe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcercaDe.ForeColor = System.Drawing.Color.White;
-            this.btnAcercaDe.Image = global::AppFlickDesktop.Properties.Resources.icon_about;
+            this.btnAcercaDe.Image = global::AppFlickCliente.Properties.Resources.icon_about;
             this.btnAcercaDe.ImageSize = new System.Drawing.Size(20, 20);
             this.btnAcercaDe.Location = new System.Drawing.Point(3, 0);
             this.btnAcercaDe.Name = "btnAcercaDe";
@@ -426,7 +426,7 @@
             this.gunaButton6.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton6.ForeColor = System.Drawing.Color.White;
-            this.gunaButton6.Image = global::AppFlickDesktop.Properties.Resources.icon_clientes;
+            this.gunaButton6.Image = global::AppFlickCliente.Properties.Resources.icon_clientes;
             this.gunaButton6.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton6.Location = new System.Drawing.Point(171, 172);
             this.gunaButton6.Name = "gunaButton6";
@@ -463,7 +463,7 @@
             this.gunaButton14.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton14.ForeColor = System.Drawing.Color.White;
-            this.gunaButton14.Image = global::AppFlickDesktop.Properties.Resources.icon_clientes;
+            this.gunaButton14.Image = global::AppFlickCliente.Properties.Resources.icon_clientes;
             this.gunaButton14.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton14.Location = new System.Drawing.Point(21, 313);
             this.gunaButton14.Name = "gunaButton14";
@@ -500,7 +500,7 @@
             this.gunaButton5.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton5.ForeColor = System.Drawing.Color.White;
-            this.gunaButton5.Image = global::AppFlickDesktop.Properties.Resources.icon_facturacion;
+            this.gunaButton5.Image = global::AppFlickCliente.Properties.Resources.icon_facturacion;
             this.gunaButton5.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton5.Location = new System.Drawing.Point(21, 268);
             this.gunaButton5.Name = "gunaButton5";
@@ -524,7 +524,7 @@
             this.gunaButton8.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton8.ForeColor = System.Drawing.Color.White;
-            this.gunaButton8.Image = global::AppFlickDesktop.Properties.Resources.icon_funciones;
+            this.gunaButton8.Image = global::AppFlickCliente.Properties.Resources.icon_funciones;
             this.gunaButton8.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton8.Location = new System.Drawing.Point(171, 76);
             this.gunaButton8.Name = "gunaButton8";
@@ -548,7 +548,7 @@
             this.gunaButton11.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton11.ForeColor = System.Drawing.Color.White;
-            this.gunaButton11.Image = global::AppFlickDesktop.Properties.Resources.icon_empleado;
+            this.gunaButton11.Image = global::AppFlickCliente.Properties.Resources.icon_empleado;
             this.gunaButton11.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton11.Location = new System.Drawing.Point(21, 361);
             this.gunaButton11.Name = "gunaButton11";
@@ -572,7 +572,7 @@
             this.gunaButton7.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton7.ForeColor = System.Drawing.Color.White;
-            this.gunaButton7.Image = global::AppFlickDesktop.Properties.Resources.icon_peliculas;
+            this.gunaButton7.Image = global::AppFlickCliente.Properties.Resources.icon_peliculas;
             this.gunaButton7.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton7.Location = new System.Drawing.Point(171, 124);
             this.gunaButton7.Name = "gunaButton7";
@@ -596,7 +596,7 @@
             this.gunaButton12.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton12.ForeColor = System.Drawing.Color.White;
-            this.gunaButton12.Image = global::AppFlickDesktop.Properties.Resources.icon_peliculas;
+            this.gunaButton12.Image = global::AppFlickCliente.Properties.Resources.icon_peliculas;
             this.gunaButton12.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton12.Location = new System.Drawing.Point(21, 172);
             this.gunaButton12.Name = "gunaButton12";
@@ -620,7 +620,7 @@
             this.gunaButton9.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton9.ForeColor = System.Drawing.Color.White;
-            this.gunaButton9.Image = global::AppFlickDesktop.Properties.Resources.icon_facturacion;
+            this.gunaButton9.Image = global::AppFlickCliente.Properties.Resources.icon_facturacion;
             this.gunaButton9.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton9.Location = new System.Drawing.Point(171, 220);
             this.gunaButton9.Name = "gunaButton9";
@@ -644,7 +644,7 @@
             this.gunaButton13.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton13.ForeColor = System.Drawing.Color.White;
-            this.gunaButton13.Image = global::AppFlickDesktop.Properties.Resources.icon_funciones;
+            this.gunaButton13.Image = global::AppFlickCliente.Properties.Resources.icon_funciones;
             this.gunaButton13.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton13.Location = new System.Drawing.Point(21, 124);
             this.gunaButton13.Name = "gunaButton13";
@@ -668,7 +668,7 @@
             this.gunaButton10.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaButton10.ForeColor = System.Drawing.Color.White;
-            this.gunaButton10.Image = global::AppFlickDesktop.Properties.Resources.icon_horario;
+            this.gunaButton10.Image = global::AppFlickCliente.Properties.Resources.icon_horario;
             this.gunaButton10.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton10.Location = new System.Drawing.Point(21, 220);
             this.gunaButton10.Name = "gunaButton10";
@@ -736,7 +736,7 @@
             // 
             this.logoImagen.BackColor = System.Drawing.Color.Transparent;
             this.animacionLogo.SetDecoration(this.logoImagen, Guna.UI.Animation.DecorationType.None);
-            this.logoImagen.Image = global::AppFlickDesktop.Properties.Resources.flick;
+            this.logoImagen.Image = global::AppFlickCliente.Properties.Resources.flick;
             this.logoImagen.Location = new System.Drawing.Point(33, 12);
             this.logoImagen.Name = "logoImagen";
             this.logoImagen.Size = new System.Drawing.Size(156, 42);
@@ -750,7 +750,7 @@
             this.var_imagen_usuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.var_imagen_usuario.BaseColor = System.Drawing.Color.White;
             this.animacionLogo.SetDecoration(this.var_imagen_usuario, Guna.UI.Animation.DecorationType.None);
-            this.var_imagen_usuario.Image = global::AppFlickDesktop.Properties.Resources.usuario_muestra;
+            this.var_imagen_usuario.Image = global::AppFlickCliente.Properties.Resources.usuario_muestra;
             this.var_imagen_usuario.Location = new System.Drawing.Point(929, 12);
             this.var_imagen_usuario.Name = "var_imagen_usuario";
             this.var_imagen_usuario.Size = new System.Drawing.Size(36, 36);

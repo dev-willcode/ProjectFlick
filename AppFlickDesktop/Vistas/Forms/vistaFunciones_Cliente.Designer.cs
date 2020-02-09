@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms
+﻿namespace AppFlickCliente.Vistas.Forms
 {
     partial class VistaFunciones_Cliente
     {
@@ -49,7 +49,7 @@
             this.btnBuscarFuncion.FocusedColor = System.Drawing.Color.Empty;
             this.btnBuscarFuncion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBuscarFuncion.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarFuncion.Image = global::AppFlickDesktop.Properties.Resources.icon_buscar;
+            this.btnBuscarFuncion.Image = global::AppFlickCliente.Properties.Resources.icon_buscar;
             this.btnBuscarFuncion.ImageSize = new System.Drawing.Size(20, 20);
             this.btnBuscarFuncion.Location = new System.Drawing.Point(916, 21);
             this.btnBuscarFuncion.Name = "btnBuscarFuncion";

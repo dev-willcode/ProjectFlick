@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms.Elementos
+﻿namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     partial class Form_Comprar
     {
@@ -36,8 +36,8 @@
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.slide1 = new AppFlickDesktop.Vistas.Forms.Elementos.Control_slidebar();
-            this.slide2 = new AppFlickDesktop.Vistas.Forms.Elementos.Control_slidebar();
+            this.slide1 = new AppFlickCliente.Vistas.Forms.Elementos.Control_slidebar();
+            this.slide2 = new AppFlickCliente.Vistas.Forms.Elementos.Control_slidebar();
             this.Principal = new System.Windows.Forms.Panel();
             this.contenedor = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -252,7 +252,7 @@
             // 
             this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCerrar.Image = global::AppFlickDesktop.Properties.Resources.icon_cerrar;
+            this.btnCerrar.Image = global::AppFlickCliente.Properties.Resources.icon_cerrar;
             this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
             this.btnCerrar.Location = new System.Drawing.Point(846, 0);
             this.btnCerrar.Name = "btnCerrar";

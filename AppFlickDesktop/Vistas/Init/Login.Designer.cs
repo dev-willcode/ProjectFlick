@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop
+﻿namespace AppFlickCliente
 {
     partial class Login
     {
@@ -100,7 +100,7 @@
             this.logoImagen.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.logoImagen.BackColor = System.Drawing.Color.Transparent;
             this.efecto.SetDecoration(this.logoImagen, Guna.UI.Animation.DecorationType.None);
-            this.logoImagen.Image = global::AppFlickDesktop.Properties.Resources.flick;
+            this.logoImagen.Image = global::AppFlickCliente.Properties.Resources.flick;
             this.logoImagen.Location = new System.Drawing.Point(68, 98);
             this.logoImagen.Name = "logoImagen";
             this.logoImagen.Size = new System.Drawing.Size(232, 83);
@@ -720,7 +720,7 @@
             // 
             this.efecto.SetDecoration(this.btnCerrar, Guna.UI.Animation.DecorationType.None);
             this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCerrar.Image = global::AppFlickDesktop.Properties.Resources.icon_cerrar;
+            this.btnCerrar.Image = global::AppFlickCliente.Properties.Resources.icon_cerrar;
             this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
             this.btnCerrar.Location = new System.Drawing.Point(320, 12);
             this.btnCerrar.Name = "btnCerrar";

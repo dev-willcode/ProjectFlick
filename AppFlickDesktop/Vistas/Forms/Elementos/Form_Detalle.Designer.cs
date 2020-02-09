@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms
+﻿namespace AppFlickCliente.Vistas.Forms
 {
     partial class Form_Detalle
     {
@@ -114,7 +114,7 @@
             // 
             this.var_imagen_pelicula.BackColor = System.Drawing.Color.Transparent;
             this.var_imagen_pelicula.BaseColor = System.Drawing.Color.White;
-            this.var_imagen_pelicula.Image = global::AppFlickDesktop.Properties.Resources.pelicula_muestra;
+            this.var_imagen_pelicula.Image = global::AppFlickCliente.Properties.Resources.pelicula_muestra;
             this.var_imagen_pelicula.Location = new System.Drawing.Point(40, 43);
             this.var_imagen_pelicula.Name = "var_imagen_pelicula";
             this.var_imagen_pelicula.Size = new System.Drawing.Size(227, 340);
@@ -126,7 +126,7 @@
             // btnCerrar
             // 
             this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCerrar.Image = global::AppFlickDesktop.Properties.Resources.icon_cerrar;
+            this.btnCerrar.Image = global::AppFlickCliente.Properties.Resources.icon_cerrar;
             this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
             this.btnCerrar.Location = new System.Drawing.Point(794, 43);
             this.btnCerrar.Name = "btnCerrar";

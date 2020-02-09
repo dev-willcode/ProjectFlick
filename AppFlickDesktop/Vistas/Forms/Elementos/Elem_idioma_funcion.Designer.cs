@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms
+﻿namespace AppFlickCliente.Vistas.Forms
 {
     partial class Elem_idioma_funcion
     {
@@ -65,7 +65,7 @@
             // 
             this.imagenBoleto.BaseColor = System.Drawing.Color.White;
             this.imagenBoleto.Dock = System.Windows.Forms.DockStyle.Left;
-            this.imagenBoleto.Image = global::AppFlickDesktop.Properties.Resources.icon_boletos;
+            this.imagenBoleto.Image = global::AppFlickCliente.Properties.Resources.icon_boletos;
             this.imagenBoleto.Location = new System.Drawing.Point(3, 3);
             this.imagenBoleto.Name = "imagenBoleto";
             this.imagenBoleto.Size = new System.Drawing.Size(38, 22);

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickDesktop", "AppFlickDesktop\AppFlickDesktop.csproj", "{150D7B97-48EE-4FAF-BAFF-F63C24568628}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickCliente", "AppFlickDesktop\AppFlickCliente.csproj", "{150D7B97-48EE-4FAF-BAFF-F63C24568628}"
 	ProjectSection(ProjectDependencies) = postProject
 		{997D0BFD-C9AB-4376-9E0A-CC0D10C0860F} = {997D0BFD-C9AB-4376-9E0A-CC0D10C0860F}
 	EndProjectSection

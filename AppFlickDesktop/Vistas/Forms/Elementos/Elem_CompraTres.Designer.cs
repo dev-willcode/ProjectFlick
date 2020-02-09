@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms.Elementos
+﻿namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     partial class Elem_CompraTres
     {
@@ -369,7 +369,7 @@
             this.var_imagen_pelicula.BackColor = System.Drawing.Color.Transparent;
             this.var_imagen_pelicula.BaseColor = System.Drawing.Color.White;
             this.var_imagen_pelicula.Dock = System.Windows.Forms.DockStyle.Left;
-            this.var_imagen_pelicula.Image = global::AppFlickDesktop.Properties.Resources.pelicula_muestra;
+            this.var_imagen_pelicula.Image = global::AppFlickCliente.Properties.Resources.pelicula_muestra;
             this.var_imagen_pelicula.Location = new System.Drawing.Point(0, 0);
             this.var_imagen_pelicula.Name = "var_imagen_pelicula";
             this.var_imagen_pelicula.Size = new System.Drawing.Size(189, 348);

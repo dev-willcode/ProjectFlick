@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace AppFlickDesktop
+namespace AppFlickCliente
 {
     static class Program
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using AppFlickDesktop.Vistas.Forms;
-using AppFlickDesktop.Vistas.Forms.Elementos;
+using AppFlickCliente.Vistas.Forms;
+using AppFlickCliente.Vistas.Forms.Elementos;
 using Controllers.Controller;
 using Entity.Entidades;
 
-namespace AppFlickDesktop.Vistas.Init
+namespace AppFlickCliente.Vistas.Init
 {
     public partial class Elem_funcion : UserControl
     {

@@ -5,7 +5,7 @@ using Controllers.Controller;
 using Entity.Entidades;
 using Utils;
 
-namespace AppFlickDesktop.Vistas.Forms.Elementos
+namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     public partial class Form_Tarjeta : Form
     {
@@ -113,7 +113,7 @@ namespace AppFlickDesktop.Vistas.Forms.Elementos
                     {
                         PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Tarjeta ingresada");
                         VistaCuenta_Cliente.rellenarTarjetas();
-                        this.Close();
+                        Close();
                     }
                 }
                 else

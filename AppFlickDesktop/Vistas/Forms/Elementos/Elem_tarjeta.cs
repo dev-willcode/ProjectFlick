@@ -1,10 +1,9 @@
 ﻿using System.Windows.Forms;
 using Controllers.Controller;
-using Controllers.DAO;
 using Entity.Entidades;
 using Utils;
 
-namespace AppFlickDesktop.Vistas.Forms
+namespace AppFlickCliente.Vistas.Forms
 {
     public partial class Elem_tarjeta : UserControl
     {
@@ -36,11 +35,11 @@ namespace AppFlickDesktop.Vistas.Forms
 
         private void btnCerrar_Click(object sender, System.EventArgs e)
         {
-            if (PropiedadesGenerales.Notificar.Preguntar("Eliminar","¿Esta seguro de eliminar?"))
+            if (PropiedadesGenerales.Notificar.Preguntar("Eliminar", "¿Esta seguro de eliminar?"))
             {
                 if (TarjetaController.EliminarTarjeta(Tarjeta.id))
                 {
-                    PropiedadesGenerales.Notificar.notificarCorrecto("Completado","Se ha eliminado la tarjeta");
+                    PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado la tarjeta");
                     VistaCuenta_Cliente.rellenarTarjetas();
                 }
                 else

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using AppFlickDesktop.Vistas.Notificaciones;
+using AppFlickCliente.Vistas.Notificaciones;
 using Controllers.Controller;
 using Guna.UI.WinForms;
 using Utils;
 
-namespace AppFlickDesktop.Vistas.Forms.Elementos
+namespace AppFlickCliente.Vistas.Forms.Elementos
 {
 
     public partial class Form_Comprar : Form

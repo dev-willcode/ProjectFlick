@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms
+﻿namespace AppFlickCliente.Vistas.Forms
 {
     partial class VistaCuenta_Cliente
     {
@@ -377,7 +377,7 @@
             // 
             this.var_imagen_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.var_imagen_usuario.BaseColor = System.Drawing.Color.White;
-            this.var_imagen_usuario.Image = global::AppFlickDesktop.Properties.Resources.usuario_muestra;
+            this.var_imagen_usuario.Image = global::AppFlickCliente.Properties.Resources.usuario_muestra;
             this.var_imagen_usuario.Location = new System.Drawing.Point(307, 74);
             this.var_imagen_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.var_imagen_usuario.Name = "var_imagen_usuario";

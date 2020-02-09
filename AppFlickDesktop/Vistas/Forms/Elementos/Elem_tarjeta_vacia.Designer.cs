@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms.Elementos
+﻿namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     partial class Elem_tarjeta_vacia
     {
@@ -35,7 +35,7 @@
             // 
             // panelAnadir
             // 
-            this.panelAnadir.BackgroundImage = global::AppFlickDesktop.Properties.Resources.tarjeta_nueva;
+            this.panelAnadir.BackgroundImage = global::AppFlickCliente.Properties.Resources.tarjeta_nueva;
             this.panelAnadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelAnadir.Controls.Add(this.btnMasTarjetas);
             this.panelAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -56,7 +56,7 @@
             this.btnMasTarjetas.FocusedColor = System.Drawing.Color.Empty;
             this.btnMasTarjetas.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnMasTarjetas.ForeColor = System.Drawing.Color.White;
-            this.btnMasTarjetas.Image = global::AppFlickDesktop.Properties.Resources.icon_mas;
+            this.btnMasTarjetas.Image = global::AppFlickCliente.Properties.Resources.icon_mas;
             this.btnMasTarjetas.ImageSize = new System.Drawing.Size(38, 38);
             this.btnMasTarjetas.Location = new System.Drawing.Point(129, 57);
             this.btnMasTarjetas.Margin = new System.Windows.Forms.Padding(4);

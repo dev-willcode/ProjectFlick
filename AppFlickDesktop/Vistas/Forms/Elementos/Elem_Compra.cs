@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using Controllers.Controller;
 
-namespace AppFlickDesktop.Vistas.Forms.Elementos
+namespace AppFlickCliente.Vistas.Forms.Elementos
 {
     public class Elem_Compra : UserControl
     {

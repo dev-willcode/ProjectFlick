@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms
+﻿namespace AppFlickCliente.Vistas.Forms
 {
     partial class VistaFacturas_Cliente
     {
@@ -129,7 +129,7 @@
             this.btnBuscarFactura.FocusedColor = System.Drawing.Color.Empty;
             this.btnBuscarFactura.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnBuscarFactura.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarFactura.Image = global::AppFlickDesktop.Properties.Resources.icon_buscar;
+            this.btnBuscarFactura.Image = global::AppFlickCliente.Properties.Resources.icon_buscar;
             this.btnBuscarFactura.ImageSize = new System.Drawing.Size(20, 20);
             this.btnBuscarFactura.Location = new System.Drawing.Point(921, 24);
             this.btnBuscarFactura.Name = "btnBuscarFactura";

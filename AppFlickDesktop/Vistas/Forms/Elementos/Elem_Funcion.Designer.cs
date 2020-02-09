@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Init
+﻿namespace AppFlickCliente.Vistas.Init
 {
     partial class Elem_funcion
     {
@@ -63,7 +63,7 @@
             // 
             this.var_imagen_pelicula.BackColor = System.Drawing.Color.Transparent;
             this.var_imagen_pelicula.BaseColor = System.Drawing.Color.White;
-            this.var_imagen_pelicula.Image = global::AppFlickDesktop.Properties.Resources.pelicula_muestra;
+            this.var_imagen_pelicula.Image = global::AppFlickCliente.Properties.Resources.pelicula_muestra;
             this.var_imagen_pelicula.Location = new System.Drawing.Point(22, -1);
             this.var_imagen_pelicula.Name = "var_imagen_pelicula";
             this.var_imagen_pelicula.Size = new System.Drawing.Size(131, 188);
@@ -85,7 +85,7 @@
             this.btnComprar.FocusedColor = System.Drawing.Color.Empty;
             this.btnComprar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComprar.ForeColor = System.Drawing.Color.White;
-            this.btnComprar.Image = global::AppFlickDesktop.Properties.Resources.icon_comprar;
+            this.btnComprar.Image = global::AppFlickCliente.Properties.Resources.icon_comprar;
             this.btnComprar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnComprar.ImageSize = new System.Drawing.Size(20, 20);
             this.btnComprar.Location = new System.Drawing.Point(577, 129);
@@ -117,7 +117,7 @@
             this.btnMas.FocusedColor = System.Drawing.Color.Empty;
             this.btnMas.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMas.ForeColor = System.Drawing.Color.White;
-            this.btnMas.Image = global::AppFlickDesktop.Properties.Resources.icon_etiqueta_verde;
+            this.btnMas.Image = global::AppFlickCliente.Properties.Resources.icon_etiqueta_verde;
             this.btnMas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnMas.ImageSize = new System.Drawing.Size(20, 20);
             this.btnMas.Location = new System.Drawing.Point(317, 129);
@@ -149,7 +149,7 @@
             this.btnTrailer.FocusedColor = System.Drawing.Color.Empty;
             this.btnTrailer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrailer.ForeColor = System.Drawing.Color.White;
-            this.btnTrailer.Image = global::AppFlickDesktop.Properties.Resources.icon_trailer;
+            this.btnTrailer.Image = global::AppFlickCliente.Properties.Resources.icon_trailer;
             this.btnTrailer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTrailer.ImageSize = new System.Drawing.Size(20, 20);
             this.btnTrailer.Location = new System.Drawing.Point(447, 129);

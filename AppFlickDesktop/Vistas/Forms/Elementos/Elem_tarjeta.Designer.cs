@@ -1,4 +1,4 @@
-﻿namespace AppFlickDesktop.Vistas.Forms
+﻿namespace AppFlickCliente.Vistas.Forms
 {
     partial class Elem_tarjeta
     {
@@ -187,7 +187,7 @@
             this.btnCerrar.FocusedColor = System.Drawing.Color.Empty;
             this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCerrar.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Image = global::AppFlickDesktop.Properties.Resources.icon_cerrar;
+            this.btnCerrar.Image = global::AppFlickCliente.Properties.Resources.icon_cerrar;
             this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
             this.btnCerrar.Location = new System.Drawing.Point(319, 0);
             this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -207,7 +207,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.BackgroundImage = global::AppFlickDesktop.Properties.Resources.tarjeta_imagen;
+            this.BackgroundImage = global::AppFlickCliente.Properties.Resources.tarjeta_imagen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.gunaElipsePanel1);

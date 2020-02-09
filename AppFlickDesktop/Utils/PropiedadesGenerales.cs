@@ -1,4 +1,4 @@
-﻿using AppFlickDesktop.Vistas.Notificaciones;
+﻿using AppFlickCliente.Vistas.Notificaciones;
 using Controllers.Controller;
 using Entity.Entidades;
 

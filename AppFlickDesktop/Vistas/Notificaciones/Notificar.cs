@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace AppFlickDesktop.Vistas.Notificaciones
+namespace AppFlickCliente.Vistas.Notificaciones
 {
     public class Notificar
     {

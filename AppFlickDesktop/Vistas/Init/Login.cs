@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using AppFlickDesktop.Vistas.Init;
-using AppFlickDesktop.Vistas.Notificaciones;
+using AppFlickCliente.Vistas.Init;
+using AppFlickCliente.Vistas.Notificaciones;
 using Controllers.Controller;
 using Entity.Entidades;
 
-namespace AppFlickDesktop
+namespace AppFlickCliente
 {
     public partial class Login : Form
     {
