@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using Controllers.DAO;
 using Entity.Entidades;
@@ -9,9 +10,17 @@ namespace Controllers.Controller
     {
         public List<Banco> ListarBancosActivos()
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BancosActivos"))
+            try
             {
-                return Procedimientos.ListarEntidades<Banco>(cmd);
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BancosActivos"))
+                {
+                    return Procedimientos.ListarEntidades<Banco>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguió listar los bancos activos", ex);
             }
         }
     }

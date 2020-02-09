@@ -10,6 +10,13 @@ namespace Controllers.Utilidades
 {
     public class UtilsProcedimientos
     {
+        private Configuraciones Configuraciones = new Configuraciones();
+
+        public UtilsProcedimientos()
+        {
+            Configuraciones.CrearConexion();
+        }
+
         public void agregarParametros(SqlCommand cmd, List<object> listaParametros, List<object> valores)
         {
             for (int i = 0; i < listaParametros.Count; i++)
@@ -18,36 +25,27 @@ namespace Controllers.Utilidades
             }
         }
 
-        public int retornarConteo(SqlCommand cmd)
-        {
-            using (SqlDataReader reader = cmd.ExecuteReader())
-            {
-                if (reader.Read())
-                {
-                    return (int)reader["count"];
-                }
-                else
-                {
-                    return 0;
-                }
-            }
-        }
-
         public SqlCommand CrearComandoSP(string procedimientoAlmacenado)
         {
-            try
+            SqlCommand cmd = new SqlCommand
             {
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = procedimientoAlmacenado;
-                cmd.Connection = Configuraciones.connect;
-                return cmd;
-            }
-            catch (Exception ex)
-            {
+                CommandType = CommandType.StoredProcedure,
+                CommandText = procedimientoAlmacenado,
+                Connection = Configuraciones.connect
+            };
+            return cmd;
+        }
 
-                throw ex;
-            }
+
+        public SqlCommand CrearComandoQ(string comando)
+        {
+            SqlCommand cmd = new SqlCommand
+            {
+                CommandType = CommandType.Text,
+                CommandText = comando,
+                Connection = Configuraciones.connect
+            };
+            return cmd;
         }
 
         public Entidad DevolverEntidad<T>(SqlCommand cmd)
@@ -65,13 +63,35 @@ namespace Controllers.Utilidades
             }
         }
 
-        public SqlCommand CrearComandoQ(string comando)
+        public List<T> ListarEntidades<T>(SqlCommand cmd)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = comando;
-            cmd.Connection = Configuraciones.connect;
-            return cmd;
+            Entidad entidad;
+            ArrayList listado = new ArrayList();
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    entidad = Activator.CreateInstance(typeof(T), reader) as Entidad;
+                    listado.Add(entidad);
+                }
+            }
+            return listado.Cast<T>().ToList();
+        }
+
+        public int retornarConteo(SqlCommand cmd)
+        {
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    return (int)reader["count"];
+                }
+                else
+                {
+                    return 0;
+                }
+            }
         }
 
         public int evaluarInsercción(SqlCommand cmd)
@@ -127,22 +147,6 @@ namespace Controllers.Utilidades
                 }
                 return false;
             }
-        }
-
-        public List<T> ListarEntidades<T>(SqlCommand cmd)
-        {
-            Entidad entidad;
-            ArrayList listado = new ArrayList();
-
-            using (SqlDataReader reader = cmd.ExecuteReader())
-            {
-                while (reader.Read())
-                {
-                    entidad = Activator.CreateInstance(typeof(T), reader) as Entidad;
-                    listado.Add(entidad);
-                }
-            }
-            return listado.Cast<T>().ToList();
         }
     }
 }

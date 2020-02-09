@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControllerException.cs" />
     <Compile Include="Controller\BancoController.cs" />
     <Compile Include="Controller\BoletoController.cs" />
     <Compile Include="Controller\CategoriaController.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Controllers;
 using Controllers.Controller;
 using Entity.Entidades;
 using Utils;
@@ -30,10 +31,17 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
 
         private void cargarBancos()
         {
-            List<Banco> lista = PropiedadesGenerales.BancoController.ListarBancosActivos();
-            comboBancos.DataSource = lista;
-            comboBancos.DisplayMember = "banco_nombre";
-            comboBancos.ValueMember = "id";
+            try
+            {
+                List<Banco> lista = PropiedadesGenerales.BancoController.ListarBancosActivos();
+                comboBancos.DataSource = lista;
+                comboBancos.DisplayMember = "banco_nombre";
+                comboBancos.ValueMember = "id";
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
         }
 
         private void cargarMesAnio()

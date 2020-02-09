@@ -3,8 +3,10 @@ using System.Drawing;
 using System.Windows.Forms;
 using AppFlickCliente.Vistas.Init;
 using AppFlickCliente.Vistas.Notificaciones;
+using Controllers;
 using Controllers.Controller;
 using Entity.Entidades;
+using Utils;
 
 namespace AppFlickCliente
 {
@@ -45,15 +47,23 @@ namespace AppFlickCliente
 
             if (validarCamposLogin())
             {
-                Cliente cliente = usuarioController.IniciarSesion(usuario);
-                if (cliente != null)
+                try
                 {
-                    abrirDashboard(cliente);
+                    Cliente cliente = usuarioController.IniciarSesion(usuario);
+                    if (cliente != null)
+                    {
+                        abrirDashboard(cliente);
+                    }
+                    else
+                    {
+                        notificar.notificarFallo("Error al iniciar sesión",
+                            "No se consiguió iniciar la sesión, usuario o contraseña incorrectos.");
+                    }
                 }
-                else
+                catch (ControllerException ex)
                 {
-                    notificar.notificarFallo("Error al iniciar sesión",
-                        "No se consiguió iniciar la sesión, usuario o contraseña incorrectos.");
+
+                    PropiedadesGenerales.Notificar.notificarError(ex);
                 }
             }
             else
@@ -180,6 +190,11 @@ namespace AppFlickCliente
             {
                 timer.Stop();
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

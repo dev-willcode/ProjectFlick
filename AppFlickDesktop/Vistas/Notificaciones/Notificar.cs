@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
+using Controllers;
 
 namespace AppFlickCliente.Vistas.Notificaciones
 {
@@ -23,6 +25,11 @@ namespace AppFlickCliente.Vistas.Notificaciones
         {
             DialogResult res = MessageBox.Show(pregunta, titulo, MessageBoxButtons.YesNo);
             return res.ToString().Equals("Yes");
+        }
+
+        internal void notificarError(ControllerException ex)
+        {
+            MessageBox.Show(Environment.NewLine + ex.Message);
         }
     }
 }

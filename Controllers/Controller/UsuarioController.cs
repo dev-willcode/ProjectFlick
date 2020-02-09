@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using Controllers.DAO;
 using Entity.Entidades;
@@ -9,19 +10,27 @@ namespace Controllers.Controller
     {
         public Cliente IniciarSesion(Usuario usuario)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_IniciarSesion"))
+            try
             {
-                Procedimientos.agregarParametros(cmd,
-                    new List<object>() {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_IniciarSesion"))
+                {
+                    Procedimientos.agregarParametros(cmd,
+                        new List<object>() {
                         "@usuario_username",
                         "@usuario_password",
-                        },
-                    new List<object>() {
+                            },
+                        new List<object>() {
                         usuario.usuario_username,
                         usuario.usuario_password,
-                    }
-                    );
-                return Procedimientos.DevolverEntidad<Cliente>(cmd) as Cliente;
+                        }
+                        );
+                    return Procedimientos.DevolverEntidad<Cliente>(cmd) as Cliente;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguío iniciar la sesión", ex);
             }
         }
 
