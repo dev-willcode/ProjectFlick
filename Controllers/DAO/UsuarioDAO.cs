@@ -9,20 +9,28 @@ namespace Controllers.DAO
     {
         public override int Create(Usuario Entidad)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_CrearUsuario"))
+            try
             {
-                Procedimientos.agregarParametros(cmd,
-                    new List<object>() {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_CrearUsuario"))
+                {
+                    Procedimientos.agregarParametros(cmd,
+                        new List<object>() {
                         "@usuario_username",
                         "@usuario_password",
                         "@usuario_perfil" },
-                    new List<object>() {
+                        new List<object>() {
                         Entidad.usuario_username,
                         Entidad.usuario_password,
                     Entidad.usuario_perfil == 0 ? DBNull.Value : (object)Entidad.usuario_perfil }
-                    );
+                        );
 
-                return Procedimientos.evaluarInsercción(cmd);
+                    return Procedimientos.evaluarInsercción(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException ("No se consiguió crear un Usuario" ,ex);
             }
         }
 

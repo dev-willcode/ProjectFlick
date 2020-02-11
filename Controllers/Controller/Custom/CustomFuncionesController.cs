@@ -22,11 +22,19 @@ namespace Controllers.Controller
 
         private void inicializarPropiedades()
         {
-            Idioma = new IdiomaController().Get(Funcion.funcion_idioma);
-            Pelicula = new PeliculaController().Get(Funcion.funcion_pelicula);
-            Categorias = new CategoriaController().ListarCategorias(Funcion.funcion_pelicula);
-            Horarios = new HorariosController().Get(Funcion.funcion_horario);
-            Sala_Cine = new Sala_CineController().Get(Funcion.funcion_sala);
+            try
+            {
+                Idioma = new IdiomaController().Get(Funcion.funcion_idioma);
+                Pelicula = new PeliculaController().Get(Funcion.funcion_pelicula);
+                Categorias = new CategoriaController().ListarCategorias(Funcion.funcion_pelicula);
+                Horarios = new HorariosController().Get(Funcion.funcion_horario);
+                Sala_Cine = new Sala_CineController().Get(Funcion.funcion_sala);
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguió inicializar Propiedades de Funciones",ex);
+            }       
         }
 
         public Funcion Funcion { get; set; }

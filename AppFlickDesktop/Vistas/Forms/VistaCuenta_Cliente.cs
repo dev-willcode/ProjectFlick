@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using AppFlickCliente.Vistas.Forms.Elementos;
+using Controllers;
 using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
@@ -62,15 +63,22 @@ namespace AppFlickCliente.Vistas.Forms
             Cliente clienteTemp = generarCliente();
             if (!clienteTemp.Equals(PropiedadesGenerales.ClienteActual))
             {
-                if (PropiedadesGenerales.ClienteController.Update(clienteTemp))
+                try
                 {
-                    PropiedadesGenerales.Notificar.notificarCorrecto("Actualizado",
-                        "Informacion personal actualizada correctamente");
+                    if (PropiedadesGenerales.ClienteController.Update(clienteTemp))
+                    {
+                        PropiedadesGenerales.Notificar.notificarCorrecto("Actualizado",
+                            "Informacion personal actualizada correctamente");
+                    }
+                    else
+                    {
+                        PropiedadesGenerales.Notificar.notificarFallo("No se consiguio actualizar",
+                            "Error al actualizar su informacion personal");
+                    }
                 }
-                else
+                catch (ControllerException ex)
                 {
-                    PropiedadesGenerales.Notificar.notificarFallo("No se consiguio actualizar",
-                        "Error al actualizar su informacion personal");
+                    PropiedadesGenerales.Notificar.notificarError(ex);
                 }
             }
             else

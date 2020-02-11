@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using AppFlickCliente.Vistas.Notificaciones;
+using Controllers;
 using Entity.Entidades;
 using Utils;
 
@@ -28,23 +29,30 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
         {
             int letra;
             string nombre;
-            List<Boleto> boletosComprados = PropiedadesGenerales.BoletoController.listarBoletosFuncion(CFuncionesController.Funcion.id);
-            for (int i = 1; i < tablaAsientos.ColumnCount; i++)
+            try
             {
-                letra = 74;
-                for (int j = 0; j < tablaAsientos.RowCount - 1; j++)
+                List<Boleto> boletosComprados = PropiedadesGenerales.BoletoController.listarBoletosFuncion(CFuncionesController.Funcion.id);
+                for (int i = 1; i < tablaAsientos.ColumnCount; i++)
                 {
-                    nombre = (char)letra-- + i.ToString();
-                    if (boletosComprados.FindIndex(e => (e.boleto_asiento.Equals(nombre))) == -1)
+                    letra = 74;
+                    for (int j = 0; j < tablaAsientos.RowCount - 1; j++)
                     {
-                        tablaAsientos.Controls.Add(new Elem_asiento(this, nombre, true), i, j);
-                    }
-                    else
-                    {
-                        tablaAsientos.Controls.Add(new Elem_asiento(this, nombre, false), i, j);
+                        nombre = (char)letra-- + i.ToString();
+                        if (boletosComprados.FindIndex(e => (e.boleto_asiento.Equals(nombre))) == -1)
+                        {
+                            tablaAsientos.Controls.Add(new Elem_asiento(this, nombre, true), i, j);
+                        }
+                        else
+                        {
+                            tablaAsientos.Controls.Add(new Elem_asiento(this, nombre, false), i, j);
+                        }
                     }
                 }
             }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }                  
         }
 
         private void btnContinuar_Click(object sender, System.EventArgs e)

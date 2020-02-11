@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AppFlickCliente.Vistas.Init;
+using Controllers;
 using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
@@ -43,16 +44,23 @@ namespace AppFlickCliente.Vistas.Forms
 
         private void RellenarFunciones()
         {
-            List<Funcion> listaFuncionesActivas = PropiedadesGenerales
-                .FuncionesController.ListarFuncionesActivas();
-            listaControles = new List<Elem_funcion>();
-            foreach (Funcion funcion in listaFuncionesActivas)
+            try
             {
-                Elem_funcion elemento = new Elem_funcion(funcion);
-                panelFunciones.Controls.Add(elemento);
-                elemento.Dock = DockStyle.Top;
-                listaControles.Add(elemento);
-                elemento.VisibleChanged += new EventHandler(EventoOcultar);
+                List<Funcion> listaFuncionesActivas = PropiedadesGenerales
+                .FuncionesController.ListarFuncionesActivas();
+                listaControles = new List<Elem_funcion>();
+                foreach (Funcion funcion in listaFuncionesActivas)
+                {
+                    Elem_funcion elemento = new Elem_funcion(funcion);
+                    panelFunciones.Controls.Add(elemento);
+                    elemento.Dock = DockStyle.Top;
+                    listaControles.Add(elemento);
+                    elemento.VisibleChanged += new EventHandler(EventoOcultar);
+                }
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
             }
         }
 

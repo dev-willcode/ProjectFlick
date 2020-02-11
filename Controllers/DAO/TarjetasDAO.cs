@@ -9,10 +9,12 @@ namespace Controllers.DAO
     {
         public override int Create(Tarjetas Entidad)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_CrearTarjeta"))
+            try
             {
-                Procedimientos.agregarParametros(cmd,
-                    new List<object>() {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_CrearTarjeta"))
+                {
+                    Procedimientos.agregarParametros(cmd,
+                        new List<object>() {
                         "@tarjeta_cliente",
                         "@tarjeta_tipo",
                         "@tarjeta_banco",
@@ -21,7 +23,7 @@ namespace Controllers.DAO
                         "@tarjeta_ano",
                         "@tarjeta_mes",
                         "@tarjeta_propietario"},
-                    new List<object>() {
+                        new List<object>() {
                         Entidad.tarjeta_cliente,
                         Entidad.tarjeta_tipo,
                         Entidad.tarjeta_banco,
@@ -30,18 +32,29 @@ namespace Controllers.DAO
                         Entidad.tarjeta_anio,
                         Entidad.tarjeta_mes,
                         Entidad.tarjeta_propietario}
-                    );
-
-                return Procedimientos.evaluarInsercción(cmd);
+                        );
+                    return Procedimientos.evaluarInsercción(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ControllerException ("No se consiguió crear la Tarjeta",ex);
             }
         }
 
         public override bool Delete(int id)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BorrarTarjeta"))
+            try
             {
-                cmd.Parameters.AddWithValue("@id", id);
-                return Procedimientos.evaluarEliminacion<Tarjetas>(cmd);
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BorrarTarjeta"))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return Procedimientos.evaluarEliminacion<Tarjetas>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ControllerException ("No se consiguió eliminar la Tarjeta" ,ex);
             }
         }
 

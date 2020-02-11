@@ -19,10 +19,18 @@ namespace Controllers.Controller
 
         public override Funcion Get(int id)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetFuncion"))
+            try
             {
-                cmd.Parameters.AddWithValue("@id", id);
-                return Procedimientos.evaluarObtención<Funcion>(cmd);
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetFuncion"))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return Procedimientos.evaluarObtención<Funcion>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguió obtener la Función", ex);
             }
         }
 

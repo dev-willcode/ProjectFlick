@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using Controllers;
 using Controllers.Controller;
 using Entity.Entidades;
 using Utils;
@@ -25,12 +26,20 @@ namespace AppFlickCliente.Vistas.Forms
 
         private void cargarDatos()
         {
-            var_tarjeta_tipo.Text = "Tarjeta de " + Tarjeta.tarjeta_tipo;
-            var_nombre_banco.Text = PropiedadesGenerales.BancoController.Get(Tarjeta.tarjeta_banco).banco_nombre;
-            var_tarjeta_ano.Text = Tarjeta.tarjeta_anio.ToString();
-            var_tarjeta_propietario.Text = Tarjeta.tarjeta_propietario;
-            var_tarjeta_numero.Text = Tarjeta.tarjeta_numero_protegido;
-            var_mes_dia.Text = Tarjeta.tarjeta_mes;
+            try
+            {
+                var_tarjeta_tipo.Text = "Tarjeta de " + Tarjeta.tarjeta_tipo;
+                var_nombre_banco.Text = PropiedadesGenerales.BancoController.Get(Tarjeta.tarjeta_banco).banco_nombre;
+                var_tarjeta_ano.Text = Tarjeta.tarjeta_anio.ToString();
+                var_tarjeta_propietario.Text = Tarjeta.tarjeta_propietario;
+                var_tarjeta_numero.Text = Tarjeta.tarjeta_numero_protegido;
+                var_mes_dia.Text = Tarjeta.tarjeta_mes;
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
+           
         }
 
         private void btnCerrar_Click(object sender, System.EventArgs e)

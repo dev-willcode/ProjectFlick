@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Entity.Entidades;
 
 namespace Controllers.Controller
@@ -13,6 +14,7 @@ namespace Controllers.Controller
          * Crea la clase personalizada e inicializa las propiedades de la Factura, 
          * en base a la Funcion de la factura entregada.
          */
+
         public CustomFacturaController(Factura factura)
         {
             Factura = factura;
@@ -20,8 +22,15 @@ namespace Controllers.Controller
         }
         private void inicializarPropiedades()
         {
-            CFuncionesController = new CustomFuncionesController(new FuncionesController().Get(Factura.factura_funcion));
-            ListaBoletos = new BoletoController().listarBoletos(Factura.factura_cliente);
+            try
+            {
+                CFuncionesController = new CustomFuncionesController(new FuncionesController().Get(Factura.factura_funcion));
+                ListaBoletos = new BoletoController().listarBoletos(Factura.factura_cliente);
+            }
+            catch (Exception ex)
+            {
+                throw new ControllerException("No se consiguió listar los Boletos", ex);
+            }
         }
 
         public Factura Factura { get; set; }

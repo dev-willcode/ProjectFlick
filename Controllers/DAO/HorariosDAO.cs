@@ -18,10 +18,18 @@ namespace Controllers.DAO
 
         public override Horarios Get(int id)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetHorario"))
+            try
             {
-                cmd.Parameters.AddWithValue("@id", id);
-                return Procedimientos.evaluarObtención<Horarios>(cmd);
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetHorario"))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return Procedimientos.evaluarObtención<Horarios>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException ("No se consiguió obtener el Horario",ex);
             }
         }
 

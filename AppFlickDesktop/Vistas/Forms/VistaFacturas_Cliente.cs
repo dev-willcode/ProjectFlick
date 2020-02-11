@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using Controllers;
 using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
@@ -41,18 +42,24 @@ namespace AppFlickCliente.Vistas.Forms
 
         private void RellenarFacturas()
         {
-            List<Factura> lista = PropiedadesGenerales.FacturaController
-                .ListarFacturas(PropiedadesGenerales.ClienteActual.id);
-            listaControles = new List<Elem_Factura>();
-            foreach (Factura factura in lista)
+            try
             {
-                Elem_Factura elemento = new Elem_Factura(factura);
-                panelFacturas.Controls.Add(elemento);
-                elemento.Dock = DockStyle.Top;
-                listaControles.Add(elemento);
-                elemento.VisibleChanged += new EventHandler(EventoOcultar);
+                List<Factura> lista = PropiedadesGenerales.FacturaController
+                .ListarFacturas(PropiedadesGenerales.ClienteActual.id);
+                listaControles = new List<Elem_Factura>();
+                foreach (Factura factura in lista)
+                {
+                    Elem_Factura elemento = new Elem_Factura(factura);
+                    panelFacturas.Controls.Add(elemento);
+                    elemento.Dock = DockStyle.Top;
+                    listaControles.Add(elemento);
+                    elemento.VisibleChanged += new EventHandler(EventoOcultar);
+                }
             }
-
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
         }
         private void EventoOcultar(object sender, EventArgs e)
         {

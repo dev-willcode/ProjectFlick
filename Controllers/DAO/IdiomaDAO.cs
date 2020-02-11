@@ -18,10 +18,18 @@ namespace Controllers.DAO
 
         public override Idioma Get(int id)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_IdiomasPelicula"))
+            try
             {
-                cmd.Parameters.AddWithValue("@id", id);
-                return Procedimientos.evaluarObtención<Idioma>(cmd);
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_IdiomasPelicula"))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return Procedimientos.evaluarObtención<Idioma>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguió obtener el Idioma de la Pelicula",ex);
             }
         }
 

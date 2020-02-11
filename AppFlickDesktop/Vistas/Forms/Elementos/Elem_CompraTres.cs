@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Controllers;
 using Entity.Entidades;
 using Utils;
 
@@ -23,14 +24,21 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
 
         private void cargarTarjetas()
         {
-            Tarjetas tarjeta = new Tarjetas();
-            List<Tarjetas> lista = PropiedadesGenerales.TarjetasController
-                .listarTarjetas(PropiedadesGenerales.ClienteActual.id);
-            tarjeta.tarjeta_numero_protegido = "Seleccione...";
-            lista.Insert(0, tarjeta);
-            comboTarjetas.DataSource = lista;
-            comboTarjetas.DisplayMember = "tarjeta_numero_protegido";
-            comboTarjetas.ValueMember = "id";
+            try
+            {
+                Tarjetas tarjeta = new Tarjetas();
+                List<Tarjetas> lista = PropiedadesGenerales.TarjetasController
+                    .listarTarjetas(PropiedadesGenerales.ClienteActual.id);
+                tarjeta.tarjeta_numero_protegido = "Seleccione...";
+                lista.Insert(0, tarjeta);
+                comboTarjetas.DataSource = lista;
+                comboTarjetas.DisplayMember = "tarjeta_numero_protegido";
+                comboTarjetas.ValueMember = "id";
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
         }
 
         internal void ActualizarInformacionCompra()

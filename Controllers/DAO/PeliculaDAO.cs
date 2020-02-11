@@ -18,10 +18,18 @@ namespace Controllers.DAO
 
         public override Pelicula Get(int id)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetPelicula"))
+            try
             {
-                cmd.Parameters.AddWithValue("@id", id);
-                return Procedimientos.evaluarObtención<Pelicula>(cmd);
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetPelicula"))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return Procedimientos.evaluarObtención<Pelicula>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException ("No se consiguio obtener la Pelicula",ex);
             }
         }
 

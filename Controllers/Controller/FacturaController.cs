@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using Controllers.DAO;
 using Entity.Entidades;
@@ -9,11 +10,20 @@ namespace Controllers.Controller
     {
         public List<Factura> ListarFacturas(int idCliente)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_FacturasCliente"))
+            try
             {
-                cmd.Parameters.AddWithValue("@id", idCliente);
-                return Procedimientos.ListarEntidades<Factura>(cmd);
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_FacturasCliente"))
+                {
+                    cmd.Parameters.AddWithValue("@id", idCliente);
+                    return Procedimientos.ListarEntidades<Factura>(cmd);
+                }
             }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException ("No se consiguió listar Facturas",ex);
+            }
+            
         }
     }
 }

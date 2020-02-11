@@ -9,10 +9,12 @@ namespace Controllers.DAO
     {
         public override int Create(Cliente Entidad)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_CrearCliente"))
+            try
             {
-                Procedimientos.agregarParametros(cmd,
-                    new List<object>() {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_CrearCliente"))
+                {
+                    Procedimientos.agregarParametros(cmd,
+                        new List<object>() {
                         "@cliente_cedula",
                         "@cliente_apellidos",
                         "@cliente_nombres",
@@ -20,7 +22,7 @@ namespace Controllers.DAO
                         "@cliente_email",
                         "@cliente_direccion",
                         "@cliente_usuario" },
-                    new List<object>() {
+                        new List<object>() {
                         Entidad.cliente_cedula,
                         Entidad.cliente_apellidos,
                         Entidad.cliente_nombres,
@@ -28,9 +30,15 @@ namespace Controllers.DAO
                         Entidad.cliente_email,
                         Entidad.cliente_direccion,
                         Entidad.cliente_usuario, }
-                    );
+                        );
 
-                return Procedimientos.evaluarInsercción(cmd);
+                    return Procedimientos.evaluarInsercción(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguió crear un cliente", ex);
             }
         }
 
@@ -46,10 +54,12 @@ namespace Controllers.DAO
 
         public override bool Update(Cliente Entidad)
         {
-            using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_ActualizarCliente"))
+            try
             {
-                Procedimientos.agregarParametros(cmd,
-                    new List<object>() {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_ActualizarCliente"))
+                {
+                    Procedimientos.agregarParametros(cmd,
+                        new List<object>() {
                         "@id",
                         "@cliente_cedula",
                         "@cliente_apellidos",
@@ -57,7 +67,7 @@ namespace Controllers.DAO
                         "@cliente_telefono",
                         "@cliente_email",
                         "@cliente_direccion"},
-                    new List<object>() {
+                        new List<object>() {
                         Entidad.id,
                         Entidad.cliente_cedula,
                         Entidad.cliente_apellidos,
@@ -65,10 +75,17 @@ namespace Controllers.DAO
                         Entidad.cliente_telefono,
                         Entidad.cliente_email,
                         Entidad.cliente_direccion}
-                    );
+                        );
 
-                return Procedimientos.evaluarActualizacion(cmd);
+                    return Procedimientos.evaluarActualizacion(cmd);
+                }
             }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException ("No se consiguió actualizar el cliente",ex); 
+            }
+     
         }
     }
 }
