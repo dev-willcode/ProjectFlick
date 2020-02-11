@@ -21,9 +21,9 @@ namespace Controllers.Controller
             catch (Exception ex)
             {
 
-                throw new ControllerException ("No se consiguió listar Facturas",ex);
+                throw new ControllerException("No se consiguió listar Facturas", ex);
             }
-            
+
         }
     }
 }

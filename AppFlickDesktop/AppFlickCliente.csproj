@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Utils\PropiedadesGenerales.cs" />
+    <Compile Include="Utils\UtilsProcedimientos.cs" />
     <Compile Include="Vistas\Forms\Elementos\Control_slidebar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +161,9 @@
     </Compile>
     <Compile Include="Vistas\Forms\VistaFunciones_Cliente.Designer.cs">
       <DependentUpon>VistaFunciones_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Vistas.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Vistas\Init\Dashboard.cs">
       <SubType>Form</SubType>

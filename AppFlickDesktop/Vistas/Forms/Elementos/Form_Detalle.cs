@@ -1,29 +1,34 @@
 ﻿using System;
 using System.Windows.Forms;
-using Controllers.Controller;
+using Entity.Entidades.EntidadesPersonalizadas;
 
 namespace AppFlickCliente.Vistas.Forms
 {
     public partial class Form_Detalle : Form
     {
-        CustomFuncionesController CFuncionesController { get; set; }
+        private readonly VistaFunciones funcion;
 
-        public Form_Detalle(CustomFuncionesController cFuncionesController)
+        public Form_Detalle(VistaFunciones funcion)
         {
+            this.funcion = funcion;
             InitializeComponent();
-            CFuncionesController = cFuncionesController;
             rellenarDatos();
         }
+
         private void rellenarDatos()
         {
-            var_titulo.Text = CFuncionesController.Pelicula.pelicula_titulo;
-            var_titulo_original.Text = CFuncionesController.Pelicula.pelicula_titulo_original;
-            var_censura.Text = "Censura: " + CFuncionesController.Pelicula.pelicula_tipo_censura;
-            var_duracion_pelicula.Text = "Duración: " + CFuncionesController.Pelicula.pelicula_duracion;
-            var_categoria.Text = "Categoria: " + CFuncionesController.ObtenerCategorias();
-            var_sinopsis.Text = "Directores: " + CFuncionesController.Pelicula.pelicula_sinopsis;
-            var_directores.Text = "Directores: " + CFuncionesController.Pelicula.pelicula_director;
-            var_reparto.Text = "Reparto: " + CFuncionesController.Pelicula.pelicula_reparto;
+            var_titulo.Text = funcion.pelicula_titulo;
+            var_titulo_original.Text = funcion.pelicula_titulo_original;
+            var_censura.Text = "Censura: " + funcion.pelicula_tipo_censura;
+            var_duracion_pelicula.Text = "Duración: " + funcion.pelicula_duracion;
+            var_categoria.Text = "Categoria: " + funcion.categorias;
+            var_sinopsis.Text = "Sinopsis: " + funcion.pelicula_sinopsis;
+            var_directores.Text = "Directores: " + funcion.pelicula_director;
+            var_reparto.Text = "Reparto: " + funcion.pelicula_reparto;
+            if (funcion.pelicula_imagen != null)
+            {
+                var_imagen_pelicula.Image = Utils.UtilsProcedimientos.generarImagen(funcion.pelicula_imagen);
+            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

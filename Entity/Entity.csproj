@@ -48,6 +48,8 @@
     <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Empresa.cs" />
+    <Compile Include="Entidades\EntidadesPersonalizadas\VistaFacturaFuncion.cs" />
+    <Compile Include="Entidades\EntidadesPersonalizadas\VistaFunciones.cs" />
     <Compile Include="Entidades\Factura.cs" />
     <Compile Include="Entidades\Funcion.cs" />
     <Compile Include="Entidades\Horarios.cs" />

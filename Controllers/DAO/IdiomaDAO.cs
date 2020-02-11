@@ -29,7 +29,7 @@ namespace Controllers.DAO
             catch (Exception ex)
             {
 
-                throw new ControllerException("No se consiguió obtener el Idioma de la Pelicula",ex);
+                throw new ControllerException("No se consiguió obtener el Idioma de la Pelicula", ex);
             }
         }
 

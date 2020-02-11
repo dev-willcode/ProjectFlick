@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using AppFlickCliente.Vistas.Forms.Elementos;
+using AppFlickCliente.Vistas.Init;
 using Controllers;
 using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
@@ -9,11 +11,12 @@ using Utils;
 
 namespace AppFlickCliente.Vistas.Forms
 {
-    public partial class VistaCuenta_Cliente : UserControl
+    public partial class VistaCuenta_Cliente : Vistas
     {
         private PanelScrollHelper scroll;
 
-        public VistaCuenta_Cliente()
+        public VistaCuenta_Cliente(Dashboard dashboard)
+            :base(dashboard)
         {
             InitializeComponent();
             PropiedadesScroll();
@@ -36,6 +39,10 @@ namespace AppFlickCliente.Vistas.Forms
             txtTelefono_usuario.Text = PropiedadesGenerales.ClienteActual.cliente_telefono.ToString();
             txtEmail_usuario.Text = PropiedadesGenerales.ClienteActual.cliente_email.ToString();
             txtDireccion_usuario.Text = PropiedadesGenerales.ClienteActual.cliente_direccion.ToString();
+            if (PropiedadesGenerales.ClienteActual.cliente_imagen != null)
+            {
+                var_imagen_usuario.Image = Utils.UtilsProcedimientos.generarImagen(PropiedadesGenerales.ClienteActual.cliente_imagen);
+            }
 
         }
 
@@ -67,6 +74,8 @@ namespace AppFlickCliente.Vistas.Forms
                 {
                     if (PropiedadesGenerales.ClienteController.Update(clienteTemp))
                     {
+                        PropiedadesGenerales.ClienteActual = clienteTemp;
+                        Dashboard.cargarDatos();
                         PropiedadesGenerales.Notificar.notificarCorrecto("Actualizado",
                             "Informacion personal actualizada correctamente");
                     }
@@ -91,21 +100,42 @@ namespace AppFlickCliente.Vistas.Forms
         private Cliente generarCliente()
         {
             Cliente cliente = new Cliente();
+            cliente.id = PropiedadesGenerales.ClienteActual.id;
             cliente.cliente_cedula = txtCedula_usuario.Text;
-            cliente.cliente_nombres = txtNombres_usuario.Text;
             cliente.cliente_apellidos = txtApellidos_usuario.Text;
+            cliente.cliente_nombres = txtNombres_usuario.Text;
+            cliente.cliente_telefono = txtTelefono_usuario.Text;
             cliente.cliente_email = txtEmail_usuario.Text;
             cliente.cliente_direccion = txtDireccion_usuario.Text;
-            cliente.cliente_telefono = txtTelefono_usuario.Text;
-            cliente.id = PropiedadesGenerales.ClienteActual.id;
+            cliente.cliente_usuario = PropiedadesGenerales.ClienteActual.cliente_usuario;
+            cliente.cliente_imagen = PropiedadesGenerales.ClienteActual.cliente_imagen;
             return cliente;
 
         }
 
-        private void btnMasTarjetas_Click_1(object sender, EventArgs e)
+        private void btnCambiarImagen_Click(object sender, EventArgs e)
         {
-            Form_Tarjeta form = new Form_Tarjeta(this);
-            form.ShowDialog();
+            try
+            {
+                if (SelectorArchivo.ShowDialog() == DialogResult.OK)
+                {
+                    Image img = Image.FromFile(SelectorArchivo.FileName);
+                    byte[] bitarray = Utils.UtilsProcedimientos.ImageToByteArray(img);
+                    if (PropiedadesGenerales.UsuarioController.UpdateImagen(
+                        PropiedadesGenerales.ClienteActual.id, bitarray))
+                    {
+                        PropiedadesGenerales.Notificar.notificarCorrecto("correcto", "actualizado correcto");
+                        PropiedadesGenerales.ClienteActual.cliente_imagen = bitarray;
+                        Dashboard.cargarDatos();
+                        var_imagen_usuario.Image = img;
+                    }
+
+                }
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 namespace Entity.Entidades
 {
     public class Cliente : Entidad
@@ -17,6 +18,8 @@ namespace Entity.Entidades
             cliente_email = data["cliente_email"].ToString();
             cliente_direccion = data["cliente_direccion"].ToString();
             cliente_usuario = (int)data["cliente_usuario"];
+            cliente_imagen = data["cliente_imagen"].GetType().Equals(typeof(DBNull)) ?
+                null : (byte[])data["cliente_imagen"];
         }
 
         public int id { get; set; }
@@ -34,6 +37,7 @@ namespace Entity.Entidades
         public string cliente_direccion { get; set; }
 
         public int cliente_usuario { get; set; }
+        public byte[] cliente_imagen { get; set; }
 
         public override bool Equals(object obj)
         {

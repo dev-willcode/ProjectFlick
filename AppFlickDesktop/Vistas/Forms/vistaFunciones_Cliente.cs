@@ -4,24 +4,48 @@ using System.Drawing;
 using System.Windows.Forms;
 using AppFlickCliente.Vistas.Init;
 using Controllers;
-using Entity.Entidades;
+using Entity.Entidades.EntidadesPersonalizadas;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
 
 namespace AppFlickCliente.Vistas.Forms
 {
-    public partial class VistaFunciones_Cliente : UserControl
+    public partial class VistaFunciones_Cliente : Vistas
     {
 
         private PanelScrollHelper scroll;
         private List<Elem_funcion> listaControles;
         private Label labelSinFunciones;
-        public VistaFunciones_Cliente()
+        public VistaFunciones_Cliente(Dashboard dashboard)
+            : base(dashboard)
         {
             InitializeComponent();
             PropiedadesScroll();
             InicializarLabelSinFunciones();
-            RellenarFunciones();
+            RellenarFuncionesActivas();
+        }
+
+        private void RellenarFuncionesActivas()
+        {
+            try
+            {
+                List<VistaFunciones> listaFuncionesActivas = PropiedadesGenerales
+                .VFuncionesController.ListarFuncionesActivas();
+                listaControles = new List<Elem_funcion>();
+
+                listaFuncionesActivas.ForEach(funcion =>
+                {
+                    Elem_funcion elemento = new Elem_funcion(funcion);
+                    panelFunciones.Controls.Add(elemento);
+                    elemento.Dock = DockStyle.Top;
+                    listaControles.Add(elemento);
+                    elemento.VisibleChanged += new EventHandler(EventoOcultar);
+                });
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
         }
 
         private void InicializarLabelSinFunciones()
@@ -40,28 +64,6 @@ namespace AppFlickCliente.Vistas.Forms
         {
             scroll = new PanelScrollHelper(panelFunciones, scrollBar, true);
             scroll.UpdateScrollBar();
-        }
-
-        private void RellenarFunciones()
-        {
-            try
-            {
-                List<Funcion> listaFuncionesActivas = PropiedadesGenerales
-                .FuncionesController.ListarFuncionesActivas();
-                listaControles = new List<Elem_funcion>();
-                foreach (Funcion funcion in listaFuncionesActivas)
-                {
-                    Elem_funcion elemento = new Elem_funcion(funcion);
-                    panelFunciones.Controls.Add(elemento);
-                    elemento.Dock = DockStyle.Top;
-                    listaControles.Add(elemento);
-                    elemento.VisibleChanged += new EventHandler(EventoOcultar);
-                }
-            }
-            catch (ControllerException ex)
-            {
-                PropiedadesGenerales.Notificar.notificarError(ex);
-            }
         }
 
         private void EventoOcultar(object sender, EventArgs e)
@@ -93,10 +95,8 @@ namespace AppFlickCliente.Vistas.Forms
             {
                 foreach (Elem_funcion elemento in listaControles)
                 {
-                    if (!(elemento.CFuncionesController.Pelicula
-                        .pelicula_titulo.Contains(txtBuscarFuncion.Text.ToUpper()) ||
-                        elemento.CFuncionesController.Pelicula
-                        .pelicula_titulo_original.Contains(txtBuscarFuncion.Text.ToUpper())))
+                    if (!(elemento.funcion.pelicula_titulo.Contains(txtBuscarFuncion.Text.ToUpper()) ||
+                        elemento.funcion.pelicula_titulo_original.Contains(txtBuscarFuncion.Text.ToUpper())))
                     {
                         elemento.Visible = false;
                     }

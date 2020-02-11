@@ -30,7 +30,7 @@ namespace Controllers.DAO
             catch (Exception ex)
             {
 
-                throw new ControllerException ("No se consiguió crear un Usuario" ,ex);
+                throw new ControllerException("No se consiguió crear un Usuario", ex);
             }
         }
 

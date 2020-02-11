@@ -31,7 +31,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             string nombre;
             try
             {
-                List<Boleto> boletosComprados = PropiedadesGenerales.BoletoController.listarBoletosFuncion(CFuncionesController.Funcion.id);
+                List<Boleto> boletosComprados = PropiedadesGenerales.BoletoController.ListarBoletosFuncion(VistaFunciones.id);
                 for (int i = 1; i < tablaAsientos.ColumnCount; i++)
                 {
                     letra = 74;
@@ -52,7 +52,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             catch (ControllerException ex)
             {
                 PropiedadesGenerales.Notificar.notificarError(ex);
-            }                  
+            }
         }
 
         private void btnContinuar_Click(object sender, System.EventArgs e)

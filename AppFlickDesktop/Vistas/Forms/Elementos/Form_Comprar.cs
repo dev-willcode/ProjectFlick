@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using AppFlickCliente.Vistas.Notificaciones;
-using Controllers.Controller;
+using Entity.Entidades.EntidadesPersonalizadas;
 using Guna.UI.WinForms;
 using Utils;
 
@@ -10,19 +9,17 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
 
     public partial class Form_Comprar : Form
     {
-        private Notificar notificar = PropiedadesGenerales.Notificar;
-
+        internal VistaFunciones funcion;
         internal double PrecioTotal { get; set; }
         internal int CantBoletosAComprar { get; set; }
         internal string AsientosSeleccionados { get; set; }
         internal Elem_CompraUno elem_CompraUno { get; set; }
         internal Elem_CompraDos elem_CompraDos { get; set; }
         internal Elem_CompraTres elem_CompraTres { get; set; }
-        public CustomFuncionesController CFuncionesController { get; set; }
 
-        public Form_Comprar(CustomFuncionesController cFuncionesController)
+        public Form_Comprar(VistaFunciones funcion)
         {
-            CFuncionesController = cFuncionesController;
+            this.funcion = funcion;
             InitializeComponent();
             InicializarPaneles();
         }
@@ -88,7 +85,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             }
             else
             {
-                notificar.notificarFallo("Advertencia",
+                PropiedadesGenerales.Notificar.notificarFallo("Advertencia",
                 "Verifique que ha completado el primer paso");
             }
         }
@@ -103,7 +100,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             }
             else
             {
-                notificar.notificarFallo("Advertencia",
+                PropiedadesGenerales.Notificar.notificarFallo("Advertencia",
                 "Verifique que ha completado el primer y segundo paso");
             }
         }

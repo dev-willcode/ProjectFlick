@@ -38,7 +38,7 @@ namespace Controllers.DAO
             }
             catch (Exception ex)
             {
-                throw new ControllerException ("No se consiguió crear la Tarjeta",ex);
+                throw new ControllerException("No se consiguió crear la Tarjeta", ex);
             }
         }
 
@@ -54,7 +54,7 @@ namespace Controllers.DAO
             }
             catch (Exception ex)
             {
-                throw new ControllerException ("No se consiguió eliminar la Tarjeta" ,ex);
+                throw new ControllerException("No se consiguió eliminar la Tarjeta", ex);
             }
         }
 

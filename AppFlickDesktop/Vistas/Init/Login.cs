@@ -2,9 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using AppFlickCliente.Vistas.Init;
-using AppFlickCliente.Vistas.Notificaciones;
 using Controllers;
-using Controllers.Controller;
 using Entity.Entidades;
 using Utils;
 
@@ -12,8 +10,6 @@ namespace AppFlickCliente
 {
     public partial class Login : Form
     {
-        private UsuarioController usuarioController = Utils.PropiedadesGenerales.UsuarioController;
-        private Notificar notificar = new Notificar();
         public Login()
         {
             InitializeComponent();
@@ -49,14 +45,14 @@ namespace AppFlickCliente
             {
                 try
                 {
-                    Cliente cliente = usuarioController.IniciarSesion(usuario);
+                    Cliente cliente = PropiedadesGenerales.UsuarioController.IniciarSesion(usuario);
                     if (cliente != null)
                     {
                         abrirDashboard(cliente);
                     }
                     else
                     {
-                        notificar.notificarFallo("Error al iniciar sesión",
+                        PropiedadesGenerales.Notificar.notificarFallo("Error al iniciar sesión",
                             "No se consiguió iniciar la sesión, usuario o contraseña incorrectos.");
                     }
                 }
@@ -68,15 +64,15 @@ namespace AppFlickCliente
             }
             else
             {
-                notificar.notificarFallo("Error al iniciar sesión",
+                PropiedadesGenerales.Notificar.notificarFallo("Error al iniciar sesión",
                     "verifique que ha llenado los campos de usuario y contraseña!");
             }
         }
 
         private void abrirDashboard(Cliente cliente)
         {
+            PropiedadesGenerales.ClienteActual = cliente;
             Dashboard dashboard = new Dashboard();
-            dashboard.asignarUsuario(cliente);
             dashboard.Show();
             Close();
         }
@@ -105,7 +101,7 @@ namespace AppFlickCliente
                 usuario.usuario_username = txtnUsuario.Text;
                 usuario.usuario_password = txtnContrasena.Text;
 
-                if (!usuarioController.UsuarioEstaRepetido(usuario))
+                if (!PropiedadesGenerales.UsuarioController.UsuarioEstaRepetido(usuario))
                 {
                     Cliente cliente = new Cliente();
                     cliente.cliente_cedula = txtnCedula.Text;
@@ -115,15 +111,15 @@ namespace AppFlickCliente
                     cliente.cliente_email = txtnEmail.Text;
                     cliente.cliente_direccion = txtnDireccion.Text;
 
-                    if (usuarioController.RegistrarNuevoCliente(usuario, cliente))
+                    if (PropiedadesGenerales.UsuarioController.RegistrarNuevoCliente(usuario, cliente))
                     {
-                        notificar.notificarCorrecto("Completado", "registro correcto");
+                        PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "registro correcto");
                         abrirDashboard(cliente);
                     }
                 }
                 else
                 {
-                    notificar.notificarFallo("Error al registrarse", "el usuario está repetido!");
+                    PropiedadesGenerales.Notificar.notificarFallo("Error al registrarse", "el usuario está repetido!");
                 }
             }
         }
@@ -173,7 +169,7 @@ namespace AppFlickCliente
 
             if (!string.IsNullOrEmpty(errores))
             {
-                notificar.notificarFallo("Revise el formulario",
+                PropiedadesGenerales.Notificar.notificarFallo("Revise el formulario",
                     "revise los siguientes errores: " + Environment.NewLine + errores);
             }
 
@@ -190,11 +186,6 @@ namespace AppFlickCliente
             {
                 timer.Stop();
             }
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

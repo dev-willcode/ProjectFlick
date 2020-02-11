@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using Controllers.Controller;
+using Entity.Entidades.EntidadesPersonalizadas;
 
 namespace AppFlickCliente.Vistas.Forms.Elementos
 {
@@ -11,11 +11,11 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
         public Elem_Compra(Form_Comprar form)
         {
             FormPadre = form;
-            CFuncionesController = form.CFuncionesController;
+            VistaFunciones = form.funcion;
         }
 
         internal bool Confirmado { get; set; }
-        internal CustomFuncionesController CFuncionesController { get; set; }
+        internal VistaFunciones VistaFunciones { get; set; }
         internal Form_Comprar FormPadre { get; set; }
     }
 }

@@ -21,13 +21,13 @@ namespace Controllers.Controller
             }
             catch (Exception ex)
             {
-                throw new ControllerException("No se consiguió listar Tarjetas",ex);
+                throw new ControllerException("No se consiguió listar Tarjetas", ex);
             }
         }
 
         public bool RegistrarTarjeta(Tarjetas tarjeta)
         {
-           return new TarjetasDAO().Create(tarjeta) > 0;
+            return new TarjetasDAO().Create(tarjeta) > 0;
         }
 
         public bool EliminarTarjeta(int tarjeta)

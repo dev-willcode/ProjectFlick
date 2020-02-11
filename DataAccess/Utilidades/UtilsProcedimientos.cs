@@ -10,13 +10,6 @@ namespace Controllers.Utilidades
 {
     public class UtilsProcedimientos
     {
-        private Configuraciones Configuraciones = new Configuraciones();
-
-        public UtilsProcedimientos()
-        {
-            Configuraciones.CrearConexion();
-        }
-
         public void agregarParametros(SqlCommand cmd, List<object> listaParametros, List<object> valores)
         {
             for (int i = 0; i < listaParametros.Count; i++)
@@ -31,7 +24,7 @@ namespace Controllers.Utilidades
             {
                 CommandType = CommandType.StoredProcedure,
                 CommandText = procedimientoAlmacenado,
-                Connection = Configuraciones.connect
+                Connection = Configuraciones.CrearConexion()
             };
             return cmd;
         }
@@ -43,7 +36,7 @@ namespace Controllers.Utilidades
             {
                 CommandType = CommandType.Text,
                 CommandText = comando,
-                Connection = Configuraciones.connect
+                Connection = Configuraciones.CrearConexion()
             };
             return cmd;
         }
@@ -112,14 +105,22 @@ namespace Controllers.Utilidades
 
         public T evaluarObtención<T>(SqlCommand cmd)
         {
-            using (SqlDataReader reader = cmd.ExecuteReader())
+            try
             {
-                Entidad entidad = null;
-                if (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    entidad = Activator.CreateInstance(typeof(T), reader) as Entidad;
+                    Entidad entidad = null;
+                    if (reader.Read())
+                    {
+                        entidad = Activator.CreateInstance(typeof(T), reader) as Entidad;
+                    }
+                    return (T)entidad;
                 }
-                return (T)entidad;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
             }
         }
 

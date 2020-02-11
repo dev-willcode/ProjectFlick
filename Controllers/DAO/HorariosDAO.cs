@@ -29,7 +29,7 @@ namespace Controllers.DAO
             catch (Exception ex)
             {
 
-                throw new ControllerException ("No se consiguió obtener el Horario",ex);
+                throw new ControllerException("No se consiguió obtener el Horario", ex);
             }
         }
 

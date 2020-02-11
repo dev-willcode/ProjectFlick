@@ -68,5 +68,23 @@ namespace Controllers.Controller
                 return Procedimientos.retornarConteo(cmd);
             }
         }
+
+        public bool UpdateImagen(int id, byte[] imagen)
+        {
+            try
+            {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_ActualizarImagenCliente"))
+                {
+                    Procedimientos.agregarParametros(cmd,
+                        new List<object>() { "@id", "@imagen", },
+                        new List<object>() { id, imagen, });
+                    return Procedimientos.evaluarActualizacion(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ControllerException("No se consiguío actualizar la imagen", ex);
+            }
+        }
     }
 }

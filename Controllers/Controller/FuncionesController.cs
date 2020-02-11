@@ -9,17 +9,17 @@ namespace Controllers.Controller
     {
         public List<Funcion> ListarFuncionesActivas()
         {
-			try
-			{
+            try
+            {
                 using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_FuncionesActivas"))
                 {
                     return Procedimientos.ListarEntidades<Funcion>(cmd);
                 }
             }
-			catch (Exception ex)
-			{
-				throw new ControllerException("No se consiguió listar las Funciones activas",ex);
-			}
+            catch (Exception ex)
+            {
+                throw new ControllerException("No se consiguió listar las Funciones activas", ex);
+            }
         }
     }
 }

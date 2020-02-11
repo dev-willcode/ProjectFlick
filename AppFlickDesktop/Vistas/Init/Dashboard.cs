@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using AppFlickCliente.Vistas.Forms;
-using Entity.Entidades;
 using Utils;
 
 namespace AppFlickCliente.Vistas.Init
@@ -16,8 +15,20 @@ namespace AppFlickCliente.Vistas.Init
         {
             InitializeComponent();
             inicializarPropiedades();
+            cargarDatos();
             btnFunciones_Click(null, null);
+            timer.Start();
         }
+
+        internal void cargarDatos()
+        {
+            if (PropiedadesGenerales.ClienteActual.cliente_imagen != null)
+            {
+                var_imagen_usuario.Image = Utils.UtilsProcedimientos.generarImagen(PropiedadesGenerales.ClienteActual.cliente_imagen);
+            }
+            var_nombre_usuario.Text = PropiedadesGenerales.ClienteActual.cliente_nombres.Split(' ')[0];
+        }
+
         private void inicializarPropiedades()
         {
             listaLabelsMenu = new List<Label>()
@@ -41,19 +52,19 @@ namespace AppFlickCliente.Vistas.Init
         private void btnFunciones_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelFunciones);
-            pintarPantalla(new VistaFunciones_Cliente());
+            pintarPantalla(new VistaFunciones_Cliente(this));
         }
 
         private void btnFacturas_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelFacturas);
-            pintarPantalla(new VistaFacturas_Cliente());
+            pintarPantalla(new VistaFacturas_Cliente(this));
         }
 
         private void btnMiCuenta_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelCuenta);
-            pintarPantalla(new VistaCuenta_Cliente());
+            pintarPantalla(new VistaCuenta_Cliente(this));
         }
 
         private void pintarLabelMenu(Label seleccionado)
@@ -65,9 +76,16 @@ namespace AppFlickCliente.Vistas.Init
             seleccionado.BackColor = Color.FromArgb(12, 109, 237);
         }
 
-        internal void asignarUsuario(Cliente cliente)
+        private void timer_Tick(object sender, EventArgs e)
         {
-            PropiedadesGenerales.ClienteActual = cliente;
+            var_hora_actual.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            PropiedadesGenerales.ClienteActual = null;
+            new Login().Show();
+            Close();
         }
     }
 }

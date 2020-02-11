@@ -26,7 +26,7 @@ namespace Controllers.Controller
 
         }
 
-        public List<Boleto> listarBoletosFuncion(int id)
+        public List<Boleto> ListarBoletosFuncion(int id)
         {
             try
             {
@@ -39,7 +39,7 @@ namespace Controllers.Controller
             catch (Exception ex)
             {
 
-                throw new ControllerException ("No se consiguió listar Boletos por Función",ex) ;
+                throw new ControllerException("No se consiguió listar Boletos por Función", ex);
             }
 
         }

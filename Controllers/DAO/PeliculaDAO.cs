@@ -29,7 +29,7 @@ namespace Controllers.DAO
             catch (Exception ex)
             {
 
-                throw new ControllerException ("No se consiguio obtener la Pelicula",ex);
+                throw new ControllerException("No se consiguio obtener la Pelicula", ex);
             }
         }
 

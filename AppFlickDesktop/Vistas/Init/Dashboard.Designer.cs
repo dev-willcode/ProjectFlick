@@ -61,11 +61,12 @@
             this.gunaButton10 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.var_hora_actual = new Guna.UI.WinForms.GunaLabel();
-            this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
+            this.btnCerrar = new Guna.UI.WinForms.GunaCircleButton();
             this.logoImagen = new System.Windows.Forms.PictureBox();
             this.var_imagen_usuario = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.var_nombre_usuario = new Guna.UI.WinForms.GunaLabel();
             this.animacionLogo = new Guna.UI.WinForms.GunaTransition(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelTemporal.SuspendLayout();
@@ -80,7 +81,7 @@
             this.panel2.Controls.Add(this.tableLayoutPanel1);
             this.panel2.Controls.Add(this.panelTemporal);
             this.panel2.Controls.Add(this.var_hora_actual);
-            this.panel2.Controls.Add(this.gunaCircleButton1);
+            this.panel2.Controls.Add(this.btnCerrar);
             this.panel2.Controls.Add(this.logoImagen);
             this.panel2.Controls.Add(this.var_imagen_usuario);
             this.panel2.Controls.Add(this.var_nombre_usuario);
@@ -123,27 +124,27 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 95F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(599, 42);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(521, 42);
             this.tableLayoutPanel1.TabIndex = 67;
             // 
             // labelCuenta
             // 
             this.animacionLogo.SetDecoration(this.labelCuenta, Guna.UI.Animation.DecorationType.None);
             this.labelCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCuenta.Location = new System.Drawing.Point(398, 39);
+            this.labelCuenta.Location = new System.Drawing.Point(346, 39);
             this.labelCuenta.Margin = new System.Windows.Forms.Padding(0);
             this.labelCuenta.Name = "labelCuenta";
-            this.labelCuenta.Size = new System.Drawing.Size(201, 3);
+            this.labelCuenta.Size = new System.Drawing.Size(175, 3);
             this.labelCuenta.TabIndex = 73;
             // 
             // labelFacturas
             // 
             this.animacionLogo.SetDecoration(this.labelFacturas, Guna.UI.Animation.DecorationType.None);
             this.labelFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelFacturas.Location = new System.Drawing.Point(199, 39);
+            this.labelFacturas.Location = new System.Drawing.Point(173, 39);
             this.labelFacturas.Margin = new System.Windows.Forms.Padding(0);
             this.labelFacturas.Name = "labelFacturas";
-            this.labelFacturas.Size = new System.Drawing.Size(199, 3);
+            this.labelFacturas.Size = new System.Drawing.Size(173, 3);
             this.labelFacturas.TabIndex = 72;
             // 
             // labelFunciones
@@ -153,7 +154,7 @@
             this.labelFunciones.Location = new System.Drawing.Point(0, 39);
             this.labelFunciones.Margin = new System.Windows.Forms.Padding(0);
             this.labelFunciones.Name = "labelFunciones";
-            this.labelFunciones.Size = new System.Drawing.Size(199, 3);
+            this.labelFunciones.Size = new System.Drawing.Size(173, 3);
             this.labelFunciones.TabIndex = 71;
             // 
             // btnFunciones
@@ -178,7 +179,7 @@
             this.btnFunciones.OnHoverForeColor = System.Drawing.Color.White;
             this.btnFunciones.OnHoverImage = null;
             this.btnFunciones.OnPressedColor = System.Drawing.Color.Black;
-            this.btnFunciones.Size = new System.Drawing.Size(199, 39);
+            this.btnFunciones.Size = new System.Drawing.Size(173, 39);
             this.btnFunciones.TabIndex = 63;
             this.btnFunciones.Text = "Funciones";
             this.btnFunciones.TextOffsetX = 4;
@@ -198,7 +199,7 @@
             this.btnMiCuenta.ForeColor = System.Drawing.Color.White;
             this.btnMiCuenta.Image = global::AppFlickCliente.Properties.Resources.icon_usuario;
             this.btnMiCuenta.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnMiCuenta.Location = new System.Drawing.Point(398, 0);
+            this.btnMiCuenta.Location = new System.Drawing.Point(346, 0);
             this.btnMiCuenta.Margin = new System.Windows.Forms.Padding(0);
             this.btnMiCuenta.Name = "btnMiCuenta";
             this.btnMiCuenta.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -206,7 +207,7 @@
             this.btnMiCuenta.OnHoverForeColor = System.Drawing.Color.White;
             this.btnMiCuenta.OnHoverImage = null;
             this.btnMiCuenta.OnPressedColor = System.Drawing.Color.Black;
-            this.btnMiCuenta.Size = new System.Drawing.Size(201, 39);
+            this.btnMiCuenta.Size = new System.Drawing.Size(175, 39);
             this.btnMiCuenta.TabIndex = 65;
             this.btnMiCuenta.Text = "Mi cuenta";
             this.btnMiCuenta.TextOffsetX = 4;
@@ -226,7 +227,7 @@
             this.btnTarjetas.ForeColor = System.Drawing.Color.White;
             this.btnTarjetas.Image = global::AppFlickCliente.Properties.Resources.icon_tarjetas;
             this.btnTarjetas.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnTarjetas.Location = new System.Drawing.Point(199, 0);
+            this.btnTarjetas.Location = new System.Drawing.Point(173, 0);
             this.btnTarjetas.Margin = new System.Windows.Forms.Padding(0);
             this.btnTarjetas.Name = "btnTarjetas";
             this.btnTarjetas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -234,7 +235,7 @@
             this.btnTarjetas.OnHoverForeColor = System.Drawing.Color.White;
             this.btnTarjetas.OnHoverImage = null;
             this.btnTarjetas.OnPressedColor = System.Drawing.Color.Black;
-            this.btnTarjetas.Size = new System.Drawing.Size(199, 39);
+            this.btnTarjetas.Size = new System.Drawing.Size(173, 39);
             this.btnTarjetas.TabIndex = 66;
             this.btnTarjetas.Text = "Facturas";
             this.btnTarjetas.TextOffsetX = 4;
@@ -701,36 +702,37 @@
             this.animacionLogo.SetDecoration(this.var_hora_actual, Guna.UI.Animation.DecorationType.None);
             this.var_hora_actual.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_hora_actual.ForeColor = System.Drawing.Color.White;
-            this.var_hora_actual.Location = new System.Drawing.Point(803, 33);
+            this.var_hora_actual.Location = new System.Drawing.Point(742, 33);
             this.var_hora_actual.Name = "var_hora_actual";
-            this.var_hora_actual.Size = new System.Drawing.Size(119, 15);
+            this.var_hora_actual.Size = new System.Drawing.Size(180, 15);
             this.var_hora_actual.TabIndex = 61;
             this.var_hora_actual.Text = "10:01 PM";
             this.var_hora_actual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gunaCircleButton1
+            // btnCerrar
             // 
-            this.gunaCircleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaCircleButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaCircleButton1.AnimationSpeed = 0.03F;
-            this.gunaCircleButton1.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.animacionLogo.SetDecoration(this.gunaCircleButton1, Guna.UI.Animation.DecorationType.None);
-            this.gunaCircleButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaCircleButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaCircleButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaCircleButton1.Image")));
-            this.gunaCircleButton1.ImageSize = new System.Drawing.Size(52, 52);
-            this.gunaCircleButton1.Location = new System.Drawing.Point(971, 12);
-            this.gunaCircleButton1.Name = "gunaCircleButton1";
-            this.gunaCircleButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.gunaCircleButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.gunaCircleButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.OnHoverImage = null;
-            this.gunaCircleButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.Size = new System.Drawing.Size(36, 36);
-            this.gunaCircleButton1.TabIndex = 59;
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.AnimationHoverSpeed = 0.07F;
+            this.btnCerrar.AnimationSpeed = 0.03F;
+            this.btnCerrar.BaseColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.animacionLogo.SetDecoration(this.btnCerrar, Guna.UI.Animation.DecorationType.None);
+            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCerrar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCerrar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Image = global::AppFlickCliente.Properties.Resources.icon_cerrar;
+            this.btnCerrar.ImageSize = new System.Drawing.Size(36, 36);
+            this.btnCerrar.Location = new System.Drawing.Point(971, 12);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnCerrar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnCerrar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCerrar.OnHoverImage = null;
+            this.btnCerrar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCerrar.Size = new System.Drawing.Size(36, 36);
+            this.btnCerrar.TabIndex = 59;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // logoImagen
             // 
@@ -766,9 +768,9 @@
             this.animacionLogo.SetDecoration(this.var_nombre_usuario, Guna.UI.Animation.DecorationType.None);
             this.var_nombre_usuario.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_nombre_usuario.ForeColor = System.Drawing.Color.White;
-            this.var_nombre_usuario.Location = new System.Drawing.Point(799, 12);
+            this.var_nombre_usuario.Location = new System.Drawing.Point(738, 12);
             this.var_nombre_usuario.Name = "var_nombre_usuario";
-            this.var_nombre_usuario.Size = new System.Drawing.Size(123, 21);
+            this.var_nombre_usuario.Size = new System.Drawing.Size(184, 21);
             this.var_nombre_usuario.TabIndex = 57;
             this.var_nombre_usuario.Text = "Alan Brito";
             this.var_nombre_usuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -793,6 +795,10 @@
             animation1.TimeCoeff = 0F;
             animation1.TransparencyCoeff = 0F;
             this.animacionLogo.DefaultAnimation = animation1;
+            // 
+            // timer
+            // 
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // Dashboard
             // 
@@ -839,7 +845,7 @@
         private Guna.UI.WinForms.GunaButton gunaButton15;
         private Guna.UI.WinForms.GunaButton gunaButton17;
         private Guna.UI.WinForms.GunaElipsePanel panelTemporal;
-        private Guna.UI.WinForms.GunaCircleButton gunaCircleButton1;
+        private Guna.UI.WinForms.GunaCircleButton btnCerrar;
         private Guna.UI.WinForms.GunaCirclePictureBox var_imagen_usuario;
         private Guna.UI.WinForms.GunaLabel var_nombre_usuario;
         private Guna.UI.WinForms.GunaLabel var_hora_actual;
@@ -852,5 +858,6 @@
         private System.Windows.Forms.Label labelFacturas;
         private System.Windows.Forms.Label labelFunciones;
         private System.Windows.Forms.Panel panelPrincipal;
+        private System.Windows.Forms.Timer timer;
     }
 }

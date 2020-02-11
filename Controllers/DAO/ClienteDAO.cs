@@ -49,7 +49,19 @@ namespace Controllers.DAO
 
         public override Cliente Get(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetCliente"))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return Procedimientos.evaluarObtención<Cliente>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguió crear un cliente", ex);
+            }
         }
 
         public override bool Update(Cliente Entidad)
@@ -83,9 +95,9 @@ namespace Controllers.DAO
             catch (Exception ex)
             {
 
-                throw new ControllerException ("No se consiguió actualizar el cliente",ex); 
+                throw new ControllerException("No se consiguió actualizar el cliente", ex);
             }
-     
+
         }
     }
 }

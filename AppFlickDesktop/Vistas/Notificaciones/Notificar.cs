@@ -29,7 +29,7 @@ namespace AppFlickCliente.Vistas.Notificaciones
 
         internal void notificarError(ControllerException ex)
         {
-            MessageBox.Show(Environment.NewLine + ex.Message);
+            MessageBox.Show(Environment.NewLine + ex.Message + Environment.NewLine + ex.GetBaseException().Message);
         }
     }
 }

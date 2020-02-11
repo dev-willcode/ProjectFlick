@@ -39,7 +39,7 @@ namespace AppFlickCliente.Vistas.Forms
             {
                 PropiedadesGenerales.Notificar.notificarError(ex);
             }
-           
+
         }
 
         private void btnCerrar_Click(object sender, System.EventArgs e)

@@ -1,5 +1,4 @@
 ﻿using System.Windows.Forms;
-using Entity.Entidades;
 
 namespace AppFlickCliente.Vistas.Forms
 {
@@ -9,11 +8,10 @@ namespace AppFlickCliente.Vistas.Forms
         {
             InitializeComponent();
         }
-
-        public Elem_idioma_funcion(Idioma idioma)
+        public Elem_idioma_funcion(string idioma_abreviatura)
         {
             InitializeComponent();
-            var_idioma.Text = idioma.idioma_abreviatura;
+            var_idioma.Text = idioma_abreviatura;
         }
     }
 }

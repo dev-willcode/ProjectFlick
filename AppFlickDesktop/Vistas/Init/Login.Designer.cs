@@ -782,7 +782,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.container.ResumeLayout(false);
             this.container.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoImagen)).EndInit();

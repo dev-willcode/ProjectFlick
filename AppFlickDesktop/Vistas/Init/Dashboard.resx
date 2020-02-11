@@ -155,16 +155,7 @@
         d2luZy5Qb2ludEYCAAAAAXgBeQAACwsCAAAAAAAAAAAAAAAL
 </value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gunaCircleButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAVVJREFUeF7t
-        1DFOw0AQBVC3OUFSIAUiGrgSXIHcFpogQKKAU2D+l/40lgbHKyOvN/9JU9i7Xs8fR+nMzMzMzMzMzMzM
-        zMysQN/3j6gbXc4OZx9QD7qsCxo7on5Q36h73Z4Nz9TZfMeTbtcBDUX4MOsQeJbODPUMAY0Mwwc2fKdt
-        xXDGMHxYfghoYIN6ZTeJD1TxfwKf1RkZvnuj7ctAA1vUM7tJfKEm/xLwTPblA9+51fZlsRE1lJk0BO5F
-        rSN8YEOoF3aXOGsI3KO9mfrCBzS2QxUPgWvak6k3fECDRUPgPa1l6g8f0OjYED5Rt9reVviAhs8aAqq9
-        8AGN71HvTJHg2l/rb6i9jlsnBBj7JWT4zDq//BCCTB0C9+70eBsYSMHGtBc+MJgCZtoNHxhQQYfaDx8Q
-        9Ap1Ymq5nPABgWMIlxc+IPg1S5dmZmZmZmZmZmb/rut+AT/sRLvJLUMlAAAAAElFTkSuQmCC
-</value>
-  </data>
+  <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>152, 17</value>
+  </metadata>
 </root>

@@ -35,15 +35,16 @@
             // 
             // panelAnadir
             // 
+            this.panelAnadir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.panelAnadir.BackgroundImage = global::AppFlickCliente.Properties.Resources.tarjeta_nueva;
             this.panelAnadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelAnadir.Controls.Add(this.btnMasTarjetas);
             this.panelAnadir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelAnadir.Location = new System.Drawing.Point(0, 0);
-            this.panelAnadir.Margin = new System.Windows.Forms.Padding(5);
+            this.panelAnadir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAnadir.Name = "panelAnadir";
-            this.panelAnadir.Padding = new System.Windows.Forms.Padding(5);
-            this.panelAnadir.Size = new System.Drawing.Size(386, 241);
+            this.panelAnadir.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAnadir.Size = new System.Drawing.Size(290, 196);
             this.panelAnadir.TabIndex = 1;
             // 
             // btnMasTarjetas
@@ -58,26 +59,26 @@
             this.btnMasTarjetas.ForeColor = System.Drawing.Color.White;
             this.btnMasTarjetas.Image = global::AppFlickCliente.Properties.Resources.icon_mas;
             this.btnMasTarjetas.ImageSize = new System.Drawing.Size(38, 38);
-            this.btnMasTarjetas.Location = new System.Drawing.Point(129, 57);
-            this.btnMasTarjetas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMasTarjetas.Location = new System.Drawing.Point(97, 46);
             this.btnMasTarjetas.Name = "btnMasTarjetas";
             this.btnMasTarjetas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnMasTarjetas.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnMasTarjetas.OnHoverForeColor = System.Drawing.Color.White;
             this.btnMasTarjetas.OnHoverImage = null;
             this.btnMasTarjetas.OnPressedColor = System.Drawing.Color.Black;
-            this.btnMasTarjetas.Size = new System.Drawing.Size(134, 123);
+            this.btnMasTarjetas.Size = new System.Drawing.Size(100, 100);
             this.btnMasTarjetas.TabIndex = 0;
             this.btnMasTarjetas.Click += new System.EventHandler(this.btnMasTarjetas_Click);
             // 
             // Elem_tarjeta_vacia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.Controls.Add(this.panelAnadir);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Elem_tarjeta_vacia";
-            this.Size = new System.Drawing.Size(386, 241);
+            this.Size = new System.Drawing.Size(290, 196);
             this.panelAnadir.ResumeLayout(false);
             this.ResumeLayout(false);
 

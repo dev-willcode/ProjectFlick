@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using AppFlickCliente.Vistas.Init;
 using Controllers;
-using Entity.Entidades;
+using Entity.Entidades.EntidadesPersonalizadas;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
 
 namespace AppFlickCliente.Vistas.Forms
 {
-    public partial class VistaFacturas_Cliente : UserControl
+    public partial class VistaFacturas_Cliente : Vistas
     {
         private PanelScrollHelper scroll;
         private List<Elem_Factura> listaControles;
         private Label labelSinFacturas;
-        public VistaFacturas_Cliente()
+        public VistaFacturas_Cliente(Dashboard dashboard)
+            : base(dashboard)
         {
             InitializeComponent();
             PropiedadesScroll();
@@ -44,17 +46,17 @@ namespace AppFlickCliente.Vistas.Forms
         {
             try
             {
-                List<Factura> lista = PropiedadesGenerales.FacturaController
-                .ListarFacturas(PropiedadesGenerales.ClienteActual.id);
+                List<VistaFacturaFuncion> lista = PropiedadesGenerales.VFacturaFuncionController
+                    .ListarFacturas(PropiedadesGenerales.ClienteActual.id);
                 listaControles = new List<Elem_Factura>();
-                foreach (Factura factura in lista)
+                lista.ForEach(factura =>
                 {
                     Elem_Factura elemento = new Elem_Factura(factura);
                     panelFacturas.Controls.Add(elemento);
                     elemento.Dock = DockStyle.Top;
                     listaControles.Add(elemento);
                     elemento.VisibleChanged += new EventHandler(EventoOcultar);
-                }
+                });
             }
             catch (ControllerException ex)
             {
@@ -87,10 +89,8 @@ namespace AppFlickCliente.Vistas.Forms
             {
                 foreach (Elem_Factura elemento in listaControles)
                 {
-                    if (!(elemento.CFacturaController.Factura.factura_numero
-                        .Contains(txtBuscarFactura.Text) ||
-                        elemento.CFacturaController.CFuncionesController.Pelicula
-                        .pelicula_titulo.Contains(txtBuscarFactura.Text.ToUpper())))
+                    if (!(elemento.factura.factura_numero.Contains(txtBuscarFactura.Text) ||
+                        elemento.factura.pelicula_titulo.Contains(txtBuscarFactura.Text.ToUpper())))
                     {
                         elemento.Visible = false;
                     }

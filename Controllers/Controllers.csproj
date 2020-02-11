@@ -46,8 +46,6 @@
     <Compile Include="Controller\BoletoController.cs" />
     <Compile Include="Controller\CategoriaController.cs" />
     <Compile Include="Controller\ClienteController.cs" />
-    <Compile Include="Controller\Custom\CustomFacturaController.cs" />
-    <Compile Include="Controller\Custom\CustomFuncionesController.cs" />
     <Compile Include="Controller\Empleado.cs" />
     <Compile Include="Controller\FacturaController.cs" />
     <Compile Include="Controller\FuncionesController.cs" />
@@ -58,6 +56,8 @@
     <Compile Include="Controller\Sala_CineController.cs" />
     <Compile Include="Controller\TarjetasController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
+    <Compile Include="Controller\Vistas\vFacturaFuncionController.cs" />
+    <Compile Include="Controller\Vistas\vFuncionesController.cs" />
     <Compile Include="DAO\BancoDAO.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />

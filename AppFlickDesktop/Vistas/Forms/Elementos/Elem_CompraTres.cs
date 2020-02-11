@@ -43,14 +43,18 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
 
         internal void ActualizarInformacionCompra()
         {
-            var_titulo.Text = CFuncionesController.Pelicula.pelicula_titulo;
-            var_sala.Text = CFuncionesController.Sala_Cine.sala_nombre;
-            var_fecha.Text = "Fecha: " + CFuncionesController.Funcion.funcion_fecha_evento.ToShortDateString();
-            var_hora.Text = "Hora: " + CFuncionesController.Horarios.horario_inicio.ToString();
+            var_titulo.Text = VistaFunciones.pelicula_titulo;
+            var_sala.Text = VistaFunciones.sala_nombre;
+            var_fecha.Text = "Fecha: " + VistaFunciones.funcion_fecha_evento.ToShortDateString();
+            var_hora.Text = "Hora: " + VistaFunciones.horario_inicio.ToString();
             var_cantBoletos.Text = "Cant. Boletos: " + FormPadre.CantBoletosAComprar;
-            containerIdioma.Controls.Add(new Elem_idioma_funcion(CFuncionesController.Idioma));
+            containerIdioma.Controls.Add(new Elem_idioma_funcion(VistaFunciones.idioma_abreviatura));
             var_asientos.Text = FormPadre.AsientosSeleccionados;
             var_precioTotal.Text = "Total a pagar: $" + FormPadre.PrecioTotal;
+            if (VistaFunciones.pelicula_imagen != null)
+            {
+                var_imagen_pelicula.Image = Utils.UtilsProcedimientos.generarImagen(VistaFunciones.pelicula_imagen);
+            }
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -71,11 +75,6 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                     FormPadre.Close();
                 }
             }
-        }
-
-        private Boleto generarBoleto()
-        {
-            return null;
         }
     }
 }
