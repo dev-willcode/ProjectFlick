@@ -143,6 +143,16 @@ namespace AppFlickCliente.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_cambiar {
+            get {
+                object obj = ResourceManager.GetObject("icon_cambiar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_cerrar {
             get {
                 object obj = ResourceManager.GetObject("icon_cerrar", resourceCulture);
@@ -286,6 +296,16 @@ namespace AppFlickCliente.Properties {
         internal static System.Drawing.Bitmap icon_peliculas {
             get {
                 object obj = ResourceManager.GetObject("icon_peliculas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icon_regresar {
+            get {
+                object obj = ResourceManager.GetObject("icon_regresar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

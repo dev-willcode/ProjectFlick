@@ -14,7 +14,7 @@ namespace AppFlickCliente.Vistas.Forms
     public partial class VistaCuenta_Cliente : Vistas
     {
         private PanelScrollHelper scroll;
-
+        public VistaCuenta_Cliente() { }
         public VistaCuenta_Cliente(Dashboard dashboard)
             :base(dashboard)
         {

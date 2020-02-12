@@ -18,17 +18,17 @@ namespace Entity.Entidades
             factura_fecha_emision = (DateTime)data["factura_fecha_emision"];
         }
 
-        public int id { get; private set; }
+        public int id { get; set; }
 
-        public int factura_cliente { get; private set; }
+        public int factura_cliente { get; set; }
 
-        public int factura_funcion { get; private set; }
+        public int factura_funcion { get; set; }
 
-        public string factura_numero { get; private set; }
+        public string factura_numero { get; set; }
 
-        public string factura_metodo_pago { get; private set; }
+        public string factura_metodo_pago { get;  set; }
 
-        public DateTime factura_fecha_emision { get; private set; }
+        public DateTime factura_fecha_emision { get; set; }
 
     }
 }

@@ -381,7 +381,7 @@
             this.btnCambiarImagen.FocusedColor = System.Drawing.Color.Empty;
             this.btnCambiarImagen.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCambiarImagen.ForeColor = System.Drawing.Color.White;
-            this.btnCambiarImagen.Image = global::AppFlickCliente.Properties.Resources.icon_mas;
+            this.btnCambiarImagen.Image = global::AppFlickCliente.Properties.Resources.icon_cambiar;
             this.btnCambiarImagen.ImageSize = new System.Drawing.Size(38, 38);
             this.btnCambiarImagen.Location = new System.Drawing.Point(369, 193);
             this.btnCambiarImagen.Name = "btnCambiarImagen";

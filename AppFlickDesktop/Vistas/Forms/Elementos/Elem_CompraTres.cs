@@ -63,18 +63,52 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             {
                 PropiedadesGenerales.Notificar.notificarFallo("Eror al ingresar datos bancarios", "Seleccione una tarjeta primero");
             }
-            else if (txtCCV.Text.Length < 3)
+            else if (txtCCV.Text.Length < 3 && txtCCV.Text.Equals(((Tarjetas)comboTarjetas.SelectedItem).tarjeta_ccv))
             {
                 PropiedadesGenerales.Notificar.notificarFallo("Eror al ingresar datos bancarios", "Codigo de seguridad CCV incorrecto");
             }
             else
             {
+                try
                 {
-                    // Generar los boletos aquí
+                    Factura factura = new Factura();
+                    factura.factura_cliente = PropiedadesGenerales.ClienteActual.id;
+                    factura.factura_funcion = VistaFunciones.id;
+                    factura.factura_metodo_pago = "Escritorio";
+                    factura.factura_fecha_emision = DateTime.Now;
+                    factura.id = PropiedadesGenerales.FacturaController.Create(factura);
+
+                    List<Boleto> lista = CrearListadoBoletos(factura.id);
+                    lista.ForEach(boleto => {
+                        PropiedadesGenerales.BoletoController.Create(boleto);
+                        });
+
                     PropiedadesGenerales.Notificar.notificarCorrecto("Éxito", "Ha completado correctamente su compra, se ha generado una factura asociada a la compra.");
                     FormPadre.Close();
                 }
+                catch (ControllerException ex)
+                {
+                    PropiedadesGenerales.Notificar.notificarError(ex);
+                }
             }
+        }
+
+        private List<Boleto> CrearListadoBoletos(int id)
+        {
+            List<Boleto> listado = new List<Boleto>();
+            string[] array = var_asientos.Text.Replace(" ", "").Split(',');
+            Boleto boleto;
+            foreach (string item in array)
+            {
+                boleto = new Boleto();
+                boleto.boleto_factura = id;
+                boleto.boleto_funcion = VistaFunciones.id;
+                boleto.boleto_asiento = item;
+                boleto.boleto_tipo_asiento = "NORMAL";
+                boleto.boleto_medio_compra = "APP ESCRITORIO";
+                listado.Add(boleto);
+            }
+            return listado;
         }
     }
 }

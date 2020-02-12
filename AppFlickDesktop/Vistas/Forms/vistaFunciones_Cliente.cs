@@ -16,6 +16,7 @@ namespace AppFlickCliente.Vistas.Forms
         private PanelScrollHelper scroll;
         private List<Elem_funcion> listaControles;
         private Label labelSinFunciones;
+        public VistaFunciones_Cliente() { }
         public VistaFunciones_Cliente(Dashboard dashboard)
             : base(dashboard)
         {

@@ -271,6 +271,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\icons\icon.ico" />
+    <Content Include="Resources\icons\icon_cambiar.png" />
+    <Content Include="Resources\icons\icon_regresar.png" />
     <Content Include="Resources\icons\icon_menos.png" />
     <Content Include="Resources\icons\icon_mas.png" />
     <Content Include="Resources\icons\icon_buscar.png" />

@@ -26,8 +26,9 @@ namespace AppFlickCliente.Vistas.Forms
                 var_titulo.Text = factura.pelicula_titulo;
                 var_fecha.Text = factura.factura_fecha_emision.ToShortDateString();
                 var_hora.Text = factura.horario_inicio.ToString();
-                factura.boletos = PropiedadesGenerales.BoletoController.ListarBoletosFuncion(factura.factura_funcion);
+                factura.boletos = PropiedadesGenerales.BoletoController.listarBoletosFactura(factura.id);
                 var_cant_boletos.Text = factura.boletos.Count.ToString();
+                var_costo_total.Text = (factura.boletos.Count * factura.funcion_precio_boleto).ToString();
                 containerIdioma.Controls.Add(new Elem_idioma_funcion(factura.idioma_abreviatura));
             }
             catch (ControllerException ex)

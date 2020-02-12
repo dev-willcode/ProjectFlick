@@ -15,6 +15,9 @@ namespace AppFlickCliente.Vistas.Forms
         private PanelScrollHelper scroll;
         private List<Elem_Factura> listaControles;
         private Label labelSinFacturas;
+
+        public VistaFacturas_Cliente() { }
+
         public VistaFacturas_Cliente(Dashboard dashboard)
             : base(dashboard)
         {

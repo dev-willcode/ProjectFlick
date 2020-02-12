@@ -10,6 +10,8 @@ namespace Entity.Entidades.EntidadesPersonalizadas
         {
             id = (int)data["id"];
             factura_funcion = (int)data["factura_funcion"];
+            factura_cliente = (int)data["factura_cliente"];
+            funcion_precio_boleto = (decimal)data["funcion_precio_boleto"];
             factura_numero = data["factura_numero"].ToString();
             pelicula_titulo = data["pelicula_titulo"].ToString();
             idioma_abreviatura = data["idioma_abreviatura"].ToString();
@@ -20,6 +22,8 @@ namespace Entity.Entidades.EntidadesPersonalizadas
 
         public int id { get; set; }
         public int factura_funcion { get; set; }
+        public int factura_cliente { get; set; }
+        public decimal funcion_precio_boleto { get; set; }
         public string factura_numero { get; set; }
         public string pelicula_titulo { get; set; }
         public string idioma_abreviatura { get; set; }

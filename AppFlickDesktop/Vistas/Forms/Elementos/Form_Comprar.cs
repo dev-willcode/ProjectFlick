@@ -46,15 +46,23 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             if (contenedor.Controls[0].Equals(elem_CompraUno))
             {
                 PintarBoton(btnCompraUno);
+                activarRetroceso(false);
             }
             else if (contenedor.Controls[0].Equals(elem_CompraDos))
             {
                 PintarBoton(btnCompraDos);
+                activarRetroceso(true);
             }
             else
             {
                 PintarBoton(btnCompraTres);
+                activarRetroceso(true);
             }
+        }
+
+        internal void activarRetroceso(bool value)
+        {
+            btnCerrar.Visible = value;
         }
 
         internal void CambiarAUno(object sender, EventArgs e)
@@ -102,6 +110,20 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             {
                 PropiedadesGenerales.Notificar.notificarFallo("Advertencia",
                 "Verifique que ha completado el primer y segundo paso");
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            if (contenedor.Controls[0].Equals(elem_CompraDos))
+            {
+                slide1.Contraer();
+                CambiarAPanel(elem_CompraUno);
+            }
+            else if (contenedor.Controls[0].Equals(elem_CompraTres))
+            {
+                slide2.Contraer();
+                CambiarAPanel(elem_CompraDos);
             }
         }
     }
