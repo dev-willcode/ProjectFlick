@@ -16,7 +16,6 @@ namespace AppFlickCliente.Vistas.Init
             InitializeComponent();
             inicializarPropiedades();
             cargarDatos();
-            btnFunciones_Click(null, null);
             timer.Start();
         }
 
@@ -27,6 +26,7 @@ namespace AppFlickCliente.Vistas.Init
                 var_imagen_usuario.Image = Utils.UtilsProcedimientos.generarImagen(PropiedadesGenerales.ClienteActual.cliente_imagen);
             }
             var_nombre_usuario.Text = PropiedadesGenerales.ClienteActual.cliente_nombres.Split(' ')[0];
+            btnFunciones_Click(null, null);
         }
 
         private void inicializarPropiedades()

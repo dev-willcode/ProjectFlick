@@ -63,7 +63,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             {
                 PropiedadesGenerales.Notificar.notificarFallo("Eror al ingresar datos bancarios", "Seleccione una tarjeta primero");
             }
-            else if (txtCCV.Text.Length < 3 && txtCCV.Text.Equals(((Tarjetas)comboTarjetas.SelectedItem).tarjeta_ccv))
+            else if (txtCCV.Text.Length < 3 || !txtCCV.Text.Equals(((Tarjetas)comboTarjetas.SelectedItem).tarjeta_ccv))
             {
                 PropiedadesGenerales.Notificar.notificarFallo("Eror al ingresar datos bancarios", "Codigo de seguridad CCV incorrecto");
             }

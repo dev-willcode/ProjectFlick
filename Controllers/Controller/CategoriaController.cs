@@ -10,21 +10,19 @@ namespace Controllers.Controller
     {
         public string ListarCategoriasString(int id)
         {
+
             try
             {
-                string resul = "";
-                List<Categoria> lista = ListarCategorias(id);
-                if (lista.Count != 0)
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_ObtenerCategorias"))
                 {
-                    lista.ForEach(categoria => resul += categoria.categoria_nombre + " , ");
-                    resul = resul.Substring(0, resul.Length - 2);
+                    cmd.Parameters.AddWithValue("@idPelicula", id);
+                    return Procedimientos.obtenerString(cmd);
                 }
-                return resul;
             }
             catch (Exception ex)
             {
 
-                throw ex;
+                throw new ControllerException("No se consiguió listar Categorias", ex);
             }
         }
 

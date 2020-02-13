@@ -29,7 +29,7 @@ namespace Controllers.DAO
                         Entidad.cliente_telefono,
                         Entidad.cliente_email,
                         Entidad.cliente_direccion,
-                        Entidad.cliente_usuario, }
+                        Entidad.cliente_usuario }
                         );
 
                     return Procedimientos.evaluarInsercción(cmd);

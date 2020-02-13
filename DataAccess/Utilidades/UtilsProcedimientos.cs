@@ -40,6 +40,20 @@ namespace Controllers.Utilidades
             };
             return cmd;
         }
+        public string obtenerString(SqlCommand cmd)
+        {
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    return reader[0] as string;
+                }
+                else
+                {
+                    throw new DataException("Error al devolver la cadena");
+                }
+            }
+        }
 
         public Entidad DevolverEntidad<T>(SqlCommand cmd)
         {

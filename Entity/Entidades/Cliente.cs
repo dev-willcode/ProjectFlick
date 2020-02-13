@@ -18,7 +18,7 @@ namespace Entity.Entidades
             cliente_email = data["cliente_email"].ToString();
             cliente_direccion = data["cliente_direccion"].ToString();
             cliente_usuario = (int)data["cliente_usuario"];
-            cliente_imagen = data["cliente_imagen"].GetType().Equals(typeof(DBNull)) ?
+            cliente_imagen = data["cliente_imagen"] == DBNull.Value ?
                 null : (byte[])data["cliente_imagen"];
         }
 

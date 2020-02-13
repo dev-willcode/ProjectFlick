@@ -15,7 +15,7 @@ namespace Entity.Entidades.EntidadesPersonalizadas
             horario_inicio = (TimeSpan)data["horario_inicio"];
             pelicula_duracion = data["pelicula_duracion"].ToString();
             pelicula_tipo_censura = data["pelicula_tipo_censura"].ToString();
-            pelicula_imagen = data["pelicula_imagen"].GetType().Equals(typeof(DBNull)) ?
+            pelicula_imagen = data["pelicula_imagen"] == DBNull.Value ?
                 null : (byte[])data["pelicula_imagen"];
             pelicula_url_trailer = data["pelicula_url_trailer"].ToString();
             pelicula_sinopsis = data["pelicula_sinopsis"].ToString();
