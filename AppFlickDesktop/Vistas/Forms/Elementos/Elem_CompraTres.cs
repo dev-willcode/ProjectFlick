@@ -74,7 +74,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                     Factura factura = new Factura();
                     factura.factura_cliente = PropiedadesGenerales.ClienteActual.id;
                     factura.factura_funcion = VistaFunciones.id;
-                    factura.factura_metodo_pago = "Escritorio";
+                    factura.factura_metodo_pago = "APP ESCRITORIO";
                     factura.factura_fecha_emision = DateTime.Now;
                     factura.id = PropiedadesGenerales.FacturaController.Create(factura);
 
@@ -105,7 +105,6 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                 boleto.boleto_funcion = VistaFunciones.id;
                 boleto.boleto_asiento = item;
                 boleto.boleto_tipo_asiento = "NORMAL";
-                boleto.boleto_medio_compra = "APP ESCRITORIO";
                 listado.Add(boleto);
             }
             return listado;

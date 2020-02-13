@@ -31,7 +31,7 @@ namespace Controllers.DAO
             catch (Exception ex)
             {
 
-                throw new ControllerException("No se consiguió crear un cliente", ex);
+                throw new ControllerException("No se consiguió crear la factura", ex);
             }
         }
 
