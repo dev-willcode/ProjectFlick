@@ -15,7 +15,6 @@ namespace Entity.Entidades
             boleto_funcion = (int)data["boleto_funcion"];
             boleto_asiento = data["boleto_asiento"].ToString();
             boleto_tipo_asiento = data["boleto_tipo_asiento"].ToString();
-            boleto_medio_compra = data["boleto_medio_compra"].ToString();
         }
 
         public int id { get; set; }
@@ -27,7 +26,5 @@ namespace Entity.Entidades
         public string boleto_asiento { get; set; }
 
         public string boleto_tipo_asiento { get; set; }
-
-        public string boleto_medio_compra { get; set; }
     }
 }

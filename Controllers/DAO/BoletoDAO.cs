@@ -18,14 +18,12 @@ namespace Controllers.DAO.Vistas
                         "@boleto_factura",
                         "@boleto_funcion",
                         "@boleto_asiento",
-                        "@boleto_tipo_asiento",
-                        "@boleto_medio_compra"},
+                        "@boleto_tipo_asiento"},
                         new List<object>() {
                         Entidad.boleto_factura,
                         Entidad.boleto_funcion,
                         Entidad.boleto_asiento,
-                        Entidad.boleto_tipo_asiento,
-                        Entidad.boleto_medio_compra}
+                        Entidad.boleto_tipo_asiento}
                         );
 
                     return Procedimientos.evaluarInsercción(cmd);
