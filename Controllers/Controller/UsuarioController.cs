@@ -12,7 +12,7 @@ namespace Controllers.Controller
         {
             try
             {
-                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_IniciarSesion"))
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_IniciarSesionCliente"))
                 {
                     Procedimientos.agregarParametros(cmd,
                         new List<object>() {
