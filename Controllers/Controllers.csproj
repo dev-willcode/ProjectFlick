@@ -46,7 +46,7 @@
     <Compile Include="Controller\BoletoController.cs" />
     <Compile Include="Controller\CategoriaController.cs" />
     <Compile Include="Controller\ClienteController.cs" />
-    <Compile Include="Controller\Empleado.cs" />
+    <Compile Include="Controller\EmpleadoController.cs" />
     <Compile Include="Controller\EmpresaController.cs" />
     <Compile Include="Controller\FacturaController.cs" />
     <Compile Include="Controller\FuncionesController.cs" />
@@ -63,6 +63,7 @@
     <Compile Include="DAO\BancoDAO.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\EmpleadoDAO.cs" />
     <Compile Include="DAO\EmpresaDAO.cs" />
     <Compile Include="DAO\FacturaDAO.cs" />
     <Compile Include="DAO\BoletoDAO.cs" />

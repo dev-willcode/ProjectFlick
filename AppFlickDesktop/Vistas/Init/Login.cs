@@ -45,7 +45,7 @@ namespace AppFlickCliente
             {
                 try
                 {
-                    Cliente cliente = PropiedadesGenerales.UsuarioController.IniciarSesion(usuario);
+                    Cliente cliente = PropiedadesGenerales.UsuarioController.IniciarSesionCliente(usuario);
                     if (cliente != null)
                     {
                         abrirDashboard(cliente);

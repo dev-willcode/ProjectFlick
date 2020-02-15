@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\Controllers.csproj", "{A117B98B-A93C-4D27-9062-B54BA2C40E50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickAdministrador", "AppFlickAdministrador\AppFlickAdministrador.csproj", "{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{A117B98B-A93C-4D27-9062-B54BA2C40E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A117B98B-A93C-4D27-9062-B54BA2C40E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A117B98B-A93C-4D27-9062-B54BA2C40E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

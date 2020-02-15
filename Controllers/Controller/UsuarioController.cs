@@ -8,11 +8,11 @@ namespace Controllers.Controller
 {
     public class UsuarioController : UsuarioDAO
     {
-        public Cliente IniciarSesion(Usuario usuario)
+        public Cliente IniciarSesionCliente(Usuario usuario)
         {
             try
             {
-                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_IniciarSesion"))
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_IniciarSesionCliente"))
                 {
                     Procedimientos.agregarParametros(cmd,
                         new List<object>() {
@@ -25,6 +25,32 @@ namespace Controllers.Controller
                         }
                         );
                     return Procedimientos.DevolverEntidad<Cliente>(cmd) as Cliente;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguío iniciar la sesión", ex);
+            }
+        }
+
+        public Empleado IniciarSesionEmpleado(Usuario usuario)
+        {
+            try
+            {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_IniciarSesionEmpleado"))
+                {
+                    Procedimientos.agregarParametros(cmd,
+                        new List<object>() {
+                        "@usuario_username",
+                        "@usuario_password",
+                            },
+                        new List<object>() {
+                        usuario.usuario_username,
+                        usuario.usuario_password,
+                        }
+                        );
+                    return Procedimientos.DevolverEntidad<Empleado>(cmd) as Empleado;
                 }
             }
             catch (Exception ex)
