@@ -33,6 +33,9 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             //dsFacturaDatos.Vista_FacturaDatos.AddVista_FacturaDatosRow(
             //codificar las propiedades
             //);
+            //dsFacturaDatos.SP_ObtenerBoletosFactura.AddSP_ObtenerBoletosFacturaRow(
+            //codificar las propiedades
+            //);
             rPFactura.SetDataSource(dsFacturaDatos);
             crystalReportViewer1.ReportSource = rPFactura;
         }
