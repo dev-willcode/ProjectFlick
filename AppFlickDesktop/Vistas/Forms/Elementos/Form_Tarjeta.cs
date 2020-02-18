@@ -81,7 +81,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                 errores += " - Ingrese el CCV" + Environment.NewLine;
             }
 
-            if (string.IsNullOrEmpty(txtNumeroTarjeta.Text) && txtNumeroTarjeta.Text.Length == 15)
+            if (string.IsNullOrEmpty(txtNumeroTarjeta.Text))
             {
                 errores += " - Ingrese el número de la tarjeta" + Environment.NewLine;
             }
@@ -116,18 +116,28 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                     tarjeta.tarjeta_ccv = txtCCV.Text;
                     tarjeta.tarjeta_propietario = txtPropietario.Text;
                     tarjeta.tarjeta_numero = txtNumeroTarjeta.Text;
-
-                    if (TarjetaController.RegistrarTarjeta(tarjeta))
+                    if (txtNumeroTarjeta.Text.Length > 15 && txtCCV.Text.Length > 2)
                     {
-                        PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Tarjeta ingresada");
-                        VistaCuenta_Cliente.rellenarTarjetas();
-                        Close();
+                        if (TarjetaController.RegistrarTarjeta(tarjeta))
+                        {
+                            PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Tarjeta ingresada");
+                            VistaCuenta_Cliente.rellenarTarjetas();
+                            Close();
+                        }                     
+                    }
+                    else
+                    {
+                        PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar tarjeta", "Ingrese correctamente el CCV y Numero de Tarjeta!");
                     }
                 }
                 else
                 {
                     PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar tarjeta", "tarjeta ya usada!");
                 }
+            }
+            else
+            {
+                PropiedadesGenerales.Notificar.notificarFallo("Faltan datos", "Complete todos los campos!");
             }
         }
     }

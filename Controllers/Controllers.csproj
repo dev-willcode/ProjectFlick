@@ -57,10 +57,12 @@
     <Compile Include="Controller\Sala_CineController.cs" />
     <Compile Include="Controller\TarjetasController.cs" />
     <Compile Include="Controller\UsuarioController.cs" />
+    <Compile Include="Controller\BoletosFacturaController.cs" />
     <Compile Include="Controller\Vistas\vFacturaDatosController.cs" />
     <Compile Include="Controller\Vistas\vFacturaFuncionController.cs" />
     <Compile Include="Controller\Vistas\vFuncionesController.cs" />
     <Compile Include="DAO\BancoDAO.cs" />
+    <Compile Include="DAO\BoletosFacturaDAO.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\EmpleadoDAO.cs" />

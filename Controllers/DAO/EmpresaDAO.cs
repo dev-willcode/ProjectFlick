@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,7 +22,18 @@ namespace Controllers.DAO
 
         public override Empresa Get(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetEmpresa"))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return Procedimientos.evaluarObtención<Empresa>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ControllerException("No se consiguio obtener una Empresa", ex);
+            }
         }
 
         public override bool Update(Empresa Entidad)
