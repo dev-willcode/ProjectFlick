@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
 using AppFlickCliente.Reports;
 using AppFlickCliente.Reports.DataSets;
+using Controllers;
 using Entity.Entidades;
 using Entity.Entidades.EntidadesPersonalizadas;
 using Utils;
@@ -25,43 +26,51 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
 
         private void generarReporte(int id)
         {
-            DSFacturaDatos dsFacturaDatos = new DSFacturaDatos();
-            vistaFactura = PropiedadesGenerales.VFacturaDatosController.GetDatosFactura(id);
-            empresa = PropiedadesGenerales.EmpresaController.Get(id);
-            boletoFactura = PropiedadesGenerales.BoletosFacturaController.getBoletosFactura(id);
-            RPFacturaDatos rPFactura = new RPFacturaDatos();
-         
-            dsFacturaDatos.Vista_FacturaDatos.AddVista_FacturaDatosRow(
-                vistaFactura.id,
-                vistaFactura.cliente_cedula,
-                vistaFactura.cliente_apellidos,
-                vistaFactura.cliente_nombres,
-                vistaFactura.cliente_telefono,
-                vistaFactura.cliente_email,
-                vistaFactura.cliente_direccion,
-                vistaFactura.factura_numero,
-                vistaFactura.factura_fecha_emision,
-                vistaFactura.factura_metodo_pago,
-                vistaFactura.funcion_fecha_evento,
-                vistaFactura.funcion_precio_boleto,
-                vistaFactura.sala_nombre,
-                vistaFactura.horario_inicio,
-                vistaFactura.idioma_abreviatura,
-                vistaFactura.pelicula_titulo,
-                vistaFactura.pelicula_tipo_censura,
-                vistaFactura.pelicula_duracion
-            );
-            dsFacturaDatos.SP_ObtenerBoletosFactura.AddSP_ObtenerBoletosFacturaRow(
-                boletoFactura.cantidad,
-                boletoFactura.asientos,
-                boletoFactura.concepto,
-                boletoFactura.precio_unitario,
-                boletoFactura.importe,
-                boletoFactura.iva,
-                boletoFactura.total
-            );
-            rPFactura.SetDataSource(dsFacturaDatos);
-            crystalReportViewer1.ReportSource = rPFactura;
+            try
+            {
+                DSFacturaDatos dsFacturaDatos = new DSFacturaDatos();
+                vistaFactura = PropiedadesGenerales.VFacturaDatosController.GetDatosFactura(id);
+                empresa = PropiedadesGenerales.EmpresaController.Get(1);
+                boletoFactura = PropiedadesGenerales.BoletosFacturaController.getBoletosFactura(id);
+                RPFacturaDatos rPFactura = new RPFacturaDatos();
+
+                dsFacturaDatos.Vista_FacturaDatos.AddVista_FacturaDatosRow(
+                    vistaFactura.id,
+                    vistaFactura.cliente_cedula,
+                    vistaFactura.cliente_apellidos,
+                    vistaFactura.cliente_nombres,
+                    vistaFactura.cliente_telefono,
+                    vistaFactura.cliente_email,
+                    vistaFactura.cliente_direccion,
+                    vistaFactura.factura_numero,
+                    vistaFactura.factura_fecha_emision,
+                    vistaFactura.factura_metodo_pago,
+                    vistaFactura.funcion_fecha_evento,
+                    vistaFactura.funcion_precio_boleto,
+                    vistaFactura.sala_nombre,
+                    vistaFactura.horario_inicio,
+                    vistaFactura.idioma_abreviatura,
+                    vistaFactura.pelicula_titulo,
+                    vistaFactura.pelicula_tipo_censura,
+                    vistaFactura.pelicula_duracion
+                );
+                dsFacturaDatos.SP_ObtenerBoletosFactura.AddSP_ObtenerBoletosFacturaRow(
+                    boletoFactura.cantidad,
+                    boletoFactura.asientos,
+                    boletoFactura.concepto,
+                    boletoFactura.precio_unitario,
+                    boletoFactura.importe,
+                    boletoFactura.iva,
+                    boletoFactura.total
+                );
+                rPFactura.SetDataSource(dsFacturaDatos);
+                crystalReportViewer1.ReportSource = rPFactura;
+            }
+            catch (ControllerException ex)
+            {
+
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
         }
     }
 }
