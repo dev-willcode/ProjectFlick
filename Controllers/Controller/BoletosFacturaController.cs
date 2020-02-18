@@ -15,7 +15,7 @@ namespace Controllers.Controller.Vistas
         {
             try
             {
-                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BoletosFactura"))
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_ObtenerBoletosFactura"))
                 {
                     cmd.Parameters.AddWithValue("@idFactura", idFactura);
                     return Procedimientos.evaluarObtención<BoletosFactura>(cmd);

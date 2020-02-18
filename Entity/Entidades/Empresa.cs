@@ -4,9 +4,6 @@ namespace Entity.Entidades
 {
     public class Empresa : Entidad
     {
-        public Empresa()
-        {
-        }
 
         public Empresa(IDataReader data)
         {
