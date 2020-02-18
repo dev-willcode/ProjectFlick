@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using AppFlickAdministrador.Vistas.Forms;
 using Utils;
 
 namespace AppFlickAdministrador.Vistas.Init
@@ -21,14 +22,14 @@ namespace AppFlickAdministrador.Vistas.Init
         internal void cargarDatos()
         {
             var_nombre_usuario.Text = PropiedadesGenerales.EmpleadoActual.empleado_nombres.Split(' ')[0];
-            //btnFunciones_Click(null, null);
+            btnFunciones_Click(null, null);
         }
 
         private void inicializarPropiedades()
         {
             listaLabelsMenu = new List<Label>()
             {
-                labelFunciones
+                labelFunciones, labelPeliculas, labelHorarios, labelFacturacion, labelClientes, labelEmpleados
             };
         }
         private void animacion_logo(object sender, EventArgs e)
@@ -63,6 +64,12 @@ namespace AppFlickAdministrador.Vistas.Init
             PropiedadesGenerales.EmpleadoActual = null;
             new Login().Show();
             Close();
+        }
+
+        private void btnFunciones_Click(object sender, EventArgs e)
+        {
+            pintarLabelMenu(labelFunciones);
+            pintarPantalla(new VistaFunciones_Admin(this));
         }
     }
 }
