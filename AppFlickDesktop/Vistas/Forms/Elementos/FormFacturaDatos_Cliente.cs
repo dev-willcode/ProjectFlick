@@ -34,6 +34,19 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                 boletoFactura = PropiedadesGenerales.BoletosFacturaController.getBoletosFactura(id);
                 RPFacturaDatos rPFactura = new RPFacturaDatos();
 
+                dsFacturaDatos.Empresa.AddEmpresaRow
+                    (
+                    empresa.id,
+                    empresa.empresa_razon_social,
+                    empresa.empresa_numero_contribuyente,
+                    empresa.empresa_numero_autorizacion,
+                    empresa.empresa_direccion,
+                    empresa.empresa_telefono,
+                    empresa.empresa_email,
+                    empresa.empresa_website,
+                    empresa.empresa_ambiente,
+                    empresa.empresa_contabilidad
+                    );
                 dsFacturaDatos.Vista_FacturaDatos.AddVista_FacturaDatosRow(
                     vistaFactura.id,
                     vistaFactura.cliente_cedula,
@@ -63,6 +76,9 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                     boletoFactura.iva,
                     boletoFactura.total
                 );
+
+
+
                 rPFactura.SetDataSource(dsFacturaDatos);
                 crystalReportViewer1.ReportSource = rPFactura;
             }

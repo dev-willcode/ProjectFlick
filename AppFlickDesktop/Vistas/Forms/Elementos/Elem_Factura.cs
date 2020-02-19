@@ -8,7 +8,7 @@ namespace AppFlickCliente.Vistas.Forms
 {
     public partial class Elem_Factura : UserControl
     {
-        internal readonly VistaFacturaFuncion factura;
+        internal readonly VistaFacturaFuncion factura;     
 
         public Elem_Factura() { }
 
@@ -41,11 +41,10 @@ namespace AppFlickCliente.Vistas.Forms
 
         private void btnImprimir_Click(object sender, System.EventArgs e)
         {
-            using (FormFacturaDatos_Cliente facturaDatos = new FormFacturaDatos_Cliente())
-            {
-                facturaDatos.mostrarReporte(factura.id);
-                facturaDatos.ShowDialog();
-            }
+            FormFacturaDatos_Cliente facturaDatos = new FormFacturaDatos_Cliente();
+            facturaDatos.mostrarReporte(factura.id);
+            facturaDatos.ShowDialog();
+
         }
     }
 }
