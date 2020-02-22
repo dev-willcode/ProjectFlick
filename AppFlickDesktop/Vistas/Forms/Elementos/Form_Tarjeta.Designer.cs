@@ -164,6 +164,7 @@
             this.txtNumeroTarjeta.Size = new System.Drawing.Size(364, 39);
             this.txtNumeroTarjeta.TabIndex = 0;
             this.txtNumeroTarjeta.TextOffsetX = 2;
+            this.txtNumeroTarjeta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumeroTarjeta_KeyPress);
             // 
             // gunaLabel1
             // 
@@ -317,6 +318,7 @@
             this.txtPropietario.Size = new System.Drawing.Size(383, 39);
             this.txtPropietario.TabIndex = 96;
             this.txtPropietario.TextOffsetX = 2;
+            this.txtPropietario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPropietario_KeyPress);
             // 
             // txtCCV
             // 
@@ -339,6 +341,7 @@
             this.txtCCV.Size = new System.Drawing.Size(116, 39);
             this.txtCCV.TabIndex = 97;
             this.txtCCV.TextOffsetX = 2;
+            this.txtCCV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCCV_KeyPress);
             // 
             // comboTipo
             // 

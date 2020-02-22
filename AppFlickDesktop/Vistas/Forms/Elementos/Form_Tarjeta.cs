@@ -123,7 +123,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                             PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Tarjeta ingresada");
                             VistaCuenta_Cliente.rellenarTarjetas();
                             Close();
-                        }                     
+                        }
                     }
                     else
                     {
@@ -138,6 +138,65 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             else
             {
                 PropiedadesGenerales.Notificar.notificarFallo("Faltan datos", "Complete todos los campos!");
+            }
+        }
+
+        private void txtNumeroTarjeta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                  if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void txtPropietario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCCV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                  if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
             }
         }
     }
