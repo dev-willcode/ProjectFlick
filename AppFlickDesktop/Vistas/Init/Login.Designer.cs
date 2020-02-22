@@ -91,8 +91,9 @@
             this.efecto.SetDecoration(this.container, Guna.UI.Animation.DecorationType.None);
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(0, 0);
+            this.container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(825, 500);
+            this.container.Size = new System.Drawing.Size(1100, 615);
             this.container.TabIndex = 22;
             // 
             // logoImagen
@@ -101,7 +102,8 @@
             this.logoImagen.BackColor = System.Drawing.Color.Transparent;
             this.efecto.SetDecoration(this.logoImagen, Guna.UI.Animation.DecorationType.None);
             this.logoImagen.Image = global::AppFlickCliente.Properties.Resources.flick;
-            this.logoImagen.Location = new System.Drawing.Point(68, 98);
+            this.logoImagen.Location = new System.Drawing.Point(91, 121);
+            this.logoImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logoImagen.Name = "logoImagen";
             this.logoImagen.Size = new System.Drawing.Size(232, 83);
             this.logoImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -121,8 +123,9 @@
             this.containerIzq.Controls.Add(this.gunaLabel4);
             this.efecto.SetDecoration(this.containerIzq, Guna.UI.Animation.DecorationType.None);
             this.containerIzq.Location = new System.Drawing.Point(0, 0);
+            this.containerIzq.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.containerIzq.Name = "containerIzq";
-            this.containerIzq.Size = new System.Drawing.Size(440, 500);
+            this.containerIzq.Size = new System.Drawing.Size(587, 615);
             this.containerIzq.TabIndex = 26;
             // 
             // txtPassword
@@ -139,11 +142,12 @@
             this.txtPassword.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtPassword.Location = new System.Drawing.Point(79, 275);
+            this.txtPassword.Location = new System.Drawing.Point(105, 338);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.Radius = 10;
-            this.txtPassword.Size = new System.Drawing.Size(273, 30);
+            this.txtPassword.Size = new System.Drawing.Size(364, 39);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.TextOffsetX = 10;
             this.txtPassword.UseSystemPasswordChar = true;
@@ -162,11 +166,12 @@
             this.txtUsername.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtUsername.Location = new System.Drawing.Point(79, 220);
+            this.txtUsername.Location = new System.Drawing.Point(105, 271);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.Radius = 10;
-            this.txtUsername.Size = new System.Drawing.Size(273, 30);
+            this.txtUsername.Size = new System.Drawing.Size(364, 39);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TextOffsetX = 10;
             // 
@@ -186,7 +191,8 @@
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Image = null;
             this.btnLogin.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnLogin.Location = new System.Drawing.Point(206, 323);
+            this.btnLogin.Location = new System.Drawing.Point(275, 398);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnLogin.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -194,7 +200,7 @@
             this.btnLogin.OnHoverImage = null;
             this.btnLogin.OnPressedColor = System.Drawing.Color.Black;
             this.btnLogin.Radius = 10;
-            this.btnLogin.Size = new System.Drawing.Size(146, 40);
+            this.btnLogin.Size = new System.Drawing.Size(195, 49);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -207,9 +213,10 @@
             this.efecto.SetDecoration(this.gunaLabel1, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(76, 333);
+            this.gunaLabel1.Location = new System.Drawing.Point(101, 410);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(123, 15);
+            this.gunaLabel1.Size = new System.Drawing.Size(154, 20);
             this.gunaLabel1.TabIndex = 10;
             this.gunaLabel1.Text = "Olvidó su contraseña?";
             // 
@@ -220,9 +227,10 @@
             this.efecto.SetDecoration(this.gunaLabel2, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(91, 256);
+            this.gunaLabel2.Location = new System.Drawing.Point(121, 315);
+            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(70, 15);
+            this.gunaLabel2.Size = new System.Drawing.Size(86, 20);
             this.gunaLabel2.TabIndex = 11;
             this.gunaLabel2.Text = "Contraseña:";
             // 
@@ -233,9 +241,10 @@
             this.efecto.SetDecoration(this.gunaLabel3, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel3.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel3.Location = new System.Drawing.Point(91, 202);
+            this.gunaLabel3.Location = new System.Drawing.Point(121, 249);
+            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(50, 15);
+            this.gunaLabel3.Size = new System.Drawing.Size(62, 20);
             this.gunaLabel3.TabIndex = 12;
             this.gunaLabel3.Text = "Usuario:";
             // 
@@ -246,9 +255,10 @@
             this.efecto.SetDecoration(this.gunaLabel4, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel4.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel4.Location = new System.Drawing.Point(129, 434);
+            this.gunaLabel4.Location = new System.Drawing.Point(172, 534);
+            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(157, 15);
+            this.gunaLabel4.Size = new System.Drawing.Size(196, 20);
             this.gunaLabel4.TabIndex = 13;
             this.gunaLabel4.Text = "ProjectFlick 2019 © GPL v3.0";
             // 
@@ -258,9 +268,10 @@
             this.containerDer.Controls.Add(this.parent);
             this.containerDer.Controls.Add(this.panelSuperior);
             this.efecto.SetDecoration(this.containerDer, Guna.UI.Animation.DecorationType.None);
-            this.containerDer.Location = new System.Drawing.Point(440, 0);
+            this.containerDer.Location = new System.Drawing.Point(587, 0);
+            this.containerDer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.containerDer.Name = "containerDer";
-            this.containerDer.Size = new System.Drawing.Size(385, 500);
+            this.containerDer.Size = new System.Drawing.Size(513, 615);
             this.containerDer.TabIndex = 22;
             // 
             // parent
@@ -271,9 +282,10 @@
             this.parent.Controls.Add(this.btnRegistro);
             this.efecto.SetDecoration(this.parent, Guna.UI.Animation.DecorationType.None);
             this.parent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parent.Location = new System.Drawing.Point(0, 55);
+            this.parent.Location = new System.Drawing.Point(0, 68);
+            this.parent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.parent.Name = "parent";
-            this.parent.Size = new System.Drawing.Size(385, 445);
+            this.parent.Size = new System.Drawing.Size(513, 547);
             this.parent.TabIndex = 25;
             // 
             // movible
@@ -299,10 +311,11 @@
             this.movible.Controls.Add(this.txtnCedula);
             this.movible.Controls.Add(this.txtnApellidos);
             this.efecto.SetDecoration(this.movible, Guna.UI.Animation.DecorationType.None);
-            this.movible.Location = new System.Drawing.Point(0, 430);
+            this.movible.Location = new System.Drawing.Point(20, 538);
+            this.movible.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.movible.Name = "movible";
             this.movible.Radius = 20;
-            this.movible.Size = new System.Drawing.Size(360, 440);
+            this.movible.Size = new System.Drawing.Size(480, 542);
             this.movible.TabIndex = 24;
             // 
             // btnCancelar
@@ -322,7 +335,8 @@
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Image = null;
             this.btnCancelar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnCancelar.Location = new System.Drawing.Point(107, 354);
+            this.btnCancelar.Location = new System.Drawing.Point(143, 436);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnCancelar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -330,7 +344,7 @@
             this.btnCancelar.OnHoverImage = null;
             this.btnCancelar.OnPressedColor = System.Drawing.Color.Black;
             this.btnCancelar.Radius = 10;
-            this.btnCancelar.Size = new System.Drawing.Size(153, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(204, 34);
             this.btnCancelar.TabIndex = 22;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -343,9 +357,10 @@
             this.efecto.SetDecoration(this.gunaLabel11, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel11.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel11.Location = new System.Drawing.Point(39, 27);
+            this.gunaLabel11.Location = new System.Drawing.Point(52, 33);
+            this.gunaLabel11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel11.Name = "gunaLabel11";
-            this.gunaLabel11.Size = new System.Drawing.Size(50, 15);
+            this.gunaLabel11.Size = new System.Drawing.Size(62, 20);
             this.gunaLabel11.TabIndex = 21;
             this.gunaLabel11.Text = "Usuario:";
             // 
@@ -356,9 +371,10 @@
             this.efecto.SetDecoration(this.gunaLabel12, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel12.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel12.Location = new System.Drawing.Point(198, 27);
+            this.gunaLabel12.Location = new System.Drawing.Point(264, 33);
+            this.gunaLabel12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(70, 15);
+            this.gunaLabel12.Size = new System.Drawing.Size(86, 20);
             this.gunaLabel12.TabIndex = 20;
             this.gunaLabel12.Text = "Contraseña:";
             // 
@@ -376,11 +392,12 @@
             this.txtnUsuario.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtnUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtnUsuario.Location = new System.Drawing.Point(27, 45);
+            this.txtnUsuario.Location = new System.Drawing.Point(36, 55);
+            this.txtnUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnUsuario.Name = "txtnUsuario";
             this.txtnUsuario.PasswordChar = '\0';
             this.txtnUsuario.Radius = 10;
-            this.txtnUsuario.Size = new System.Drawing.Size(144, 30);
+            this.txtnUsuario.Size = new System.Drawing.Size(192, 39);
             this.txtnUsuario.TabIndex = 5;
             this.txtnUsuario.TextOffsetX = 10;
             // 
@@ -398,11 +415,12 @@
             this.txtnContrasena.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtnContrasena.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtnContrasena.Location = new System.Drawing.Point(178, 46);
+            this.txtnContrasena.Location = new System.Drawing.Point(237, 57);
+            this.txtnContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnContrasena.Name = "txtnContrasena";
             this.txtnContrasena.PasswordChar = '●';
             this.txtnContrasena.Radius = 10;
-            this.txtnContrasena.Size = new System.Drawing.Size(159, 30);
+            this.txtnContrasena.Size = new System.Drawing.Size(212, 39);
             this.txtnContrasena.TabIndex = 6;
             this.txtnContrasena.TextOffsetX = 10;
             this.txtnContrasena.UseSystemPasswordChar = true;
@@ -414,9 +432,10 @@
             this.efecto.SetDecoration(this.gunaLabel10, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel10.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel10.Location = new System.Drawing.Point(198, 185);
+            this.gunaLabel10.Location = new System.Drawing.Point(264, 228);
+            this.gunaLabel10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel10.Name = "gunaLabel10";
-            this.gunaLabel10.Size = new System.Drawing.Size(39, 15);
+            this.gunaLabel10.Size = new System.Drawing.Size(49, 20);
             this.gunaLabel10.TabIndex = 17;
             this.gunaLabel10.Text = "Email:";
             // 
@@ -427,9 +446,10 @@
             this.efecto.SetDecoration(this.gunaLabel9, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel9.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel9.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel9.Location = new System.Drawing.Point(39, 185);
+            this.gunaLabel9.Location = new System.Drawing.Point(52, 228);
+            this.gunaLabel9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel9.Name = "gunaLabel9";
-            this.gunaLabel9.Size = new System.Drawing.Size(55, 15);
+            this.gunaLabel9.Size = new System.Drawing.Size(70, 20);
             this.gunaLabel9.TabIndex = 16;
             this.gunaLabel9.Text = "Teléfono:";
             // 
@@ -440,9 +460,10 @@
             this.efecto.SetDecoration(this.gunaLabel8, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel8.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel8.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel8.Location = new System.Drawing.Point(39, 234);
+            this.gunaLabel8.Location = new System.Drawing.Point(52, 288);
+            this.gunaLabel8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel8.Name = "gunaLabel8";
-            this.gunaLabel8.Size = new System.Drawing.Size(60, 15);
+            this.gunaLabel8.Size = new System.Drawing.Size(75, 20);
             this.gunaLabel8.TabIndex = 15;
             this.gunaLabel8.Text = "Dirección:";
             // 
@@ -453,9 +474,10 @@
             this.efecto.SetDecoration(this.gunaLabel7, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel7.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel7.Location = new System.Drawing.Point(39, 131);
+            this.gunaLabel7.Location = new System.Drawing.Point(52, 161);
+            this.gunaLabel7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(59, 15);
+            this.gunaLabel7.Size = new System.Drawing.Size(75, 20);
             this.gunaLabel7.TabIndex = 14;
             this.gunaLabel7.Text = "Apellidos:";
             // 
@@ -466,9 +488,10 @@
             this.efecto.SetDecoration(this.gunaLabel6, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel6.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel6.Location = new System.Drawing.Point(198, 131);
+            this.gunaLabel6.Location = new System.Drawing.Point(264, 161);
+            this.gunaLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(59, 15);
+            this.gunaLabel6.Size = new System.Drawing.Size(73, 20);
             this.gunaLabel6.TabIndex = 13;
             this.gunaLabel6.Text = "Nombres:";
             // 
@@ -479,9 +502,10 @@
             this.efecto.SetDecoration(this.gunaLabel5, Guna.UI.Animation.DecorationType.None);
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaLabel5.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel5.Location = new System.Drawing.Point(39, 78);
+            this.gunaLabel5.Location = new System.Drawing.Point(52, 96);
+            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(47, 15);
+            this.gunaLabel5.Size = new System.Drawing.Size(58, 20);
             this.gunaLabel5.TabIndex = 12;
             this.gunaLabel5.Text = "Cedula:";
             // 
@@ -499,11 +523,12 @@
             this.txtnEmail.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtnEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtnEmail.Location = new System.Drawing.Point(182, 201);
+            this.txtnEmail.Location = new System.Drawing.Point(243, 247);
+            this.txtnEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnEmail.Name = "txtnEmail";
             this.txtnEmail.PasswordChar = '\0';
             this.txtnEmail.Radius = 10;
-            this.txtnEmail.Size = new System.Drawing.Size(159, 30);
+            this.txtnEmail.Size = new System.Drawing.Size(212, 39);
             this.txtnEmail.TabIndex = 11;
             this.txtnEmail.TextOffsetX = 10;
             // 
@@ -521,11 +546,12 @@
             this.txtnDireccion.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtnDireccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtnDireccion.Location = new System.Drawing.Point(31, 252);
+            this.txtnDireccion.Location = new System.Drawing.Point(41, 310);
+            this.txtnDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnDireccion.Name = "txtnDireccion";
             this.txtnDireccion.PasswordChar = '\0';
             this.txtnDireccion.Radius = 10;
-            this.txtnDireccion.Size = new System.Drawing.Size(310, 30);
+            this.txtnDireccion.Size = new System.Drawing.Size(413, 39);
             this.txtnDireccion.TabIndex = 12;
             this.txtnDireccion.TextOffsetX = 10;
             // 
@@ -543,13 +569,15 @@
             this.txtnNombres.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtnNombres.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnNombres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtnNombres.Location = new System.Drawing.Point(182, 149);
+            this.txtnNombres.Location = new System.Drawing.Point(243, 183);
+            this.txtnNombres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnNombres.Name = "txtnNombres";
             this.txtnNombres.PasswordChar = '\0';
             this.txtnNombres.Radius = 10;
-            this.txtnNombres.Size = new System.Drawing.Size(156, 30);
+            this.txtnNombres.Size = new System.Drawing.Size(208, 39);
             this.txtnNombres.TabIndex = 9;
             this.txtnNombres.TextOffsetX = 10;
+            this.txtnNombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnNombres_KeyPress);
             // 
             // txtnTelefono
             // 
@@ -565,13 +593,15 @@
             this.txtnTelefono.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtnTelefono.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtnTelefono.Location = new System.Drawing.Point(31, 201);
+            this.txtnTelefono.Location = new System.Drawing.Point(41, 247);
+            this.txtnTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnTelefono.Name = "txtnTelefono";
             this.txtnTelefono.PasswordChar = '\0';
             this.txtnTelefono.Radius = 10;
-            this.txtnTelefono.Size = new System.Drawing.Size(140, 30);
+            this.txtnTelefono.Size = new System.Drawing.Size(187, 39);
             this.txtnTelefono.TabIndex = 10;
             this.txtnTelefono.TextOffsetX = 10;
+            this.txtnTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnTelefono_KeyPress);
             // 
             // btnRegistrar
             // 
@@ -589,7 +619,8 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Image = null;
             this.btnRegistrar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegistrar.Location = new System.Drawing.Point(73, 302);
+            this.btnRegistrar.Location = new System.Drawing.Point(97, 372);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnRegistrar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -597,7 +628,7 @@
             this.btnRegistrar.OnHoverImage = null;
             this.btnRegistrar.OnPressedColor = System.Drawing.Color.Black;
             this.btnRegistrar.Radius = 10;
-            this.btnRegistrar.Size = new System.Drawing.Size(220, 40);
+            this.btnRegistrar.Size = new System.Drawing.Size(293, 49);
             this.btnRegistrar.TabIndex = 13;
             this.btnRegistrar.Text = "Registrarse ahora";
             this.btnRegistrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -617,13 +648,15 @@
             this.txtnCedula.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtnCedula.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtnCedula.Location = new System.Drawing.Point(27, 96);
+            this.txtnCedula.Location = new System.Drawing.Point(36, 118);
+            this.txtnCedula.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnCedula.Name = "txtnCedula";
             this.txtnCedula.PasswordChar = '\0';
             this.txtnCedula.Radius = 10;
-            this.txtnCedula.Size = new System.Drawing.Size(310, 30);
+            this.txtnCedula.Size = new System.Drawing.Size(413, 39);
             this.txtnCedula.TabIndex = 7;
             this.txtnCedula.TextOffsetX = 10;
+            this.txtnCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnCedula_KeyPress);
             // 
             // txtnApellidos
             // 
@@ -639,13 +672,15 @@
             this.txtnApellidos.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtnApellidos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnApellidos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtnApellidos.Location = new System.Drawing.Point(27, 149);
+            this.txtnApellidos.Location = new System.Drawing.Point(36, 183);
+            this.txtnApellidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtnApellidos.Name = "txtnApellidos";
             this.txtnApellidos.PasswordChar = '\0';
             this.txtnApellidos.Radius = 10;
-            this.txtnApellidos.Size = new System.Drawing.Size(144, 30);
+            this.txtnApellidos.Size = new System.Drawing.Size(192, 39);
             this.txtnApellidos.TabIndex = 8;
             this.txtnApellidos.TextOffsetX = 10;
+            this.txtnApellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnApellidos_KeyPress);
             // 
             // label1
             // 
@@ -655,9 +690,10 @@
             this.efecto.SetDecoration(this.label1, Guna.UI.Animation.DecorationType.None);
             this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(76, 187);
+            this.label1.Location = new System.Drawing.Point(101, 230);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 40);
+            this.label1.Size = new System.Drawing.Size(357, 50);
             this.label1.TabIndex = 22;
             this.label1.Text = "La mejor experiencia";
             // 
@@ -669,9 +705,10 @@
             this.efecto.SetDecoration(this.label6, Guna.UI.Animation.DecorationType.None);
             this.label6.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(181, 227);
+            this.label6.Location = new System.Drawing.Point(241, 279);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(174, 40);
+            this.label6.Size = new System.Drawing.Size(224, 50);
             this.label6.TabIndex = 23;
             this.label6.Text = "a tu alcance.";
             // 
@@ -692,7 +729,8 @@
             this.btnRegistro.ForeColor = System.Drawing.Color.White;
             this.btnRegistro.Image = null;
             this.btnRegistro.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnRegistro.Location = new System.Drawing.Point(188, 288);
+            this.btnRegistro.Location = new System.Drawing.Point(251, 354);
+            this.btnRegistro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnRegistro.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -700,7 +738,7 @@
             this.btnRegistro.OnHoverImage = null;
             this.btnRegistro.OnPressedColor = System.Drawing.Color.Black;
             this.btnRegistro.Radius = 10;
-            this.btnRegistro.Size = new System.Drawing.Size(153, 40);
+            this.btnRegistro.Size = new System.Drawing.Size(204, 49);
             this.btnRegistro.TabIndex = 4;
             this.btnRegistro.Text = "Registrarse";
             this.btnRegistro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -712,8 +750,9 @@
             this.efecto.SetDecoration(this.panelSuperior, Guna.UI.Animation.DecorationType.None);
             this.panelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSuperior.Location = new System.Drawing.Point(0, 0);
+            this.panelSuperior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSuperior.Name = "panelSuperior";
-            this.panelSuperior.Size = new System.Drawing.Size(385, 55);
+            this.panelSuperior.Size = new System.Drawing.Size(513, 68);
             this.panelSuperior.TabIndex = 24;
             // 
             // btnCerrar
@@ -722,11 +761,12 @@
             this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnCerrar.Image = global::AppFlickCliente.Properties.Resources.icon_cerrar;
             this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnCerrar.Location = new System.Drawing.Point(320, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(427, 15);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.OnHoverImage = null;
             this.btnCerrar.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnCerrar.Size = new System.Drawing.Size(32, 32);
+            this.btnCerrar.Size = new System.Drawing.Size(43, 39);
             this.btnCerrar.TabIndex = 21;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
@@ -770,15 +810,16 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(825, 500);
+            this.ClientSize = new System.Drawing.Size(1100, 615);
             this.Controls.Add(this.container);
             this.efecto.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
