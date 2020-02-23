@@ -35,6 +35,7 @@
             this.tableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.var_titulo = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.btnBorrar = new Guna.UI.WinForms.GunaButton();
             this.tableContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@
             this.btnImprimir.ForeColor = System.Drawing.Color.White;
             this.btnImprimir.Image = null;
             this.btnImprimir.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnImprimir.Location = new System.Drawing.Point(653, 8);
+            this.btnImprimir.Location = new System.Drawing.Point(593, 8);
             this.btnImprimir.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -63,7 +64,7 @@
             this.btnImprimir.OnHoverImage = null;
             this.btnImprimir.OnPressedColor = System.Drawing.Color.Black;
             this.btnImprimir.Radius = 10;
-            this.btnImprimir.Size = new System.Drawing.Size(96, 42);
+            this.btnImprimir.Size = new System.Drawing.Size(84, 42);
             this.btnImprimir.TabIndex = 85;
             this.btnImprimir.Text = "Imprimir";
             this.btnImprimir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -75,9 +76,9 @@
             this.var_costo_total.Dock = System.Windows.Forms.DockStyle.Fill;
             this.var_costo_total.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_costo_total.ForeColor = System.Drawing.Color.White;
-            this.var_costo_total.Location = new System.Drawing.Point(594, 0);
+            this.var_costo_total.Location = new System.Drawing.Point(539, 0);
             this.var_costo_total.Name = "var_costo_total";
-            this.var_costo_total.Size = new System.Drawing.Size(50, 58);
+            this.var_costo_total.Size = new System.Drawing.Size(45, 58);
             this.var_costo_total.TabIndex = 74;
             this.var_costo_total.Text = "5,90";
             this.var_costo_total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -88,9 +89,9 @@
             this.var_fecha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.var_fecha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_fecha.ForeColor = System.Drawing.Color.White;
-            this.var_fecha.Location = new System.Drawing.Point(503, 0);
+            this.var_fecha.Location = new System.Drawing.Point(456, 0);
             this.var_fecha.Name = "var_fecha";
-            this.var_fecha.Size = new System.Drawing.Size(85, 58);
+            this.var_fecha.Size = new System.Drawing.Size(77, 58);
             this.var_fecha.TabIndex = 71;
             this.var_fecha.Text = "12 Dec 2019";
             this.var_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,20 +104,22 @@
             this.var_numero_factura.ForeColor = System.Drawing.Color.White;
             this.var_numero_factura.Location = new System.Drawing.Point(3, 0);
             this.var_numero_factura.Name = "var_numero_factura";
-            this.var_numero_factura.Size = new System.Drawing.Size(68, 58);
+            this.var_numero_factura.Size = new System.Drawing.Size(61, 58);
             this.var_numero_factura.TabIndex = 69;
             this.var_numero_factura.Text = "0001";
             this.var_numero_factura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tableContainer
             // 
-            this.tableContainer.ColumnCount = 6;
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.820047F));
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.2622F));
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.2622F));
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.11237F));
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.540113F));
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.00307F));
+            this.tableContainer.ColumnCount = 7;
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.927316F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.69291F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.69291F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.01125F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.854648F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.73006F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableContainer.Controls.Add(this.btnBorrar, 6, 0);
             this.tableContainer.Controls.Add(this.gunaLabel1, 2, 0);
             this.tableContainer.Controls.Add(this.var_titulo, 1, 0);
             this.tableContainer.Controls.Add(this.var_numero_factura, 0, 0);
@@ -137,9 +140,9 @@
             this.var_titulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.var_titulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_titulo.ForeColor = System.Drawing.Color.White;
-            this.var_titulo.Location = new System.Drawing.Point(77, 0);
+            this.var_titulo.Location = new System.Drawing.Point(70, 0);
             this.var_titulo.Name = "var_titulo";
-            this.var_titulo.Size = new System.Drawing.Size(207, 58);
+            this.var_titulo.Size = new System.Drawing.Size(187, 58);
             this.var_titulo.TabIndex = 86;
             this.var_titulo.Text = "Alan Brito";
             this.var_titulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,12 +153,44 @@
             this.gunaLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(290, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(263, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(207, 58);
+            this.gunaLabel1.Size = new System.Drawing.Size(187, 58);
             this.gunaLabel1.TabIndex = 87;
             this.gunaLabel1.Text = "AVENGERS: ENDGAME";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Animated = true;
+            this.btnBorrar.AnimationHoverSpeed = 0.07F;
+            this.btnBorrar.AnimationSpeed = 0.03F;
+            this.btnBorrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBorrar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(100)))), ((int)(((byte)(235)))));
+            this.btnBorrar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnBorrar.BorderSize = 1;
+            this.btnBorrar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBorrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnBorrar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBorrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.ForeColor = System.Drawing.Color.White;
+            this.btnBorrar.Image = null;
+            this.btnBorrar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnBorrar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBorrar.Location = new System.Drawing.Point(689, 8);
+            this.btnBorrar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnBorrar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnBorrar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBorrar.OnHoverImage = null;
+            this.btnBorrar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBorrar.Radius = 7;
+            this.btnBorrar.Size = new System.Drawing.Size(60, 42);
+            this.btnBorrar.TabIndex = 88;
+            this.btnBorrar.Text = "Anular";
+            this.btnBorrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnBorrar.UseTransfarantBackground = true;
             // 
             // Elem_Factura
             // 
@@ -178,5 +213,6 @@
         private System.Windows.Forms.TableLayoutPanel tableContainer;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaLabel var_titulo;
+        private Guna.UI.WinForms.GunaButton btnBorrar;
     }
 }
