@@ -53,6 +53,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\PropiedadesGenerales.cs" />
     <Compile Include="Utils\UtilsProcedimientos.cs" />
+    <Compile Include="Vistas\Forms\Elementos\Elem_Factura.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_Factura.Designer.cs">
+      <DependentUpon>Elem_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_Horario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_Horario.Designer.cs">
+      <DependentUpon>Elem_Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_pelicula.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_pelicula.Designer.cs">
+      <DependentUpon>Elem_pelicula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_Funcion.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -64,6 +82,24 @@
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_idioma_funcion.Designer.cs">
       <DependentUpon>Elem_idioma_funcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\VistaFacturacion_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\VistaFacturacion_Admin.Designer.cs">
+      <DependentUpon>VistaFacturacion_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\VistaHorarios_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\VistaHorarios_Admin.Designer.cs">
+      <DependentUpon>VistaHorarios_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\VistaPelicula_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\VistaPelicula_Admin.Designer.cs">
+      <DependentUpon>VistaPelicula_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Forms\VistaFunciones_Admin.cs">
       <SubType>UserControl</SubType>
@@ -97,11 +133,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Factura.resx">
+      <DependentUpon>Elem_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Horario.resx">
+      <DependentUpon>Elem_Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_pelicula.resx">
+      <DependentUpon>Elem_pelicula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Funcion.resx">
       <DependentUpon>Elem_Funcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_idioma_funcion.resx">
       <DependentUpon>Elem_idioma_funcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\VistaFacturacion_Admin.resx">
+      <DependentUpon>VistaFacturacion_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\VistaHorarios_Admin.resx">
+      <DependentUpon>VistaHorarios_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\VistaPelicula_Admin.resx">
+      <DependentUpon>VistaPelicula_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\VistaFunciones_Admin.resx">
       <DependentUpon>VistaFunciones_Admin.cs</DependentUpon>

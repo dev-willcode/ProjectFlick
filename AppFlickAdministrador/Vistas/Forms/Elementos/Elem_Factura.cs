@@ -1,10 +1,9 @@
 ﻿using System.Windows.Forms;
-using AppFlickCliente.Vistas.Forms.Elementos;
 using Controllers;
 using Entity.Entidades.EntidadesPersonalizadas;
 using Utils;
 
-namespace AppFlickCliente.Vistas.Forms
+namespace AppFlickAdministrador.Vistas.Forms
 {
     public partial class Elem_Factura : UserControl
     {
@@ -26,10 +25,7 @@ namespace AppFlickCliente.Vistas.Forms
                 var_numero_factura.Text = factura.factura_numero;
                 var_titulo.Text = factura.pelicula_titulo;
                 var_fecha.Text = factura.factura_fecha_emision.ToShortDateString();
-                var_hora.Text = factura.horario_inicio.ToString();
-                var_cant_boletos.Text = factura.numero_boletos.ToString();
                 var_costo_total.Text = (factura.numero_boletos * factura.funcion_precio_boleto).ToString();
-                containerIdioma.Controls.Add(new Elem_idioma_funcion(factura.idioma_abreviatura));
             }
             catch (ControllerException ex)
             {
@@ -40,9 +36,10 @@ namespace AppFlickCliente.Vistas.Forms
 
         private void btnImprimir_Click(object sender, System.EventArgs e)
         {
-            FormFacturaDatos_Cliente facturaDatos = new FormFacturaDatos_Cliente();
+            //PENDIENTE
+            /*FormFacturaDatos_Cliente facturaDatos = new FormFacturaDatos_Cliente();
             facturaDatos.mostrarReporte(factura.id);
-            facturaDatos.ShowDialog();
+            facturaDatos.ShowDialog();*/
 
         }
     }

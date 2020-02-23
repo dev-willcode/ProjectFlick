@@ -102,8 +102,6 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
@@ -213,6 +211,7 @@
             this.btnTarjetas.TabIndex = 66;
             this.btnTarjetas.Text = "Peliculas";
             this.btnTarjetas.TextOffsetX = 4;
+            this.btnTarjetas.Click += new System.EventHandler(this.btnTarjetas_Click);
             // 
             // labelFunciones
             // 
@@ -250,6 +249,7 @@
             this.btnMiCuenta.TabIndex = 65;
             this.btnMiCuenta.Text = "Horarios";
             this.btnMiCuenta.TextOffsetX = 4;
+            this.btnMiCuenta.Click += new System.EventHandler(this.btnMiCuenta_Click);
             // 
             // gunaButton4
             // 
@@ -277,6 +277,7 @@
             this.gunaButton4.TabIndex = 72;
             this.gunaButton4.Text = "Facturación";
             this.gunaButton4.TextOffsetX = 4;
+            this.gunaButton4.Click += new System.EventHandler(this.gunaButton4_Click);
             // 
             // gunaButton16
             // 

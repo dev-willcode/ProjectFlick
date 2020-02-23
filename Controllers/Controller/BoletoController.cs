@@ -8,40 +8,6 @@ namespace Controllers.Controller
 {
     public class BoletoController : BoletoDAO
     {
-        public List<Boleto> listarBoletosFactura(int idFactura)
-        {
-            try
-            {
-                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BoletosFactura"))
-                {
-                    cmd.Parameters.AddWithValue("@idFactura", idFactura);
-                    return Procedimientos.ListarEntidades<Boleto>(cmd);
-                }
-            }
-            catch (Exception ex)
-            {
-
-                throw new ControllerException("No se consiguió listar los Boletos", ex);
-            }
-        }
-
-        public List<Boleto> listarBoletosCliente(int idCliente)
-        {
-            try
-            {
-                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BoletosCliente"))
-                {
-                    cmd.Parameters.AddWithValue("@idCliente", idCliente);
-                    return Procedimientos.ListarEntidades<Boleto>(cmd);
-                }
-            }
-            catch (Exception ex)
-            {
-
-                throw new ControllerException("No se consiguió listar los Boletos", ex);
-            }
-        }
-
         public List<Boleto> ListarBoletosFuncion(int id)
         {
             try

@@ -50,7 +50,8 @@
     <Compile Include="Controller\EmpresaController.cs" />
     <Compile Include="Controller\FacturaController.cs" />
     <Compile Include="Controller\FuncionesController.cs" />
-    <Compile Include="Controller\FuncionesDAO.cs" />
+    <Compile Include="DAO\FuncionesDAO.cs" />
+    <Compile Include="Controller\HorarioController.cs" />
     <Compile Include="Controller\HorariosController.cs" />
     <Compile Include="Controller\IdiomaController.cs" />
     <Compile Include="Controller\PeliculaController.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Controller\Vistas\vFacturaDatosController.cs" />
     <Compile Include="Controller\Vistas\vFacturaFuncionController.cs" />
     <Compile Include="Controller\Vistas\vFuncionesController.cs" />
+    <Compile Include="Controller\Vistas\vPeliculasController.cs" />
     <Compile Include="DAO\BancoDAO.cs" />
     <Compile Include="DAO\BoletosFacturaDAO.cs" />
     <Compile Include="DAO\CategoriaDAO.cs" />

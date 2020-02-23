@@ -1,6 +1,6 @@
 ﻿namespace AppFlickAdministrador.Vistas.Forms
 {
-    partial class VistaFunciones_Admin
+    partial class VistaPelicula_Admin
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -52,7 +52,7 @@
             this.btnBuscarFuncion.ForeColor = System.Drawing.Color.White;
             this.btnBuscarFuncion.Image = global::AppFlickAdministrador.Properties.Resources.icon_buscar;
             this.btnBuscarFuncion.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscarFuncion.Location = new System.Drawing.Point(618, 21);
+            this.btnBuscarFuncion.Location = new System.Drawing.Point(616, 21);
             this.btnBuscarFuncion.Name = "btnBuscarFuncion";
             this.btnBuscarFuncion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnBuscarFuncion.OnHoverBorderColor = System.Drawing.Color.White;
@@ -71,9 +71,9 @@
             this.gunaLabel5.ForeColor = System.Drawing.Color.White;
             this.gunaLabel5.Location = new System.Drawing.Point(19, 16);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(144, 37);
+            this.gunaLabel5.Size = new System.Drawing.Size(128, 37);
             this.gunaLabel5.TabIndex = 64;
-            this.gunaLabel5.Text = "Funciones";
+            this.gunaLabel5.Text = "Peliculas";
             // 
             // txtBuscarFuncion
             // 
@@ -88,7 +88,7 @@
             this.txtBuscarFuncion.FocusedForeColor = System.Drawing.Color.White;
             this.txtBuscarFuncion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarFuncion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtBuscarFuncion.Location = new System.Drawing.Point(213, 21);
+            this.txtBuscarFuncion.Location = new System.Drawing.Point(211, 21);
             this.txtBuscarFuncion.Name = "txtBuscarFuncion";
             this.txtBuscarFuncion.PasswordChar = '\0';
             this.txtBuscarFuncion.Radius = 10;
@@ -161,12 +161,12 @@
             this.btnEditar.OnPressedColor = System.Drawing.Color.Black;
             this.btnEditar.Radius = 7;
             this.btnEditar.Size = new System.Drawing.Size(110, 32);
-            this.btnEditar.TabIndex = 68;
+            this.btnEditar.TabIndex = 67;
             this.btnEditar.Text = "Añadir";
             this.btnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEditar.UseTransfarantBackground = true;
             // 
-            // VistaFunciones_Admin
+            // VistaPelicula_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -176,7 +176,7 @@
             this.Controls.Add(this.btnBuscarFuncion);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.txtBuscarFuncion);
-            this.Name = "VistaFunciones_Admin";
+            this.Name = "VistaPelicula_Admin";
             this.Size = new System.Drawing.Size(809, 506);
             this.container.ResumeLayout(false);
             this.ResumeLayout(false);
