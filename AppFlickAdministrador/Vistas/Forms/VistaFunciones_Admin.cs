@@ -30,7 +30,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             try
             {
                 List<VistaFunciones> listaFuncionesActivas = PropiedadesGeneralesA
-                    .VFuncionesController.ListarFuncionesActivas();
+                    .VFuncionesController.ListarFunciones();
                 listaControles = new List<Elem_funcion>();
 
                 listaFuncionesActivas.ForEach(funcion =>
