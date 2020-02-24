@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using AppFlickCliente.Vistas.Forms.Elementos;
 using Controllers;
 using Entity.Entidades.EntidadesPersonalizadas;
 using Utils;
@@ -29,17 +30,15 @@ namespace AppFlickAdministrador.Vistas.Forms
             }
             catch (ControllerException ex)
             {
-
                 PropiedadesGenerales.Notificar.notificarError(ex);
             }
         }
 
         private void btnImprimir_Click(object sender, System.EventArgs e)
         {
-            //PENDIENTE
-            /*FormFacturaDatos_Cliente facturaDatos = new FormFacturaDatos_Cliente();
+            FormFacturaDatos_Cliente facturaDatos = new FormFacturaDatos_Cliente();
             facturaDatos.mostrarReporte(factura.id);
-            facturaDatos.ShowDialog();*/
+            facturaDatos.ShowDialog();
 
         }
     }

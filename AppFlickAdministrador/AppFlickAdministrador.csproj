@@ -180,6 +180,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AppFlickDesktop\AppFlickCliente.csproj">
+      <Project>{150D7B97-48EE-4FAF-BAFF-F63C24568628}</Project>
+      <Name>AppFlickCliente</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Controllers\Controllers.csproj">
       <Project>{a117b98b-a93c-4d27-9062-b54ba2c40e50}</Project>
       <Name>Controllers</Name>

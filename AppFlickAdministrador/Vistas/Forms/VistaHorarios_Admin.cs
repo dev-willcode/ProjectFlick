@@ -24,7 +24,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             InitializeComponent();
             PropiedadesScroll();
             InicializarLabelSinFunciones();
-            RellenarFacturas();
+            RellenarHorarios();
         }
 
         private void PropiedadesScroll()
@@ -45,7 +45,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             panelHorarios.Controls.Add(labelSinHorario);
         }
 
-        private void RellenarFacturas()
+        private void RellenarHorarios()
         {
             try
             {

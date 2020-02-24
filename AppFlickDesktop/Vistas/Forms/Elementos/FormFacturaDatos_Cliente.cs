@@ -19,11 +19,11 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             InitializeComponent();
         }
 
-        internal void mostrarReporte(int id)
+        public void mostrarReporte(int id)
         {
             generarReporte(id);
         }
-
+     
         private void generarReporte(int id)
         {
             try
@@ -76,9 +76,6 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                     boletoFactura.iva,
                     boletoFactura.total
                 );
-
-
-
                 rPFactura.SetDataSource(dsFacturaDatos);
                 crystalReportViewer1.ReportSource = rPFactura;
             }
@@ -87,6 +84,6 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
 
                 PropiedadesGenerales.Notificar.notificarError(ex);
             }
-        }
+        }   
     }
 }
