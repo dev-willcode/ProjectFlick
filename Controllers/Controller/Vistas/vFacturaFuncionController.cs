@@ -30,11 +30,20 @@ namespace Controllers.Controller.Vistas
 
         public List<VistaFacturaFuncion> ListarFacturas()
         {
-            // generar nueva vista llamada "VistaFactura", con los datos que se
-            // requiere, numero factura, cliente, pelicula... ver ejemplo -> "SP_VistaFacturasCliente"
-            // crear el proceidmiento almacenado de listar TODAS las facturas
-
-            throw new NotImplementedException();
+            try
+            {
+                // generar nueva vista llamada "VistaFactura", con los datos que se
+                // requiere, numero factura, cliente, pelicula... ver ejemplo -> "SP_VistaFacturasCliente"
+                // crear el proceidmiento almacenado de listar TODAS las facturas
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_VistaFacturasClienteAdmin"))
+                {
+                    return Procedimientos.ListarEntidades<VistaFacturaFuncion>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {                
+                throw new ControllerException("No se consiguió listar Facturas", ex);
+            }   
         }
     }
 }
