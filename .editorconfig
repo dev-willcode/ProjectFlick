@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0436: El tipo entra en conflicto con un tipo importado
+dotnet_diagnostic.CS0436.severity = warning

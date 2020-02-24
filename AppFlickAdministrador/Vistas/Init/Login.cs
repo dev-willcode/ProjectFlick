@@ -40,33 +40,33 @@ namespace AppFlickAdministrador
                 usuario.usuario_password = txtPassword.Text;
                 try
                 {
-                    Empleado empleado = PropiedadesGenerales.UsuarioController.IniciarSesionEmpleado(usuario);
+                    Empleado empleado = PropiedadesGeneralesA.UsuarioController.IniciarSesionEmpleado(usuario);
                     if (empleado != null)
                     {
                         abrirDashboard(empleado);
                     }
                     else
                     {
-                        PropiedadesGenerales.Notificar.notificarFallo("Error al iniciar sesión",
+                        PropiedadesGeneralesA.Notificar.notificarFallo("Error al iniciar sesión",
                             "No se consiguió iniciar la sesión, usuario o contraseña incorrectos.");
                     }
                 }
                 catch (ControllerException ex)
                 {
 
-                    PropiedadesGenerales.Notificar.notificarError(ex);
+                    PropiedadesGeneralesA.Notificar.notificarError(ex);
                 }
             }
             else
             {
-                PropiedadesGenerales.Notificar.notificarFallo("Error al iniciar sesión",
+                PropiedadesGeneralesA.Notificar.notificarFallo("Error al iniciar sesión",
                     "verifique que ha llenado los campos de usuario y contraseña!");
             }
         }
 
         private void abrirDashboard(Empleado empleado)
         {
-            PropiedadesGenerales.EmpleadoActual = empleado;
+            PropiedadesGeneralesA.EmpleadoActual = empleado;
             Dashboard dashboard = new Dashboard();
             dashboard.Show();
             Close();

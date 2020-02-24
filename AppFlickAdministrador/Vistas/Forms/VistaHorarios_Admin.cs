@@ -49,7 +49,7 @@ namespace AppFlickAdministrador.Vistas.Forms
         {
             try
             {
-                List<Horarios> lista = PropiedadesGenerales.HorarioController
+                List<Horarios> lista = PropiedadesGeneralesA.HorarioController
                     .ListarHorarios();
                 listaControles = new List<Elem_Horario>();
                 lista.ForEach(horario =>
@@ -63,7 +63,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             }
             catch (ControllerException ex)
             {
-                PropiedadesGenerales.Notificar.notificarError(ex);
+                PropiedadesGeneralesA.Notificar.notificarError(ex);
             }
         }
         private void EventoOcultar(object sender, EventArgs e)

@@ -49,7 +49,7 @@ namespace AppFlickAdministrador.Vistas.Forms
         {
             try
             {
-                List<VistaFacturaFuncion> lista = PropiedadesGenerales.VFacturaFuncionController.ListarFacturas();
+                List<VistaFacturaFuncion> lista = PropiedadesGeneralesA.VFacturaFuncionController.ListarFacturas();
                 listaControles = new List<Elem_Factura>();
                 lista.ForEach(factura =>
                 {
@@ -62,7 +62,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             }
             catch (ControllerException ex)
             {
-                PropiedadesGenerales.Notificar.notificarError(ex);
+                PropiedadesGeneralesA.Notificar.notificarError(ex);
             }
         }
         private void EventoOcultar(object sender, EventArgs e)

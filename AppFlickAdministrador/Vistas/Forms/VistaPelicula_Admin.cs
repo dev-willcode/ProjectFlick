@@ -29,7 +29,7 @@ namespace AppFlickAdministrador.Vistas.Forms
         {
             try
             {
-                List<Pelicula> listaFuncionesActivas = PropiedadesGenerales
+                List<Pelicula> listaFuncionesActivas = PropiedadesGeneralesA
                     .VPeliculasController.ListarPeliculas();
                 listaControles = new List<Elem_pelicula>();
 
@@ -44,7 +44,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             }
             catch (ControllerException ex)
             {
-                PropiedadesGenerales.Notificar.notificarError(ex);
+                PropiedadesGeneralesA.Notificar.notificarError(ex);
             }
         }
 

@@ -36,7 +36,7 @@ namespace AppFlickAdministrador.Vistas.Init
             }
             catch (ControllerException ex)
             {
-                PropiedadesGenerales.Notificar.notificarError(ex);
+                PropiedadesGeneralesA.Notificar.notificarError(ex);
             }
         }
     }

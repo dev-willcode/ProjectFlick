@@ -5,7 +5,7 @@ using Entity.Entidades;
 
 namespace Utils
 {
-    public static class PropiedadesGenerales
+    public static class PropiedadesGeneralesA
     {
         public static Empleado EmpleadoActual { get; set; }
         public static ClienteController ClienteController { get => clienteController; set => clienteController = value; }
