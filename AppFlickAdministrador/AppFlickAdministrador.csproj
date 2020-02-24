@@ -83,6 +83,12 @@
     <Compile Include="Vistas\Forms\Elementos\Elem_idioma_funcion.Designer.cs">
       <DependentUpon>Elem_idioma_funcion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Form_Horario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Form_Horario.Designer.cs">
+      <DependentUpon>Form_Horario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\VistaFacturacion_Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_idioma_funcion.resx">
       <DependentUpon>Elem_idioma_funcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Horario.resx">
+      <DependentUpon>Form_Horario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\VistaFacturacion_Admin.resx">
       <DependentUpon>VistaFacturacion_Admin.cs</DependentUpon>
