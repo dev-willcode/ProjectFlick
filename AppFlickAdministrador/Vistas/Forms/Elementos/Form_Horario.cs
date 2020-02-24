@@ -36,75 +36,136 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             }
         }
 
-        private void guardar()
+        private void nuevo()
         {
-            try
+            if (validarCamposHorario())
             {
-                if (validarCamposHorario())
+                try
                 {
-                    DialogResult = DialogResult.OK;
+                    Horarios horario = new Horarios();
+                    horario.horario_inicio = TimeSpan.Parse(txthoraInicio.Text);
+                    horario.horario_fin = TimeSpan.Parse(txthoraFin.Text);
+                    TimeSpan timeSpan = TimeSpan.FromHours(-1);
+                    TimeSpan timeDiferencia = TimeSpan.Parse(txthoraInicio.Text) - TimeSpan.Parse(txthoraFin.Text);
+                    if (txthoraInicio.Text != txthoraFin.Text)
+                    {
+                        if (TimeSpan.Parse(txthoraInicio.Text) < TimeSpan.Parse(txthoraFin.Text))
+                        {
+                            if (timeDiferencia <= timeSpan)
+                            {
+                                if (HorarioController.RegistrarHorario(horario))
+                                {
+                                    PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Horario ingresado");
+                                    VistaHorarios_Admin.RellenarHorarios();
+                                    Close();
+                                }
+                                else
+                                {
+                                    PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Ingrese hora de inicio y hora de fin");
+                                }
+                            }
+                            else
+                            {
+                                PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Hora de Inicio y Hora de Fin deben tener diferencia de 1 hora");
+                            }
+                        }
+                        else
+                        {
+                            PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Hora de Inicio es tiempo antes que Hora Fin");
+                        }
+                    }
+                    else
+                    {
+                        PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Hora de Inicio y Hora de Fin no pueden ser iguales");
+                    }
                 }
-                else
+                catch (ControllerException ex)
                 {
-                    PropiedadesGenerales.Notificar.notificarFallo("Error al guardar horario", "Ingrese hora de inicio y hora de fin");
+                    PropiedadesGenerales.Notificar.notificarError(ex);
                 }
             }
-            catch (ControllerException ex)
+            else
             {
-                PropiedadesGenerales.Notificar.notificarError(ex);
+                PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Ingrese hora de inicio y hora de fin");
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void editar()
         {
-            Horarios horarioTemp = generarHorario();
-            try
+            if (validarCamposHorario())
             {
-                Horarios horario = new Horarios();
-                horario.horario_inicio = TimeSpan.Parse(txthoraInicio.Text);
-                horario.horario_fin = TimeSpan.Parse(txthoraFin.Text);
-                if (control == 0)
+                Horarios horarioTemp = generarHorario();
+                TimeSpan timeSpan = TimeSpan.FromHours(-1);
+                TimeSpan timeDiferencia = TimeSpan.Parse(txthoraInicio.Text) - TimeSpan.Parse(txthoraFin.Text);
+                if (!horarioTemp.Equals(PropiedadesGenerales.HorarioActual))
                 {
-                    if (HorarioController.RegistrarHorario(horario))
+                    try
                     {
-                        PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Horario ingresado");
-                        VistaHorarios_Admin.RellenarHorarios();
-                        Close();
+                        if (txthoraInicio.Text != txthoraFin.Text)
+                        {
+                            if (TimeSpan.Parse(txthoraInicio.Text) < TimeSpan.Parse(txthoraFin.Text))
+                            {
+                                if (timeDiferencia <= timeSpan)
+                                {
+                                    if (HorarioController.Update(horarioTemp) && validarCamposHorario())
+                                    {
+                                        PropiedadesGenerales.HorarioActual = horarioTemp;
+                                        VistaHorarios_Admin.RellenarHorarios();
+                                        PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Horario actualizado");
+                                        Close();
+                                    }
+                                    else
+                                    {
+                                        PropiedadesGenerales.Notificar.notificarFallo("Error al actualizar horario", "Ingrese hora de inicio y hora de fin");
+                                    }
+                                }
+                                else
+                                {
+                                    PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Hora de Inicio y Hora de Fin deben tener diferencia de 1 hora");
+                                }
+                            }
+                            else
+                            {
+                                PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Hora de Inicio es tiempo antes que Hora Fin");
+                            }
+                        }
+                        else
+                        {
+                            PropiedadesGenerales.Notificar.notificarFallo("Error al actualizar horario", "Hora de Inicio y Hora de Fin no pueden ser iguales");
+                        }
                     }
-                    else
+                    catch (ControllerException ex)
                     {
-                        PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Ingrese hora de inicio y hora de fin");
-                    }
-                }
-                if (control == 1)
-                {
-                    if (PropiedadesGenerales.HorarioController.Update(horarioTemp))
-                    {
-                        PropiedadesGenerales.HorarioActual = horarioTemp;
-                        PropiedadesGenerales.Notificar.notificarCorrecto("Actualizado",
-                            "Horario actualizad0 correctamente");
-                    }
-                    else
-                    {
-                        PropiedadesGenerales.Notificar.notificarFallo("No se consiguio actualizar",
-                            "Error al actualizar el horario");
+                        PropiedadesGenerales.Notificar.notificarError(ex);
                     }
                 }
             }
-            catch (ControllerException ex)
+            else
             {
-                PropiedadesGenerales.Notificar.notificarError(ex);
+                PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Ingrese hora de inicio y hora de fin");
             }
         }
 
         private Horarios generarHorario()
         {
-            Horarios horarios = new Horarios();
-            horarios.id = PropiedadesGenerales.HorarioActual.id;
-            horarios.horario_inicio = TimeSpan.Parse(txthoraInicio.Text);
-            horarios.horario_fin = TimeSpan.Parse(txthoraFin.Text);
-            return horarios;
+            Horarios horario = new Horarios();
+            //horario.id = PropiedadesGenerales.HorarioActual.id;
+            horario.horario_inicio = TimeSpan.Parse(txthoraInicio.Text);
+            horario.horario_fin = TimeSpan.Parse(txthoraFin.Text);
+            return horario;
 
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            if (control == 0)
+            {
+                nuevo();
+            }
+            if (control == 1)
+            {
+                editar();
+            }
         }
 
         private bool validarCamposHorario()
@@ -127,6 +188,40 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             if (control == 1)
             {
                 cargarDatos(Horario);
+            }
+        }
+
+        private void txthoraInicio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) || e.KeyChar == ':')
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txthoraFin_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) || e.KeyChar == ':')
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }

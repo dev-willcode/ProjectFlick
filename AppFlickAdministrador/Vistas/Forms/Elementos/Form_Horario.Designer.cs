@@ -123,6 +123,7 @@
             this.txthoraInicio.Size = new System.Drawing.Size(291, 39);
             this.txthoraInicio.TabIndex = 87;
             this.txthoraInicio.TextOffsetX = 10;
+            this.txthoraInicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txthoraInicio_KeyPress);
             // 
             // txthoraFin
             // 
@@ -144,6 +145,7 @@
             this.txthoraFin.Size = new System.Drawing.Size(291, 39);
             this.txthoraFin.TabIndex = 88;
             this.txthoraFin.TextOffsetX = 10;
+            this.txthoraFin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txthoraFin_KeyPress);
             // 
             // var_titulo
             // 
@@ -172,7 +174,7 @@
             this.Controls.Add(this.txthoraFin);
             this.Controls.Add(this.panel);
             this.Name = "Form_Horario";
-            this.Text = "Form_Horario";
+            this.Text = "v";
             this.Load += new System.EventHandler(this.Form_Horario_Load);
             this.ResumeLayout(false);
 

@@ -22,5 +22,21 @@ namespace Entity.Entidades
 
         public TimeSpan horario_fin { get;  set; }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+            Horarios horario = obj as Horarios;
+            return horario_fin == horario.horario_fin &&
+                horario_fin == horario.horario_fin;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
     }
 }
