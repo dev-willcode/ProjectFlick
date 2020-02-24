@@ -222,10 +222,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vistas\Notificaciones\Notificar.cs" />
-    <None Include="Reports\RPFacturaDatos.rpt">
+    <EmbeddedResource Include="Reports\RPFacturaDatos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPFacturaDatos.cs</LastGenOutput>
-    </None>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Control_slidebar.resx">
       <DependentUpon>Control_slidebar.cs</DependentUpon>
     </EmbeddedResource>

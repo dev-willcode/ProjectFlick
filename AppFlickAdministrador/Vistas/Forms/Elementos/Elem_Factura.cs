@@ -36,9 +36,9 @@ namespace AppFlickAdministrador.Vistas.Forms
 
         private void btnImprimir_Click(object sender, System.EventArgs e)
         {
-            //FormFacturaDatos_Admin facturaDatos = new FormFacturaDatos_Admin();
-            //facturaDatos.mostrarReporte(factura.id);
-            //facturaDatos.ShowDialog();
+            FormFacturaDatos_Admin facturaDatos = new FormFacturaDatos_Admin();
+            facturaDatos.mostrarReporte(factura.id);
+            facturaDatos.ShowDialog();
 
         }
     }

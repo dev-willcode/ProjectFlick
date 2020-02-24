@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSFacturaDatos" targetNamespace="http://tempuri.org/DSFacturaDatos.xsd" xmlns:mstns="http://tempuri.org/DSFacturaDatos.xsd" xmlns="http://tempuri.org/DSFacturaDatos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="cinedbConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="cinedbConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AppFlickAdministrador.Properties.Settings.GlobalReference.Default.cinedbConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Vista_FacturaDatosTableAdapter" GeneratorDataComponentClassName="Vista_FacturaDatosTableAdapter" Name="Vista_FacturaDatos" UserDataComponentName="Vista_FacturaDatosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cinedbConnectionString (Settings)" DbObjectName="cinedb.dbo.Vista_FacturaDatos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, cliente_cedula, cliente_apellidos, cliente_nombres, cliente_telefono, cliente_email, cliente_direccion, factura_numero, factura_fecha_emision, factura_metodo_pago, funcion_fecha_evento, funcion_precio_boleto, sala_nombre, horario_inicio, idioma_abreviatura, pelicula_titulo, pelicula_tipo_censura, pelicula_duracion FROM dbo.Vista_FacturaDatos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="cliente_cedula" DataSetColumn="cliente_cedula" />
+              <Mapping SourceColumn="cliente_apellidos" DataSetColumn="cliente_apellidos" />
+              <Mapping SourceColumn="cliente_nombres" DataSetColumn="cliente_nombres" />
+              <Mapping SourceColumn="cliente_telefono" DataSetColumn="cliente_telefono" />
+              <Mapping SourceColumn="cliente_email" DataSetColumn="cliente_email" />
+              <Mapping SourceColumn="cliente_direccion" DataSetColumn="cliente_direccion" />
+              <Mapping SourceColumn="factura_numero" DataSetColumn="factura_numero" />
+              <Mapping SourceColumn="factura_fecha_emision" DataSetColumn="factura_fecha_emision" />
+              <Mapping SourceColumn="factura_metodo_pago" DataSetColumn="factura_metodo_pago" />
+              <Mapping SourceColumn="funcion_fecha_evento" DataSetColumn="funcion_fecha_evento" />
+              <Mapping SourceColumn="funcion_precio_boleto" DataSetColumn="funcion_precio_boleto" />
+              <Mapping SourceColumn="sala_nombre" DataSetColumn="sala_nombre" />
+              <Mapping SourceColumn="horario_inicio" DataSetColumn="horario_inicio" />
+              <Mapping SourceColumn="idioma_abreviatura" DataSetColumn="idioma_abreviatura" />
+              <Mapping SourceColumn="pelicula_titulo" DataSetColumn="pelicula_titulo" />
+              <Mapping SourceColumn="pelicula_tipo_censura" DataSetColumn="pelicula_tipo_censura" />
+              <Mapping SourceColumn="pelicula_duracion" DataSetColumn="pelicula_duracion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SP_ObtenerBoletosFacturaTableAdapter" GeneratorDataComponentClassName="SP_ObtenerBoletosFacturaTableAdapter" Name="SP_ObtenerBoletosFactura" UserDataComponentName="SP_ObtenerBoletosFacturaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cinedbConnectionString (Settings)" DbObjectName="cinedb.dbo.SP_ObtenerBoletosFactura" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.SP_ObtenerBoletosFactura</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idFactura" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
+              <Mapping SourceColumn="asientos" DataSetColumn="asientos" />
+              <Mapping SourceColumn="concepto" DataSetColumn="concepto" />
+              <Mapping SourceColumn="precio_unitario" DataSetColumn="precio_unitario" />
+              <Mapping SourceColumn="importe" DataSetColumn="importe" />
+              <Mapping SourceColumn="iva" DataSetColumn="iva" />
+              <Mapping SourceColumn="total" DataSetColumn="total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmpresaTableAdapter" GeneratorDataComponentClassName="EmpresaTableAdapter" Name="Empresa" UserDataComponentName="EmpresaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cinedbConnectionString (Settings)" DbObjectName="cinedb.dbo.Empresa" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[Empresa] WHERE (([id] = @Original_id) AND ([empresa_razon_social] = @Original_empresa_razon_social) AND ([empresa_numero_contribuyente] = @Original_empresa_numero_contribuyente) AND ([empresa_numero_autorizacion] = @Original_empresa_numero_autorizacion) AND ([empresa_direccion] = @Original_empresa_direccion) AND ([empresa_telefono] = @Original_empresa_telefono) AND ([empresa_email] = @Original_empresa_email) AND ([empresa_website] = @Original_empresa_website) AND ([empresa_ambiente] = @Original_empresa_ambiente) AND ([empresa_contabilidad] = @Original_empresa_contabilidad))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_razon_social" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_razon_social" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_numero_contribuyente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_numero_contribuyente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_numero_autorizacion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_numero_autorizacion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_direccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_direccion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_telefono" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_website" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_website" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_ambiente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_ambiente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_empresa_contabilidad" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="empresa_contabilidad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[Empresa] ([empresa_razon_social], [empresa_numero_contribuyente], [empresa_numero_autorizacion], [empresa_direccion], [empresa_telefono], [empresa_email], [empresa_website], [empresa_ambiente], [empresa_contabilidad]) VALUES (@empresa_razon_social, @empresa_numero_contribuyente, @empresa_numero_autorizacion, @empresa_direccion, @empresa_telefono, @empresa_email, @empresa_website, @empresa_ambiente, @empresa_contabilidad);
+SELECT id, empresa_razon_social, empresa_numero_contribuyente, empresa_numero_autorizacion, empresa_direccion, empresa_telefono, empresa_email, empresa_website, empresa_ambiente, empresa_contabilidad FROM Empresa WHERE (id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_razon_social" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_razon_social" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_numero_contribuyente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_numero_contribuyente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_numero_autorizacion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_numero_autorizacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_direccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_telefono" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_website" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_website" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_ambiente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_ambiente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@empresa_contabilidad" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="empresa_contabilidad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, empresa_razon_social, empresa_numero_contribuyente, empresa_numero_autorizacion, empresa_direccion, empresa_telefono, empresa_email, empresa_website, empresa_ambiente, empresa_contabilidad FROM dbo.Empresa</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[Empresa] SET [empresa_razon_social] = @empresa_razon_social, [empresa_numero_contribuyente] = @empresa_numero_contribuyente, [empresa_numero_autorizacion] = @empresa_numero_autorizacion, [empresa_direccion] = @empresa_direccion, [empresa_telefono] = @empresa_telefono, [empresa_email] = @empresa_email, [empresa_website] = @empresa_website, [empresa_ambiente] = @empresa_ambiente, [empresa_contabilidad] = @empresa_contabilidad WHERE (([id] = @Original_id) AND ([empresa_razon_social] = @Original_empresa_razon_social) AND ([empresa_numero_contribuyente] = @Original_empresa_numero_contribuyente) AND ([empresa_numero_autorizacion] = @Original_empresa_numero_autorizacion) AND ([empresa_direccion] = @Original_empresa_direccion) AND ([empresa_telefono] = @Original_empresa_telefono) AND ([empresa_email] = @Original_empresa_email) AND ([empresa_website] = @Original_empresa_website) AND ([empresa_ambiente] = @Original_empresa_ambiente) AND ([empresa_contabilidad] = @Original_empresa_contabilidad));
+SELECT id, empresa_razon_social, empresa_numero_contribuyente, empresa_numero_autorizacion, empresa_direccion, empresa_telefono, empresa_email, empresa_website, empresa_ambiente, empresa_contabilidad FROM Empresa WHERE (id = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_razon_social" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_razon_social" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_numero_contribuyente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_numero_contribuyente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_numero_autorizacion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_numero_autorizacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_direccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_direccion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_telefono" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_telefono" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_website" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_website" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@empresa_ambiente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_ambiente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@empresa_contabilidad" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="empresa_contabilidad" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_razon_social" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_razon_social" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_numero_contribuyente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_numero_contribuyente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_numero_autorizacion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_numero_autorizacion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_direccion" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_direccion" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_telefono" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_telefono" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_website" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_website" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_empresa_ambiente" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="empresa_ambiente" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_empresa_contabilidad" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="empresa_contabilidad" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="id" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="empresa_razon_social" DataSetColumn="empresa_razon_social" />
+              <Mapping SourceColumn="empresa_numero_contribuyente" DataSetColumn="empresa_numero_contribuyente" />
+              <Mapping SourceColumn="empresa_numero_autorizacion" DataSetColumn="empresa_numero_autorizacion" />
+              <Mapping SourceColumn="empresa_direccion" DataSetColumn="empresa_direccion" />
+              <Mapping SourceColumn="empresa_telefono" DataSetColumn="empresa_telefono" />
+              <Mapping SourceColumn="empresa_email" DataSetColumn="empresa_email" />
+              <Mapping SourceColumn="empresa_website" DataSetColumn="empresa_website" />
+              <Mapping SourceColumn="empresa_ambiente" DataSetColumn="empresa_ambiente" />
+              <Mapping SourceColumn="empresa_contabilidad" DataSetColumn="empresa_contabilidad" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSFacturaDatos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSFacturaDatos" msprop:Generator_UserDSName="DSFacturaDatos">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Vista_FacturaDatos" msprop:Generator_TableClassName="Vista_FacturaDatosDataTable" msprop:Generator_TableVarName="tableVista_FacturaDatos" msprop:Generator_RowChangedName="Vista_FacturaDatosRowChanged" msprop:Generator_TablePropName="Vista_FacturaDatos" msprop:Generator_RowDeletingName="Vista_FacturaDatosRowDeleting" msprop:Generator_RowChangingName="Vista_FacturaDatosRowChanging" msprop:Generator_RowEvHandlerName="Vista_FacturaDatosRowChangeEventHandler" msprop:Generator_RowDeletedName="Vista_FacturaDatosRowDeleted" msprop:Generator_RowClassName="Vista_FacturaDatosRow" msprop:Generator_UserTableName="Vista_FacturaDatos" msprop:Generator_RowEvArgName="Vista_FacturaDatosRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="cliente_cedula" msprop:Generator_ColumnVarNameInTable="columncliente_cedula" msprop:Generator_ColumnPropNameInRow="cliente_cedula" msprop:Generator_ColumnPropNameInTable="cliente_cedulaColumn" msprop:Generator_UserColumnName="cliente_cedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliente_apellidos" msprop:Generator_ColumnVarNameInTable="columncliente_apellidos" msprop:Generator_ColumnPropNameInRow="cliente_apellidos" msprop:Generator_ColumnPropNameInTable="cliente_apellidosColumn" msprop:Generator_UserColumnName="cliente_apellidos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliente_nombres" msprop:Generator_ColumnVarNameInTable="columncliente_nombres" msprop:Generator_ColumnPropNameInRow="cliente_nombres" msprop:Generator_ColumnPropNameInTable="cliente_nombresColumn" msprop:Generator_UserColumnName="cliente_nombres" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliente_telefono" msprop:Generator_ColumnVarNameInTable="columncliente_telefono" msprop:Generator_ColumnPropNameInRow="cliente_telefono" msprop:Generator_ColumnPropNameInTable="cliente_telefonoColumn" msprop:Generator_UserColumnName="cliente_telefono" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliente_email" msprop:Generator_ColumnVarNameInTable="columncliente_email" msprop:Generator_ColumnPropNameInRow="cliente_email" msprop:Generator_ColumnPropNameInTable="cliente_emailColumn" msprop:Generator_UserColumnName="cliente_email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliente_direccion" msprop:Generator_ColumnVarNameInTable="columncliente_direccion" msprop:Generator_ColumnPropNameInRow="cliente_direccion" msprop:Generator_ColumnPropNameInTable="cliente_direccionColumn" msprop:Generator_UserColumnName="cliente_direccion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="factura_numero" msprop:Generator_ColumnVarNameInTable="columnfactura_numero" msprop:Generator_ColumnPropNameInRow="factura_numero" msprop:Generator_ColumnPropNameInTable="factura_numeroColumn" msprop:Generator_UserColumnName="factura_numero" type="xs:int" />
+              <xs:element name="factura_fecha_emision" msprop:Generator_ColumnVarNameInTable="columnfactura_fecha_emision" msprop:Generator_ColumnPropNameInRow="factura_fecha_emision" msprop:Generator_ColumnPropNameInTable="factura_fecha_emisionColumn" msprop:Generator_UserColumnName="factura_fecha_emision" type="xs:dateTime" />
+              <xs:element name="factura_metodo_pago" msprop:Generator_ColumnVarNameInTable="columnfactura_metodo_pago" msprop:Generator_ColumnPropNameInRow="factura_metodo_pago" msprop:Generator_ColumnPropNameInTable="factura_metodo_pagoColumn" msprop:Generator_UserColumnName="factura_metodo_pago" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="funcion_fecha_evento" msprop:Generator_ColumnVarNameInTable="columnfuncion_fecha_evento" msprop:Generator_ColumnPropNameInRow="funcion_fecha_evento" msprop:Generator_ColumnPropNameInTable="funcion_fecha_eventoColumn" msprop:Generator_UserColumnName="funcion_fecha_evento" type="xs:dateTime" />
+              <xs:element name="funcion_precio_boleto" msprop:Generator_ColumnVarNameInTable="columnfuncion_precio_boleto" msprop:Generator_ColumnPropNameInRow="funcion_precio_boleto" msprop:Generator_ColumnPropNameInTable="funcion_precio_boletoColumn" msprop:Generator_UserColumnName="funcion_precio_boleto" type="xs:decimal" />
+              <xs:element name="sala_nombre" msprop:Generator_ColumnVarNameInTable="columnsala_nombre" msprop:Generator_ColumnPropNameInRow="sala_nombre" msprop:Generator_ColumnPropNameInTable="sala_nombreColumn" msprop:Generator_UserColumnName="sala_nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="horario_inicio" msprop:Generator_ColumnVarNameInTable="columnhorario_inicio" msprop:Generator_ColumnPropNameInRow="horario_inicio" msprop:Generator_ColumnPropNameInTable="horario_inicioColumn" msprop:Generator_UserColumnName="horario_inicio" type="xs:duration" />
+              <xs:element name="idioma_abreviatura" msprop:Generator_ColumnVarNameInTable="columnidioma_abreviatura" msprop:Generator_ColumnPropNameInRow="idioma_abreviatura" msprop:Generator_ColumnPropNameInTable="idioma_abreviaturaColumn" msprop:Generator_UserColumnName="idioma_abreviatura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pelicula_titulo" msprop:Generator_ColumnVarNameInTable="columnpelicula_titulo" msprop:Generator_ColumnPropNameInRow="pelicula_titulo" msprop:Generator_ColumnPropNameInTable="pelicula_tituloColumn" msprop:Generator_UserColumnName="pelicula_titulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pelicula_tipo_censura" msprop:Generator_ColumnVarNameInTable="columnpelicula_tipo_censura" msprop:Generator_ColumnPropNameInRow="pelicula_tipo_censura" msprop:Generator_ColumnPropNameInTable="pelicula_tipo_censuraColumn" msprop:Generator_UserColumnName="pelicula_tipo_censura">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pelicula_duracion" msprop:Generator_ColumnVarNameInTable="columnpelicula_duracion" msprop:Generator_ColumnPropNameInRow="pelicula_duracion" msprop:Generator_ColumnPropNameInTable="pelicula_duracionColumn" msprop:Generator_UserColumnName="pelicula_duracion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SP_ObtenerBoletosFactura" msprop:Generator_TableClassName="SP_ObtenerBoletosFacturaDataTable" msprop:Generator_TableVarName="tableSP_ObtenerBoletosFactura" msprop:Generator_TablePropName="SP_ObtenerBoletosFactura" msprop:Generator_RowDeletingName="SP_ObtenerBoletosFacturaRowDeleting" msprop:Generator_RowChangingName="SP_ObtenerBoletosFacturaRowChanging" msprop:Generator_RowEvHandlerName="SP_ObtenerBoletosFacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="SP_ObtenerBoletosFacturaRowDeleted" msprop:Generator_UserTableName="SP_ObtenerBoletosFactura" msprop:Generator_RowChangedName="SP_ObtenerBoletosFacturaRowChanged" msprop:Generator_RowEvArgName="SP_ObtenerBoletosFacturaRowChangeEvent" msprop:Generator_RowClassName="SP_ObtenerBoletosFacturaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cantidad" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" minOccurs="0" />
+              <xs:element name="asientos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnasientos" msprop:Generator_ColumnPropNameInRow="asientos" msprop:Generator_ColumnPropNameInTable="asientosColumn" msprop:Generator_UserColumnName="asientos" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="concepto" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnconcepto" msprop:Generator_ColumnPropNameInRow="concepto" msprop:Generator_ColumnPropNameInTable="conceptoColumn" msprop:Generator_UserColumnName="concepto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="111" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="precio_unitario" msprop:Generator_ColumnVarNameInTable="columnprecio_unitario" msprop:Generator_ColumnPropNameInRow="precio_unitario" msprop:Generator_ColumnPropNameInTable="precio_unitarioColumn" msprop:Generator_UserColumnName="precio_unitario" type="xs:decimal" />
+              <xs:element name="importe" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnimporte" msprop:Generator_ColumnPropNameInRow="importe" msprop:Generator_ColumnPropNameInTable="importeColumn" msprop:Generator_UserColumnName="importe" type="xs:decimal" minOccurs="0" />
+              <xs:element name="iva" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columniva" msprop:Generator_ColumnPropNameInRow="iva" msprop:Generator_ColumnPropNameInTable="ivaColumn" msprop:Generator_UserColumnName="iva" type="xs:decimal" minOccurs="0" />
+              <xs:element name="total" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Empresa" msprop:Generator_TableClassName="EmpresaDataTable" msprop:Generator_TableVarName="tableEmpresa" msprop:Generator_RowChangedName="EmpresaRowChanged" msprop:Generator_TablePropName="Empresa" msprop:Generator_RowDeletingName="EmpresaRowDeleting" msprop:Generator_RowChangingName="EmpresaRowChanging" msprop:Generator_RowEvHandlerName="EmpresaRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpresaRowDeleted" msprop:Generator_RowClassName="EmpresaRow" msprop:Generator_UserTableName="Empresa" msprop:Generator_RowEvArgName="EmpresaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="empresa_razon_social" msprop:Generator_ColumnVarNameInTable="columnempresa_razon_social" msprop:Generator_ColumnPropNameInRow="empresa_razon_social" msprop:Generator_ColumnPropNameInTable="empresa_razon_socialColumn" msprop:Generator_UserColumnName="empresa_razon_social">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa_numero_contribuyente" msprop:Generator_ColumnVarNameInTable="columnempresa_numero_contribuyente" msprop:Generator_ColumnPropNameInRow="empresa_numero_contribuyente" msprop:Generator_ColumnPropNameInTable="empresa_numero_contribuyenteColumn" msprop:Generator_UserColumnName="empresa_numero_contribuyente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa_numero_autorizacion" msprop:Generator_ColumnVarNameInTable="columnempresa_numero_autorizacion" msprop:Generator_ColumnPropNameInRow="empresa_numero_autorizacion" msprop:Generator_ColumnPropNameInTable="empresa_numero_autorizacionColumn" msprop:Generator_UserColumnName="empresa_numero_autorizacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa_direccion" msprop:Generator_ColumnVarNameInTable="columnempresa_direccion" msprop:Generator_ColumnPropNameInRow="empresa_direccion" msprop:Generator_ColumnPropNameInTable="empresa_direccionColumn" msprop:Generator_UserColumnName="empresa_direccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa_telefono" msprop:Generator_ColumnVarNameInTable="columnempresa_telefono" msprop:Generator_ColumnPropNameInRow="empresa_telefono" msprop:Generator_ColumnPropNameInTable="empresa_telefonoColumn" msprop:Generator_UserColumnName="empresa_telefono">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa_email" msprop:Generator_ColumnVarNameInTable="columnempresa_email" msprop:Generator_ColumnPropNameInRow="empresa_email" msprop:Generator_ColumnPropNameInTable="empresa_emailColumn" msprop:Generator_UserColumnName="empresa_email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa_website" msprop:Generator_ColumnVarNameInTable="columnempresa_website" msprop:Generator_ColumnPropNameInRow="empresa_website" msprop:Generator_ColumnPropNameInTable="empresa_websiteColumn" msprop:Generator_UserColumnName="empresa_website">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa_ambiente" msprop:Generator_ColumnVarNameInTable="columnempresa_ambiente" msprop:Generator_ColumnPropNameInRow="empresa_ambiente" msprop:Generator_ColumnPropNameInTable="empresa_ambienteColumn" msprop:Generator_UserColumnName="empresa_ambiente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empresa_contabilidad" msprop:Generator_ColumnVarNameInTable="columnempresa_contabilidad" msprop:Generator_ColumnPropNameInRow="empresa_contabilidad" msprop:Generator_ColumnPropNameInTable="empresa_contabilidadColumn" msprop:Generator_UserColumnName="empresa_contabilidad" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Vista_FacturaDatos" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="Empresa_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Empresa" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
