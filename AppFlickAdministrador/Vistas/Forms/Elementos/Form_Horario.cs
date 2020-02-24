@@ -2,13 +2,6 @@
 using Controllers.Controller;
 using Entity.Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utils;
 
@@ -17,9 +10,9 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
     public partial class Form_Horario : Form
     {
         public readonly Horarios Horario;
-        private HorarioController HorarioController = PropiedadesGeneralesA.HorarioController;
         private VistaHorarios_Admin VistaHorarios_Admin { get; set; }
         public int control;
+        private HorarioController HorarioController = PropiedadesGenerales.HorarioController;
 
         public Form_Horario(VistaHorarios_Admin vistaHorarios_Admin, Horarios horario)
 
@@ -39,44 +32,81 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             }
             catch (ControllerException ex)
             {
-                PropiedadesGeneralesA.Notificar.notificarError(ex);
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
+        }
+
+        private void guardar()
+        {
+            try
+            {
+                if (validarCamposHorario())
+                {
+                    DialogResult = DialogResult.OK;
+                }
+                else
+                {
+                    PropiedadesGenerales.Notificar.notificarFallo("Error al guardar horario", "Ingrese hora de inicio y hora de fin");
+                }
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
             }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-           // Horarios horarioTemp = generarHorario();
-            if (validarCamposHorario())
+            Horarios horarioTemp = generarHorario();
+            try
             {
                 Horarios horario = new Horarios();
                 horario.horario_inicio = TimeSpan.Parse(txthoraInicio.Text);
                 horario.horario_fin = TimeSpan.Parse(txthoraFin.Text);
-                if (HorarioController.RegistrarHorario(horario))
+                if (control == 0)
                 {
-                    PropiedadesGeneralesA.Notificar.notificarCorrecto("Completado", "Horario ingresado");
-                    VistaHorarios_Admin.RellenarHorarios();
-                    Close();
+                    if (HorarioController.RegistrarHorario(horario))
+                    {
+                        PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Horario ingresado");
+                        VistaHorarios_Admin.RellenarHorarios();
+                        Close();
+                    }
+                    else
+                    {
+                        PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Ingrese hora de inicio y hora de fin");
+                    }
                 }
-                else
+                if (control == 1)
                 {
-                    PropiedadesGeneralesA.Notificar.notificarFallo("Error al ingresar horario", "Ingrese hora de inicio y hora de fin");
+                    if (PropiedadesGenerales.HorarioController.Update(horarioTemp))
+                    {
+                        PropiedadesGenerales.HorarioActual = horarioTemp;
+                        PropiedadesGenerales.Notificar.notificarCorrecto("Actualizado",
+                            "Horario actualizad0 correctamente");
+                    }
+                    else
+                    {
+                        PropiedadesGenerales.Notificar.notificarFallo("No se consiguio actualizar",
+                            "Error al actualizar el horario");
+                    }
                 }
             }
-            else
+            catch (ControllerException ex)
             {
-                PropiedadesGeneralesA.Notificar.notificarFallo("Faltan datos", "Complete todos los campos!");
+                PropiedadesGenerales.Notificar.notificarError(ex);
             }
         }
 
         private Horarios generarHorario()
         {
             Horarios horarios = new Horarios();
-            horarios.id = PropiedadesGeneralesA.HorarioActual.id;
+            horarios.id = PropiedadesGenerales.HorarioActual.id;
             horarios.horario_inicio = TimeSpan.Parse(txthoraInicio.Text);
             horarios.horario_fin = TimeSpan.Parse(txthoraFin.Text);
             return horarios;
 
         }
+
         private bool validarCamposHorario()
         {
             string errores = "";

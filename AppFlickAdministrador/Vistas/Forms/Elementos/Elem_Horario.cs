@@ -33,7 +33,7 @@ namespace AppFlickAdministrador.Vistas.Init
             }
             catch (ControllerException ex)
             {
-                PropiedadesGeneralesA.Notificar.notificarError(ex);
+                PropiedadesGenerales.Notificar.notificarError(ex);
             }
         }
 
@@ -45,22 +45,23 @@ namespace AppFlickAdministrador.Vistas.Init
         private void btnEditar_Click(object sender, System.EventArgs e)
         {
             Form_Horario form = new Form_Horario(VistaHorarios_Admin,Horario);
+            form.Text = "Editar Horario";
             form.control = 1;
             form.ShowDialog();
         }
 
         private void btnBorrar_Click(object sender, System.EventArgs e)
         {
-            if (PropiedadesGeneralesA.Notificar.Preguntar("Eliminar", "¿Esta seguro de eliminar?"))
+            if (PropiedadesGenerales.Notificar.Preguntar("Eliminar", "¿Esta seguro de eliminar?"))
             {
                 if (HorarioController.EliminarHorario(Horario.id))
                 {
-                    PropiedadesGeneralesA.Notificar.notificarCorrecto("Completado", "Se ha eliminado el horario");
+                    PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado el horario");
                     VistaHorarios_Admin.RellenarHorarios();
                 }
                 else
                 {
-                    PropiedadesGeneralesA.Notificar.notificarFallo("Eliminación Cancelada", "No se ha borrado el horario");
+                    PropiedadesGenerales.Notificar.notificarFallo("Eliminación Cancelada", "No se ha borrado el horario");
                 }
             }
         }

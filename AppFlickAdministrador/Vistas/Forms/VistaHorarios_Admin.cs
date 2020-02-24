@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using AppFlickAdministrador.Vistas.Forms.Elementos;
 using AppFlickAdministrador.Vistas.Init;
 using Controllers;
+using Controllers.Controller;
 using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
@@ -16,7 +17,7 @@ namespace AppFlickAdministrador.Vistas.Forms
         private PanelScrollHelper scroll;
         private List<Elem_Horario> listaControles;
         private Label labelSinHorario;
-        public readonly Horarios horario;
+        public readonly Horarios horario;       
 
         public VistaHorarios_Admin() { }
 
@@ -51,12 +52,13 @@ namespace AppFlickAdministrador.Vistas.Forms
         {
             try
             {
-                List<Horarios> lista = PropiedadesGeneralesA.HorarioController
+                panelHorarios.Controls.Clear();
+                List<Horarios> lista = PropiedadesGenerales.HorarioController
                     .ListarHorarios();
                 listaControles = new List<Elem_Horario>();
                 lista.ForEach(horario =>
                 {
-                    Elem_Horario elemento = new Elem_Horario(this,horario);
+                    Elem_Horario elemento = new Elem_Horario(this, horario);
                     panelHorarios.Controls.Add(elemento);
                     elemento.Dock = DockStyle.Top;
                     listaControles.Add(elemento);
@@ -65,7 +67,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             }
             catch (ControllerException ex)
             {
-                PropiedadesGeneralesA.Notificar.notificarError(ex);
+                PropiedadesGenerales.Notificar.notificarError(ex);
             }
         }
         private void EventoOcultar(object sender, EventArgs e)
@@ -85,6 +87,7 @@ namespace AppFlickAdministrador.Vistas.Forms
         private void btnAnadir_Click(object sender, EventArgs e)
         {
             Form_Horario form = new Form_Horario(this, horario);
+            form.Text = "Ingresar Horario";
             form.control = 0;
             form.ShowDialog();
         }

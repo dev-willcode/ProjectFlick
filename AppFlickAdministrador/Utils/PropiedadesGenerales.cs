@@ -5,7 +5,7 @@ using Entity.Entidades;
 
 namespace Utils
 {
-    public static class PropiedadesGeneralesA
+    public static class PropiedadesGenerales
     {
         public static Empleado EmpleadoActual { get; set; }
         public static Horarios HorarioActual { get;  set; }
@@ -38,7 +38,7 @@ namespace Utils
         private static CategoriaController categoriaController = new CategoriaController();
         private static EmpresaController empresaController = new EmpresaController();
         private static HorarioController horarioController = new HorarioController();
-
+      
         private static BoletosFacturaController boletosFacturaController = new BoletosFacturaController();
         private static vFuncionesController vFuncionesController = new vFuncionesController();
         private static vPeliculasController vPeliculasController = new vPeliculasController();

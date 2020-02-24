@@ -184,8 +184,8 @@
         private Guna.UI.WinForms.GunaButton btnGuardar;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaLabel var_titulo;
         private Guna.UI.WinForms.GunaTextBox txthoraInicio;
         private Guna.UI.WinForms.GunaTextBox txthoraFin;
-        private Guna.UI.WinForms.GunaLabel var_titulo;
     }
 }

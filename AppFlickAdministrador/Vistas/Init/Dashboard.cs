@@ -21,7 +21,7 @@ namespace AppFlickAdministrador.Vistas.Init
 
         internal void cargarDatos()
         {
-            var_nombre_usuario.Text = PropiedadesGeneralesA.EmpleadoActual.empleado_nombres.Split(' ')[0];
+            var_nombre_usuario.Text = PropiedadesGenerales.EmpleadoActual.empleado_nombres.Split(' ')[0];
             btnFunciones_Click(null, null);
         }
 
@@ -61,7 +61,7 @@ namespace AppFlickAdministrador.Vistas.Init
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            PropiedadesGeneralesA.EmpleadoActual = null;
+            PropiedadesGenerales.EmpleadoActual = null;
             new Login().Show();
             Close();
         }
