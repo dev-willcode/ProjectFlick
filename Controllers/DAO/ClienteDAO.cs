@@ -97,7 +97,6 @@ namespace Controllers.DAO
 
                 throw new ControllerException("No se consiguió actualizar el cliente", ex);
             }
-
         }
     }
 }

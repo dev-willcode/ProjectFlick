@@ -8,7 +8,7 @@ namespace Utils
     public static class PropiedadesGenerales
     {
         public static Cliente ClienteActual { get; internal set; }
-
+       
         private static Notificar notificar = new Notificar();
         private static ClienteController clienteController = new ClienteController();
         private static UsuarioController usuarioController = new UsuarioController();
@@ -19,7 +19,6 @@ namespace Utils
         private static FacturaController facturaController = new FacturaController();
         private static CategoriaController categoriaController = new CategoriaController();
         private static EmpresaController empresaController = new EmpresaController();
-        private static HorarioController horarioController = new HorarioController();
 
         private static BoletosFacturaController boletosFacturaController = new BoletosFacturaController();
         private static vFuncionesController vFuncionesController = new vFuncionesController();
@@ -40,6 +39,5 @@ namespace Utils
         public static vFacturaDatosController VFacturaDatosController { get => vFacturaDatosController; set => vFacturaDatosController = value; }
         public static EmpresaController EmpresaController { get => empresaController; set => empresaController = value; }
         public static BoletosFacturaController BoletosFacturaController { get => boletosFacturaController; set => boletosFacturaController = value; }
-        public static HorarioController HorarioController { get => horarioController; set => horarioController = value; }
     }
 }

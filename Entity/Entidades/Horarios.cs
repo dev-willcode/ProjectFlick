@@ -16,10 +16,11 @@ namespace Entity.Entidades
             horario_fin = (TimeSpan)data["horario_fin"];
         }
 
-        public int id { get; private set; }
+        public int id { get;  set; }
 
-        public TimeSpan horario_inicio { get; private set; }
+        public TimeSpan horario_inicio { get;  set; }
 
-        public TimeSpan horario_fin { get; private set; }
+        public TimeSpan horario_fin { get;  set; }
+
     }
 }

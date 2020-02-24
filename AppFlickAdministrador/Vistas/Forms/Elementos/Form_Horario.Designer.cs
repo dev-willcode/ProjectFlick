@@ -173,6 +173,7 @@
             this.Controls.Add(this.panel);
             this.Name = "Form_Horario";
             this.Text = "Form_Horario";
+            this.Load += new System.EventHandler(this.Form_Horario_Load);
             this.ResumeLayout(false);
 
         }

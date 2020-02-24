@@ -71,7 +71,6 @@
     <Compile Include="DAO\EmpresaDAO.cs" />
     <Compile Include="DAO\FacturaDAO.cs" />
     <Compile Include="DAO\BoletoDAO.cs" />
-    <Compile Include="DAO\HorarioDAO.cs" />
     <Compile Include="DAO\HorariosDAO.cs" />
     <Compile Include="DAO\IdiomaDAO.cs" />
     <Compile Include="DAO\PeliculaDAO.cs" />

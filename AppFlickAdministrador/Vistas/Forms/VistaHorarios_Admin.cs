@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using AppFlickAdministrador.Vistas.Forms.Elementos;
 using AppFlickAdministrador.Vistas.Init;
 using Controllers;
 using Entity.Entidades;
@@ -15,6 +16,7 @@ namespace AppFlickAdministrador.Vistas.Forms
         private PanelScrollHelper scroll;
         private List<Elem_Horario> listaControles;
         private Label labelSinHorario;
+        public readonly Horarios horario;
 
         public VistaHorarios_Admin() { }
 
@@ -45,7 +47,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             panelHorarios.Controls.Add(labelSinHorario);
         }
 
-        private void RellenarHorarios()
+        public void RellenarHorarios()
         {
             try
             {
@@ -54,7 +56,7 @@ namespace AppFlickAdministrador.Vistas.Forms
                 listaControles = new List<Elem_Horario>();
                 lista.ForEach(horario =>
                 {
-                    Elem_Horario elemento = new Elem_Horario(horario);
+                    Elem_Horario elemento = new Elem_Horario(this,horario);
                     panelHorarios.Controls.Add(elemento);
                     elemento.Dock = DockStyle.Top;
                     listaControles.Add(elemento);
@@ -78,6 +80,13 @@ namespace AppFlickAdministrador.Vistas.Forms
             {
                 labelSinHorario.Visible = false;
             }
+        }
+
+        private void btnAnadir_Click(object sender, EventArgs e)
+        {
+            Form_Horario form = new Form_Horario(this, horario);
+            form.control = 0;
+            form.ShowDialog();
         }
     }
 }

@@ -38,6 +38,7 @@
             this.var_numero_factura = new Guna.UI.WinForms.GunaLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAnadir = new Guna.UI.WinForms.GunaButton();
             this.container.SuspendLayout();
             this.tableContainer.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -49,7 +50,7 @@
             this.container.Controls.Add(this.panelHorarios);
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(0, 62);
-            this.container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.container.Margin = new System.Windows.Forms.Padding(4);
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(605, 375);
             this.container.TabIndex = 70;
@@ -59,7 +60,7 @@
             this.scrollBar.Dock = System.Windows.Forms.DockStyle.Right;
             this.scrollBar.LargeChange = 10;
             this.scrollBar.Location = new System.Drawing.Point(582, 0);
-            this.scrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.scrollBar.Margin = new System.Windows.Forms.Padding(4);
             this.scrollBar.Maximum = 100;
             this.scrollBar.Name = "scrollBar";
             this.scrollBar.ScrollbarSize = 12;
@@ -74,7 +75,7 @@
             // 
             this.panelHorarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHorarios.Location = new System.Drawing.Point(0, 0);
-            this.panelHorarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelHorarios.Margin = new System.Windows.Forms.Padding(4);
             this.panelHorarios.Name = "panelHorarios";
             this.panelHorarios.Size = new System.Drawing.Size(605, 375);
             this.panelHorarios.TabIndex = 70;
@@ -103,7 +104,7 @@
             this.tableContainer.Controls.Add(this.var_numero_factura, 0, 0);
             this.tableContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableContainer.Location = new System.Drawing.Point(0, 0);
-            this.tableContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableContainer.Margin = new System.Windows.Forms.Padding(4);
             this.tableContainer.Name = "tableContainer";
             this.tableContainer.RowCount = 1;
             this.tableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -157,7 +158,7 @@
             this.panel1.Controls.Add(this.container);
             this.panel1.Controls.Add(this.tableContainer);
             this.panel1.Location = new System.Drawing.Point(425, 96);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(605, 437);
             this.panel1.TabIndex = 91;
@@ -170,15 +171,49 @@
             this.panel3.Size = new System.Drawing.Size(360, 437);
             this.panel3.TabIndex = 90;
             // 
+            // btnAnadir
+            // 
+            this.btnAnadir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAnadir.Animated = true;
+            this.btnAnadir.AnimationHoverSpeed = 0.07F;
+            this.btnAnadir.AnimationSpeed = 0.03F;
+            this.btnAnadir.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnadir.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnAnadir.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnAnadir.BorderSize = 1;
+            this.btnAnadir.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAnadir.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAnadir.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnadir.ForeColor = System.Drawing.Color.White;
+            this.btnAnadir.Image = global::AppFlickAdministrador.Properties.Resources.icon_mas;
+            this.btnAnadir.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAnadir.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAnadir.Location = new System.Drawing.Point(879, 23);
+            this.btnAnadir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAnadir.Name = "btnAnadir";
+            this.btnAnadir.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnAnadir.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnAnadir.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAnadir.OnHoverImage = null;
+            this.btnAnadir.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAnadir.Radius = 7;
+            this.btnAnadir.Size = new System.Drawing.Size(147, 39);
+            this.btnAnadir.TabIndex = 92;
+            this.btnAnadir.Text = "Añadir";
+            this.btnAnadir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAnadir.UseTransfarantBackground = true;
+            this.btnAnadir.Click += new System.EventHandler(this.btnAnadir_Click);
+            // 
             // VistaHorarios_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.Controls.Add(this.btnAnadir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.gunaLabel5);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "VistaHorarios_Admin";
             this.Size = new System.Drawing.Size(1079, 623);
             this.container.ResumeLayout(false);
@@ -201,5 +236,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private System.Windows.Forms.Panel panel3;
+        private Guna.UI.WinForms.GunaButton btnAnadir;
     }
 }
