@@ -22,15 +22,5 @@ namespace Controllers.Controller
                 throw new ControllerException("No se consiguió listar los horarios", ex);
             }
         }
-
-        public bool RegistrarHorario(Horario horario)
-        {
-            return new HorariosDAO().Create(horario) > 0;
-        }
-
-        public static bool EliminarHorario(int id)
-        {
-            return new HorariosDAO().Delete(id);
-        }
     }
 }

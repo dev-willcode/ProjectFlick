@@ -61,16 +61,10 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                         {
                             if (timeDiferencia <= timeSpan)
                             {
-                                if (PropiedadesGenerales.HorarioController.RegistrarHorario(horario))
-                                {
-                                    PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Horario ingresado");
-                                    VistaHorarios_Admin.RellenarHorarios();
-                                    Close();
-                                }
-                                else
-                                {
-                                    PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Ingrese hora de inicio y hora de fin");
-                                }
+                                PropiedadesGenerales.HorarioController.Create(horario);
+                                PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Horario ingresado");
+                                VistaHorarios_Admin.RellenarHorarios();
+                                Close();
                             }
                             else
                             {

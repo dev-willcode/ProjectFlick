@@ -25,15 +25,6 @@ namespace Controllers.Controller
             }
         }
 
-        public bool RegistrarTarjeta(Tarjetas tarjeta)
-        {
-            return new TarjetasDAO().Create(tarjeta) > 0;
-        }
-
-        public bool EliminarTarjeta(int tarjeta)
-        {
-            return new TarjetasDAO().Delete(tarjeta);
-        }
         public bool TarjetaRepetida(Tarjetas tarjeta)
         {
             return ContarRepetidos(tarjeta.tarjeta_numero) > 0;
