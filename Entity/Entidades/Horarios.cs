@@ -3,24 +3,24 @@ using System.Data;
 
 namespace Entity.Entidades
 {
-    public class Horarios : Entidad
+    public class Horario : Entidad
     {
-        public Horarios()
+        public Horario()
         {
         }
 
-        public Horarios(IDataReader data)
+        public Horario(IDataReader data)
         {
             id = (int)data["id"];
             horario_inicio = (TimeSpan)data["horario_inicio"];
             horario_fin = (TimeSpan)data["horario_fin"];
         }
 
-        public int id { get;  set; }
+        public int id { get; set; }
 
-        public TimeSpan horario_inicio { get;  set; }
+        public TimeSpan horario_inicio { get; set; }
 
-        public TimeSpan horario_fin { get;  set; }
+        public TimeSpan horario_fin { get; set; }
 
         public override bool Equals(object obj)
         {
@@ -28,7 +28,7 @@ namespace Entity.Entidades
             {
                 return false;
             }
-            Horarios horario = obj as Horarios;
+            Horario horario = obj as Horario;
             return horario_fin == horario.horario_fin &&
                 horario_fin == horario.horario_fin;
         }

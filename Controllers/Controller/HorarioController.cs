@@ -8,13 +8,13 @@ namespace Controllers.Controller
 {
     public class HorarioController : HorariosDAO
     {
-        public List<Horarios> ListarHorarios()
+        public List<Horario> ListarHorarios()
         {
             try
             {
                 using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_ListarHorarios"))
                 {
-                    return Procedimientos.ListarEntidades<Horarios>(cmd);
+                    return Procedimientos.ListarEntidades<Horario>(cmd);
                 }
             }
             catch (Exception ex)
@@ -23,7 +23,7 @@ namespace Controllers.Controller
             }
         }
 
-        public bool RegistrarHorario(Horarios horario)
+        public bool RegistrarHorario(Horario horario)
         {
             return new HorariosDAO().Create(horario) > 0;
         }

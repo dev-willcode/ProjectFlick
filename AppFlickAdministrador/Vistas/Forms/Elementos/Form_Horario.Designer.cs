@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel = new System.Windows.Forms.Panel();
             this.btnGuardar = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
@@ -35,6 +36,8 @@
             this.txthoraInicio = new Guna.UI.WinForms.GunaTextBox();
             this.txthoraFin = new Guna.UI.WinForms.GunaTextBox();
             this.var_titulo = new Guna.UI.WinForms.GunaLabel();
+            this.btnCerrar = new Guna.UI.WinForms.GunaImageButton();
+            this.DragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.SuspendLayout();
             // 
             // panel
@@ -42,9 +45,8 @@
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel.Location = new System.Drawing.Point(0, 0);
-            this.panel.Margin = new System.Windows.Forms.Padding(4);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(399, 18);
+            this.panel.Size = new System.Drawing.Size(482, 15);
             this.panel.TabIndex = 1;
             // 
             // btnGuardar
@@ -62,8 +64,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = null;
             this.btnGuardar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnGuardar.Location = new System.Drawing.Point(58, 293);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Location = new System.Drawing.Point(117, 234);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnGuardar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -71,21 +72,20 @@
             this.btnGuardar.OnHoverImage = null;
             this.btnGuardar.OnPressedColor = System.Drawing.Color.Black;
             this.btnGuardar.Radius = 10;
-            this.btnGuardar.Size = new System.Drawing.Size(291, 42);
+            this.btnGuardar.Size = new System.Drawing.Size(218, 34);
             this.btnGuardar.TabIndex = 89;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.btnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.CausesValidation = false;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(58, 192);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel2.Location = new System.Drawing.Point(85, 152);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(265, 34);
+            this.gunaLabel2.Size = new System.Drawing.Size(292, 28);
             this.gunaLabel2.TabIndex = 85;
             this.gunaLabel2.Text = "Hora de finalización:";
             this.gunaLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,10 +95,9 @@
             this.gunaLabel4.CausesValidation = false;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel4.Location = new System.Drawing.Point(58, 111);
-            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel4.Location = new System.Drawing.Point(85, 86);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(265, 34);
+            this.gunaLabel4.Size = new System.Drawing.Size(292, 28);
             this.gunaLabel4.TabIndex = 86;
             this.gunaLabel4.Text = "Hora de inicio:";
             this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,15 +114,14 @@
             this.txthoraInicio.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txthoraInicio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txthoraInicio.ForeColor = System.Drawing.Color.White;
-            this.txthoraInicio.Location = new System.Drawing.Point(58, 149);
-            this.txthoraInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.txthoraInicio.Location = new System.Drawing.Point(85, 117);
             this.txthoraInicio.Name = "txthoraInicio";
             this.txthoraInicio.PasswordChar = '\0';
             this.txthoraInicio.Radius = 10;
-            this.txthoraInicio.Size = new System.Drawing.Size(291, 39);
+            this.txthoraInicio.Size = new System.Drawing.Size(292, 32);
             this.txthoraInicio.TabIndex = 87;
             this.txthoraInicio.TextOffsetX = 10;
-            this.txthoraInicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txthoraInicio_KeyPress);
+            this.txthoraInicio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxthoraInicio_KeyPress);
             // 
             // txthoraFin
             // 
@@ -137,12 +135,11 @@
             this.txthoraFin.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txthoraFin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txthoraFin.ForeColor = System.Drawing.Color.White;
-            this.txthoraFin.Location = new System.Drawing.Point(58, 230);
-            this.txthoraFin.Margin = new System.Windows.Forms.Padding(4);
+            this.txthoraFin.Location = new System.Drawing.Point(85, 183);
             this.txthoraFin.Name = "txthoraFin";
             this.txthoraFin.PasswordChar = '\0';
             this.txthoraFin.Radius = 10;
-            this.txthoraFin.Size = new System.Drawing.Size(291, 39);
+            this.txthoraFin.Size = new System.Drawing.Size(292, 32);
             this.txthoraFin.TabIndex = 88;
             this.txthoraFin.TextOffsetX = 10;
             this.txthoraFin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txthoraFin_KeyPress);
@@ -153,19 +150,35 @@
             this.var_titulo.CausesValidation = false;
             this.var_titulo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_titulo.ForeColor = System.Drawing.Color.White;
-            this.var_titulo.Location = new System.Drawing.Point(13, 30);
-            this.var_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.var_titulo.Location = new System.Drawing.Point(25, 30);
             this.var_titulo.Name = "var_titulo";
-            this.var_titulo.Size = new System.Drawing.Size(455, 39);
+            this.var_titulo.Size = new System.Drawing.Size(352, 32);
             this.var_titulo.TabIndex = 90;
             this.var_titulo.Text = "Añada un horario";
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCerrar.Image = global::AppFlickAdministrador.Properties.Resources.icon_cerrar;
+            this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnCerrar.Location = new System.Drawing.Point(416, 30);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.OnHoverImage = null;
+            this.btnCerrar.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(32, 32);
+            this.btnCerrar.TabIndex = 91;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // DragControl
+            // 
+            this.DragControl.TargetControl = this.panel;
+            // 
             // Form_Horario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(399, 385);
+            this.ClientSize = new System.Drawing.Size(482, 299);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.var_titulo);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.gunaLabel2);
@@ -173,9 +186,12 @@
             this.Controls.Add(this.txthoraInicio);
             this.Controls.Add(this.txthoraFin);
             this.Controls.Add(this.panel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_Horario";
-            this.Text = "v";
-            this.Load += new System.EventHandler(this.Form_Horario_Load);
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
 
         }
@@ -189,5 +205,7 @@
         private Guna.UI.WinForms.GunaLabel var_titulo;
         private Guna.UI.WinForms.GunaTextBox txthoraInicio;
         private Guna.UI.WinForms.GunaTextBox txthoraFin;
+        private Guna.UI.WinForms.GunaImageButton btnCerrar;
+        private Guna.UI.WinForms.GunaDragControl DragControl;
     }
 }

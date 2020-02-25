@@ -38,9 +38,9 @@ namespace Controllers.Controller.Vistas
                 }
             }
             catch (Exception ex)
-            {                
+            {
                 throw new ControllerException("No se consiguió listar Facturas", ex);
-            }   
+            }
         }
     }
 }

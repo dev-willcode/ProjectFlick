@@ -23,7 +23,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
         {
             generarReporte(id);
         }
-     
+
         private void generarReporte(int id)
         {
             try
@@ -84,6 +84,6 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
 
                 PropiedadesGenerales.Notificar.notificarError(ex);
             }
-        }   
+        }
     }
 }

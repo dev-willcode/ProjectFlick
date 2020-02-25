@@ -5,7 +5,7 @@ namespace AppFlickCliente.Vistas.Forms
 {
     public class Vistas : UserControl
     {
-        public Vistas () { }
+        public Vistas() { }
         public Vistas(Dashboard dashboard)
         {
             Dashboard = dashboard;

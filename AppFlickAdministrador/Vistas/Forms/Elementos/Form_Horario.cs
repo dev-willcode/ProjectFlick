@@ -1,48 +1,56 @@
-﻿using Controllers;
-using Controllers.Controller;
-using Entity.Entidades;
-using System;
+﻿using System;
 using System.Windows.Forms;
+using AppFlickAdministrador.Utils;
+using Controllers;
+using Entity.Entidades;
 using Utils;
 
 namespace AppFlickAdministrador.Vistas.Forms.Elementos
 {
     public partial class Form_Horario : Form
     {
-        public readonly Horarios Horario;
+        private readonly Horario HorarioActual;
         private VistaHorarios_Admin VistaHorarios_Admin { get; set; }
-        public int control;
-        private HorarioController HorarioController = PropiedadesGenerales.HorarioController;
+        public string Accion { get; set; }
 
-        public Form_Horario(VistaHorarios_Admin vistaHorarios_Admin, Horarios horario)
+        public Form_Horario(VistaHorarios_Admin vistaHorarios_Admin, string titulo)
+        {
+            Accion = Constantes.accionInsertar;
+            inicializarformulario(vistaHorarios_Admin, titulo);
+        }
 
+        public Form_Horario(VistaHorarios_Admin vistaHorarios_Admin,
+            string titulo, Horario horario)
+        {
+            Accion = Constantes.accionEditar;
+            HorarioActual = horario;
+            inicializarformulario(vistaHorarios_Admin, titulo);
+        }
+
+        private void inicializarformulario(VistaHorarios_Admin vistaHorarios_Admin, string titulo)
         {
             VistaHorarios_Admin = vistaHorarios_Admin;
-            Horario = horario;
+            Text = titulo;
             InitializeComponent();
-            this.CenterToParent();
-        }
-
-        private void cargarDatos(Horarios horario)
-        {
-            try
+            if (Accion.Equals(Constantes.accionEditar))
             {
-                txthoraInicio.Text = horario.horario_inicio.ToString();
-                txthoraFin.Text = horario.horario_fin.ToString();
-            }
-            catch (ControllerException ex)
-            {
-                PropiedadesGenerales.Notificar.notificarError(ex);
+                cargarDatos();
             }
         }
 
-        private void nuevo()
+        private void cargarDatos()
         {
-            if (validarCamposHorario())
+            txthoraInicio.Text = HorarioActual.horario_inicio.ToString();
+            txthoraFin.Text = HorarioActual.horario_fin.ToString();
+        }
+
+        private void NuevoHorario()
+        {
+            if (ValidarCamposHorario())
             {
                 try
                 {
-                    Horarios horario = new Horarios();
+                    Horario horario = new Horario();
                     horario.horario_inicio = TimeSpan.Parse(txthoraInicio.Text);
                     horario.horario_fin = TimeSpan.Parse(txthoraFin.Text);
                     TimeSpan timeSpan = TimeSpan.FromHours(-1);
@@ -53,7 +61,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                         {
                             if (timeDiferencia <= timeSpan)
                             {
-                                if (HorarioController.RegistrarHorario(horario))
+                                if (PropiedadesGenerales.HorarioController.RegistrarHorario(horario))
                                 {
                                     PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Horario ingresado");
                                     VistaHorarios_Admin.RellenarHorarios();
@@ -90,14 +98,14 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             }
         }
 
-        private void editar()
+        private void EditarHorario()
         {
-            if (validarCamposHorario())
+            if (ValidarCamposHorario())
             {
-                Horarios horarioTemp = generarHorario();
+                Horario horarioTemp = generarHorario();
                 TimeSpan timeSpan = TimeSpan.FromHours(-1);
                 TimeSpan timeDiferencia = TimeSpan.Parse(txthoraInicio.Text) - TimeSpan.Parse(txthoraFin.Text);
-                if (!horarioTemp.Equals(PropiedadesGenerales.HorarioActual))
+                if (!horarioTemp.Equals(HorarioActual))
                 {
                     try
                     {
@@ -107,9 +115,8 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                             {
                                 if (timeDiferencia <= timeSpan)
                                 {
-                                    if (HorarioController.Update(horarioTemp) && validarCamposHorario())
+                                    if (ValidarCamposHorario() && PropiedadesGenerales.HorarioController.Update(horarioTemp))
                                     {
-                                        PropiedadesGenerales.HorarioActual = horarioTemp;
                                         VistaHorarios_Admin.RellenarHorarios();
                                         PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Horario actualizado");
                                         Close();
@@ -139,6 +146,10 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                         PropiedadesGenerales.Notificar.notificarError(ex);
                     }
                 }
+                else
+                {
+                    PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "No ha hecho ningun cambio!");
+                }
             }
             else
             {
@@ -146,29 +157,31 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             }
         }
 
-        private Horarios generarHorario()
+        private Horario generarHorario()
         {
-            Horarios horario = new Horarios();
-            //horario.id = PropiedadesGenerales.HorarioActual.id;
-            horario.horario_inicio = TimeSpan.Parse(txthoraInicio.Text);
-            horario.horario_fin = TimeSpan.Parse(txthoraFin.Text);
+            Horario horario = new Horario
+            {
+                id = HorarioActual.id,
+                horario_inicio = TimeSpan.Parse(txthoraInicio.Text),
+                horario_fin = TimeSpan.Parse(txthoraFin.Text)
+            };
             return horario;
 
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            if (control == 0)
+            if (Accion.Equals(Constantes.accionInsertar))
             {
-                nuevo();
+                NuevoHorario();
             }
-            if (control == 1)
+            else
             {
-                editar();
+                EditarHorario();
             }
         }
 
-        private bool validarCamposHorario()
+        private bool ValidarCamposHorario()
         {
             string errores = "";
             if (string.IsNullOrEmpty(txthoraInicio.Text))
@@ -183,22 +196,14 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             return string.IsNullOrEmpty(errores);
         }
 
-        private void Form_Horario_Load(object sender, EventArgs e)
+        private void TxthoraInicio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (control == 1)
-            {
-                cargarDatos(Horario);
-            }
-        }
-
-        private void txthoraInicio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsDigit(e.KeyChar) || e.KeyChar == ':')
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == ':')
             {
                 e.Handled = false;
             }
             else
-              if (Char.IsControl(e.KeyChar))
+              if (char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -210,12 +215,12 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void txthoraFin_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar) || e.KeyChar == ':')
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == ':')
             {
                 e.Handled = false;
             }
             else
-              if (Char.IsControl(e.KeyChar))
+              if (char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -223,6 +228,11 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

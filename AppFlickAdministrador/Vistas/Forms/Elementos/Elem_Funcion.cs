@@ -1,5 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using AppFlickAdministrador.Vistas.Forms;
 using Controllers;
 using Entity.Entidades.EntidadesPersonalizadas;

@@ -44,10 +44,9 @@
             this.container_funcion.Controls.Add(this.tableLayoutPanel1);
             this.container_funcion.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container_funcion.Location = new System.Drawing.Point(0, 0);
-            this.container_funcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.container_funcion.Name = "container_funcion";
-            this.container_funcion.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.container_funcion.Size = new System.Drawing.Size(503, 62);
+            this.container_funcion.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.container_funcion.Size = new System.Drawing.Size(445, 50);
             this.container_funcion.TabIndex = 69;
             // 
             // tableLayoutPanel1
@@ -55,19 +54,18 @@
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.74555F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.74554F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.74554F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.76337F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.73563F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.7931F));
             this.tableLayoutPanel1.Controls.Add(this.btnBorrar, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnEditar, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelHoraFin, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelHoraInicio, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(7, 6);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(489, 50);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(435, 40);
             this.tableLayoutPanel1.TabIndex = 53;
             // 
             // btnBorrar
@@ -87,8 +85,7 @@
             this.btnBorrar.Image = global::AppFlickAdministrador.Properties.Resources.icon_menos;
             this.btnBorrar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBorrar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBorrar.Location = new System.Drawing.Point(424, 4);
-            this.btnBorrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBorrar.Location = new System.Drawing.Point(377, 3);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnBorrar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -96,7 +93,7 @@
             this.btnBorrar.OnHoverImage = null;
             this.btnBorrar.OnPressedColor = System.Drawing.Color.Black;
             this.btnBorrar.Radius = 7;
-            this.btnBorrar.Size = new System.Drawing.Size(61, 42);
+            this.btnBorrar.Size = new System.Drawing.Size(55, 34);
             this.btnBorrar.TabIndex = 57;
             this.btnBorrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnBorrar.UseTransfarantBackground = true;
@@ -119,8 +116,7 @@
             this.btnEditar.Image = global::AppFlickAdministrador.Properties.Resources.icon_cambiar;
             this.btnEditar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEditar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEditar.Location = new System.Drawing.Point(284, 4);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Location = new System.Drawing.Point(253, 3);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnEditar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -128,7 +124,7 @@
             this.btnEditar.OnHoverImage = null;
             this.btnEditar.OnPressedColor = System.Drawing.Color.Black;
             this.btnEditar.Radius = 7;
-            this.btnEditar.Size = new System.Drawing.Size(132, 42);
+            this.btnEditar.Size = new System.Drawing.Size(118, 34);
             this.btnEditar.TabIndex = 56;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -142,10 +138,9 @@
             this.labelHoraFin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelHoraFin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHoraFin.ForeColor = System.Drawing.Color.White;
-            this.labelHoraFin.Location = new System.Drawing.Point(144, 0);
-            this.labelHoraFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHoraFin.Location = new System.Drawing.Point(128, 0);
             this.labelHoraFin.Name = "labelHoraFin";
-            this.labelHoraFin.Size = new System.Drawing.Size(132, 50);
+            this.labelHoraFin.Size = new System.Drawing.Size(119, 40);
             this.labelHoraFin.TabIndex = 55;
             this.labelHoraFin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -156,23 +151,21 @@
             this.labelHoraInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelHoraInicio.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHoraInicio.ForeColor = System.Drawing.Color.White;
-            this.labelHoraInicio.Location = new System.Drawing.Point(4, 0);
-            this.labelHoraInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelHoraInicio.Location = new System.Drawing.Point(3, 0);
             this.labelHoraInicio.Name = "labelHoraInicio";
-            this.labelHoraInicio.Size = new System.Drawing.Size(132, 50);
+            this.labelHoraInicio.Size = new System.Drawing.Size(119, 40);
             this.labelHoraInicio.TabIndex = 32;
             this.labelHoraInicio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Elem_Horario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.Controls.Add(this.container_funcion);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Elem_Horario";
-            this.Size = new System.Drawing.Size(503, 62);
+            this.Size = new System.Drawing.Size(445, 50);
             this.container_funcion.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

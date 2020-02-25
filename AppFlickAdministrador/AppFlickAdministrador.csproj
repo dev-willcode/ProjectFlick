@@ -72,6 +72,7 @@
       <DependentUpon>RPFacturaDatos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Utils\Constantes.cs" />
     <Compile Include="Utils\PropiedadesGenerales.cs" />
     <Compile Include="Utils\UtilsProcedimientos.cs" />
     <Compile Include="Vistas\Forms\Elementos\Elem_Factura.cs">

@@ -10,21 +10,21 @@ namespace AppFlickAdministrador.Vistas.Init
 {
     public partial class Elem_Horario : UserControl
     {
-        public readonly Horarios Horario;
+        public readonly Horario Horario;
         private VistaHorarios_Admin VistaHorarios_Admin { get; set; }
 
         public Elem_Horario() { }
 
-        public Elem_Horario(VistaHorarios_Admin vistaHorarios_Admin, Horarios horario)
+        public Elem_Horario(VistaHorarios_Admin vistaHorarios_Admin, Horario horario)
         {
             Horario = horario;
             VistaHorarios_Admin = vistaHorarios_Admin;
             InitializeComponent();
             rellenarDatos(horario);
-            
+
         }
 
-        private void rellenarDatos(Horarios horario)
+        private void rellenarDatos(Horario horario)
         {
             try
             {
@@ -37,16 +37,9 @@ namespace AppFlickAdministrador.Vistas.Init
             }
         }
 
-        private void tableLayoutPanel1_MouseClick(object sender, MouseEventArgs e)
-        {
-            MessageBox.Show("hey");
-        }
-
         private void btnEditar_Click(object sender, System.EventArgs e)
         {
-            Form_Horario form = new Form_Horario(VistaHorarios_Admin,Horario);
-            form.Text = "Editar Horario";
-            form.control = 1;
+            Form_Horario form = new Form_Horario(VistaHorarios_Admin, "Editar horario", Horario);
             form.ShowDialog();
         }
 

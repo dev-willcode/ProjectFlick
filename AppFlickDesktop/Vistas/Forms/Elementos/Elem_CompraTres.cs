@@ -79,9 +79,10 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                     factura.id = PropiedadesGenerales.FacturaController.Create(factura);
 
                     List<Boleto> lista = CrearListadoBoletos(factura.id);
-                    lista.ForEach(boleto => {
+                    lista.ForEach(boleto =>
+                    {
                         PropiedadesGenerales.BoletoController.Create(boleto);
-                        });
+                    });
 
                     PropiedadesGenerales.Notificar.notificarCorrecto("Éxito", "Ha completado correctamente su compra, se ha generado una factura asociada a la compra.");
                     FormPadre.Close();

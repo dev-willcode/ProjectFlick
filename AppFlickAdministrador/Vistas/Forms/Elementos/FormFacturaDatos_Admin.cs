@@ -1,17 +1,9 @@
-﻿using AppFlickAdministrador.Reports;
+﻿using System.Windows.Forms;
+using AppFlickAdministrador.Reports;
 using AppFlickAdministrador.Reports.DataSets;
 using Controllers;
 using Entity.Entidades;
 using Entity.Entidades.EntidadesPersonalizadas;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using Utils;
 
 namespace AppFlickAdministrador.Vistas.Forms.Elementos
@@ -26,7 +18,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
         public FormFacturaDatos_Admin()
         {
             InitializeComponent();
-            this.CenterToParent();
+            CenterToParent();
         }
 
         public void mostrarReporte(int id)

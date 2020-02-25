@@ -5,7 +5,6 @@ using System.Windows.Forms;
 using AppFlickAdministrador.Vistas.Forms.Elementos;
 using AppFlickAdministrador.Vistas.Init;
 using Controllers;
-using Controllers.Controller;
 using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
@@ -17,7 +16,6 @@ namespace AppFlickAdministrador.Vistas.Forms
         private PanelScrollHelper scroll;
         private List<Elem_Horario> listaControles;
         private Label labelSinHorario;
-        public readonly Horarios horario;       
 
         public VistaHorarios_Admin() { }
 
@@ -53,7 +51,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             try
             {
                 panelHorarios.Controls.Clear();
-                List<Horarios> lista = PropiedadesGenerales.HorarioController
+                List<Horario> lista = PropiedadesGenerales.HorarioController
                     .ListarHorarios();
                 listaControles = new List<Elem_Horario>();
                 lista.ForEach(horario =>
@@ -86,9 +84,7 @@ namespace AppFlickAdministrador.Vistas.Forms
 
         private void btnAnadir_Click(object sender, EventArgs e)
         {
-            Form_Horario form = new Form_Horario(this, horario);
-            form.Text = "Ingresar Horario";
-            form.control = 0;
+            Form_Horario form = new Form_Horario(this, "Ingresar Horario");
             form.ShowDialog();
         }
     }

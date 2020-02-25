@@ -1,11 +1,7 @@
-﻿using Controllers.DAO;
-using Entity.Entidades.EntidadesPersonalizadas;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Controllers.DAO;
+using Entity.Entidades.EntidadesPersonalizadas;
 
 namespace Controllers.Controller.Vistas
 {

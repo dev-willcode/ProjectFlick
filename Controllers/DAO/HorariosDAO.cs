@@ -5,9 +5,9 @@ using Entity.Entidades;
 
 namespace Controllers.DAO
 {
-    public class HorariosDAO : IDataAccess<Horarios>
+    public class HorariosDAO : IDataAccess<Horario>
     {
-        public override int Create(Horarios Entidad)
+        public override int Create(Horario Entidad)
         {
             try
             {
@@ -46,14 +46,14 @@ namespace Controllers.DAO
             }
         }
 
-        public override Horarios Get(int id)
+        public override Horario Get(int id)
         {
             try
             {
                 using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetHorario"))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
-                    return Procedimientos.evaluarObtención<Horarios>(cmd);
+                    return Procedimientos.evaluarObtención<Horario>(cmd);
                 }
             }
             catch (Exception ex)
@@ -63,7 +63,7 @@ namespace Controllers.DAO
             }
         }
 
-        public override bool Update(Horarios Entidad)
+        public override bool Update(Horario Entidad)
         {
             try
             {
@@ -71,11 +71,13 @@ namespace Controllers.DAO
                 {
                     Procedimientos.agregarParametros(cmd,
                      new List<object>() {
-                        "@hora_inicio",
-                        "@hora_fin",},
+                            "@id",
+                            "@hora_inicio",
+                            "@hora_fin",},
                         new List<object>() {
-                        Entidad.horario_inicio,
-                        Entidad.horario_fin}
+                            Entidad.id,
+                            Entidad.horario_inicio,
+                            Entidad.horario_fin}
                         );
                     return Procedimientos.evaluarActualizacion(cmd);
                 }

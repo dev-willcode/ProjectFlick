@@ -128,11 +128,12 @@ namespace Controllers.Utilidades
                     {
                         entidad = Activator.CreateInstance(typeof(T), reader) as Entidad;
                         return (T)entidad;
-                    }else
+                    }
+                    else
                     {
                         throw new ArgumentNullException();
                     }
-                    
+
                 }
             }
             catch (Exception ex)

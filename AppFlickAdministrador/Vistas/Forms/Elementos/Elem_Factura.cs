@@ -8,7 +8,7 @@ namespace AppFlickAdministrador.Vistas.Forms
 {
     public partial class Elem_Factura : UserControl
     {
-        internal readonly VistaFacturaFuncion factura;     
+        internal readonly VistaFacturaFuncion factura;
 
         public Elem_Factura() { }
 

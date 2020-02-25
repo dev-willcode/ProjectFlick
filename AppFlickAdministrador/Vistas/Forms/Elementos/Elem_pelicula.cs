@@ -15,7 +15,7 @@ namespace AppFlickAdministrador.Vistas.Init
         {
             InitializeComponent();
             rellenarDatos(pelicula);
-            this.Pelicula = pelicula;
+            Pelicula = pelicula;
         }
 
         private void rellenarDatos(Pelicula pelicula)

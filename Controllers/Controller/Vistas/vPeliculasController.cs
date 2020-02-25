@@ -6,7 +6,7 @@ using Entity.Entidades;
 
 namespace Controllers.Controller.Vistas
 {
-    public class vPeliculasController: PeliculaDAO
+    public class vPeliculasController : PeliculaDAO
     {
         public List<Pelicula> ListarPeliculas()
         {

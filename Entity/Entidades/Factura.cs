@@ -26,7 +26,7 @@ namespace Entity.Entidades
 
         public string factura_numero { get; set; }
 
-        public string factura_metodo_pago { get;  set; }
+        public string factura_metodo_pago { get; set; }
 
         public DateTime factura_fecha_emision { get; set; }
 

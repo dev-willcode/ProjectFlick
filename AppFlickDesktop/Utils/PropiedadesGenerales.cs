@@ -8,7 +8,7 @@ namespace Utils
     public static class PropiedadesGenerales
     {
         public static Cliente ClienteActual { get; internal set; }
-       
+
         private static Notificar notificar = new Notificar();
         private static ClienteController clienteController = new ClienteController();
         private static UsuarioController usuarioController = new UsuarioController();

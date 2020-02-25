@@ -16,7 +16,7 @@ namespace AppFlickCliente.Vistas.Forms
         private PanelScrollHelper scroll;
         public VistaCuenta_Cliente() { }
         public VistaCuenta_Cliente(Dashboard dashboard)
-            :base(dashboard)
+            : base(dashboard)
         {
             InitializeComponent();
             PropiedadesScroll();
