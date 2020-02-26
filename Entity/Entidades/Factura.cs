@@ -16,6 +16,7 @@ namespace Entity.Entidades
             factura_numero = data["factura_numero"].ToString();
             factura_metodo_pago = data["factura_metodo_pago"].ToString();
             factura_fecha_emision = (DateTime)data["factura_fecha_emision"];
+            factura_estado = data["factura_estado"].ToString();
         }
 
         public int id { get; set; }
@@ -29,6 +30,8 @@ namespace Entity.Entidades
         public string factura_metodo_pago { get; set; }
 
         public DateTime factura_fecha_emision { get; set; }
+
+        public string factura_estado { get; set; }
 
     }
 }

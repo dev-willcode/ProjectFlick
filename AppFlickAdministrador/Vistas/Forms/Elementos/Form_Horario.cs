@@ -61,16 +61,17 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                         {
                             if (timeDiferencia <= timeSpan)
                             {
-                                if (PropiedadesGenerales.HorarioController.RegistrarHorario(horario))
+                                try
                                 {
+                                    PropiedadesGenerales.HorarioController.Create(horario);
                                     PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Horario ingresado");
                                     VistaHorarios_Admin.RellenarHorarios();
                                     Close();
                                 }
-                                else
+                                catch (ControllerException ex)
                                 {
-                                    PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar horario", "Ingrese hora de inicio y hora de fin");
-                                }
+                                    PropiedadesGenerales.Notificar.notificarError(ex);
+                                }                            
                             }
                             else
                             {
@@ -183,6 +184,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private bool ValidarCamposHorario()
         {
+            ValidarFormato();
             string errores = "";
             if (string.IsNullOrEmpty(txthoraInicio.Text))
             {
@@ -194,6 +196,34 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 errores += " - Escriba un hora de Fin" + Environment.NewLine;
             }
             return string.IsNullOrEmpty(errores);
+        }
+
+        private void ValidarFormato()
+        {
+            if (txthoraInicio.Text.Length == 1)
+            {
+                txthoraInicio.Text = "0" + txthoraInicio.Text + ":00:00";
+            }
+            else if (txthoraInicio.Text.Length == 2)
+            {
+                txthoraInicio.Text += ":00:00";
+            }
+            else if (txthoraInicio.Text.Length == 5)
+            {
+                txthoraInicio.Text += ":00";
+            }
+            if (txthoraFin.Text.Length == 1)
+            {
+                txthoraFin.Text = "0" + txthoraInicio.Text + ":00:00";
+            }
+            else if (txthoraFin.Text.Length == 2)
+            {
+                txthoraFin.Text += ":00:00";
+            }
+            else if (txthoraFin.Text.Length == 5)
+            {
+                txthoraFin.Text += ":00";
+            }
         }
 
         private void TxthoraInicio_KeyPress(object sender, KeyPressEventArgs e)

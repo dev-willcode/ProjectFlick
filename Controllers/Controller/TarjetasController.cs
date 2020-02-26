@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Controllers.DAO;
+using Entity.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using Controllers.DAO;
-using Entity.Entidades;
 
 namespace Controllers.Controller
 {
@@ -25,15 +25,6 @@ namespace Controllers.Controller
             }
         }
 
-        public bool RegistrarTarjeta(Tarjetas tarjeta)
-        {
-            return new TarjetasDAO().Create(tarjeta) > 0;
-        }
-
-        public bool EliminarTarjeta(int tarjeta)
-        {
-            return new TarjetasDAO().Delete(tarjeta);
-        }
         public bool TarjetaRepetida(Tarjetas tarjeta)
         {
             return ContarRepetidos(tarjeta.tarjeta_numero) > 0;

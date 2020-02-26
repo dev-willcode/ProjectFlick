@@ -118,82 +118,84 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                     tarjeta.tarjeta_numero = txtNumeroTarjeta.Text;
                     if (txtNumeroTarjeta.Text.Length > 15 && txtCCV.Text.Length > 2)
                     {
-                        if (TarjetaController.RegistrarTarjeta(tarjeta))
+                        try
                         {
+                            TarjetaController.Create(tarjeta);
                             PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Tarjeta ingresada");
                             VistaCuenta_Cliente.rellenarTarjetas();
                             Close();
                         }
+                        catch (ControllerException ex)
+                        {
+
+                            PropiedadesGenerales.Notificar.notificarError(ex);
+                        }
                     }
                     else
                     {
-                        PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar tarjeta", "Ingrese correctamente el CCV y Numero de Tarjeta!");
+                        PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar tarjeta", "tarjeta ya usada!");
                     }
                 }
                 else
                 {
-                    PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar tarjeta", "tarjeta ya usada!");
+                    PropiedadesGenerales.Notificar.notificarFallo("Faltan datos", "Complete todos los campos!");
                 }
             }
-            else
-            {
-                PropiedadesGenerales.Notificar.notificarFallo("Faltan datos", "Complete todos los campos!");
-            }
         }
+        
+            private void txtNumeroTarjeta_KeyPress(object sender, KeyPressEventArgs e)
+            {
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                  if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
+            }
 
-        private void txtNumeroTarjeta_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsDigit(e.KeyChar))
+            private void txtPropietario_KeyPress(object sender, KeyPressEventArgs e)
             {
-                e.Handled = false;
+                if (Char.IsLetter(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsSeparator(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
             }
-            else
-              if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
 
-        private void txtPropietario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsLetter(e.KeyChar))
+            private void txtCCV_KeyPress(object sender, KeyPressEventArgs e)
             {
-                e.Handled = false;
-            }
-            else
-            if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtCCV_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsDigit(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-              if (Char.IsControl(e.KeyChar))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                  if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    e.Handled = true;
+                }
             }
         }
     }
-}

@@ -47,14 +47,15 @@ namespace AppFlickAdministrador.Vistas.Init
         {
             if (PropiedadesGenerales.Notificar.Preguntar("Eliminar", "¿Esta seguro de eliminar?"))
             {
-                if (HorarioController.EliminarHorario(Horario.id))
+                try
                 {
+                    PropiedadesGenerales.HorarioController.Delete(Horario.id);
                     PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado el horario");
                     VistaHorarios_Admin.RellenarHorarios();
                 }
-                else
+                catch (ControllerException ex)
                 {
-                    PropiedadesGenerales.Notificar.notificarFallo("Eliminación Cancelada", "No se ha borrado el horario");
+                    PropiedadesGenerales.Notificar.notificarError(ex);
                 }
             }
         }
