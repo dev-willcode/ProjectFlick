@@ -1,7 +1,8 @@
-﻿using System.Windows.Forms;
-using AppFlickAdministrador.Vistas.Forms.Elementos;
+﻿using AppFlickAdministrador.Vistas.Forms.Elementos;
 using Controllers;
 using Entity.Entidades.EntidadesPersonalizadas;
+using System.Drawing;
+using System.Windows.Forms;
 using Utils;
 
 namespace AppFlickAdministrador.Vistas.Forms
@@ -21,7 +22,6 @@ namespace AppFlickAdministrador.Vistas.Forms
 
         private void RellenarDatos()
         {
-            anularBoton();
             try
             {
                 var_numero_factura.Text = factura.factura_numero;
@@ -29,6 +29,7 @@ namespace AppFlickAdministrador.Vistas.Forms
                 var_titulo.Text = factura.pelicula_titulo;
                 var_fecha.Text = factura.factura_fecha_emision.ToShortDateString();
                 var_costo_total.Text = (factura.numero_boletos * factura.funcion_precio_boleto).ToString();
+                anularBoton();
             }
             catch (ControllerException ex)
             {
@@ -48,18 +49,33 @@ namespace AppFlickAdministrador.Vistas.Forms
         {
             if (factura.factura_estado == "ANULADO")
             {
-                btnAnular.Enabled = false;
-                btnAnular.Text = "ANULADO";
-            }           
-        }
-        private void btnAnular_Click(object sender, System.EventArgs e)
-        {
-            if (factura.factura_estado == "ACTIVO")
-            {
+                btnAnular.OnHoverBaseColor = btnAnular.BaseColor = Color.FromArgb(90, 0, 0);
                 btnAnular.Enabled = false;
                 btnAnular.Text = "ANULADO";
             }
-            factura.factura_estado = btnAnular.Text;
+        }
+        private void btnAnular_Click(object sender, System.EventArgs e)
+        {
+
+            if (factura.factura_estado == "ACTIVO")
+            {
+                try
+                {
+                    if (PropiedadesGenerales.FacturaController.UpdateEstado(factura.id))
+                    {
+                        btnAnular.Text = factura.factura_estado = "ANULADO";
+                        btnAnular.OnHoverBaseColor = btnAnular.BaseColor = Color.FromArgb(90,0, 0);
+                        btnAnular.Animated = false;
+                        btnAnular.Refresh();
+                    }
+                }
+                catch (ControllerException ex)
+                {
+
+                    PropiedadesGenerales.Notificar.notificarError(ex);
+                }
+               
+            }
         }
     }
 }

@@ -110,5 +110,21 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             }
             return listado;
         }
+
+        private void txtCCV_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

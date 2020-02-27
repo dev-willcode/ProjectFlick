@@ -131,7 +131,7 @@
             this.tableContainer.Controls.Add(this.var_fecha, 3, 0);
             this.tableContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableContainer.Location = new System.Drawing.Point(0, 0);
-            this.tableContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableContainer.Margin = new System.Windows.Forms.Padding(4);
             this.tableContainer.Name = "tableContainer";
             this.tableContainer.RowCount = 1;
             this.tableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -146,7 +146,6 @@
             this.btnAnular.BackColor = System.Drawing.Color.Transparent;
             this.btnAnular.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(100)))), ((int)(((byte)(235)))));
             this.btnAnular.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.btnAnular.BorderSize = 1;
             this.btnAnular.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAnular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAnular.FocusedColor = System.Drawing.Color.Empty;
@@ -205,7 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.Controls.Add(this.tableContainer);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Elem_Factura";
             this.Size = new System.Drawing.Size(1007, 71);
             this.tableContainer.ResumeLayout(false);
