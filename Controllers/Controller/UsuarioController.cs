@@ -65,7 +65,7 @@ namespace Controllers.Controller
             return ContarRepetidos(usuario.usuario_username) > 0;
         }
 
-        public bool RegistrarNuevoCliente(Usuario usuario, Cliente cliente)
+        public int RegistrarNuevoCliente(Usuario usuario, Cliente cliente)
         {
             UsuarioDAO UsuarioDAO = new UsuarioDAO();
             ClienteDAO ClienteDAO = new ClienteDAO();
@@ -79,10 +79,10 @@ namespace Controllers.Controller
                 // Se creo correctamente el cliente
                 if (ClienteDAO.Create(cliente) != -1)
                 {
-                    return true;
+                    return idInsertada;
                 }
             }
-            return false;
+            return -1;
         }
 
         private int ContarRepetidos(string usuario_username)

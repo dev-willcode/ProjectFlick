@@ -110,8 +110,8 @@ namespace AppFlickCliente
                     cliente.cliente_telefono = txtnTelefono.Text;
                     cliente.cliente_email = txtnEmail.Text;
                     cliente.cliente_direccion = txtnDireccion.Text;
-
-                    if (PropiedadesGenerales.UsuarioController.RegistrarNuevoCliente(usuario, cliente))
+                    cliente.id = PropiedadesGenerales.UsuarioController.RegistrarNuevoCliente(usuario, cliente);
+                    if (cliente.id != -1)
                     {
                         PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "registro correcto");
                         abrirDashboard(cliente);

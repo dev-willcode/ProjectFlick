@@ -202,19 +202,20 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
         {
             if (txthoraInicio.Text.Length == 1)
             {
-                txthoraInicio.Text = "0" + txthoraInicio.Text + ":00:00";
+                txthoraInicio.Text = "0" + txthoraInicio.Text + ":00:00";              
             }
             else if (txthoraInicio.Text.Length == 2)
             {
                 txthoraInicio.Text += ":00:00";
+                
             }
             else if (txthoraInicio.Text.Length == 5)
             {
-                txthoraInicio.Text += ":00";
+                txthoraInicio.Text += ":00";          
             }
             if (txthoraFin.Text.Length == 1)
             {
-                txthoraFin.Text = "0" + txthoraInicio.Text + ":00:00";
+                txthoraFin.Text = "0" + txthoraFin.Text + ":00:00";
             }
             else if (txthoraFin.Text.Length == 2)
             {
