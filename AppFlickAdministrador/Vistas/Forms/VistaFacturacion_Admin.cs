@@ -49,7 +49,7 @@ namespace AppFlickAdministrador.Vistas.Forms
         {
             try
             {
-                List<VistaFacturaFuncion> lista = PropiedadesGenerales.VFacturaFuncionController.ListarFacturas();
+                List<VistaFacturaAdmin> lista = PropiedadesGenerales.VFacturaAdminController.ListarFacturas();
                 listaControles = new List<Elem_Factura>();
                 lista.ForEach(factura =>
                 {

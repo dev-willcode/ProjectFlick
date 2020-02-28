@@ -18,12 +18,14 @@ namespace Controllers.DAO
                         "@factura_cliente",
                         "@factura_funcion",
                         "@factura_metodo_pago",
-                        "@factura_fecha_emision"},
+                        "@factura_fecha_emision",
+                        "@factura_estado"},
                         new List<object>() {
                         Entidad.factura_cliente,
                         Entidad.factura_funcion,
                         Entidad.factura_metodo_pago,
-                        Entidad.factura_fecha_emision});
+                        Entidad.factura_fecha_emision,
+                        "ACTIVO"});
 
                     return Procedimientos.evaluarInsercción(cmd);
                 }

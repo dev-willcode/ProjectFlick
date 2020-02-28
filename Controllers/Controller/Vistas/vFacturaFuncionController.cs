@@ -27,20 +27,5 @@ namespace Controllers.Controller.Vistas
             }
 
         }
-
-        public List<VistaFacturaFuncion> ListarFacturas()
-        {
-            try
-            {
-                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_VistaFacturasClienteAdmin"))
-                {
-                    return Procedimientos.ListarEntidades<VistaFacturaFuncion>(cmd);
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new ControllerException("No se consiguió listar Facturas", ex);
-            }
-        }
     }
 }

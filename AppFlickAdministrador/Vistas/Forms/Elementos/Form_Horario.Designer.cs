@@ -115,6 +115,7 @@
             this.txthoraInicio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txthoraInicio.ForeColor = System.Drawing.Color.White;
             this.txthoraInicio.Location = new System.Drawing.Point(85, 117);
+            this.txthoraInicio.MaxLength = 8;
             this.txthoraInicio.Name = "txthoraInicio";
             this.txthoraInicio.PasswordChar = '\0';
             this.txthoraInicio.Radius = 10;
@@ -136,6 +137,7 @@
             this.txthoraFin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txthoraFin.ForeColor = System.Drawing.Color.White;
             this.txthoraFin.Location = new System.Drawing.Point(85, 183);
+            this.txthoraFin.MaxLength = 8;
             this.txthoraFin.Name = "txthoraFin";
             this.txthoraFin.PasswordChar = '\0';
             this.txthoraFin.Radius = 10;
@@ -187,7 +189,7 @@
             this.Controls.Add(this.txthoraFin);
             this.Controls.Add(this.panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Horario";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

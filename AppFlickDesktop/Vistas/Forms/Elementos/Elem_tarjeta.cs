@@ -46,15 +46,17 @@ namespace AppFlickCliente.Vistas.Forms
         {
             if (PropiedadesGenerales.Notificar.Preguntar("Eliminar", "¿Esta seguro de eliminar?"))
             {
-                if (TarjetaController.EliminarTarjeta(Tarjeta.id))
+                try
                 {
+                    TarjetaController.Delete(Tarjeta.id);
                     PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado la tarjeta");
                     VistaCuenta_Cliente.rellenarTarjetas();
                 }
-                else
+                catch (ControllerException ex)
                 {
-                    PropiedadesGenerales.Notificar.notificarFallo("Eliminación Cancelada", "No se ha borrado la tarjeta");
-                }
+
+                    PropiedadesGenerales.Notificar.notificarError(ex);
+                }    
             }
         }
     }
