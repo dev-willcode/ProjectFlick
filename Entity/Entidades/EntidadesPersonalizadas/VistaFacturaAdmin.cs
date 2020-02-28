@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entity.Entidades.EntidadesPersonalizadas
 {
@@ -25,13 +21,13 @@ namespace Entity.Entidades.EntidadesPersonalizadas
         public int id { get; set; }
 
         public string factura_numero { get; set; }
-      
+
         public string pelicula_titulo { get; set; }
-      
+
         public string cliente_nombres { get; set; }
-       
+
         public string cliente_apellidos { get; set; }
-       
+
         public DateTime factura_fecha_emision { get; set; }
 
         public string factura_estado { get; set; }

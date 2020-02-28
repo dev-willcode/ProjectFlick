@@ -4,21 +4,21 @@ using System.Drawing;
 using System.Windows.Forms;
 using AppFlickAdministrador.Vistas.Init;
 using Controllers;
-using Entity.Entidades.EntidadesPersonalizadas;
+using Entity.Entidades;
 using Guna.UI.Lib.ScrollBar;
 using Utils;
 
 namespace AppFlickAdministrador.Vistas.Forms
 {
-    public partial class VistaFacturacion_Admin : Vistas
+    public partial class VistaEmpleados_Admin : Vistas
     {
         private PanelScrollHelper scroll;
-        private List<Elem_Factura> listaControles;
-        private Label labelSinFacturas;
+        private List<Elem_Empleado> listaControles;
+        private Label labelSinEmpleados;
 
-        public VistaFacturacion_Admin() { }
+        public VistaEmpleados_Admin() { }
 
-        public VistaFacturacion_Admin(Dashboard dashboard)
+        public VistaEmpleados_Admin(Dashboard dashboard)
             : base(dashboard)
         {
             InitializeComponent();
@@ -35,25 +35,25 @@ namespace AppFlickAdministrador.Vistas.Forms
 
         private void InicializarLabelSinFunciones()
         {
-            labelSinFacturas = new Label();
-            labelSinFacturas.Visible = false;
-            labelSinFacturas.Dock = DockStyle.Fill;
-            labelSinFacturas.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelSinFacturas.ForeColor = Color.FromArgb(69, 69, 69);
-            labelSinFacturas.Text = "No se encontraron facturas, que esperas para comprar tus boletos!";
-            labelSinFacturas.TextAlign = ContentAlignment.MiddleCenter;
-            panelContenedor.Controls.Add(labelSinFacturas);
+            labelSinEmpleados = new Label();
+            labelSinEmpleados.Visible = false;
+            labelSinEmpleados.Dock = DockStyle.Fill;
+            labelSinEmpleados.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelSinEmpleados.ForeColor = Color.FromArgb(69, 69, 69);
+            labelSinEmpleados.Text = "No se encontraron empleados, que esperas para comprar tus boletos!";
+            labelSinEmpleados.TextAlign = ContentAlignment.MiddleCenter;
+            panelContenedor.Controls.Add(labelSinEmpleados);
         }
 
         private void RellenarFacturas()
         {
             try
             {
-                List<VistaFacturaAdmin> lista = PropiedadesGenerales.VFacturaAdminController.ListarFacturas();
-                listaControles = new List<Elem_Factura>();
-                lista.ForEach(factura =>
+                List<Empleado> lista = PropiedadesGenerales.EmpleadoController.ListarEmpleados();
+                listaControles = new List<Elem_Empleado>();
+                lista.ForEach(cliente =>
                 {
-                    Elem_Factura elemento = new Elem_Factura(factura);
+                    Elem_Empleado elemento = new Elem_Empleado(cliente);
                     panelContenedor.Controls.Add(elemento);
                     elemento.Dock = DockStyle.Top;
                     listaControles.Add(elemento);
@@ -71,15 +71,13 @@ namespace AppFlickAdministrador.Vistas.Forms
             listaControles.ForEach(elemento => { if (elemento.Visible) { conteoVisibles++; } });
             if (conteoVisibles == 0)
             {
-                labelSinFacturas.Visible = true;
+                labelSinEmpleados.Visible = true;
             }
             else
             {
-                labelSinFacturas.Visible = false;
+                labelSinEmpleados.Visible = false;
             }
         }
-
-
 
         private void FiltroFunciones()
         {
@@ -89,10 +87,11 @@ namespace AppFlickAdministrador.Vistas.Forms
             }
             else
             {
-                foreach (Elem_Factura elemento in listaControles)
+                foreach (Elem_Empleado elemento in listaControles)
                 {
-                    if (!(elemento.factura.factura_numero.Contains(txtBuscarFactura.Text) ||
-                        elemento.factura.pelicula_titulo.Contains(txtBuscarFactura.Text.ToUpper())))
+                    if (!(elemento.empleado.empleado_nombres.Contains(txtBuscarFactura.Text) ||
+                        elemento.empleado.empleado_apellidos.Contains(txtBuscarFactura.Text) ||
+                        elemento.empleado.empleado_cedula.Contains(txtBuscarFactura.Text)))
                     {
                         elemento.Visible = false;
                     }

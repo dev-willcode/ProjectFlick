@@ -142,60 +142,60 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                 }
             }
         }
-        
-            private void txtNumeroTarjeta_KeyPress(object sender, KeyPressEventArgs e)
-            {
-                if (Char.IsDigit(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                  if (Char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    e.Handled = true;
-                }
-            }
 
-            private void txtPropietario_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtNumeroTarjeta_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
             {
-                if (Char.IsLetter(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                if (Char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else if (Char.IsSeparator(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    e.Handled = true;
-                }
+                e.Handled = false;
             }
-
-            private void txtCCV_KeyPress(object sender, KeyPressEventArgs e)
+            else
+              if (Char.IsControl(e.KeyChar))
             {
-                if (Char.IsDigit(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                  if (Char.IsControl(e.KeyChar))
-                {
-                    e.Handled = false;
-                }
-                else
-                {
-                    e.Handled = true;
-                }
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPropietario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCCV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+              if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
             }
         }
     }
+}

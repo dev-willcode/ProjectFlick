@@ -71,7 +71,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                                 catch (ControllerException ex)
                                 {
                                     PropiedadesGenerales.Notificar.notificarError(ex);
-                                }                            
+                                }
                             }
                             else
                             {
@@ -202,16 +202,16 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
         {
             if (txthoraInicio.Text.Length == 1)
             {
-                txthoraInicio.Text = "0" + txthoraInicio.Text + ":00:00";              
+                txthoraInicio.Text = "0" + txthoraInicio.Text + ":00:00";
             }
             else if (txthoraInicio.Text.Length == 2)
             {
                 txthoraInicio.Text += ":00:00";
-                
+
             }
             else if (txthoraInicio.Text.Length == 5)
             {
-                txthoraInicio.Text += ":00";          
+                txthoraInicio.Text += ":00";
             }
             if (txthoraFin.Text.Length == 1)
             {

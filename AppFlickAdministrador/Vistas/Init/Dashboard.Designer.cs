@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation2 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel2 = new System.Windows.Forms.Panel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.gunaButton18 = new Guna.UI.WinForms.GunaButton();
+            this.btnEmpleados = new Guna.UI.WinForms.GunaButton();
             this.btnFunciones = new Guna.UI.WinForms.GunaButton();
             this.btnTarjetas = new Guna.UI.WinForms.GunaButton();
             this.labelFunciones = new System.Windows.Forms.Label();
-            this.btnMiCuenta = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton16 = new Guna.UI.WinForms.GunaButton();
+            this.btnHorarios = new Guna.UI.WinForms.GunaButton();
+            this.btnFacturación = new Guna.UI.WinForms.GunaButton();
+            this.btnClientes = new Guna.UI.WinForms.GunaButton();
             this.labelPeliculas = new System.Windows.Forms.Label();
             this.labelHorarios = new System.Windows.Forms.Label();
             this.labelFacturacion = new System.Windows.Forms.Label();
@@ -105,13 +105,13 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
-            this.tableLayoutPanel1.Controls.Add(this.gunaButton18, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.btnEmpleados, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.btnFunciones, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnTarjetas, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelFunciones, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnMiCuenta, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.gunaButton4, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.gunaButton16, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.btnHorarios, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnFacturación, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnClientes, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.labelPeliculas, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelHorarios, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelFacturacion, 1, 3);
@@ -130,32 +130,33 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(171, 297);
             this.tableLayoutPanel1.TabIndex = 67;
             // 
-            // gunaButton18
+            // btnEmpleados
             // 
-            this.gunaButton18.AnimationHoverSpeed = 0.07F;
-            this.gunaButton18.AnimationSpeed = 0.03F;
-            this.gunaButton18.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.gunaButton18.BorderColor = System.Drawing.Color.Black;
-            this.animacionLogo.SetDecoration(this.gunaButton18, Guna.UI.Animation.DecorationType.None);
-            this.gunaButton18.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaButton18.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton18.ForeColor = System.Drawing.Color.White;
-            this.gunaButton18.Image = global::AppFlickAdministrador.Properties.Resources.icon_empleado;
-            this.gunaButton18.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton18.Location = new System.Drawing.Point(0, 245);
-            this.gunaButton18.Margin = new System.Windows.Forms.Padding(0);
-            this.gunaButton18.Name = "gunaButton18";
-            this.gunaButton18.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.gunaButton18.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton18.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton18.OnHoverImage = null;
-            this.gunaButton18.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton18.Size = new System.Drawing.Size(167, 52);
-            this.gunaButton18.TabIndex = 74;
-            this.gunaButton18.Text = "Empleados";
-            this.gunaButton18.TextOffsetX = 4;
+            this.btnEmpleados.AnimationHoverSpeed = 0.07F;
+            this.btnEmpleados.AnimationSpeed = 0.03F;
+            this.btnEmpleados.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnEmpleados.BorderColor = System.Drawing.Color.Black;
+            this.animacionLogo.SetDecoration(this.btnEmpleados, Guna.UI.Animation.DecorationType.None);
+            this.btnEmpleados.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnEmpleados.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEmpleados.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.ForeColor = System.Drawing.Color.White;
+            this.btnEmpleados.Image = global::AppFlickAdministrador.Properties.Resources.icon_empleado;
+            this.btnEmpleados.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEmpleados.Location = new System.Drawing.Point(0, 245);
+            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnEmpleados.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnEmpleados.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEmpleados.OnHoverImage = null;
+            this.btnEmpleados.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEmpleados.Size = new System.Drawing.Size(167, 52);
+            this.btnEmpleados.TabIndex = 74;
+            this.btnEmpleados.Text = "Empleados";
+            this.btnEmpleados.TextOffsetX = 4;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // btnFunciones
             // 
@@ -223,88 +224,89 @@
             this.labelFunciones.Size = new System.Drawing.Size(4, 49);
             this.labelFunciones.TabIndex = 71;
             // 
-            // btnMiCuenta
+            // btnHorarios
             // 
-            this.btnMiCuenta.AnimationHoverSpeed = 0.07F;
-            this.btnMiCuenta.AnimationSpeed = 0.03F;
-            this.btnMiCuenta.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.btnMiCuenta.BorderColor = System.Drawing.Color.Black;
-            this.animacionLogo.SetDecoration(this.btnMiCuenta, Guna.UI.Animation.DecorationType.None);
-            this.btnMiCuenta.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnMiCuenta.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnMiCuenta.FocusedColor = System.Drawing.Color.Empty;
-            this.btnMiCuenta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMiCuenta.ForeColor = System.Drawing.Color.White;
-            this.btnMiCuenta.Image = global::AppFlickAdministrador.Properties.Resources.icon_horario;
-            this.btnMiCuenta.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnMiCuenta.Location = new System.Drawing.Point(0, 98);
-            this.btnMiCuenta.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMiCuenta.Name = "btnMiCuenta";
-            this.btnMiCuenta.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.btnMiCuenta.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnMiCuenta.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnMiCuenta.OnHoverImage = null;
-            this.btnMiCuenta.OnPressedColor = System.Drawing.Color.Black;
-            this.btnMiCuenta.Size = new System.Drawing.Size(167, 49);
-            this.btnMiCuenta.TabIndex = 65;
-            this.btnMiCuenta.Text = "Horarios";
-            this.btnMiCuenta.TextOffsetX = 4;
-            this.btnMiCuenta.Click += new System.EventHandler(this.btnMiCuenta_Click);
+            this.btnHorarios.AnimationHoverSpeed = 0.07F;
+            this.btnHorarios.AnimationSpeed = 0.03F;
+            this.btnHorarios.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnHorarios.BorderColor = System.Drawing.Color.Black;
+            this.animacionLogo.SetDecoration(this.btnHorarios, Guna.UI.Animation.DecorationType.None);
+            this.btnHorarios.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnHorarios.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnHorarios.FocusedColor = System.Drawing.Color.Empty;
+            this.btnHorarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHorarios.ForeColor = System.Drawing.Color.White;
+            this.btnHorarios.Image = global::AppFlickAdministrador.Properties.Resources.icon_horario;
+            this.btnHorarios.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnHorarios.Location = new System.Drawing.Point(0, 98);
+            this.btnHorarios.Margin = new System.Windows.Forms.Padding(0);
+            this.btnHorarios.Name = "btnHorarios";
+            this.btnHorarios.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnHorarios.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnHorarios.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnHorarios.OnHoverImage = null;
+            this.btnHorarios.OnPressedColor = System.Drawing.Color.Black;
+            this.btnHorarios.Size = new System.Drawing.Size(167, 49);
+            this.btnHorarios.TabIndex = 65;
+            this.btnHorarios.Text = "Horarios";
+            this.btnHorarios.TextOffsetX = 4;
+            this.btnHorarios.Click += new System.EventHandler(this.btnHorarios_Click);
             // 
-            // gunaButton4
+            // btnFacturación
             // 
-            this.gunaButton4.AnimationHoverSpeed = 0.07F;
-            this.gunaButton4.AnimationSpeed = 0.03F;
-            this.gunaButton4.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.gunaButton4.BorderColor = System.Drawing.Color.Black;
-            this.animacionLogo.SetDecoration(this.gunaButton4, Guna.UI.Animation.DecorationType.None);
-            this.gunaButton4.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaButton4.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton4.ForeColor = System.Drawing.Color.White;
-            this.gunaButton4.Image = global::AppFlickAdministrador.Properties.Resources.icon_facturacion;
-            this.gunaButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton4.Location = new System.Drawing.Point(0, 147);
-            this.gunaButton4.Margin = new System.Windows.Forms.Padding(0);
-            this.gunaButton4.Name = "gunaButton4";
-            this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton4.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton4.OnHoverImage = null;
-            this.gunaButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton4.Size = new System.Drawing.Size(167, 49);
-            this.gunaButton4.TabIndex = 72;
-            this.gunaButton4.Text = "Facturación";
-            this.gunaButton4.TextOffsetX = 4;
-            this.gunaButton4.Click += new System.EventHandler(this.gunaButton4_Click);
+            this.btnFacturación.AnimationHoverSpeed = 0.07F;
+            this.btnFacturación.AnimationSpeed = 0.03F;
+            this.btnFacturación.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnFacturación.BorderColor = System.Drawing.Color.Black;
+            this.animacionLogo.SetDecoration(this.btnFacturación, Guna.UI.Animation.DecorationType.None);
+            this.btnFacturación.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnFacturación.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFacturación.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFacturación.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturación.ForeColor = System.Drawing.Color.White;
+            this.btnFacturación.Image = global::AppFlickAdministrador.Properties.Resources.icon_facturacion;
+            this.btnFacturación.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnFacturación.Location = new System.Drawing.Point(0, 147);
+            this.btnFacturación.Margin = new System.Windows.Forms.Padding(0);
+            this.btnFacturación.Name = "btnFacturación";
+            this.btnFacturación.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnFacturación.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFacturación.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnFacturación.OnHoverImage = null;
+            this.btnFacturación.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFacturación.Size = new System.Drawing.Size(167, 49);
+            this.btnFacturación.TabIndex = 72;
+            this.btnFacturación.Text = "Facturación";
+            this.btnFacturación.TextOffsetX = 4;
+            this.btnFacturación.Click += new System.EventHandler(this.btnFacturacion_Click);
             // 
-            // gunaButton16
+            // btnClientes
             // 
-            this.gunaButton16.AnimationHoverSpeed = 0.07F;
-            this.gunaButton16.AnimationSpeed = 0.03F;
-            this.gunaButton16.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.gunaButton16.BorderColor = System.Drawing.Color.Black;
-            this.animacionLogo.SetDecoration(this.gunaButton16, Guna.UI.Animation.DecorationType.None);
-            this.gunaButton16.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaButton16.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton16.ForeColor = System.Drawing.Color.White;
-            this.gunaButton16.Image = global::AppFlickAdministrador.Properties.Resources.icon_clientes;
-            this.gunaButton16.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton16.Location = new System.Drawing.Point(0, 196);
-            this.gunaButton16.Margin = new System.Windows.Forms.Padding(0);
-            this.gunaButton16.Name = "gunaButton16";
-            this.gunaButton16.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.gunaButton16.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton16.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton16.OnHoverImage = null;
-            this.gunaButton16.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton16.Size = new System.Drawing.Size(167, 49);
-            this.gunaButton16.TabIndex = 73;
-            this.gunaButton16.Text = "Clientes";
-            this.gunaButton16.TextOffsetX = 4;
+            this.btnClientes.AnimationHoverSpeed = 0.07F;
+            this.btnClientes.AnimationSpeed = 0.03F;
+            this.btnClientes.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnClientes.BorderColor = System.Drawing.Color.Black;
+            this.animacionLogo.SetDecoration(this.btnClientes, Guna.UI.Animation.DecorationType.None);
+            this.btnClientes.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnClientes.FocusedColor = System.Drawing.Color.Empty;
+            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = global::AppFlickAdministrador.Properties.Resources.icon_clientes;
+            this.btnClientes.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnClientes.Location = new System.Drawing.Point(0, 196);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnClientes.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnClientes.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnClientes.OnHoverImage = null;
+            this.btnClientes.OnPressedColor = System.Drawing.Color.Black;
+            this.btnClientes.Size = new System.Drawing.Size(167, 49);
+            this.btnClientes.TabIndex = 73;
+            this.btnClientes.Text = "Clientes";
+            this.btnClientes.TextOffsetX = 4;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // labelPeliculas
             // 
@@ -426,22 +428,22 @@
             // 
             this.animacionLogo.AnimationType = Guna.UI.Animation.AnimationType.Scale;
             this.animacionLogo.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.animacionLogo.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.animacionLogo.DefaultAnimation = animation2;
             // 
             // timer
             // 
@@ -474,16 +476,16 @@
         private Guna.UI.WinForms.GunaLabel var_hora_actual;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Guna.UI.WinForms.GunaButton btnFunciones;
-        private Guna.UI.WinForms.GunaButton btnMiCuenta;
+        private Guna.UI.WinForms.GunaButton btnHorarios;
         private Guna.UI.WinForms.GunaButton btnTarjetas;
         private Guna.UI.WinForms.GunaTransition animacionLogo;
         private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Timer timer;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaButton gunaButton18;
+        private Guna.UI.WinForms.GunaButton btnEmpleados;
         private System.Windows.Forms.Label labelFunciones;
-        private Guna.UI.WinForms.GunaButton gunaButton4;
-        private Guna.UI.WinForms.GunaButton gunaButton16;
+        private Guna.UI.WinForms.GunaButton btnFacturación;
+        private Guna.UI.WinForms.GunaButton btnClientes;
         private System.Windows.Forms.Label labelPeliculas;
         private System.Windows.Forms.Label labelHorarios;
         private System.Windows.Forms.Label labelFacturacion;

@@ -32,7 +32,7 @@
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.txtBuscarFuncion = new Guna.UI.WinForms.GunaTextBox();
             this.container = new System.Windows.Forms.Panel();
-            this.panelFunciones = new System.Windows.Forms.Panel();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.scrollBar = new Guna.UI.WinForms.GunaVScrollBar();
             this.btnEditar = new Guna.UI.WinForms.GunaButton();
             this.container.SuspendLayout();
@@ -105,7 +105,7 @@
             this.container.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.container.Controls.Add(this.panelFunciones);
+            this.container.Controls.Add(this.panelContenedor);
             this.container.Controls.Add(this.scrollBar);
             this.container.Location = new System.Drawing.Point(26, 76);
             this.container.Name = "container";
@@ -114,11 +114,11 @@
             // 
             // panelFunciones
             // 
-            this.panelFunciones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFunciones.Location = new System.Drawing.Point(0, 0);
-            this.panelFunciones.Name = "panelFunciones";
-            this.panelFunciones.Size = new System.Drawing.Size(738, 408);
-            this.panelFunciones.TabIndex = 70;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(0, 0);
+            this.panelContenedor.Name = "panelFunciones";
+            this.panelContenedor.Size = new System.Drawing.Size(738, 408);
+            this.panelContenedor.TabIndex = 70;
             // 
             // scrollBar
             // 
@@ -190,7 +190,7 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaTextBox txtBuscarFuncion;
         private System.Windows.Forms.Panel container;
-        private System.Windows.Forms.Panel panelFunciones;
+        private System.Windows.Forms.Panel panelContenedor;
         private Guna.UI.WinForms.GunaVScrollBar scrollBar;
         private Guna.UI.WinForms.GunaButton btnEditar;
     }

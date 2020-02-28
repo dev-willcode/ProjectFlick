@@ -1,6 +1,6 @@
 ﻿namespace AppFlickAdministrador.Vistas.Forms
 {
-    partial class VistaFacturacion_Admin
+    partial class VistaEmpleados_Admin
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -38,10 +38,10 @@
             this.tableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.var_imprimir = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.var_numero_factura = new Guna.UI.WinForms.GunaLabel();
             this.var_costo_total = new Guna.UI.WinForms.GunaLabel();
             this.var_fecha = new Guna.UI.WinForms.GunaLabel();
+            this.btnEditar = new Guna.UI.WinForms.GunaButton();
             this.panel1.SuspendLayout();
             this.container.SuspendLayout();
             this.tableContainer.SuspendLayout();
@@ -55,9 +55,9 @@
             this.gunaLabel5.ForeColor = System.Drawing.Color.White;
             this.gunaLabel5.Location = new System.Drawing.Point(24, 19);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(165, 37);
+            this.gunaLabel5.Size = new System.Drawing.Size(157, 37);
             this.gunaLabel5.TabIndex = 68;
-            this.gunaLabel5.Text = "Facturación";
+            this.gunaLabel5.Text = "Empleados";
             // 
             // txtBuscarFactura
             // 
@@ -72,7 +72,7 @@
             this.txtBuscarFactura.FocusedForeColor = System.Drawing.Color.White;
             this.txtBuscarFactura.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarFactura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtBuscarFactura.Location = new System.Drawing.Point(346, 24);
+            this.txtBuscarFactura.Location = new System.Drawing.Point(223, 24);
             this.txtBuscarFactura.Name = "txtBuscarFactura";
             this.txtBuscarFactura.PasswordChar = '\0';
             this.txtBuscarFactura.Radius = 10;
@@ -97,7 +97,7 @@
             this.btnBuscarFactura.ForeColor = System.Drawing.Color.White;
             this.btnBuscarFactura.Image = global::AppFlickAdministrador.Properties.Resources.icon_buscar;
             this.btnBuscarFactura.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscarFactura.Location = new System.Drawing.Point(751, 24);
+            this.btnBuscarFactura.Location = new System.Drawing.Point(628, 24);
             this.btnBuscarFactura.Name = "btnBuscarFactura";
             this.btnBuscarFactura.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnBuscarFactura.OnHoverBorderColor = System.Drawing.Color.White;
@@ -155,18 +155,17 @@
             // 
             // tableContainer
             // 
-            this.tableContainer.ColumnCount = 6;
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.73735F));
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.20412F));
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.20412F));
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.08748F));
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.948684F));
-            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.81825F));
-            this.tableContainer.Controls.Add(this.gunaLabel2, 0, 0);
-            this.tableContainer.Controls.Add(this.var_imprimir, 5, 0);
-            this.tableContainer.Controls.Add(this.gunaLabel1, 1, 0);
+            this.tableContainer.ColumnCount = 5;
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.87367F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.78691F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.50533F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.69863F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.13546F));
+            this.tableContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableContainer.Controls.Add(this.gunaLabel2, 1, 0);
+            this.tableContainer.Controls.Add(this.var_imprimir, 4, 0);
             this.tableContainer.Controls.Add(this.var_numero_factura, 0, 0);
-            this.tableContainer.Controls.Add(this.var_costo_total, 4, 0);
+            this.tableContainer.Controls.Add(this.var_costo_total, 3, 0);
             this.tableContainer.Controls.Add(this.var_fecha, 2, 0);
             this.tableContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableContainer.Location = new System.Drawing.Point(0, 0);
@@ -182,11 +181,11 @@
             this.gunaLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel2.Location = new System.Drawing.Point(76, 0);
+            this.gunaLabel2.Location = new System.Drawing.Point(145, 0);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(206, 50);
+            this.gunaLabel2.Size = new System.Drawing.Size(143, 50);
             this.gunaLabel2.TabIndex = 77;
-            this.gunaLabel2.Text = "Cliente";
+            this.gunaLabel2.Text = "Empleado";
             this.gunaLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // var_imprimir
@@ -195,25 +194,12 @@
             this.var_imprimir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.var_imprimir.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_imprimir.ForeColor = System.Drawing.Color.White;
-            this.var_imprimir.Location = new System.Drawing.Point(651, 0);
+            this.var_imprimir.Location = new System.Drawing.Point(582, 0);
             this.var_imprimir.Name = "var_imprimir";
-            this.var_imprimir.Size = new System.Drawing.Size(101, 50);
+            this.var_imprimir.Size = new System.Drawing.Size(170, 50);
             this.var_imprimir.TabIndex = 76;
-            this.var_imprimir.Text = "Factura";
+            this.var_imprimir.Text = "Acciones";
             this.var_imprimir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.CausesValidation = false;
-            this.gunaLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(288, 0);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(206, 50);
-            this.gunaLabel1.TabIndex = 75;
-            this.gunaLabel1.Text = "Función";
-            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // var_numero_factura
             // 
@@ -223,9 +209,9 @@
             this.var_numero_factura.ForeColor = System.Drawing.Color.White;
             this.var_numero_factura.Location = new System.Drawing.Point(3, 0);
             this.var_numero_factura.Name = "var_numero_factura";
-            this.var_numero_factura.Size = new System.Drawing.Size(67, 50);
+            this.var_numero_factura.Size = new System.Drawing.Size(136, 50);
             this.var_numero_factura.TabIndex = 69;
-            this.var_numero_factura.Text = "N° ";
+            this.var_numero_factura.Text = "Cedula";
             this.var_numero_factura.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // var_costo_total
@@ -234,11 +220,11 @@
             this.var_costo_total.Dock = System.Windows.Forms.DockStyle.Fill;
             this.var_costo_total.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_costo_total.ForeColor = System.Drawing.Color.White;
-            this.var_costo_total.Location = new System.Drawing.Point(591, 0);
+            this.var_costo_total.Location = new System.Drawing.Point(479, 0);
             this.var_costo_total.Name = "var_costo_total";
-            this.var_costo_total.Size = new System.Drawing.Size(54, 50);
+            this.var_costo_total.Size = new System.Drawing.Size(97, 50);
             this.var_costo_total.TabIndex = 74;
-            this.var_costo_total.Text = "Total";
+            this.var_costo_total.Text = "E-mail";
             this.var_costo_total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // var_fecha
@@ -247,23 +233,55 @@
             this.var_fecha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.var_fecha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_fecha.ForeColor = System.Drawing.Color.White;
-            this.var_fecha.Location = new System.Drawing.Point(500, 0);
+            this.var_fecha.Location = new System.Drawing.Point(294, 0);
             this.var_fecha.Name = "var_fecha";
-            this.var_fecha.Size = new System.Drawing.Size(85, 50);
+            this.var_fecha.Size = new System.Drawing.Size(179, 50);
             this.var_fecha.TabIndex = 71;
-            this.var_fecha.Text = "Fecha";
+            this.var_fecha.Text = "Dirección";
             this.var_fecha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // VistaFacturacion_Admin
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.Animated = true;
+            this.btnEditar.AnimationHoverSpeed = 0.07F;
+            this.btnEditar.AnimationSpeed = 0.03F;
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnEditar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnEditar.BorderSize = 1;
+            this.btnEditar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEditar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEditar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Image = global::AppFlickAdministrador.Properties.Resources.icon_mas;
+            this.btnEditar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEditar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEditar.Location = new System.Drawing.Point(671, 24);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnEditar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnEditar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEditar.OnHoverImage = null;
+            this.btnEditar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEditar.Radius = 7;
+            this.btnEditar.Size = new System.Drawing.Size(110, 32);
+            this.btnEditar.TabIndex = 71;
+            this.btnEditar.Text = "Añadir";
+            this.btnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnEditar.UseTransfarantBackground = true;
+            // 
+            // VistaEmpleados_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuscarFactura);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.txtBuscarFactura);
-            this.Name = "VistaFacturacion_Admin";
+            this.Name = "VistaEmpleados_Admin";
             this.Size = new System.Drawing.Size(809, 506);
             this.panel1.ResumeLayout(false);
             this.container.ResumeLayout(false);
@@ -284,9 +302,9 @@
         private System.Windows.Forms.TableLayoutPanel tableContainer;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel var_imprimir;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaLabel var_numero_factura;
         private Guna.UI.WinForms.GunaLabel var_costo_total;
         private Guna.UI.WinForms.GunaLabel var_fecha;
+        private Guna.UI.WinForms.GunaButton btnEditar;
     }
 }

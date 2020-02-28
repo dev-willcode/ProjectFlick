@@ -1,11 +1,8 @@
-﻿using Controllers.Utilidades;
-using Entity.Entidades.EntidadesPersonalizadas;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Controllers.Utilidades;
+using Entity.Entidades.EntidadesPersonalizadas;
 
 namespace Controllers.Controller.Vistas
 {

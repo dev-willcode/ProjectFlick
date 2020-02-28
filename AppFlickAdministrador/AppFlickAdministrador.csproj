@@ -75,11 +75,23 @@
     <Compile Include="Utils\Constantes.cs" />
     <Compile Include="Utils\PropiedadesGenerales.cs" />
     <Compile Include="Utils\UtilsProcedimientos.cs" />
+    <Compile Include="Vistas\Forms\Elementos\Elem_Empleado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_Empleado.Designer.cs">
+      <DependentUpon>Elem_Empleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_Factura.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_Factura.Designer.cs">
       <DependentUpon>Elem_Factura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_Cliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Elem_Cliente.Designer.cs">
+      <DependentUpon>Elem_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Elem_Horario.cs">
       <SubType>UserControl</SubType>
@@ -116,6 +128,18 @@
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Form_Horario.Designer.cs">
       <DependentUpon>Form_Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\VistaEmpleados_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\VistaEmpleados_Admin.Designer.cs">
+      <DependentUpon>VistaEmpleados_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\VistaClientes_Admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\VistaClientes_Admin.Designer.cs">
+      <DependentUpon>VistaClientes_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Forms\VistaFacturacion_Admin.cs">
       <SubType>UserControl</SubType>
@@ -171,8 +195,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPFacturaDatos.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Empleado.resx">
+      <DependentUpon>Elem_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Factura.resx">
       <DependentUpon>Elem_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Cliente.resx">
+      <DependentUpon>Elem_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Horario.resx">
       <DependentUpon>Elem_Horario.cs</DependentUpon>
@@ -191,6 +221,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Horario.resx">
       <DependentUpon>Form_Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\VistaEmpleados_Admin.resx">
+      <DependentUpon>VistaEmpleados_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\VistaClientes_Admin.resx">
+      <DependentUpon>VistaClientes_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\VistaFacturacion_Admin.resx">
       <DependentUpon>VistaFacturacion_Admin.cs</DependentUpon>

@@ -30,7 +30,7 @@ namespace AppFlickAdministrador.Vistas.Forms
 
         private void PropiedadesScroll()
         {
-            scroll = new PanelScrollHelper(panelHorarios, scrollBar, true);
+            scroll = new PanelScrollHelper(panelContenedor, scrollBar, true);
             scroll.UpdateScrollBar();
         }
 
@@ -43,21 +43,21 @@ namespace AppFlickAdministrador.Vistas.Forms
             labelSinHorario.ForeColor = Color.FromArgb(69, 69, 69);
             labelSinHorario.Text = "No se encontraron horarios!";
             labelSinHorario.TextAlign = ContentAlignment.MiddleCenter;
-            panelHorarios.Controls.Add(labelSinHorario);
+            panelContenedor.Controls.Add(labelSinHorario);
         }
 
         public void RellenarHorarios()
         {
             try
             {
-                panelHorarios.Controls.Clear();
+                panelContenedor.Controls.Clear();
                 List<Horario> lista = PropiedadesGenerales.HorarioController
                     .ListarHorarios();
                 listaControles = new List<Elem_Horario>();
                 lista.ForEach(horario =>
                 {
                     Elem_Horario elemento = new Elem_Horario(this, horario);
-                    panelHorarios.Controls.Add(elemento);
+                    panelContenedor.Controls.Add(elemento);
                     elemento.Dock = DockStyle.Top;
                     listaControles.Add(elemento);
                     elemento.VisibleChanged += new EventHandler(EventoOcultar);

@@ -78,16 +78,28 @@ namespace AppFlickAdministrador.Vistas.Init
             pintarPantalla(new VistaPelicula_Admin(this));
         }
 
-        private void btnMiCuenta_Click(object sender, EventArgs e)
+        private void btnHorarios_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelHorarios);
             pintarPantalla(new VistaHorarios_Admin(this));
         }
 
-        private void gunaButton4_Click(object sender, EventArgs e)
+        private void btnFacturacion_Click(object sender, EventArgs e)
         {
             pintarLabelMenu(labelFacturacion);
             pintarPantalla(new VistaFacturacion_Admin(this));
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            pintarLabelMenu(labelClientes);
+            pintarPantalla(new VistaClientes_Admin(this));
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            pintarLabelMenu(labelEmpleados);
+            pintarPantalla(new VistaEmpleados_Admin(this));
         }
     }
 }

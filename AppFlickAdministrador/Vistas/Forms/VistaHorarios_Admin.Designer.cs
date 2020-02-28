@@ -30,7 +30,7 @@
         {
             this.container = new System.Windows.Forms.Panel();
             this.scrollBar = new Guna.UI.WinForms.GunaVScrollBar();
-            this.panelHorarios = new System.Windows.Forms.Panel();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.tableContainer = new System.Windows.Forms.TableLayoutPanel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
@@ -46,7 +46,7 @@
             // container
             // 
             this.container.Controls.Add(this.scrollBar);
-            this.container.Controls.Add(this.panelHorarios);
+            this.container.Controls.Add(this.panelContenedor);
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(0, 50);
             this.container.Name = "container";
@@ -70,11 +70,11 @@
             // 
             // panelHorarios
             // 
-            this.panelHorarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHorarios.Location = new System.Drawing.Point(0, 0);
-            this.panelHorarios.Name = "panelHorarios";
-            this.panelHorarios.Size = new System.Drawing.Size(742, 305);
-            this.panelHorarios.TabIndex = 70;
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(0, 0);
+            this.panelContenedor.Name = "panelHorarios";
+            this.panelContenedor.Size = new System.Drawing.Size(742, 305);
+            this.panelContenedor.TabIndex = 70;
             // 
             // gunaLabel5
             // 
@@ -206,7 +206,7 @@
         #endregion
 
         private System.Windows.Forms.Panel container;
-        private System.Windows.Forms.Panel panelHorarios;
+        private System.Windows.Forms.Panel panelContenedor;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private System.Windows.Forms.TableLayoutPanel tableContainer;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;

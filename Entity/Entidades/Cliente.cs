@@ -18,8 +18,11 @@ namespace Entity.Entidades
             cliente_email = data["cliente_email"].ToString();
             cliente_direccion = data["cliente_direccion"].ToString();
             cliente_usuario = (int)data["cliente_usuario"];
-            cliente_imagen = data["cliente_imagen"] == DBNull.Value ?
+            if (data.FieldCount > 8) // validación, para evitar agregar la imagen cuando no se la requiera (administrador).
+            {
+                cliente_imagen = data["cliente_imagen"] == DBNull.Value ?
                 null : (byte[])data["cliente_imagen"];
+            }
         }
 
         public int id { get; set; }

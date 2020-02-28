@@ -36,7 +36,7 @@ namespace AppFlickAdministrador.Vistas.Forms
                 listaFuncionesActivas.ForEach(pelicula =>
                 {
                     Elem_pelicula elemento = new Elem_pelicula(pelicula);
-                    panelFunciones.Controls.Add(elemento);
+                    panelContenedor.Controls.Add(elemento);
                     elemento.Dock = DockStyle.Top;
                     listaControles.Add(elemento);
                     elemento.VisibleChanged += new EventHandler(EventoOcultar);
@@ -57,12 +57,12 @@ namespace AppFlickAdministrador.Vistas.Forms
             labelSinFunciones.ForeColor = Color.FromArgb(69, 69, 69);
             labelSinFunciones.Text = "No se encontraron peliculas actualmente :(";
             labelSinFunciones.TextAlign = ContentAlignment.MiddleCenter;
-            panelFunciones.Controls.Add(labelSinFunciones);
+            panelContenedor.Controls.Add(labelSinFunciones);
         }
 
         private void PropiedadesScroll()
         {
-            scroll = new PanelScrollHelper(panelFunciones, scrollBar, true);
+            scroll = new PanelScrollHelper(panelContenedor, scrollBar, true);
             scroll.UpdateScrollBar();
         }
 

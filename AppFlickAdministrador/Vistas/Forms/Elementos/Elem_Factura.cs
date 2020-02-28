@@ -1,8 +1,8 @@
-﻿using AppFlickAdministrador.Vistas.Forms.Elementos;
+﻿using System.Drawing;
+using System.Windows.Forms;
+using AppFlickAdministrador.Vistas.Forms.Elementos;
 using Controllers;
 using Entity.Entidades.EntidadesPersonalizadas;
-using System.Drawing;
-using System.Windows.Forms;
 using Utils;
 
 namespace AppFlickAdministrador.Vistas.Forms
@@ -64,7 +64,7 @@ namespace AppFlickAdministrador.Vistas.Forms
                     if (PropiedadesGenerales.FacturaController.UpdateEstado(factura.id))
                     {
                         btnAnular.Text = factura.factura_estado = "ANULADO";
-                        btnAnular.OnHoverBaseColor = btnAnular.BaseColor = Color.FromArgb(90,0, 0);
+                        btnAnular.OnHoverBaseColor = btnAnular.BaseColor = Color.FromArgb(90, 0, 0);
                         btnAnular.Animated = false;
                         btnAnular.Refresh();
                     }
@@ -74,7 +74,7 @@ namespace AppFlickAdministrador.Vistas.Forms
 
                     PropiedadesGenerales.Notificar.notificarError(ex);
                 }
-               
+
             }
         }
     }

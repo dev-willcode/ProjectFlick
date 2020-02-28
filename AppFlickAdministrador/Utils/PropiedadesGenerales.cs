@@ -25,9 +25,11 @@ namespace Utils
         public static vPeliculasController VPeliculasController { get => vPeliculasController; set => vPeliculasController = value; }
         public static HorarioController HorarioController { get => horarioController; set => horarioController = value; }
         public static vFacturaAdminController VFacturaAdminController { get => vFacturaAdminController; set => vFacturaAdminController = value; }
+        public static EmpleadoController EmpleadoController { get => empleadoController; set => empleadoController = value; }
 
         private static Notificar notificar = new Notificar();
         private static ClienteController clienteController = new ClienteController();
+        private static EmpleadoController empleadoController = new EmpleadoController();
         private static UsuarioController usuarioController = new UsuarioController();
         private static FuncionesController funcionesController = new FuncionesController();
         private static TarjetasController tarjetasController = new TarjetasController();

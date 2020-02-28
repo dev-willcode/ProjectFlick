@@ -12,6 +12,7 @@ namespace Entity.Entidades
         public Empleado(IDataReader data)
         {
             id = (int)data["id"];
+            empleado_cedula = data["empleado_cedula"].ToString();
             empleado_nombres = data["empleado_nombres"].ToString();
             empleado_apellidos = data["empleado_apellidos"].ToString();
             empleado_telefono = data["empleado_telefono"].ToString();
@@ -21,6 +22,8 @@ namespace Entity.Entidades
         }
 
         public int id { get; private set; }
+
+        public string empleado_cedula { get; private set; }
 
         public string empleado_nombres { get; private set; }
 

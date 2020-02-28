@@ -56,7 +56,7 @@ namespace AppFlickCliente.Vistas.Forms
                 {
 
                     PropiedadesGenerales.Notificar.notificarError(ex);
-                }    
+                }
             }
         }
     }
