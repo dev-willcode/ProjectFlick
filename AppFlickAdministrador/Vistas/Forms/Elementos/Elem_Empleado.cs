@@ -44,7 +44,7 @@ namespace AppFlickAdministrador.Vistas.Init
                 try
                 {
                     PropiedadesGenerales.EmpleadoController.Delete(empleado.id);
-                    PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado el horario");
+                    PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado el empleado");
                     VistaEmpleados_Admin.RellenarFacturas();
                 }
                 catch (ControllerException ex)

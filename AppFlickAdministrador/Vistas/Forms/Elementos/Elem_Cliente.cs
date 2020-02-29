@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using AppFlickAdministrador.Vistas.Forms;
 using Controllers;
 using Entity.Entidades;
 using Utils;
@@ -9,13 +10,16 @@ namespace AppFlickAdministrador.Vistas.Init
     {
         public readonly Cliente cliente;
 
+        private VistaClientes_Admin VistaClientes_Admin { get; set; }
+
         public Elem_Cliente() { }
 
-        public Elem_Cliente(Cliente cliente)
+        public Elem_Cliente(VistaClientes_Admin vistaClientes_Admin, Cliente cliente)
         {
             InitializeComponent();
             rellenarDatos(cliente);
             this.cliente = cliente;
+            this.VistaClientes_Admin = vistaClientes_Admin;
         }
 
         private void rellenarDatos(Cliente cliente)
@@ -30,6 +34,23 @@ namespace AppFlickAdministrador.Vistas.Init
             catch (ControllerException ex)
             {
                 PropiedadesGenerales.Notificar.notificarError(ex);
+            }
+        }
+
+        private void btnBorrar_Click(object sender, System.EventArgs e)
+        {
+            if (PropiedadesGenerales.Notificar.Preguntar("Eliminar", "¿Esta seguro de eliminar?"))
+            {
+                try
+                {
+                    PropiedadesGenerales.ClienteController.Delete(cliente.id);
+                    PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado el cliente");
+                    VistaClientes_Admin.RellenarClientes();
+                }
+                catch (ControllerException ex)
+                {
+                    PropiedadesGenerales.Notificar.notificarError(ex);
+                }
             }
         }
     }

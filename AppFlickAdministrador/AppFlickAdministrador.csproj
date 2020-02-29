@@ -117,11 +117,23 @@
     <Compile Include="Vistas\Forms\Elementos\Elem_idioma_funcion.Designer.cs">
       <DependentUpon>Elem_idioma_funcion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Form_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Form_Clientes.Designer.cs">
+      <DependentUpon>Form_Clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\Elementos\FormFacturaDatos_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\FormFacturaDatos_Admin.Designer.cs">
       <DependentUpon>FormFacturaDatos_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Form_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Form_Empleado.Designer.cs">
+      <DependentUpon>Form_Empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Forms\Elementos\Form_Horario.cs">
       <SubType>Form</SubType>
@@ -218,6 +230,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\FormFacturaDatos_Admin.resx">
       <DependentUpon>FormFacturaDatos_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Clientes.resx">
+      <DependentUpon>Form_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Empleado.resx">
+      <DependentUpon>Form_Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Horario.resx">
       <DependentUpon>Form_Horario.cs</DependentUpon>

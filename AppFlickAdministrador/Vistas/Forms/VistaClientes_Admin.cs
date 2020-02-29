@@ -24,7 +24,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             InitializeComponent();
             PropiedadesScroll();
             InicializarLabelSinFunciones();
-            RellenarFacturas();
+            RellenarClientes();
         }
 
         private void PropiedadesScroll()
@@ -45,15 +45,16 @@ namespace AppFlickAdministrador.Vistas.Forms
             panelContenedor.Controls.Add(labelSinClientes);
         }
 
-        private void RellenarFacturas()
+        public void RellenarClientes()
         {
             try
             {
+                panelContenedor.Controls.Clear();
                 List<Cliente> lista = PropiedadesGenerales.ClienteController.ListarClientes();
                 listaControles = new List<Elem_Cliente>();
                 lista.ForEach(cliente =>
                 {
-                    Elem_Cliente elemento = new Elem_Cliente(cliente);
+                    Elem_Cliente elemento = new Elem_Cliente(this,cliente);
                     panelContenedor.Controls.Add(elemento);
                     elemento.Dock = DockStyle.Top;
                     listaControles.Add(elemento);

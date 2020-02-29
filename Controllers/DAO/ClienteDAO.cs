@@ -44,7 +44,18 @@ namespace Controllers.DAO
 
         public override bool Delete(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BorrarClientes"))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return Procedimientos.evaluarEliminacion<Cliente>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ControllerException("No se consiguió eliminar el  cliente", ex);
+            }
         }
 
         public override Cliente Get(int id)
