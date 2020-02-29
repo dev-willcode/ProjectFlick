@@ -45,15 +45,16 @@ namespace AppFlickAdministrador.Vistas.Forms
             panelContenedor.Controls.Add(labelSinEmpleados);
         }
 
-        private void RellenarFacturas()
+        public void RellenarFacturas()
         {
             try
             {
+                panelContenedor.Controls.Clear();
                 List<Empleado> lista = PropiedadesGenerales.EmpleadoController.ListarEmpleados();
                 listaControles = new List<Elem_Empleado>();
                 lista.ForEach(cliente =>
                 {
-                    Elem_Empleado elemento = new Elem_Empleado(cliente);
+                    Elem_Empleado elemento = new Elem_Empleado(this,cliente);
                     panelContenedor.Controls.Add(elemento);
                     elemento.Dock = DockStyle.Top;
                     listaControles.Add(elemento);

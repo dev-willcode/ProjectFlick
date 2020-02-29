@@ -1,0 +1,5 @@
+CREATE PROCEDURE SP_ListarEmpleado
+AS
+BEGIN
+SELECT * FROM dbo.Empleado
+END

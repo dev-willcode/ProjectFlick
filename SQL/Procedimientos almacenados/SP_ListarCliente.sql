@@ -1,0 +1,5 @@
+CREATE PROCEDURE SP_ListarCliente
+AS
+BEGIN
+SELECT * FROM dbo.Cliente
+END

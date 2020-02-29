@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using AppFlickAdministrador.Vistas.Forms;
 using Controllers;
 using Entity.Entidades;
 using Utils;
@@ -8,15 +9,18 @@ namespace AppFlickAdministrador.Vistas.Init
     public partial class Elem_Empleado : UserControl
     {
         public readonly Empleado empleado;
+        private VistaEmpleados_Admin VistaEmpleados_Admin { get; set; }
 
         public Elem_Empleado() { }
 
-        public Elem_Empleado(Empleado empleado)
+        public Elem_Empleado(VistaEmpleados_Admin vistaEmpleados_Admin, Empleado empleado)
         {
             InitializeComponent();
             rellenarDatos(empleado);
+            this.VistaEmpleados_Admin = vistaEmpleados_Admin;
             this.empleado = empleado;
         }
+
 
         private void rellenarDatos(Empleado empleado)
         {
@@ -30,6 +34,23 @@ namespace AppFlickAdministrador.Vistas.Init
             catch (ControllerException ex)
             {
                 PropiedadesGenerales.Notificar.notificarError(ex);
+            }
+        }
+
+        private void btnBorrar_Click(object sender, System.EventArgs e)
+        {
+            if (PropiedadesGenerales.Notificar.Preguntar("Eliminar", "¿Esta seguro de eliminar?"))
+            {
+                try
+                {
+                    PropiedadesGenerales.EmpleadoController.Delete(empleado.id);
+                    PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado el horario");
+                    VistaEmpleados_Admin.RellenarFacturas();
+                }
+                catch (ControllerException ex)
+                {
+                    PropiedadesGenerales.Notificar.notificarError(ex);
+                }
             }
         }
     }

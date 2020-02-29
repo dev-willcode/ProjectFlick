@@ -53,7 +53,6 @@
     <Compile Include="Controller\Vistas\vFacturaAdminController.cs" />
     <Compile Include="DAO\FuncionesDAO.cs" />
     <Compile Include="Controller\HorarioController.cs" />
-    <Compile Include="Controller\HorariosController.cs" />
     <Compile Include="Controller\IdiomaController.cs" />
     <Compile Include="Controller\PeliculaController.cs" />
     <Compile Include="Controller\Sala_CineController.cs" />
