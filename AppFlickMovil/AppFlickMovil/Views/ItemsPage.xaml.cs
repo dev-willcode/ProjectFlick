@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using AppFlickMovil.Models;
+using AppFlickMovil.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using AppFlickMovil.Models;
-using AppFlickMovil.Views;
-using AppFlickMovil.ViewModels;
 
 namespace AppFlickMovil.Views
 {
@@ -27,9 +20,11 @@ namespace AppFlickMovil.Views
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            var item = args.SelectedItem as Item;
+            Item item = args.SelectedItem as Item;
             if (item == null)
+            {
                 return;
+            }
 
             await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
 
@@ -47,7 +42,9 @@ namespace AppFlickMovil.Views
             base.OnAppearing();
 
             if (viewModel.Items.Count == 0)
+            {
                 viewModel.LoadItemsCommand.Execute(null);
+            }
         }
     }
 }

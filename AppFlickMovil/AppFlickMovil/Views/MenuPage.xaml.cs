@@ -1,7 +1,5 @@
-﻿using AppFlickMovil.Models;
-using System;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
+using AppFlickMovil.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -28,9 +26,11 @@ namespace AppFlickMovil.Views
             ListViewMenu.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem == null)
+                {
                     return;
+                }
 
-                var id = (int)((HomeMenuItem)e.SelectedItem).Id;
+                int id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
             };
         }

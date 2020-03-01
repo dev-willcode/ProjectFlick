@@ -1,7 +1,6 @@
-﻿using AppFlickMovil.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using AppFlickMovil.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -35,14 +34,16 @@ namespace AppFlickMovil.Views
                 }
             }
 
-            var newPage = MenuPages[id];
+            NavigationPage newPage = MenuPages[id];
 
             if (newPage != null && Detail != newPage)
             {
                 Detail = newPage;
 
                 if (Device.RuntimePlatform == Device.Android)
+                {
                     await Task.Delay(100);
+                }
 
                 IsPresented = false;
             }

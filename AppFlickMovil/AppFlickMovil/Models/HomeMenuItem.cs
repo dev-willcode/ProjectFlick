@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AppFlickMovil.Models
+﻿namespace AppFlickMovil.Models
 {
     public enum MenuItemType
     {

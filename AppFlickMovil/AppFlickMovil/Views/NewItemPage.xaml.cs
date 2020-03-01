@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-
+using AppFlickMovil.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
-using AppFlickMovil.Models;
 
 namespace AppFlickMovil.Views
 {

@@ -13,7 +13,7 @@ namespace AppFlickMovil.Services
         public MockDataStore()
         {
             items = new List<Item>();
-            var mockItems = new List<Item>
+            List<Item> mockItems = new List<Item>
             {
                 new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
@@ -23,7 +23,7 @@ namespace AppFlickMovil.Services
                 new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." },
             };
 
-            foreach (var item in mockItems)
+            foreach (Item item in mockItems)
             {
                 items.Add(item);
             }
@@ -38,7 +38,7 @@ namespace AppFlickMovil.Services
 
         public async Task<bool> UpdateItemAsync(Item item)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
+            Item oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
             items.Remove(oldItem);
             items.Add(item);
 
@@ -47,7 +47,7 @@ namespace AppFlickMovil.Services
 
         public async Task<bool> DeleteItemAsync(string id)
         {
-            var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
+            Item oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
             items.Remove(oldItem);
 
             return await Task.FromResult(true);
