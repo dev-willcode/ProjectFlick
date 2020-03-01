@@ -243,7 +243,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void txtCensura_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) || e.KeyChar == '+')
+            if (char.IsLetter(e.KeyChar) || e.KeyChar == '+' || char.IsDigit(e.KeyChar))
             {
                 e.Handled = false;
             }

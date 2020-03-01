@@ -76,7 +76,7 @@
             this.txtContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtContraseña.Location = new System.Drawing.Point(465, 365);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContraseña.MaxLength = 100;
+            this.txtContraseña.MaxLength = 25;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '\0';
             this.txtContraseña.Radius = 10;
@@ -139,7 +139,7 @@
             this.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtDireccion.Location = new System.Drawing.Point(41, 585);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDireccion.MaxLength = 16;
+            this.txtDireccion.MaxLength = 50;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.PasswordChar = '\0';
             this.txtDireccion.Radius = 10;
@@ -175,7 +175,7 @@
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtEmail.Location = new System.Drawing.Point(41, 499);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.MaxLength = 16;
+            this.txtEmail.MaxLength = 30;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.Radius = 10;
@@ -211,7 +211,7 @@
             this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtTelefono.Location = new System.Drawing.Point(41, 414);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelefono.MaxLength = 16;
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.Radius = 10;
@@ -234,7 +234,7 @@
             this.txtCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtCedula.Location = new System.Drawing.Point(40, 166);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCedula.MaxLength = 16;
+            this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
             this.txtCedula.Radius = 10;
@@ -257,7 +257,7 @@
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtNombre.Location = new System.Drawing.Point(41, 249);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombre.MaxLength = 16;
+            this.txtNombre.MaxLength = 30;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.Radius = 10;
@@ -294,7 +294,7 @@
             this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtUsuario.Location = new System.Drawing.Point(465, 282);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsuario.MaxLength = 100;
+            this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
             this.txtUsuario.Radius = 10;
@@ -344,7 +344,7 @@
             this.txtApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtApellido.Location = new System.Drawing.Point(41, 330);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
-            this.txtApellido.MaxLength = 16;
+            this.txtApellido.MaxLength = 30;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.PasswordChar = '\0';
             this.txtApellido.Radius = 10;

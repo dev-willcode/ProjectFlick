@@ -80,7 +80,7 @@
             this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtUsuario.Location = new System.Drawing.Point(466, 300);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsuario.MaxLength = 100;
+            this.txtUsuario.MaxLength = 25;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
             this.txtUsuario.Radius = 10;
@@ -381,7 +381,7 @@
             this.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtDireccion.Location = new System.Drawing.Point(42, 603);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDireccion.MaxLength = 30;
+            this.txtDireccion.MaxLength = 50;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.PasswordChar = '\0';
             this.txtDireccion.Radius = 10;
@@ -416,7 +416,7 @@
             this.txtContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtContraseña.Location = new System.Drawing.Point(466, 383);
             this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContraseña.MaxLength = 100;
+            this.txtContraseña.MaxLength = 25;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.PasswordChar = '\0';
             this.txtContraseña.Radius = 10;

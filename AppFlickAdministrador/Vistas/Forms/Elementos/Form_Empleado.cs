@@ -47,8 +47,8 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             txtTelefono.Text = EmpleadoActual.empleado_telefono.ToString();
             txtEmail.Text = EmpleadoActual.empleado_email.ToString();
             txtDireccion.Text = EmpleadoActual.empleado_direccion.ToString();
-            //txtUsuario.Text;
-            //txtContraseña;
+            txtUsuario.Text = PropiedadesGenerales.UsuarioController.Get(EmpleadoActual.empleado_usuario).usuario_username;
+            txtContraseña.Text = PropiedadesGenerales.UsuarioController.Get(EmpleadoActual.empleado_usuario).usuario_password;
         }
 
         private bool ValidarCamposEmpleado()

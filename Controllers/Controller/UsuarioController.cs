@@ -69,7 +69,7 @@ namespace Controllers.Controller
         {
             UsuarioDAO UsuarioDAO = new UsuarioDAO();
             ClienteDAO ClienteDAO = new ClienteDAO();
-            usuario.usuario_perfil = 0; // Perfil nulo para clientes
+            usuario.usuario_perfil = 1; // Perfil 1 para clientes
             int idInsertada = UsuarioDAO.Create(usuario); // Crea el usuario y devuelve la id generada.
 
             // Se creó correctamente el usuario, cree el cliente y asignelo
@@ -89,14 +89,11 @@ namespace Controllers.Controller
         {
             UsuarioDAO UsuarioDAO = new UsuarioDAO();
             EmpleadoDAO EmpleadoDAO = new EmpleadoDAO();
-            usuario.usuario_perfil = 0; // Perfil nulo para clientes
-            int idInsertada = UsuarioDAO.Create(usuario); // Crea el usuario y devuelve la id generada.
-
-            // Se creó correctamente el usuario, cree el cliente y asignelo
+            usuario.usuario_perfil = 2; 
+            int idInsertada = UsuarioDAO.Create(usuario); 
             if (idInsertada != -1)
             {
-                empleado.empleado_usuario = idInsertada;
-                // Se creo correctamente el cliente
+                empleado.empleado_usuario = idInsertada;            
                 if (EmpleadoDAO.Create(empleado) != -1)
                 {
                     return idInsertada;

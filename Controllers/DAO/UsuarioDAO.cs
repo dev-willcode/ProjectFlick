@@ -41,7 +41,19 @@ namespace Controllers.DAO
 
         public override Usuario Get(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_GetUsuario"))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return Procedimientos.evaluarObtención<Usuario>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguió obtener un usuario", ex);
+            }
         }
 
         public override bool Update(Usuario Entidad)

@@ -54,8 +54,8 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             txtTelefono.Text = ClienteActual.cliente_telefono.ToString();
             txtEmail.Text = ClienteActual.cliente_email.ToString();
             txtDireccion.Text = ClienteActual.cliente_direccion.ToString();
-            //txtUsuario.Text;
-            //txtContraseña;
+            txtUsuario.Text = PropiedadesGenerales.UsuarioController.Get(ClienteActual.cliente_usuario).usuario_username;
+            txtContraseña.Text = PropiedadesGenerales.UsuarioController.Get(ClienteActual.cliente_usuario).usuario_password;
         }
 
         private bool ValidarCamposCliente()
@@ -152,7 +152,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                         if (PropiedadesGenerales.ClienteController.Update(clienteTemp))
                         {
                             PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Cliente actualizado");
-                            VistaClientes_Admin.RellenarClientes();                            
+                            VistaClientes_Admin.RellenarClientes();
                             Close();
                         }
                         else
@@ -191,7 +191,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 cliente_email = txtEmail.Text,
                 cliente_direccion = txtDireccion.Text,
                 cliente_imagen = ClienteActual.cliente_imagen
-        };
+            };
             return cliente;
         }
 
@@ -233,7 +233,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsLetter(e.KeyChar) || e.KeyChar == ':')
+            if (char.IsLetter(e.KeyChar))
             {
                 e.Handled = false;
             }

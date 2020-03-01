@@ -1,0 +1,7 @@
+CREATE PROCEDURE SP_GetUsuario
+@id int
+AS
+BEGIN
+SELECT * FROM Usuario
+WHERE id = @id
+END
