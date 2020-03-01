@@ -24,24 +24,48 @@ namespace Entity.Entidades
                 null : (byte[])data["pelicula_imagen"];
         }
 
-        public int id { get; private set; }
+        public int id { get; set; }
 
-        public string pelicula_titulo { get; private set; }
+        public string pelicula_titulo { get; set; }
 
-        public string pelicula_titulo_original { get; private set; }
+        public string pelicula_titulo_original { get; set; }
 
-        public string pelicula_duracion { get; private set; }
+        public string pelicula_duracion { get; set; }
 
-        public string pelicula_tipo_censura { get; private set; }
+        public string pelicula_tipo_censura { get; set; }
 
-        public string pelicula_sinopsis { get; private set; }
+        public string pelicula_sinopsis { get; set; }
 
-        public string pelicula_director { get; private set; }
+        public string pelicula_director { get; set; }
 
-        public string pelicula_reparto { get; private set; }
+        public string pelicula_reparto { get; set; }
 
-        public string pelicula_url_trailer { get; private set; }
+        public string pelicula_url_trailer { get; set; }
 
-        public byte[] pelicula_imagen { get; private set; }
+        public byte[] pelicula_imagen { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Pelicula pelicula = obj as Pelicula;
+            return pelicula_titulo == pelicula.pelicula_titulo &&
+                pelicula_titulo_original == pelicula.pelicula_titulo_original &&
+                pelicula_duracion == pelicula.pelicula_duracion &&
+                pelicula_tipo_censura == pelicula.pelicula_tipo_censura &&
+                pelicula_sinopsis == pelicula.pelicula_sinopsis &&
+                pelicula_director == pelicula.pelicula_director &&
+                pelicula_reparto == pelicula.pelicula_reparto &&
+                pelicula_url_trailer == pelicula.pelicula_url_trailer &&
+                pelicula_imagen == pelicula.pelicula_imagen;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

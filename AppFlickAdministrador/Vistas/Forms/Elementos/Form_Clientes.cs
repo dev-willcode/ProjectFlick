@@ -58,7 +58,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             //txtContraseña;
         }
 
-        private bool ValidarCamposHorario()
+        private bool ValidarCamposCliente()
         {
             string errores = "";
             if (string.IsNullOrEmpty(txtCedula.Text))
@@ -98,7 +98,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void NuevoCliente()
         {
-            if (ValidarCamposHorario())
+            if (ValidarCamposCliente())
             {
                 try
                 {
@@ -142,7 +142,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void EditarCliente()
         {
-            if (ValidarCamposHorario())
+            if (ValidarCamposCliente())
             {
                 Cliente clienteTemp = generarCliente();
                 if (!clienteTemp.Equals(PropiedadesGenerales.EmpleadoActual))
@@ -190,7 +190,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 cliente_telefono = txtTelefono.Text,
                 cliente_email = txtEmail.Text,
                 cliente_direccion = txtDireccion.Text,
-                //cliente_imagen = ClienteActual.cliente_imagen
+                cliente_imagen = ClienteActual.cliente_imagen
         };
             return cliente;
         }

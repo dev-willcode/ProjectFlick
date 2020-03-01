@@ -9,6 +9,7 @@ namespace Utils
     {
         public static Empleado EmpleadoActual { get; set; }
         public static Usuario UsuarioActual { get; set; }
+
         public static ClienteController ClienteController { get => clienteController; set => clienteController = value; }
         public static UsuarioController UsuarioController { get => usuarioController; set => usuarioController = value; }
         public static FuncionesController FuncionesController { get => funcionesController; set => funcionesController = value; }
@@ -27,6 +28,7 @@ namespace Utils
         public static HorarioController HorarioController { get => horarioController; set => horarioController = value; }
         public static vFacturaAdminController VFacturaAdminController { get => vFacturaAdminController; set => vFacturaAdminController = value; }
         public static EmpleadoController EmpleadoController { get => empleadoController; set => empleadoController = value; }
+        public static PeliculaController PeliculaController { get => peliculaController; set => peliculaController = value; }
 
         private static Notificar notificar = new Notificar();
         private static ClienteController clienteController = new ClienteController();
@@ -40,6 +42,7 @@ namespace Utils
         private static CategoriaController categoriaController = new CategoriaController();
         private static EmpresaController empresaController = new EmpresaController();
         private static HorarioController horarioController = new HorarioController();
+        private static PeliculaController peliculaController = new PeliculaController();
 
         private static BoletosFacturaController boletosFacturaController = new BoletosFacturaController();
         private static vFuncionesController vFuncionesController = new vFuncionesController();

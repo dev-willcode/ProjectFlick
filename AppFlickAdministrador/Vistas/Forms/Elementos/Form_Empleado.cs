@@ -51,7 +51,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             //txtContraseña;
         }
 
-        private bool ValidarCamposHorario()
+        private bool ValidarCamposEmpleado()
         {
             string errores = "";
             if (string.IsNullOrEmpty(txtCedula.Text))
@@ -91,7 +91,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void NuevoEmpleado()
         {
-            if (ValidarCamposHorario())
+            if (ValidarCamposEmpleado())
             {
                 try
                 {
@@ -135,7 +135,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void EditarEmpleado()
         {
-            if (ValidarCamposHorario())
+            if (ValidarCamposEmpleado())
             {
                 Empleado empleadoTemp = generarEmpleado();
                 if (!empleadoTemp.Equals(PropiedadesGenerales.EmpleadoActual))

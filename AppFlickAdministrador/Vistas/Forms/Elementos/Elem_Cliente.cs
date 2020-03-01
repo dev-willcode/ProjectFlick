@@ -57,7 +57,7 @@ namespace AppFlickAdministrador.Vistas.Init
 
         private void btnEditar_Click(object sender, System.EventArgs e)
         {
-            Form_Clientes form = new Form_Clientes(VistaClientes_Admin, "Editar empleado", cliente);
+            Form_Clientes form = new Form_Clientes(VistaClientes_Admin, "Editar Cliente", cliente);
             form.ShowDialog();
         }
     }

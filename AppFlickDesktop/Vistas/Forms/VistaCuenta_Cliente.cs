@@ -116,7 +116,7 @@ namespace AppFlickCliente.Vistas.Forms
         private void btnCambiarImagen_Click(object sender, EventArgs e)
         {
             try
-            {
+            {   
                 if (SelectorArchivo.ShowDialog() == DialogResult.OK)
                 {
                     Image img = Image.FromFile(SelectorArchivo.FileName);

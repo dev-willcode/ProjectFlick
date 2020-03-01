@@ -1,0 +1,8 @@
+CREATE PROCEDURE SP_BorrarPelicula
+@id int
+AS
+BEGIN
+DELETE FROM Pelicula 
+OUTPUT 'ELIMINADO' AS 'RESPONSE'
+WHERE  id = @id
+END

@@ -58,6 +58,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Reports\DataSets\DSFacturaDatos.cs">
       <DependentUpon>DSFacturaDatos.xsd</DependentUpon>
     </Compile>
@@ -141,6 +146,12 @@
     <Compile Include="Vistas\Forms\Elementos\Form_Horario.Designer.cs">
       <DependentUpon>Form_Horario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Form_Pelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Forms\Elementos\Form_Pelicula.Designer.cs">
+      <DependentUpon>Form_Pelicula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Forms\VistaEmpleados_Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,14 +206,9 @@
     <Compile Include="Vistas\Notificaciones\Notificar.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Reports\RPFacturaDatos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPFacturaDatos.cs</LastGenOutput>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Horario.resx">
       <DependentUpon>Form_Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Forms\Elementos\Form_Pelicula.resx">
+      <DependentUpon>Form_Pelicula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\VistaEmpleados_Admin.resx">
       <DependentUpon>VistaEmpleados_Admin.cs</DependentUpon>
@@ -315,6 +324,8 @@
     <Content Include="Resources\icons\icon_tarjetas.png" />
     <Content Include="Resources\icons\icon_trailer.png" />
     <Content Include="Resources\icons\icon_usuario.png" />
+    <None Include="Resources\icon_cambiar.png" />
+    <None Include="Resources\icon_peliculas.png" />
     <Content Include="Resources\images\asiento_cine.png" />
     <Content Include="Resources\images\asiento_cine_ocupado_.png" />
     <Content Include="Resources\images\asiento_cine_seleccionado_.png" />

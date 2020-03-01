@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using AppFlickAdministrador.Vistas.Forms.Elementos;
 using AppFlickAdministrador.Vistas.Init;
 using Controllers;
 using Entity.Entidades;
@@ -25,17 +26,18 @@ namespace AppFlickAdministrador.Vistas.Forms
             RellenarPeliculas();
         }
 
-        private void RellenarPeliculas()
+        public void RellenarPeliculas()
         {
             try
             {
+                panelContenedor.Controls.Clear();
                 List<Pelicula> listaFuncionesActivas = PropiedadesGenerales
                     .VPeliculasController.ListarPeliculas();
                 listaControles = new List<Elem_pelicula>();
 
                 listaFuncionesActivas.ForEach(pelicula =>
                 {
-                    Elem_pelicula elemento = new Elem_pelicula(pelicula);
+                    Elem_pelicula elemento = new Elem_pelicula(this,pelicula);
                     panelContenedor.Controls.Add(elemento);
                     elemento.Dock = DockStyle.Top;
                     listaControles.Add(elemento);
@@ -120,6 +122,12 @@ namespace AppFlickAdministrador.Vistas.Forms
             {
                 FiltroPeliculas();
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Form_Pelicula form = new Form_Pelicula(this, "Ingresar Pelicula");
+            form.ShowDialog();
         }
     }
 }

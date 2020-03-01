@@ -52,14 +52,15 @@
             this.btnBuscarFuncion.ForeColor = System.Drawing.Color.White;
             this.btnBuscarFuncion.Image = global::AppFlickAdministrador.Properties.Resources.icon_buscar;
             this.btnBuscarFuncion.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscarFuncion.Location = new System.Drawing.Point(616, 21);
+            this.btnBuscarFuncion.Location = new System.Drawing.Point(821, 26);
+            this.btnBuscarFuncion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBuscarFuncion.Name = "btnBuscarFuncion";
             this.btnBuscarFuncion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnBuscarFuncion.OnHoverBorderColor = System.Drawing.Color.White;
             this.btnBuscarFuncion.OnHoverForeColor = System.Drawing.Color.White;
             this.btnBuscarFuncion.OnHoverImage = null;
             this.btnBuscarFuncion.OnPressedColor = System.Drawing.Color.Black;
-            this.btnBuscarFuncion.Size = new System.Drawing.Size(30, 32);
+            this.btnBuscarFuncion.Size = new System.Drawing.Size(40, 39);
             this.btnBuscarFuncion.TabIndex = 65;
             this.btnBuscarFuncion.Click += new System.EventHandler(this.BtnBuscarFuncion_Click);
             // 
@@ -69,9 +70,10 @@
             this.gunaLabel5.CausesValidation = false;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel5.Location = new System.Drawing.Point(19, 16);
+            this.gunaLabel5.Location = new System.Drawing.Point(25, 20);
+            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(128, 37);
+            this.gunaLabel5.Size = new System.Drawing.Size(158, 46);
             this.gunaLabel5.TabIndex = 64;
             this.gunaLabel5.Text = "Peliculas";
             // 
@@ -88,11 +90,12 @@
             this.txtBuscarFuncion.FocusedForeColor = System.Drawing.Color.White;
             this.txtBuscarFuncion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarFuncion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.txtBuscarFuncion.Location = new System.Drawing.Point(211, 21);
+            this.txtBuscarFuncion.Location = new System.Drawing.Point(281, 26);
+            this.txtBuscarFuncion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscarFuncion.Name = "txtBuscarFuncion";
             this.txtBuscarFuncion.PasswordChar = '\0';
             this.txtBuscarFuncion.Radius = 10;
-            this.txtBuscarFuncion.Size = new System.Drawing.Size(399, 32);
+            this.txtBuscarFuncion.Size = new System.Drawing.Size(532, 39);
             this.txtBuscarFuncion.TabIndex = 63;
             this.txtBuscarFuncion.Text = "Buscar....";
             this.txtBuscarFuncion.TextOffsetX = 10;
@@ -107,29 +110,32 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.container.Controls.Add(this.panelContenedor);
             this.container.Controls.Add(this.scrollBar);
-            this.container.Location = new System.Drawing.Point(26, 76);
+            this.container.Location = new System.Drawing.Point(35, 94);
+            this.container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(755, 408);
+            this.container.Size = new System.Drawing.Size(1007, 502);
             this.container.TabIndex = 66;
             // 
-            // panelFunciones
+            // panelContenedor
             // 
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
-            this.panelContenedor.Name = "panelFunciones";
-            this.panelContenedor.Size = new System.Drawing.Size(738, 408);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(984, 502);
             this.panelContenedor.TabIndex = 70;
             // 
             // scrollBar
             // 
             this.scrollBar.Dock = System.Windows.Forms.DockStyle.Right;
             this.scrollBar.LargeChange = 10;
-            this.scrollBar.Location = new System.Drawing.Point(738, 0);
+            this.scrollBar.Location = new System.Drawing.Point(984, 0);
+            this.scrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.scrollBar.Maximum = 100;
             this.scrollBar.Name = "scrollBar";
             this.scrollBar.ScrollbarSize = 12;
             this.scrollBar.ScrollIdleColor = System.Drawing.Color.Silver;
-            this.scrollBar.Size = new System.Drawing.Size(17, 408);
+            this.scrollBar.Size = new System.Drawing.Size(23, 502);
             this.scrollBar.TabIndex = 71;
             this.scrollBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.scrollBar.ThumbHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -152,7 +158,8 @@
             this.btnEditar.Image = global::AppFlickAdministrador.Properties.Resources.icon_mas;
             this.btnEditar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEditar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEditar.Location = new System.Drawing.Point(671, 21);
+            this.btnEditar.Location = new System.Drawing.Point(895, 26);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnEditar.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -160,15 +167,16 @@
             this.btnEditar.OnHoverImage = null;
             this.btnEditar.OnPressedColor = System.Drawing.Color.Black;
             this.btnEditar.Radius = 7;
-            this.btnEditar.Size = new System.Drawing.Size(110, 32);
+            this.btnEditar.Size = new System.Drawing.Size(147, 39);
             this.btnEditar.TabIndex = 67;
             this.btnEditar.Text = "Añadir";
             this.btnEditar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnEditar.UseTransfarantBackground = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // VistaPelicula_Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.Controls.Add(this.btnEditar);
@@ -176,8 +184,9 @@
             this.Controls.Add(this.btnBuscarFuncion);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.txtBuscarFuncion);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "VistaPelicula_Admin";
-            this.Size = new System.Drawing.Size(809, 506);
+            this.Size = new System.Drawing.Size(1079, 623);
             this.container.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
