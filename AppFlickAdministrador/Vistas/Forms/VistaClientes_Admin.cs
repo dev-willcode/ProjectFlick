@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using AppFlickAdministrador.Vistas.Forms.Elementos;
 using AppFlickAdministrador.Vistas.Init;
 using Controllers;
 using Entity.Entidades;
@@ -120,6 +121,12 @@ namespace AppFlickAdministrador.Vistas.Forms
             {
                 FiltroFunciones();
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Form_Clientes form = new Form_Clientes(this, "Ingresar Cliente");
+            form.ShowDialog();
         }
     }
 }

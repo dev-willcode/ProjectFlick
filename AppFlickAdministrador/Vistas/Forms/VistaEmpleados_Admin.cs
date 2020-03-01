@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using AppFlickAdministrador.Vistas.Forms.Elementos;
 using AppFlickAdministrador.Vistas.Init;
 using Controllers;
 using Entity.Entidades;
@@ -24,7 +25,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             InitializeComponent();
             PropiedadesScroll();
             InicializarLabelSinFunciones();
-            RellenarFacturas();
+            RellenarEmpleados();
         }
 
         private void PropiedadesScroll()
@@ -45,7 +46,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             panelContenedor.Controls.Add(labelSinEmpleados);
         }
 
-        public void RellenarFacturas()
+        public void RellenarEmpleados()
         {
             try
             {
@@ -120,6 +121,12 @@ namespace AppFlickAdministrador.Vistas.Forms
             {
                 FiltroFunciones();
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Form_Empleado form = new Form_Empleado(this, "Ingresar Empleado");
+            form.ShowDialog();
         }
     }
 }

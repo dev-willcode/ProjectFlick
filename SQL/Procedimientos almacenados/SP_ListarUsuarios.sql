@@ -1,0 +1,5 @@
+CREATE PROCEDURE SP_ListarUsuarios
+AS
+BEGIN
+SELECT * FROM Usuario
+END

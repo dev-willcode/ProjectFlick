@@ -48,32 +48,35 @@
             this.container.Controls.Add(this.scrollBar);
             this.container.Controls.Add(this.panelContenedor);
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.Location = new System.Drawing.Point(0, 50);
+            this.container.Location = new System.Drawing.Point(0, 62);
+            this.container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(742, 305);
+            this.container.Size = new System.Drawing.Size(989, 375);
             this.container.TabIndex = 70;
             // 
             // scrollBar
             // 
             this.scrollBar.Dock = System.Windows.Forms.DockStyle.Right;
             this.scrollBar.LargeChange = 10;
-            this.scrollBar.Location = new System.Drawing.Point(725, 0);
+            this.scrollBar.Location = new System.Drawing.Point(966, 0);
+            this.scrollBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.scrollBar.Maximum = 100;
             this.scrollBar.Name = "scrollBar";
             this.scrollBar.ScrollbarSize = 12;
             this.scrollBar.ScrollIdleColor = System.Drawing.Color.Silver;
-            this.scrollBar.Size = new System.Drawing.Size(17, 305);
+            this.scrollBar.Size = new System.Drawing.Size(23, 375);
             this.scrollBar.TabIndex = 72;
             this.scrollBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.scrollBar.ThumbHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.scrollBar.ThumbPressedColor = System.Drawing.Color.DarkGray;
             // 
-            // panelHorarios
+            // panelContenedor
             // 
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 0);
-            this.panelContenedor.Name = "panelHorarios";
-            this.panelContenedor.Size = new System.Drawing.Size(742, 305);
+            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(989, 375);
             this.panelContenedor.TabIndex = 70;
             // 
             // gunaLabel5
@@ -82,9 +85,10 @@
             this.gunaLabel5.CausesValidation = false;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel5.Location = new System.Drawing.Point(24, 19);
+            this.gunaLabel5.Location = new System.Drawing.Point(32, 23);
+            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(129, 37);
+            this.gunaLabel5.Size = new System.Drawing.Size(159, 46);
             this.gunaLabel5.TabIndex = 68;
             this.gunaLabel5.Text = "Horarios";
             // 
@@ -99,10 +103,11 @@
             this.tableContainer.Controls.Add(this.var_numero_factura, 0, 0);
             this.tableContainer.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableContainer.Location = new System.Drawing.Point(0, 0);
+            this.tableContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableContainer.Name = "tableContainer";
             this.tableContainer.RowCount = 1;
             this.tableContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableContainer.Size = new System.Drawing.Size(742, 50);
+            this.tableContainer.Size = new System.Drawing.Size(989, 62);
             this.tableContainer.TabIndex = 89;
             // 
             // gunaLabel3
@@ -111,9 +116,10 @@
             this.gunaLabel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel3.Location = new System.Drawing.Point(250, 0);
+            this.gunaLabel3.Location = new System.Drawing.Point(333, 0);
+            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(241, 50);
+            this.gunaLabel3.Size = new System.Drawing.Size(321, 62);
             this.gunaLabel3.TabIndex = 76;
             this.gunaLabel3.Text = "Hora Fin";
             this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -124,9 +130,10 @@
             this.gunaLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(497, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(662, 0);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(242, 50);
+            this.gunaLabel1.Size = new System.Drawing.Size(323, 62);
             this.gunaLabel1.TabIndex = 75;
             this.gunaLabel1.Text = "Edición";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,9 +144,10 @@
             this.var_numero_factura.Dock = System.Windows.Forms.DockStyle.Fill;
             this.var_numero_factura.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.var_numero_factura.ForeColor = System.Drawing.Color.White;
-            this.var_numero_factura.Location = new System.Drawing.Point(3, 0);
+            this.var_numero_factura.Location = new System.Drawing.Point(4, 0);
+            this.var_numero_factura.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.var_numero_factura.Name = "var_numero_factura";
-            this.var_numero_factura.Size = new System.Drawing.Size(241, 50);
+            this.var_numero_factura.Size = new System.Drawing.Size(321, 62);
             this.var_numero_factura.TabIndex = 69;
             this.var_numero_factura.Text = "Hora Inicio";
             this.var_numero_factura.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -148,9 +156,10 @@
             // 
             this.panel1.Controls.Add(this.container);
             this.panel1.Controls.Add(this.tableContainer);
-            this.panel1.Location = new System.Drawing.Point(31, 78);
+            this.panel1.Location = new System.Drawing.Point(41, 96);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(742, 355);
+            this.panel1.Size = new System.Drawing.Size(989, 437);
             this.panel1.TabIndex = 91;
             // 
             // btnAnadir
@@ -170,7 +179,8 @@
             this.btnAnadir.Image = global::AppFlickAdministrador.Properties.Resources.icon_mas;
             this.btnAnadir.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAnadir.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAnadir.Location = new System.Drawing.Point(659, 19);
+            this.btnAnadir.Location = new System.Drawing.Point(879, 23);
+            this.btnAnadir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAnadir.Name = "btnAnadir";
             this.btnAnadir.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.btnAnadir.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -178,7 +188,7 @@
             this.btnAnadir.OnHoverImage = null;
             this.btnAnadir.OnPressedColor = System.Drawing.Color.Black;
             this.btnAnadir.Radius = 7;
-            this.btnAnadir.Size = new System.Drawing.Size(110, 32);
+            this.btnAnadir.Size = new System.Drawing.Size(147, 39);
             this.btnAnadir.TabIndex = 92;
             this.btnAnadir.Text = "Añadir";
             this.btnAnadir.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -187,14 +197,15 @@
             // 
             // VistaHorarios_Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.Controls.Add(this.btnAnadir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gunaLabel5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "VistaHorarios_Admin";
-            this.Size = new System.Drawing.Size(809, 506);
+            this.Size = new System.Drawing.Size(1079, 623);
             this.container.ResumeLayout(false);
             this.tableContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

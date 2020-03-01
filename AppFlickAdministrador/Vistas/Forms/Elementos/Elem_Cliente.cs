@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using AppFlickAdministrador.Vistas.Forms;
+using AppFlickAdministrador.Vistas.Forms.Elementos;
 using Controllers;
 using Entity.Entidades;
 using Utils;
@@ -52,6 +53,12 @@ namespace AppFlickAdministrador.Vistas.Init
                     PropiedadesGenerales.Notificar.notificarError(ex);
                 }
             }
+        }
+
+        private void btnEditar_Click(object sender, System.EventArgs e)
+        {
+            Form_Clientes form = new Form_Clientes(VistaClientes_Admin, "Editar empleado", cliente);
+            form.ShowDialog();
         }
     }
 }

@@ -149,8 +149,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             {
                 e.Handled = false;
             }
-            else
-              if (Char.IsControl(e.KeyChar))
+            else if (Char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }
@@ -187,8 +186,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
             {
                 e.Handled = false;
             }
-            else
-              if (Char.IsControl(e.KeyChar))
+            else if (Char.IsControl(e.KeyChar))
             {
                 e.Handled = false;
             }

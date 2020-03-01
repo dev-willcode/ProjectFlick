@@ -85,6 +85,26 @@ namespace Controllers.Controller
             return -1;
         }
 
+        public int RegistrarNuevoEmpleado(Usuario usuario, Empleado empleado)
+        {
+            UsuarioDAO UsuarioDAO = new UsuarioDAO();
+            EmpleadoDAO EmpleadoDAO = new EmpleadoDAO();
+            usuario.usuario_perfil = 0; // Perfil nulo para clientes
+            int idInsertada = UsuarioDAO.Create(usuario); // Crea el usuario y devuelve la id generada.
+
+            // Se creó correctamente el usuario, cree el cliente y asignelo
+            if (idInsertada != -1)
+            {
+                empleado.empleado_usuario = idInsertada;
+                // Se creo correctamente el cliente
+                if (EmpleadoDAO.Create(empleado) != -1)
+                {
+                    return idInsertada;
+                }
+            }
+            return -1;
+        }
+
         private int ContarRepetidos(string usuario_username)
         {
             string consulta = "SELECT COUNT(*) AS 'count' FROM [Usuario] usuario " +
@@ -110,6 +130,21 @@ namespace Controllers.Controller
             catch (Exception ex)
             {
                 throw new ControllerException("No se consiguío actualizar la imagen", ex);
+            }
+        }
+
+        public List<Usuario> ListarUsuarios()
+        {
+            try
+            {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_ListarUsuarios"))
+                {
+                    return Procedimientos.ListarEntidades<Usuario>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ControllerException("No se consiguió listar los usuarios", ex);
             }
         }
     }

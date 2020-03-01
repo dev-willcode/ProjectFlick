@@ -1,6 +1,6 @@
 ﻿namespace AppFlickAdministrador.Vistas.Forms.Elementos
 {
-    partial class Form_Cliente
+    partial class Form_Empleado
     {
         /// <summary>
         /// Required designer variable.
@@ -130,13 +130,14 @@
             this.txtApellido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtApellido.Location = new System.Drawing.Point(42, 348);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
-            this.txtApellido.MaxLength = 16;
+            this.txtApellido.MaxLength = 30;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.PasswordChar = '\0';
             this.txtApellido.Radius = 10;
             this.txtApellido.Size = new System.Drawing.Size(364, 39);
             this.txtApellido.TabIndex = 104;
             this.txtApellido.TextOffsetX = 2;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // var_titulo
             // 
@@ -217,6 +218,7 @@
             this.btnGuardar.TabIndex = 103;
             this.btnGuardar.Text = "Guardar Empleado";
             this.btnGuardar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCerrar
             // 
@@ -230,6 +232,7 @@
             this.btnCerrar.OnHoverImageOffset = new System.Drawing.Point(0, 0);
             this.btnCerrar.Size = new System.Drawing.Size(43, 39);
             this.btnCerrar.TabIndex = 102;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // txtNombre
             // 
@@ -245,13 +248,14 @@
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtNombre.Location = new System.Drawing.Point(42, 267);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombre.MaxLength = 16;
+            this.txtNombre.MaxLength = 30;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.Radius = 10;
             this.txtNombre.Size = new System.Drawing.Size(364, 39);
             this.txtNombre.TabIndex = 118;
             this.txtNombre.TextOffsetX = 2;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtCedula
             // 
@@ -267,13 +271,14 @@
             this.txtCedula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtCedula.Location = new System.Drawing.Point(41, 184);
             this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCedula.MaxLength = 16;
+            this.txtCedula.MaxLength = 10;
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.PasswordChar = '\0';
             this.txtCedula.Radius = 10;
             this.txtCedula.Size = new System.Drawing.Size(364, 39);
             this.txtCedula.TabIndex = 119;
             this.txtCedula.TextOffsetX = 2;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // gunaLabel6
             // 
@@ -303,13 +308,14 @@
             this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtTelefono.Location = new System.Drawing.Point(42, 432);
             this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelefono.MaxLength = 16;
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.Radius = 10;
             this.txtTelefono.Size = new System.Drawing.Size(364, 39);
             this.txtTelefono.TabIndex = 120;
             this.txtTelefono.TextOffsetX = 2;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // gunaLabel7
             // 
@@ -339,7 +345,7 @@
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtEmail.Location = new System.Drawing.Point(42, 517);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.MaxLength = 16;
+            this.txtEmail.MaxLength = 30;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.Radius = 10;
@@ -375,7 +381,7 @@
             this.txtDireccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtDireccion.Location = new System.Drawing.Point(42, 603);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDireccion.MaxLength = 16;
+            this.txtDireccion.MaxLength = 30;
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.PasswordChar = '\0';
             this.txtDireccion.Radius = 10;

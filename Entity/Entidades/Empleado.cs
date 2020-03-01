@@ -21,20 +21,41 @@ namespace Entity.Entidades
             empleado_usuario = (int)data["empleado_usuario"];
         }
 
-        public int id { get; private set; }
+        public int id { get;  set; }
 
-        public string empleado_cedula { get; private set; }
+        public string empleado_cedula { get;  set; }
 
-        public string empleado_nombres { get; private set; }
+        public string empleado_nombres { get;  set; }
 
-        public string empleado_apellidos { get; private set; }
+        public string empleado_apellidos { get;  set; }
 
-        public string empleado_telefono { get; private set; }
+        public string empleado_telefono { get;  set; }
 
-        public string empleado_email { get; private set; }
+        public string empleado_email { get;  set; }
 
-        public string empleado_direccion { get; private set; }
+        public string empleado_direccion { get;  set; }
 
-        public int empleado_usuario { get; private set; }
+        public int empleado_usuario { get;  set; }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Empleado empleado = obj as Empleado;
+            return empleado_cedula == empleado.empleado_cedula &&
+                empleado_nombres == empleado.empleado_nombres &&
+                empleado_apellidos == empleado.empleado_apellidos &&
+                empleado_telefono == empleado.empleado_telefono &&
+                empleado_email == empleado.empleado_email &&
+                empleado_direccion == empleado.empleado_direccion;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

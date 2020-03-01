@@ -8,6 +8,7 @@ namespace Utils
     public static class PropiedadesGenerales
     {
         public static Empleado EmpleadoActual { get; set; }
+        public static Usuario UsuarioActual { get; set; }
         public static ClienteController ClienteController { get => clienteController; set => clienteController = value; }
         public static UsuarioController UsuarioController { get => usuarioController; set => usuarioController = value; }
         public static FuncionesController FuncionesController { get => funcionesController; set => funcionesController = value; }

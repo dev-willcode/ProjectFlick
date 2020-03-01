@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using AppFlickAdministrador.Vistas.Forms;
+using AppFlickAdministrador.Vistas.Forms.Elementos;
 using Controllers;
 using Entity.Entidades;
 using Utils;
@@ -45,13 +46,19 @@ namespace AppFlickAdministrador.Vistas.Init
                 {
                     PropiedadesGenerales.EmpleadoController.Delete(empleado.id);
                     PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado el empleado");
-                    VistaEmpleados_Admin.RellenarFacturas();
+                    VistaEmpleados_Admin.RellenarEmpleados();
                 }
                 catch (ControllerException ex)
                 {
                     PropiedadesGenerales.Notificar.notificarError(ex);
                 }
             }
+        }
+
+        private void btnEditar_Click(object sender, System.EventArgs e)
+        {
+            Form_Empleado form = new Form_Empleado(VistaEmpleados_Admin, "Editar empleado", empleado);
+            form.ShowDialog();
         }
     }
 }

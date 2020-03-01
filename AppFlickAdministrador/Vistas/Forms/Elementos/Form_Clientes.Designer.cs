@@ -218,6 +218,7 @@
             this.txtTelefono.Size = new System.Drawing.Size(364, 39);
             this.txtTelefono.TabIndex = 141;
             this.txtTelefono.TextOffsetX = 2;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // txtCedula
             // 
@@ -240,6 +241,7 @@
             this.txtCedula.Size = new System.Drawing.Size(364, 39);
             this.txtCedula.TabIndex = 140;
             this.txtCedula.TextOffsetX = 2;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // txtNombre
             // 
@@ -262,6 +264,7 @@
             this.txtNombre.Size = new System.Drawing.Size(364, 39);
             this.txtNombre.TabIndex = 139;
             this.txtNombre.TextOffsetX = 2;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // gunaLabel5
             // 
@@ -348,6 +351,7 @@
             this.txtApellido.Size = new System.Drawing.Size(364, 39);
             this.txtApellido.TabIndex = 132;
             this.txtApellido.TextOffsetX = 2;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // btnGuardar
             // 
@@ -378,6 +382,7 @@
             this.btnGuardar.TabIndex = 131;
             this.btnGuardar.Text = "Guardar Cliente";
             this.btnGuardar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCerrar
             // 
@@ -391,6 +396,7 @@
             this.btnCerrar.OnHoverImageOffset = new System.Drawing.Point(0, 0);
             this.btnCerrar.Size = new System.Drawing.Size(43, 39);
             this.btnCerrar.TabIndex = 130;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // var_titulo
             // 
