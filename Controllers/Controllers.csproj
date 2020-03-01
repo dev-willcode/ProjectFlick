@@ -50,6 +50,7 @@
     <Compile Include="Controller\EmpresaController.cs" />
     <Compile Include="Controller\FacturaController.cs" />
     <Compile Include="Controller\FuncionesController.cs" />
+    <Compile Include="Controller\Vistas\PeliculaPController.cs" />
     <Compile Include="Controller\Vistas\vFacturaAdminController.cs" />
     <Compile Include="DAO\FuncionesDAO.cs" />
     <Compile Include="Controller\HorarioController.cs" />

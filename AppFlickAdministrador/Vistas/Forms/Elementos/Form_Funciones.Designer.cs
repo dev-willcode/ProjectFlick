@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
-            this.txtContraseña = new Guna.UI.WinForms.GunaTextBox();
+            this.txtAsientos = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.txtEstado = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.txtPelícula = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.txtUsuario = new Guna.UI.WinForms.GunaTextBox();
+            this.txtPrecioB = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btnGuardar = new Guna.UI.WinForms.GunaButton();
@@ -51,6 +51,7 @@
             this.dateFechaFuncion = new System.Windows.Forms.DateTimePicker();
             this.dateFechaCreación = new System.Windows.Forms.DateTimePicker();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
+            this.btnBuscar = new Guna.UI.WinForms.GunaCircleButton();
             this.SuspendLayout();
             // 
             // panel
@@ -63,28 +64,28 @@
             this.panel.Size = new System.Drawing.Size(881, 18);
             this.panel.TabIndex = 122;
             // 
-            // txtContraseña
+            // txtAsientos
             // 
-            this.txtContraseña.BackColor = System.Drawing.Color.Transparent;
-            this.txtContraseña.BaseColor = System.Drawing.Color.White;
-            this.txtContraseña.BorderColor = System.Drawing.Color.White;
-            this.txtContraseña.BorderSize = 0;
-            this.txtContraseña.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtContraseña.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtContraseña.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtContraseña.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtContraseña.Location = new System.Drawing.Point(654, 388);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContraseña.MaxLength = 3;
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '\0';
-            this.txtContraseña.Radius = 10;
-            this.txtContraseña.Size = new System.Drawing.Size(179, 39);
-            this.txtContraseña.TabIndex = 170;
-            this.txtContraseña.TextOffsetX = 2;
-            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
+            this.txtAsientos.BackColor = System.Drawing.Color.Transparent;
+            this.txtAsientos.BaseColor = System.Drawing.Color.White;
+            this.txtAsientos.BorderColor = System.Drawing.Color.White;
+            this.txtAsientos.BorderSize = 0;
+            this.txtAsientos.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAsientos.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.txtAsientos.FocusedBorderColor = System.Drawing.Color.White;
+            this.txtAsientos.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.txtAsientos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAsientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.txtAsientos.Location = new System.Drawing.Point(654, 388);
+            this.txtAsientos.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAsientos.MaxLength = 3;
+            this.txtAsientos.Name = "txtAsientos";
+            this.txtAsientos.PasswordChar = '\0';
+            this.txtAsientos.Radius = 10;
+            this.txtAsientos.Size = new System.Drawing.Size(179, 39);
+            this.txtAsientos.TabIndex = 170;
+            this.txtAsientos.TextOffsetX = 2;
+            this.txtAsientos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAsientos_KeyPress);
             // 
             // gunaLabel3
             // 
@@ -170,7 +171,7 @@
             this.txtPelícula.Name = "txtPelícula";
             this.txtPelícula.PasswordChar = '\0';
             this.txtPelícula.Radius = 10;
-            this.txtPelícula.Size = new System.Drawing.Size(364, 39);
+            this.txtPelícula.Size = new System.Drawing.Size(315, 39);
             this.txtPelícula.TabIndex = 161;
             this.txtPelícula.TextOffsetX = 2;
             this.txtPelícula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPelícula_KeyPress);
@@ -189,28 +190,28 @@
             this.gunaLabel5.TabIndex = 159;
             this.gunaLabel5.Text = "Horario";
             // 
-            // txtUsuario
+            // txtPrecioB
             // 
-            this.txtUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.txtUsuario.BaseColor = System.Drawing.Color.White;
-            this.txtUsuario.BorderColor = System.Drawing.Color.White;
-            this.txtUsuario.BorderSize = 0;
-            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtUsuario.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtUsuario.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtUsuario.Location = new System.Drawing.Point(466, 388);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUsuario.MaxLength = 5;
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.PasswordChar = '\0';
-            this.txtUsuario.Radius = 10;
-            this.txtUsuario.Size = new System.Drawing.Size(180, 39);
-            this.txtUsuario.TabIndex = 158;
-            this.txtUsuario.TextOffsetX = 2;
-            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
+            this.txtPrecioB.BackColor = System.Drawing.Color.Transparent;
+            this.txtPrecioB.BaseColor = System.Drawing.Color.White;
+            this.txtPrecioB.BorderColor = System.Drawing.Color.White;
+            this.txtPrecioB.BorderSize = 0;
+            this.txtPrecioB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrecioB.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.txtPrecioB.FocusedBorderColor = System.Drawing.Color.White;
+            this.txtPrecioB.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.txtPrecioB.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.txtPrecioB.Location = new System.Drawing.Point(466, 388);
+            this.txtPrecioB.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecioB.MaxLength = 5;
+            this.txtPrecioB.Name = "txtPrecioB";
+            this.txtPrecioB.PasswordChar = '\0';
+            this.txtPrecioB.Radius = 10;
+            this.txtPrecioB.Size = new System.Drawing.Size(180, 39);
+            this.txtPrecioB.TabIndex = 158;
+            this.txtPrecioB.TextOffsetX = 2;
+            this.txtPrecioB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioB_KeyPress);
             // 
             // gunaLabel4
             // 
@@ -294,7 +295,7 @@
             this.var_titulo.Location = new System.Drawing.Point(33, 23);
             this.var_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.var_titulo.Name = "var_titulo";
-            this.var_titulo.Size = new System.Drawing.Size(309, 39);
+            this.var_titulo.Size = new System.Drawing.Size(470, 39);
             this.var_titulo.TabIndex = 150;
             this.var_titulo.Text = "Añada una Función";
             // 
@@ -307,7 +308,7 @@
             this.var_segundo_titulo.Location = new System.Drawing.Point(34, 73);
             this.var_segundo_titulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.var_segundo_titulo.Name = "var_segundo_titulo";
-            this.var_segundo_titulo.Size = new System.Drawing.Size(339, 31);
+            this.var_segundo_titulo.Size = new System.Drawing.Size(489, 31);
             this.var_segundo_titulo.TabIndex = 155;
             this.var_segundo_titulo.Text = "Inserte los datos de la función";
             // 
@@ -442,19 +443,45 @@
             this.gunaLabel2.TabIndex = 175;
             this.gunaLabel2.Text = "Fecha Creación Evento";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.AnimationHoverSpeed = 0.07F;
+            this.btnBuscar.AnimationSpeed = 0.03F;
+            this.btnBuscar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(75)))), ((int)(((byte)(140)))));
+            this.btnBuscar.BorderColor = System.Drawing.Color.White;
+            this.btnBuscar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnBuscar.FocusedColor = System.Drawing.Color.Empty;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::AppFlickAdministrador.Properties.Resources.icon_buscar;
+            this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnBuscar.Location = new System.Drawing.Point(363, 158);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnBuscar.OnHoverBorderColor = System.Drawing.Color.White;
+            this.btnBuscar.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnBuscar.OnHoverImage = null;
+            this.btnBuscar.OnPressedColor = System.Drawing.Color.Black;
+            this.btnBuscar.Size = new System.Drawing.Size(40, 39);
+            this.btnBuscar.TabIndex = 177;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
             // Form_Funciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(881, 560);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dateFechaCreación);
             this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.dateFechaFuncion);
             this.Controls.Add(this.comboSala);
             this.Controls.Add(this.comboIdioma);
             this.Controls.Add(this.comboHorario);
-            this.Controls.Add(this.txtContraseña);
+            this.Controls.Add(this.txtAsientos);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.gunaLabel8);
             this.Controls.Add(this.txtEstado);
@@ -462,7 +489,7 @@
             this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.txtPelícula);
             this.Controls.Add(this.gunaLabel5);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtPrecioB);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.btnGuardar);
@@ -482,14 +509,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel;
-        private Guna.UI.WinForms.GunaTextBox txtContraseña;
+        private Guna.UI.WinForms.GunaTextBox txtAsientos;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaLabel gunaLabel8;
         private Guna.UI.WinForms.GunaTextBox txtEstado;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
-        private Guna.UI.WinForms.GunaTextBox txtPelícula;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaTextBox txtUsuario;
+        private Guna.UI.WinForms.GunaTextBox txtPrecioB;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaButton btnGuardar;
@@ -504,5 +530,7 @@
         private System.Windows.Forms.DateTimePicker dateFechaFuncion;
         private System.Windows.Forms.DateTimePicker dateFechaCreación;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
+        private Guna.UI.WinForms.GunaCircleButton btnBuscar;
+        public Guna.UI.WinForms.GunaTextBox txtPelícula;
     }
 }

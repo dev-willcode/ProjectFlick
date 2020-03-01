@@ -29,6 +29,7 @@ namespace Utils
         public static vFacturaAdminController VFacturaAdminController { get => vFacturaAdminController; set => vFacturaAdminController = value; }
         public static EmpleadoController EmpleadoController { get => empleadoController; set => empleadoController = value; }
         public static PeliculaController PeliculaController { get => peliculaController; set => peliculaController = value; }
+        public static PeliculaPController PeliculaPController { get => peliculaPController; set => peliculaPController = value; }
 
         private static Notificar notificar = new Notificar();
         private static ClienteController clienteController = new ClienteController();
@@ -50,5 +51,6 @@ namespace Utils
         private static vFacturaFuncionController vFacturaFuncionController = new vFacturaFuncionController();
         private static vFacturaDatosController vFacturaDatosController = new vFacturaDatosController();
         private static vFacturaAdminController vFacturaAdminController = new vFacturaAdminController();
+        private static PeliculaPController peliculaPController = new PeliculaPController();
     }
 }

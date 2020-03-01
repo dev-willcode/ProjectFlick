@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel = new System.Windows.Forms.Panel();
             this.tablaPeliculas = new System.Windows.Forms.DataGridView();
             this.var_titulo = new Guna.UI.WinForms.GunaLabel();
-            this.btnCerrar = new Guna.UI.WinForms.GunaImageButton();
             this.btnSeleccionar = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.tablaPeliculas)).BeginInit();
             this.SuspendLayout();
@@ -44,29 +43,31 @@
             this.panel.Location = new System.Drawing.Point(0, 0);
             this.panel.Margin = new System.Windows.Forms.Padding(4);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(971, 18);
+            this.panel.Size = new System.Drawing.Size(809, 18);
             this.panel.TabIndex = 121;
             // 
             // tablaPeliculas
             // 
             this.tablaPeliculas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tablaPeliculas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tablaPeliculas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tablaPeliculas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaPeliculas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tablaPeliculas.ColumnHeadersHeight = 30;
             this.tablaPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.tablaPeliculas.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.tablaPeliculas.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.tablaPeliculas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.tablaPeliculas.Location = new System.Drawing.Point(34, 106);
             this.tablaPeliculas.Name = "tablaPeliculas";
-            this.tablaPeliculas.RowHeadersWidth = 51;
+            this.tablaPeliculas.RowHeadersWidth = 60;
             this.tablaPeliculas.RowTemplate.Height = 24;
-            this.tablaPeliculas.Size = new System.Drawing.Size(897, 366);
+            this.tablaPeliculas.Size = new System.Drawing.Size(750, 203);
             this.tablaPeliculas.TabIndex = 122;
             // 
             // var_titulo
@@ -81,20 +82,6 @@
             this.var_titulo.Size = new System.Drawing.Size(455, 39);
             this.var_titulo.TabIndex = 155;
             this.var_titulo.Text = "Listado de Películas";
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCerrar.Image = global::AppFlickAdministrador.Properties.Resources.icon_cerrar;
-            this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnCerrar.Location = new System.Drawing.Point(897, 26);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.OnHoverImage = null;
-            this.btnCerrar.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.btnCerrar.Size = new System.Drawing.Size(43, 39);
-            this.btnCerrar.TabIndex = 154;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnSeleccionar
             // 
@@ -112,7 +99,7 @@
             this.btnSeleccionar.ForeColor = System.Drawing.Color.White;
             this.btnSeleccionar.Image = global::AppFlickAdministrador.Properties.Resources.icon_mas;
             this.btnSeleccionar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSeleccionar.Location = new System.Drawing.Point(354, 491);
+            this.btnSeleccionar.Location = new System.Drawing.Point(273, 328);
             this.btnSeleccionar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -132,15 +119,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(971, 562);
+            this.ClientSize = new System.Drawing.Size(809, 394);
             this.Controls.Add(this.var_titulo);
-            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.tablaPeliculas);
             this.Controls.Add(this.panel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form_ListadoPeliculas";
-            this.Text = "Form_Funciones";
+            this.Text = "Peliculas";
             ((System.ComponentModel.ISupportInitialize)(this.tablaPeliculas)).EndInit();
             this.ResumeLayout(false);
 
@@ -151,7 +138,6 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataGridView tablaPeliculas;
         private Guna.UI.WinForms.GunaButton btnSeleccionar;
-        private Guna.UI.WinForms.GunaImageButton btnCerrar;
         private Guna.UI.WinForms.GunaLabel var_titulo;
     }
 }

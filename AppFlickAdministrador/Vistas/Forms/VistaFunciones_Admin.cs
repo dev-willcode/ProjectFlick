@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using AppFlickAdministrador.Vistas.Forms.Elementos;
 using AppFlickAdministrador.Vistas.Init;
 using Controllers;
 using Entity.Entidades.EntidadesPersonalizadas;
@@ -25,7 +26,7 @@ namespace AppFlickAdministrador.Vistas.Forms
             RellenarFuncionesActivas();
         }
 
-        private void RellenarFuncionesActivas()
+        public void RellenarFuncionesActivas()
         {
             try
             {
@@ -35,7 +36,7 @@ namespace AppFlickAdministrador.Vistas.Forms
 
                 listaFuncionesActivas.ForEach(funcion =>
                 {
-                    Elem_funcion elemento = new Elem_funcion(funcion);
+                    Elem_funcion elemento = new Elem_funcion(this,funcion);
                     panelContenedor.Controls.Add(elemento);
                     elemento.Dock = DockStyle.Top;
                     listaControles.Add(elemento);
@@ -120,6 +121,12 @@ namespace AppFlickAdministrador.Vistas.Forms
             {
                 FiltroFunciones();
             }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            Form_Funciones form = new Form_Funciones(this, "Ingresar Funcion");
+            form.ShowDialog();
         }
     }
 }
