@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickCliente", "AppFlickDesktop\AppFlickCliente.csproj", "{150D7B97-48EE-4FAF-BAFF-F63C24568628}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -15,14 +15,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\Controllers.csproj", "{A117B98B-A93C-4D27-9062-B54BA2C40E50}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickAdministrador", "AppFlickAdministrador\AppFlickAdministrador.csproj", "{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppMovil.Android", "AppMovil\AppMovil.Android\AppMovil.Android.csproj", "{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppMovil", "AppMovil\AppMovil\AppMovil.csproj", "{A5CB5CB4-6389-47A0-B8CE-03EFA372DCEF}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A117B98B-A93C-4D27-9062-B54BA2C40E50} = {A117B98B-A93C-4D27-9062-B54BA2C40E50}
-		{997D0BFD-C9AB-4376-9E0A-CC0D10C0860F} = {997D0BFD-C9AB-4376-9E0A-CC0D10C0860F}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,16 +42,6 @@ Global
 		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{A5CB5CB4-6389-47A0-B8CE-03EFA372DCEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5CB5CB4-6389-47A0-B8CE-03EFA372DCEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5CB5CB4-6389-47A0-B8CE-03EFA372DCEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A5CB5CB4-6389-47A0-B8CE-03EFA372DCEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
