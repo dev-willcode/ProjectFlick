@@ -22,8 +22,12 @@ namespace Entity.Entidades.EntidadesPersonalizadas
             pelicula_director = data["pelicula_director"].ToString();
             pelicula_reparto = data["pelicula_reparto"].ToString();
             funcion_fecha_evento = (DateTime)data["funcion_fecha_evento"];
+            funcion_estado = data["funcion_estado"].ToString();
             funcion_precio_boleto = (decimal)data["funcion_precio_boleto"];
             sala_nombre = data["sala_nombre"].ToString();
+            idioma_descripcion = data["idioma_descripcion"].ToString();
+            funcion_asientos_disponibles = (int)data["funcion_asientos_disponibles"];
+            funcion_fecha_creacion = (DateTime)data["funcion_fecha_creacion"];
         }
 
         public int id { get; set; }
@@ -41,8 +45,12 @@ namespace Entity.Entidades.EntidadesPersonalizadas
         public string pelicula_director { get; set; }
         public string pelicula_reparto { get; set; }
         public DateTime funcion_fecha_evento { get; set; }
+        public string funcion_estado { get; set; }
         public decimal funcion_precio_boleto { get; set; }
         public string sala_nombre { get; set; }
+        public string idioma_descripcion { get; set; }
+        public int funcion_asientos_disponibles { get; set; }
+        public DateTime funcion_fecha_creacion { get; set; }
 
     }
 }

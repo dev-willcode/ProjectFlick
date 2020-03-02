@@ -31,10 +31,5 @@ namespace AppMovil.Views
             MessagingCenter.Send(this, "AddItem", Item);
             await Navigation.PopModalAsync();
         }
-
-        async void Cancel_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PopModalAsync();
-        }
     }
 }

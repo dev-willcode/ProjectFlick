@@ -131,7 +131,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             }
             else
             {
-                PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar cliente", "Ingrese bien los datos");
+                PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar la Pelicula", "Ingrese bien los datos");
             }
         }
 

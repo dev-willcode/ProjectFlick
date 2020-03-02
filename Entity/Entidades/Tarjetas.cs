@@ -20,7 +20,7 @@ namespace Entity.Entidades
             tarjeta_mes = data["tarjeta_mes"].ToString();
             tarjeta_propietario = data["tarjeta_propietario"].ToString();
             tarjeta_numero_protegido = "XXXX XXXX XXXX  " +
-                tarjeta_numero.Substring(tarjeta_numero.Length - 4);
+            tarjeta_numero.Substring(tarjeta_numero.Length - 4);
         }
 
         public int id { get; set; }

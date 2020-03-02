@@ -3,6 +3,7 @@ using Controllers;
 using Entity.Entidades;
 using Entity.Entidades.EntidadesPersonalizadas;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Utils;
 
@@ -21,7 +22,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             inicializarformulario(vistaFunciones_Admin, titulo);
         }
 
-        public Form_Funciones(VistaFunciones_Admin vistaFunciones_Admin, string titulo, 
+        public Form_Funciones(VistaFunciones_Admin vistaFunciones_Admin, string titulo,
             VistaFunciones vistaFuncion)
         {
             Accion = Constantes.accionEditar;
@@ -29,7 +30,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             inicializarformulario(vistaFunciones_Admin, titulo);
         }
 
-        public Form_Funciones(VistaFunciones_Admin vistaFunciones_Admin, string titulo, 
+        public Form_Funciones(VistaFunciones_Admin vistaFunciones_Admin, string titulo,
             Funcion funcion)
         {
             Accion = Constantes.accionEditar;
@@ -43,53 +44,156 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             Text = titulo;
             InitializeComponent();
             this.CenterToParent();
+            cargarHorarios();
+            cargarIdiomas();
+            cargarSalas();
+            cargarPelicula();
             if (Accion.Equals(Constantes.accionEditar))
             {
                 cargarDatos();
             }
         }
 
+        private void cargarHorarios()
+        {
+            try
+            {
+                List<Horario> lista = PropiedadesGenerales.HorarioController.ListarHorarios();
+                comboHorario.DataSource = lista;
+                comboHorario.DisplayMember = "horario_inicio";
+                comboHorario.ValueMember = "id";
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
+        }
+
+        private void cargarIdiomas()
+        {
+            try
+            {
+                List<Idioma> lista = PropiedadesGenerales.IdiomaController.ListarIdiomas();
+                comboIdioma.DataSource = lista;
+                comboIdioma.DisplayMember = "idioma_descripcion";
+                comboIdioma.ValueMember = "id";
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
+        }
+
+        private void cargarSalas()
+        {
+            try
+            {
+                List<Sala_Cine> lista = PropiedadesGenerales.Sala_CineController.ListarSalas();
+                comboSala.DataSource = lista;
+                comboSala.DisplayMember = "sala_nombre";
+                comboSala.ValueMember = "id";
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
+        }
+
+        private void cargarPelicula()
+        {
+            try
+            {
+                List<Pelicula> lista = PropiedadesGenerales.VPeliculasController.ListarPeliculas();
+                comboPelicula.DataSource = lista;
+                comboPelicula.DisplayMember = "pelicula_titulo";
+                comboPelicula.ValueMember = "id";
+            }
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+            }
+        }
+
         private void cargarDatos()
         {
+            txtPelícula.Text = VFuncionActual.pelicula_titulo;
+            txtEstado.Text = VFuncionActual.funcion_estado;
+            txtPrecioB.Text = VFuncionActual.funcion_precio_boleto.ToString();
+            txtAsientos.Text = VFuncionActual.funcion_asientos_disponibles.ToString();
+            dateFechaCreación.Value = VFuncionActual.funcion_fecha_creacion;
+            dateFechaFuncion.Value = VFuncionActual.funcion_fecha_evento;
+            comboHorario.SelectedIndex = buscarHorario(comboHorario, VFuncionActual.horario_inicio);
+            comboIdioma.SelectedIndex = buscarIndice(comboIdioma, VFuncionActual.idioma_descripcion.ToString());
+            comboSala.SelectedIndex = buscarIndice(comboSala, VFuncionActual.sala_nombre.ToString());
+        }
+
+        private int buscarHorario(ComboBox comboBox, TimeSpan value)
+        {
+            foreach (object item in comboBox.Items)
+            {
+                if (item.GetType() == typeof(Horario))
+                {
+                    if ((item as Horario).horario_inicio.Equals(value))
+                    {
+                        return comboBox.Items.IndexOf(item);
+                    }
+                }
+            }
+            return -1;
+        }
+
+        private int buscarIndice(ComboBox combobox, string value)
+        {
+            foreach (object item in combobox.Items)
+            {
+                if (item.GetType() == typeof(Idioma))
+                {
+                    if ((item as Idioma).idioma_descripcion.Equals(value))
+                    {
+                        return combobox.Items.IndexOf(item);
+                    }
+                }
+                else if (item.GetType() == typeof(Pelicula))
+                {
+                    if ((item as Pelicula).pelicula_titulo.Equals(value))
+                    {
+                        return combobox.Items.IndexOf(item);
+                    }
+                }
+                else
+                {
+                    if ((item as Sala_Cine).sala_nombre.Equals(value))
+                    {
+                        return combobox.Items.IndexOf(item);
+                    }
+                }
+            }
+            return -1;
         }
 
         private bool ValidarCamposFuncion()
         {
             string errores = "";
-            /*if (string.IsNullOrEmpty(txtTitulo.Text))
+            /*if (string.IsNullOrEmpty(txtPelícula.Text))
             {
-                errores += " - Escriba el título" + Environment.NewLine;
-            }
-            if (string.IsNullOrEmpty(txtTituloOriginal.Text))
-            {
-                errores += " - Escriba el título original" + Environment.NewLine;
-            }
-            if (string.IsNullOrEmpty(txtDuracion.Text))
-            {
-                errores += " - Escriba la duración" + Environment.NewLine;
-            }
-            if (string.IsNullOrEmpty(txtCensura.Text))
-            {
-                errores += " - Escriba el tipo de censura" + Environment.NewLine;
-            }
-            if (string.IsNullOrEmpty(txtSinopsis.Text))
-            {
-                errores += " - Escriba la sinopsis" + Environment.NewLine;
-            }
-            if (string.IsNullOrEmpty(txtDirector.Text))
-            {
-                errores += " - Escriba el director" + Environment.NewLine;
-            }
-            if (string.IsNullOrEmpty(txtReparto.Text))
-            {
-                errores += " - Escriba el reparto" + Environment.NewLine;
-            }
-            if (string.IsNullOrEmpty(txtURL.Text))
-            {
-                errores += " - Escriba la URL del Trailer" + Environment.NewLine;
+                errores += " - Busque un nombre de la pelicula" + Environment.NewLine;
             }*/
+            if (string.IsNullOrEmpty(txtEstado.Text))
+            {
+                errores += " - Ingrese el estado de la pelicula" + Environment.NewLine;
+            }
+            if (string.IsNullOrEmpty(txtPrecioB.Text))
+            {
+                errores += " - Ingrese el precio de boleto de la pelicula" + Environment.NewLine;
+            }
+            if (string.IsNullOrEmpty(txtAsientos.Text))
+            {
+                errores += " - Ingrese el número de asientos de la pelicula" + Environment.NewLine;
+            }
             return string.IsNullOrEmpty(errores);
         }
+
+
 
         private void NuevaFuncion()
         {
@@ -98,16 +202,32 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 try
                 {
                     Funcion funcion = new Funcion();
-                    try
+                    funcion.funcion_pelicula = int.Parse(comboPelicula.SelectedValue.ToString());
+                    funcion.funcion_estado = txtEstado.Text;
+                    funcion.funcion_precio_boleto = decimal.Parse(txtPrecioB.Text);
+                    funcion.funcion_asientos_disponibles = int.Parse(txtAsientos.Text);
+                    funcion.funcion_fecha_creacion = dateFechaCreación.Value;
+                    funcion.funcion_fecha_evento = dateFechaFuncion.Value;
+                    funcion.funcion_horario = int.Parse(comboHorario.SelectedValue.ToString());
+                    funcion.funcion_idioma = int.Parse(comboIdioma.SelectedValue.ToString());
+                    funcion.funcion_sala = int.Parse(comboSala.SelectedValue.ToString());
+                    if (dateFechaFuncion.Value >= DateTime.Now)
                     {
-                        PropiedadesGenerales.FuncionesController.Create(funcion);
-                        PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Pelicula Ingresada");
-                        VistaFunciones_Admin.RellenarFuncionesActivas();
-                        Close();
+                        try
+                        {
+                            PropiedadesGenerales.FuncionesController.Create(funcion);
+                            PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Funcion Ingresada");
+                            VistaFunciones_Admin.RellenarFuncionesActivas();
+                            Close();
+                        }
+                        catch (ControllerException ex)
+                        {
+                            PropiedadesGenerales.Notificar.notificarError(ex);
+                        }
                     }
-                    catch (ControllerException ex)
+                    else
                     {
-                        PropiedadesGenerales.Notificar.notificarError(ex);
+                        PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar Funcion", "La fecha de la fucnión no puede ser anterior al día de hoy ");
                     }
                 }
                 catch (ControllerException ex)
@@ -118,7 +238,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             }
             else
             {
-                PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar cliente", "Ingrese bien los datos");
+                PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar Funcion", "Ingrese bien los datos");
             }
         }
 
@@ -129,23 +249,30 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 Funcion funcionTemp = generarFuncion();
                 if (!funcionTemp.Equals(FuncionActual))
                 {
-                    try
+                    if (dateFechaFuncion.Value >= DateTime.Now)
                     {
-                        if (PropiedadesGenerales.FuncionesController.Update(funcionTemp))
+                        try
                         {
-                            PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Pelicula actualizada");
-                            VistaFunciones_Admin.RellenarFuncionesActivas();
-                            Close();
+                            if (PropiedadesGenerales.FuncionesController.Update(funcionTemp))
+                            {
+                                PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Funcion actualizada");
+                                VistaFunciones_Admin.RellenarFuncionesActivas();
+                                Close();
+                            }
+                            else
+                            {
+                                PropiedadesGenerales.Notificar.notificarFallo("No se consiguio actualizar",
+                                    "Error al actualizar la pelicula");
+                            }
                         }
-                        else
+                        catch (ControllerException ex)
                         {
-                            PropiedadesGenerales.Notificar.notificarFallo("No se consiguio actualizar",
-                                "Error al actualizar la pelicula");
+                            PropiedadesGenerales.Notificar.notificarError(ex);
                         }
                     }
-                    catch (ControllerException ex)
+                    else
                     {
-                        PropiedadesGenerales.Notificar.notificarError(ex);
+                        PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar Funcion", "La fecha de la fucnión no puede ser anterior al día de hoy ");
                     }
                 }
                 else
@@ -155,7 +282,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             }
             else
             {
-                PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar la pelicula", "Ingrese bien los datos");
+                PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar la Funcion", "Ingrese bien los datos");
             }
         }
 
@@ -164,6 +291,15 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
         {
             Funcion funcion = new Funcion()
             {
+                id = FuncionActual.id,
+                funcion_pelicula = int.Parse(comboPelicula.SelectedValue.ToString()),
+                funcion_sala = int.Parse(comboSala.SelectedValue.ToString()),
+                funcion_fecha_evento = dateFechaFuncion.Value,
+                funcion_horario = int.Parse(comboHorario.SelectedValue.ToString()),
+                funcion_estado = txtEstado.Text,
+                funcion_precio_boleto = decimal.Parse(txtPrecioB.Text),
+                funcion_fecha_creacion = dateFechaCreación.Value,
+                funcion_asientos_disponibles = int.Parse(txtAsientos.Text)
             };
             return funcion;
         }
@@ -179,6 +315,10 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 e.Handled = true;
             }
             else if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else
             {
                 e.Handled = true;
             }
@@ -234,7 +374,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             else
             {
                 e.Handled = true;
-            }          
+            }
         }
 
         private void txtAsientos_KeyPress(object sender, KeyPressEventArgs e)

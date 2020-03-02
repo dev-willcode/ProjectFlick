@@ -30,6 +30,7 @@ namespace AppFlickAdministrador.Vistas.Forms
         {
             try
             {
+                panelContenedor.Controls.Clear();
                 List<VistaFunciones> listaFuncionesActivas = PropiedadesGenerales
                     .VFuncionesController.ListarFunciones();
                 listaControles = new List<Elem_funcion>();
