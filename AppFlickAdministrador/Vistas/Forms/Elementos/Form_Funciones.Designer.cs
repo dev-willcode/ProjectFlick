@@ -52,6 +52,7 @@
             this.dateFechaCreación = new System.Windows.Forms.DateTimePicker();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.btnBuscar = new Guna.UI.WinForms.GunaCircleButton();
+            this.comboPelicula = new Guna.UI.WinForms.GunaComboBox();
             this.SuspendLayout();
             // 
             // panel
@@ -165,7 +166,7 @@
             this.txtPelícula.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtPelícula.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPelícula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtPelícula.Location = new System.Drawing.Point(40, 158);
+            this.txtPelícula.Location = new System.Drawing.Point(391, 73);
             this.txtPelícula.Margin = new System.Windows.Forms.Padding(4);
             this.txtPelícula.MaxLength = 30;
             this.txtPelícula.Name = "txtPelícula";
@@ -456,7 +457,7 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::AppFlickAdministrador.Properties.Resources.icon_buscar;
             this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscar.Location = new System.Drawing.Point(363, 158);
+            this.btnBuscar.Location = new System.Drawing.Point(724, 73);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -468,12 +469,38 @@
             this.btnBuscar.TabIndex = 177;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // comboPelicula
+            // 
+            this.comboPelicula.BackColor = System.Drawing.Color.Transparent;
+            this.comboPelicula.BaseColor = System.Drawing.Color.White;
+            this.comboPelicula.BorderColor = System.Drawing.Color.Silver;
+            this.comboPelicula.BorderSize = 0;
+            this.comboPelicula.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboPelicula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboPelicula.FocusedColor = System.Drawing.Color.Empty;
+            this.comboPelicula.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboPelicula.ForeColor = System.Drawing.Color.Black;
+            this.comboPelicula.FormattingEnabled = true;
+            this.comboPelicula.Items.AddRange(new object[] {
+            "pichincha",
+            "machala",
+            "ue"});
+            this.comboPelicula.Location = new System.Drawing.Point(41, 168);
+            this.comboPelicula.Margin = new System.Windows.Forms.Padding(4);
+            this.comboPelicula.Name = "comboPelicula";
+            this.comboPelicula.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.comboPelicula.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.comboPelicula.Radius = 10;
+            this.comboPelicula.Size = new System.Drawing.Size(363, 31);
+            this.comboPelicula.TabIndex = 178;
+            // 
             // Form_Funciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(881, 560);
+            this.Controls.Add(this.comboPelicula);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dateFechaCreación);
             this.Controls.Add(this.gunaLabel2);
@@ -532,5 +559,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaCircleButton btnBuscar;
         public Guna.UI.WinForms.GunaTextBox txtPelícula;
+        private Guna.UI.WinForms.GunaComboBox comboPelicula;
     }
 }
