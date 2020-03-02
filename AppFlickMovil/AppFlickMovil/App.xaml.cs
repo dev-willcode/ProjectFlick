@@ -1,6 +1,7 @@
-﻿using AppFlickMovil.Views;
+﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using AppFlickMovil.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace AppFlickMovil

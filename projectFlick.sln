@@ -16,9 +16,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickAdministrador", "AppFlickAdministrador\AppFlickAdministrador.csproj", "{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickMovil.Android", "AppFlickMovil\AppFlickMovil.Android\AppFlickMovil.Android.csproj", "{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickMovil.Android", "AppFlickMovil\AppFlickMovil.Android\AppFlickMovil.Android.csproj", "{5C7191CB-93DD-4656-9535-384A7CAA2887}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickMovil", "AppFlickMovil\AppFlickMovil\AppFlickMovil.csproj", "{997D35DD-7CE0-46A2-A96B-0DBA70872225}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickMovil", "AppFlickMovil\AppFlickMovil\AppFlickMovil.csproj", "{6B25FD9F-F475-4E44-8594-652B5CBE3C26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,16 +46,16 @@ Global
 		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24CE3C36-16B9-426D-AA0C-5961ECF8D88C}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{997D35DD-7CE0-46A2-A96B-0DBA70872225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{997D35DD-7CE0-46A2-A96B-0DBA70872225}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{997D35DD-7CE0-46A2-A96B-0DBA70872225}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{997D35DD-7CE0-46A2-A96B-0DBA70872225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6B25FD9F-F475-4E44-8594-652B5CBE3C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B25FD9F-F475-4E44-8594-652B5CBE3C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B25FD9F-F475-4E44-8594-652B5CBE3C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B25FD9F-F475-4E44-8594-652B5CBE3C26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

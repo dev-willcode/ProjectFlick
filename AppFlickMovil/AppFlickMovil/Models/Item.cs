@@ -1,4 +1,6 @@
-﻿namespace AppFlickMovil.Models
+﻿using System;
+
+namespace AppFlickMovil.Models
 {
     public class Item
     {

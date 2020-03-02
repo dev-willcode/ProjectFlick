@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 using AppFlickMovil.Models;
 
 namespace AppFlickMovil.ViewModels

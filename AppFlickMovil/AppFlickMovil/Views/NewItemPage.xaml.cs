@@ -1,7 +1,10 @@
 ﻿using System;
-using AppFlickMovil.Models;
+using System.Collections.Generic;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
+using AppFlickMovil.Models;
 
 namespace AppFlickMovil.Views
 {
@@ -26,11 +29,6 @@ namespace AppFlickMovil.Views
         async void Save_Clicked(object sender, EventArgs e)
         {
             MessagingCenter.Send(this, "AddItem", Item);
-            await Navigation.PopModalAsync();
-        }
-
-        async void Cancel_Clicked(object sender, EventArgs e)
-        {
             await Navigation.PopModalAsync();
         }
     }

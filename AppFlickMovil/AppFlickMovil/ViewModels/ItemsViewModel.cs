@@ -2,9 +2,11 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
+
+using Xamarin.Forms;
+
 using AppFlickMovil.Models;
 using AppFlickMovil.Views;
-using Xamarin.Forms;
 
 namespace AppFlickMovil.ViewModels
 {
@@ -21,7 +23,7 @@ namespace AppFlickMovil.ViewModels
 
             MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
             {
-                Item newItem = item as Item;
+                var newItem = item as Item;
                 Items.Add(newItem);
                 await DataStore.AddItemAsync(newItem);
             });
@@ -30,17 +32,15 @@ namespace AppFlickMovil.ViewModels
         async Task ExecuteLoadItemsCommand()
         {
             if (IsBusy)
-            {
                 return;
-            }
 
             IsBusy = true;
 
             try
             {
                 Items.Clear();
-                System.Collections.Generic.IEnumerable<Item> items = await DataStore.GetItemsAsync(true);
-                foreach (Item item in items)
+                var items = await DataStore.GetItemsAsync(true);
+                foreach (var item in items)
                 {
                     Items.Add(item);
                 }

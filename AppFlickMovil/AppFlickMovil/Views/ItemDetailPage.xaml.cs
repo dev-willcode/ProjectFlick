@@ -1,8 +1,10 @@
-﻿
-using AppFlickMovil.Models;
-using AppFlickMovil.ViewModels;
+﻿using System;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
+using AppFlickMovil.Models;
+using AppFlickMovil.ViewModels;
 
 namespace AppFlickMovil.Views
 {
@@ -22,7 +24,7 @@ namespace AppFlickMovil.Views
         {
             InitializeComponent();
 
-            Item item = new Item
+            var item = new Item
             {
                 Text = "Item 1",
                 Description = "This is an item description."
