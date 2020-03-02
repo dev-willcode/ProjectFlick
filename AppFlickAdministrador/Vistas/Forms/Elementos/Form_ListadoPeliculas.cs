@@ -16,20 +16,36 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
         public Form_ListadoPeliculas()
         {
             InitializeComponent();
+            DisenoTabla();
             MostrarPeliculas();
             this.CenterToParent();
         }
 
+        private void DisenoTabla()
+        {
+            tablaPeliculas.AutoResizeColumns();
+            tablaPeliculas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            tablaPeliculas.BackgroundColor = Color.FromArgb(45, 45, 45);
+            tablaPeliculas.ForeColor = Color.White;
+            tablaPeliculas.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(12, 109, 237);
+            tablaPeliculas.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            tablaPeliculas.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 45, 45);
+            tablaPeliculas.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            tablaPeliculas.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tablaPeliculas.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+        }
         private void MostrarPeliculas()
-        {          
+        {
             tablaPeliculas.DataSource = PropiedadesGenerales.PeliculaPController.ListarPeliculas();
         }
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            string titulo = tablaPeliculas.CurrentRow.Cells[0].Value.ToString();
+            string idTitulo = tablaPeliculas.CurrentRow.Cells[0].Value.ToString();
+            string titulo = tablaPeliculas.CurrentRow.Cells[1].Value.ToString();
             Form_Funciones form = (Form_Funciones)Application.OpenForms["Form_Funciones"];
-            form.txtPelícula.Text = titulo;
+            form.txtidPelícula.Text = idTitulo;
+            form.txtTituloP.Text = titulo;
             Close();
         }
     }

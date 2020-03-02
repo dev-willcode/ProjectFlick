@@ -21,7 +21,7 @@ namespace Controllers.DAO
                         new List<object>() {
                         Entidad.usuario_username,
                         Entidad.usuario_password,
-                    Entidad.usuario_perfil == 0 ? DBNull.Value : (object)Entidad.usuario_perfil }
+                        Entidad.usuario_perfil == 0 ? DBNull.Value : (object)Entidad.usuario_perfil }
                         );
 
                     return Procedimientos.evaluarInsercción(cmd);
@@ -36,7 +36,18 @@ namespace Controllers.DAO
 
         public override bool Delete(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BorrarUsuario"))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+                    return Procedimientos.evaluarEliminacion<Usuario>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ControllerException("No se consiguió eliminar al usuario", ex);
+            }
         }
 
         public override Usuario Get(int id)
@@ -58,7 +69,31 @@ namespace Controllers.DAO
 
         public override bool Update(Usuario Entidad)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_ActualizarUsuario"))
+                {
+                    Procedimientos.agregarParametros(cmd,
+                      new List<object>() {
+                        "@id",
+                        "@usuario_username",
+                        "@usuario_password",
+                        "@usuario_perfil" },
+                        new List<object>() {
+                        Entidad.id,
+                        Entidad.usuario_username,
+                        Entidad.usuario_password,
+                        Entidad.usuario_perfil}
+                        );
+
+                    return Procedimientos.evaluarActualizacion(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguió actualizar el usuario", ex);
+            }
         }
     }
 }

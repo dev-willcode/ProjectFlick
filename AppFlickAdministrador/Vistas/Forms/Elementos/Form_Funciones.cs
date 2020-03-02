@@ -47,7 +47,6 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             cargarHorarios();
             cargarIdiomas();
             cargarSalas();
-            cargarPelicula();
             if (Accion.Equals(Constantes.accionEditar))
             {
                 cargarDatos();
@@ -99,24 +98,10 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             }
         }
 
-        private void cargarPelicula()
-        {
-            try
-            {
-                List<Pelicula> lista = PropiedadesGenerales.VPeliculasController.ListarPeliculas();
-                comboPelicula.DataSource = lista;
-                comboPelicula.DisplayMember = "pelicula_titulo";
-                comboPelicula.ValueMember = "id";
-            }
-            catch (ControllerException ex)
-            {
-                PropiedadesGenerales.Notificar.notificarError(ex);
-            }
-        }
-
         private void cargarDatos()
         {
-            txtPelícula.Text = VFuncionActual.pelicula_titulo;
+            txtidPelícula.Text = VFuncionActual.id.ToString();
+            txtTituloP.Text = VFuncionActual.pelicula_titulo;
             txtEstado.Text = VFuncionActual.funcion_estado;
             txtPrecioB.Text = VFuncionActual.funcion_precio_boleto.ToString();
             txtAsientos.Text = VFuncionActual.funcion_asientos_disponibles.ToString();
@@ -153,13 +138,6 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                         return combobox.Items.IndexOf(item);
                     }
                 }
-                else if (item.GetType() == typeof(Pelicula))
-                {
-                    if ((item as Pelicula).pelicula_titulo.Equals(value))
-                    {
-                        return combobox.Items.IndexOf(item);
-                    }
-                }
                 else
                 {
                     if ((item as Sala_Cine).sala_nombre.Equals(value))
@@ -174,10 +152,10 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
         private bool ValidarCamposFuncion()
         {
             string errores = "";
-            /*if (string.IsNullOrEmpty(txtPelícula.Text))
+            if (string.IsNullOrEmpty(txtidPelícula.Text))
             {
                 errores += " - Busque un nombre de la pelicula" + Environment.NewLine;
-            }*/
+            }
             if (string.IsNullOrEmpty(txtEstado.Text))
             {
                 errores += " - Ingrese el estado de la pelicula" + Environment.NewLine;
@@ -202,7 +180,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 try
                 {
                     Funcion funcion = new Funcion();
-                    funcion.funcion_pelicula = int.Parse(comboPelicula.SelectedValue.ToString());
+                    funcion.funcion_pelicula = int.Parse(txtidPelícula.Text);
                     funcion.funcion_estado = txtEstado.Text;
                     funcion.funcion_precio_boleto = decimal.Parse(txtPrecioB.Text);
                     funcion.funcion_asientos_disponibles = int.Parse(txtAsientos.Text);
@@ -291,37 +269,18 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
         {
             Funcion funcion = new Funcion()
             {
-                id = FuncionActual.id,
-                funcion_pelicula = int.Parse(comboPelicula.SelectedValue.ToString()),
+                id = VFuncionActual.id,
+                funcion_pelicula = int.Parse(txtidPelícula.Text),
                 funcion_sala = int.Parse(comboSala.SelectedValue.ToString()),
                 funcion_fecha_evento = dateFechaFuncion.Value,
                 funcion_horario = int.Parse(comboHorario.SelectedValue.ToString()),
                 funcion_estado = txtEstado.Text,
                 funcion_precio_boleto = decimal.Parse(txtPrecioB.Text),
                 funcion_fecha_creacion = dateFechaCreación.Value,
+                funcion_idioma = int.Parse(comboIdioma.SelectedValue.ToString()),
                 funcion_asientos_disponibles = int.Parse(txtAsientos.Text)
             };
             return funcion;
-        }
-
-        private void txtPelícula_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsLetter(e.KeyChar) || char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else if (Char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-            else
-            {
-                e.Handled = true;
-            }
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

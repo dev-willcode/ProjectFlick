@@ -69,7 +69,7 @@ namespace Controllers.Controller
         {
             UsuarioDAO UsuarioDAO = new UsuarioDAO();
             ClienteDAO ClienteDAO = new ClienteDAO();
-            usuario.usuario_perfil = 1; // Perfil 1 para clientes
+            usuario.usuario_perfil = 0; // Perfil nulo para clientes
             int idInsertada = UsuarioDAO.Create(usuario); // Crea el usuario y devuelve la id generada.
 
             // Se creó correctamente el usuario, cree el cliente y asignelo

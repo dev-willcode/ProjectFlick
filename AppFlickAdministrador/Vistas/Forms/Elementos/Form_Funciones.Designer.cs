@@ -34,7 +34,7 @@
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.txtEstado = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
-            this.txtPelícula = new Guna.UI.WinForms.GunaTextBox();
+            this.txtidPelícula = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.txtPrecioB = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
@@ -52,7 +52,7 @@
             this.dateFechaCreación = new System.Windows.Forms.DateTimePicker();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.btnBuscar = new Guna.UI.WinForms.GunaCircleButton();
-            this.comboPelicula = new Guna.UI.WinForms.GunaComboBox();
+            this.txtTituloP = new Guna.UI.WinForms.GunaTextBox();
             this.SuspendLayout();
             // 
             // panel
@@ -154,28 +154,28 @@
             this.gunaLabel6.TabIndex = 163;
             this.gunaLabel6.Text = "Sala";
             // 
-            // txtPelícula
+            // txtidPelícula
             // 
-            this.txtPelícula.BackColor = System.Drawing.Color.Transparent;
-            this.txtPelícula.BaseColor = System.Drawing.Color.White;
-            this.txtPelícula.BorderColor = System.Drawing.Color.White;
-            this.txtPelícula.BorderSize = 0;
-            this.txtPelícula.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPelícula.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
-            this.txtPelícula.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtPelícula.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtPelícula.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPelícula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
-            this.txtPelícula.Location = new System.Drawing.Point(391, 73);
-            this.txtPelícula.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPelícula.MaxLength = 30;
-            this.txtPelícula.Name = "txtPelícula";
-            this.txtPelícula.PasswordChar = '\0';
-            this.txtPelícula.Radius = 10;
-            this.txtPelícula.Size = new System.Drawing.Size(315, 39);
-            this.txtPelícula.TabIndex = 161;
-            this.txtPelícula.TextOffsetX = 2;
-            this.txtPelícula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPelícula_KeyPress);
+            this.txtidPelícula.BackColor = System.Drawing.Color.Transparent;
+            this.txtidPelícula.BaseColor = System.Drawing.Color.White;
+            this.txtidPelícula.BorderColor = System.Drawing.Color.White;
+            this.txtidPelícula.BorderSize = 0;
+            this.txtidPelícula.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtidPelícula.Enabled = false;
+            this.txtidPelícula.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtidPelícula.FocusedBorderColor = System.Drawing.Color.White;
+            this.txtidPelícula.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.txtidPelícula.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtidPelícula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.txtidPelícula.Location = new System.Drawing.Point(41, 165);
+            this.txtidPelícula.Margin = new System.Windows.Forms.Padding(4);
+            this.txtidPelícula.MaxLength = 30;
+            this.txtidPelícula.Name = "txtidPelícula";
+            this.txtidPelícula.PasswordChar = '\0';
+            this.txtidPelícula.Radius = 10;
+            this.txtidPelícula.Size = new System.Drawing.Size(46, 39);
+            this.txtidPelícula.TabIndex = 161;
+            this.txtidPelícula.TextOffsetX = 2;
             // 
             // gunaLabel5
             // 
@@ -457,7 +457,7 @@
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
             this.btnBuscar.Image = global::AppFlickAdministrador.Properties.Resources.icon_buscar;
             this.btnBuscar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnBuscar.Location = new System.Drawing.Point(724, 73);
+            this.btnBuscar.Location = new System.Drawing.Point(363, 165);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -469,30 +469,28 @@
             this.btnBuscar.TabIndex = 177;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // comboPelicula
+            // txtTituloP
             // 
-            this.comboPelicula.BackColor = System.Drawing.Color.Transparent;
-            this.comboPelicula.BaseColor = System.Drawing.Color.White;
-            this.comboPelicula.BorderColor = System.Drawing.Color.Silver;
-            this.comboPelicula.BorderSize = 0;
-            this.comboPelicula.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboPelicula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboPelicula.FocusedColor = System.Drawing.Color.Empty;
-            this.comboPelicula.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboPelicula.ForeColor = System.Drawing.Color.Black;
-            this.comboPelicula.FormattingEnabled = true;
-            this.comboPelicula.Items.AddRange(new object[] {
-            "pichincha",
-            "machala",
-            "ue"});
-            this.comboPelicula.Location = new System.Drawing.Point(41, 168);
-            this.comboPelicula.Margin = new System.Windows.Forms.Padding(4);
-            this.comboPelicula.Name = "comboPelicula";
-            this.comboPelicula.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
-            this.comboPelicula.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.comboPelicula.Radius = 10;
-            this.comboPelicula.Size = new System.Drawing.Size(363, 31);
-            this.comboPelicula.TabIndex = 178;
+            this.txtTituloP.BackColor = System.Drawing.Color.Transparent;
+            this.txtTituloP.BaseColor = System.Drawing.Color.White;
+            this.txtTituloP.BorderColor = System.Drawing.Color.White;
+            this.txtTituloP.BorderSize = 0;
+            this.txtTituloP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTituloP.Enabled = false;
+            this.txtTituloP.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtTituloP.FocusedBorderColor = System.Drawing.Color.White;
+            this.txtTituloP.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.txtTituloP.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTituloP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            this.txtTituloP.Location = new System.Drawing.Point(95, 165);
+            this.txtTituloP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTituloP.MaxLength = 30;
+            this.txtTituloP.Name = "txtTituloP";
+            this.txtTituloP.PasswordChar = '\0';
+            this.txtTituloP.Radius = 10;
+            this.txtTituloP.Size = new System.Drawing.Size(260, 39);
+            this.txtTituloP.TabIndex = 178;
+            this.txtTituloP.TextOffsetX = 2;
             // 
             // Form_Funciones
             // 
@@ -500,7 +498,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(881, 560);
-            this.Controls.Add(this.comboPelicula);
+            this.Controls.Add(this.txtTituloP);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.dateFechaCreación);
             this.Controls.Add(this.gunaLabel2);
@@ -514,7 +512,7 @@
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.gunaLabel7);
             this.Controls.Add(this.gunaLabel6);
-            this.Controls.Add(this.txtPelícula);
+            this.Controls.Add(this.txtidPelícula);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.txtPrecioB);
             this.Controls.Add(this.gunaLabel4);
@@ -558,7 +556,7 @@
         private System.Windows.Forms.DateTimePicker dateFechaCreación;
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaCircleButton btnBuscar;
-        public Guna.UI.WinForms.GunaTextBox txtPelícula;
-        private Guna.UI.WinForms.GunaComboBox comboPelicula;
+        public Guna.UI.WinForms.GunaTextBox txtidPelícula;
+        public Guna.UI.WinForms.GunaTextBox txtTituloP;
     }
 }

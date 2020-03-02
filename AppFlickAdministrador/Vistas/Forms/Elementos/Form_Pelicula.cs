@@ -1,10 +1,10 @@
-﻿using System;
-using System.Drawing;
-using Utils;
-using System.Windows.Forms;
+﻿using AppFlickAdministrador.Utils;
 using Controllers;
 using Entity.Entidades;
-using AppFlickAdministrador.Utils;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using Utils;
 
 namespace AppFlickAdministrador.Vistas.Forms.Elementos
 {
@@ -14,6 +14,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
         private readonly Pelicula PeliculaActual;
         private VistaPelicula_Admin VistaPelicula_Admin { get; set; }
         public string Accion { get; set; }
+        public bool cambioImagen { get; set; }
 
         public Form_Pelicula(VistaPelicula_Admin vistaPelicula_Admin, string titulo)
         {
@@ -110,7 +111,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                     pelicula.pelicula_director = txtDirector.Text.ToString();
                     pelicula.pelicula_reparto = txtReparto.Text.ToString();
                     pelicula.pelicula_url_trailer = txtURL.Text.ToString();
-                    pelicula.pelicula_imagen = UtilsProcedimientos.ImageToByteArray(var_imagen_pelicula.Image);                 
+                    pelicula.pelicula_imagen = UtilsProcedimientos.ImageToByteArray(var_imagen_pelicula.Image);
                     try
                     {
                         PropiedadesGenerales.PeliculaController.Create(pelicula);
@@ -185,9 +186,10 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 pelicula_sinopsis = txtSinopsis.Text,
                 pelicula_director = txtDirector.Text,
                 pelicula_reparto = txtReparto.Text,
-                pelicula_url_trailer = txtURL.Text,
-                pelicula_imagen = UtilsProcedimientos.ImageToByteArray(var_imagen_pelicula.Image)
-        };
+                pelicula_url_trailer = txtURL.Text                
+            };
+            if (cambioImagen) pelicula.pelicula_imagen = UtilsProcedimientos.ImageToByteArray(var_imagen_pelicula.Image);
+            else pelicula.pelicula_imagen = PeliculaActual.pelicula_imagen;
             return pelicula;
         }
 
@@ -217,6 +219,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                     Image img = Image.FromFile(SelectorArchivo.FileName);
                     byte[] bitarray = UtilsProcedimientos.ImageToByteArray(img);
                     var_imagen_pelicula.Image = img;
+                    cambioImagen = true;
                 }
             }
             catch (ControllerException ex)

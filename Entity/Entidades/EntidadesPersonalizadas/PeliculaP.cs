@@ -11,12 +11,15 @@ namespace Entity.Entidades.EntidadesPersonalizadas
     {
         public PeliculaP(IDataReader data)
         {
-            Titulo = data["Titulo"].ToString();
-            Titulo_Original = data["Titulo Original"].ToString();
-            Duracion = data["Duracion"].ToString();
-            Censura = data["Censura"].ToString();
-            Director = data["Director"].ToString();          
+            ID = (int)data["funcion_pelicula"];
+            Titulo = data["pelicula_titulo"].ToString();
+            Titulo_Original = data["pelicula_titulo_original"].ToString();
+            Duracion = data["pelicula_duracion"].ToString();
+            Censura = data["pelicula_tipo_censura"].ToString();
+            Director = data["pelicula_director"].ToString();          
         }
+
+        public int ID { get; set; }
 
         public string Titulo { get; set; }
 

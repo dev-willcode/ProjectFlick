@@ -53,7 +53,7 @@
             this.container.Controls.Add(this.var_censura);
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(0, 0);
-            this.container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.container.Margin = new System.Windows.Forms.Padding(4);
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(1197, 666);
             this.container.TabIndex = 0;
@@ -63,7 +63,7 @@
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
             this.panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel.Location = new System.Drawing.Point(0, 0);
-            this.panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel.Margin = new System.Windows.Forms.Padding(4);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(1197, 18);
             this.panel.TabIndex = 61;
@@ -76,7 +76,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.webview.IsWebBrowserContextMenuEnabled = false;
             this.webview.Location = new System.Drawing.Point(48, 108);
-            this.webview.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.webview.Margin = new System.Windows.Forms.Padding(4);
             this.webview.MinimumSize = new System.Drawing.Size(27, 25);
             this.webview.Name = "webview";
             this.webview.ScriptErrorsSuppressed = true;
@@ -92,10 +92,10 @@
             this.var_categoria.CausesValidation = false;
             this.var_categoria.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.var_categoria.ForeColor = System.Drawing.Color.White;
-            this.var_categoria.Location = new System.Drawing.Point(654, 28);
+            this.var_categoria.Location = new System.Drawing.Point(785, 44);
             this.var_categoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.var_categoria.Name = "var_categoria";
-            this.var_categoria.Size = new System.Drawing.Size(392, 46);
+            this.var_categoria.Size = new System.Drawing.Size(315, 46);
             this.var_categoria.TabIndex = 2;
             // 
             // btnCerrar
@@ -104,7 +104,7 @@
             this.btnCerrar.Image = global::AppFlickCliente.Properties.Resources.icon_cerrar;
             this.btnCerrar.ImageSize = new System.Drawing.Size(32, 32);
             this.btnCerrar.Location = new System.Drawing.Point(1105, 39);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.OnHoverImage = null;
             this.btnCerrar.OnHoverImageOffset = new System.Drawing.Point(0, 0);
@@ -169,7 +169,7 @@
             this.ClientSize = new System.Drawing.Size(1197, 666);
             this.Controls.Add(this.container);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Trailer";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

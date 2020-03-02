@@ -1,0 +1,8 @@
+CREATE PROCEDURE SP_BorrarUsuario
+@id int
+AS
+BEGIN
+DELETE FROM Usuario 
+OUTPUT 'ELIMINADO' AS 'RESPONSE'
+WHERE  id = @id
+END

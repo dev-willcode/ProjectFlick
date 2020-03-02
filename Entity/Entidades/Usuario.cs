@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 
 namespace Entity.Entidades
 {
@@ -13,7 +14,9 @@ namespace Entity.Entidades
             id = (int)data["id"];
             usuario_username = data["usuario_username"].ToString();
             usuario_password = data["usuario_password"].ToString();
-            usuario_perfil = (int)data["usuario_perfil"];
+            usuario_perfil = data["usuario_perfil"].GetType().Equals(typeof(DBNull)) ?
+               0 : (int)data["usuario_perfil"];
+  
         }
 
         public int id { get; set; }
