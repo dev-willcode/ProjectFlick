@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AppFlickAdministrador.Reports {
+namespace Controllers.Reportes.CRObjects {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace AppFlickAdministrador.Reports {
         
         public override string FullResourceName {
             get {
-                return "AppFlickAdministrador.Reports.RPFacturaDatos.rpt";
+                return "Controllers.Reportes.CRObjects.RPFacturaDatos.rpt";
             }
             set {
                 // Do nothing

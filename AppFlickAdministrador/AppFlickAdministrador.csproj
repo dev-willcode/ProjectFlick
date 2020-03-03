@@ -63,20 +63,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Reports\DataSets\DSFacturaDatos.cs">
-      <DependentUpon>DSFacturaDatos.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\DataSets\DSFacturaDatos.Designer.cs">
-      <DependentUpon>DSFacturaDatos.xsd</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="Reports\RPFacturaDatos.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RPFacturaDatos.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Utils\Constantes.cs" />
     <Compile Include="Utils\PropiedadesGenerales.cs" />
     <Compile Include="Utils\UtilsProcedimientos.cs" />
@@ -221,10 +207,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RPFacturaDatos.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RPFacturaDatos.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Forms\Elementos\Elem_Empleado.resx">
       <DependentUpon>Elem_Empleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,17 +335,6 @@
     <Content Include="Resources\images\tarjeta_imagen.png" />
     <Content Include="Resources\images\tarjeta_nueva.png" />
     <Content Include="Resources\images\usuario_muestra.jpg" />
-    <None Include="Reports\DataSets\DSFacturaDatos.xsc">
-      <DependentUpon>DSFacturaDatos.xsd</DependentUpon>
-    </None>
-    <None Include="Reports\DataSets\DSFacturaDatos.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSFacturaDatos.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Reports\DataSets\DSFacturaDatos.xss">
-      <DependentUpon>DSFacturaDatos.xsd</DependentUpon>
-    </None>
     <None Include="Resources\images\landing-page2.jpg" />
     <None Include="Resources\images\landing-page_min.jpg" />
     <None Include="Resources\images\landing-page.jpg" />

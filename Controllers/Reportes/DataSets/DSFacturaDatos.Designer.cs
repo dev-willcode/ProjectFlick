@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace AppFlickCliente.Reports.DataSets {
+namespace Controllers.Reportes.DataSets {
     
     
     /// <summary>
@@ -2388,7 +2388,7 @@ namespace AppFlickCliente.Reports.DataSets {
         }
     }
 }
-namespace AppFlickCliente.Reports.DataSets.DSFacturaDatosTableAdapters {
+namespace Controllers.Reportes.DataSets.DSFacturaDatosTableAdapters {
     
     
     /// <summary>
@@ -2537,7 +2537,7 @@ namespace AppFlickCliente.Reports.DataSets.DSFacturaDatosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AppFlickCliente.Properties.Settings.Default.cinedbConnectionString;
+            this._connection.ConnectionString = global::Controllers.Properties.Settings.Default.cinedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2710,7 +2710,7 @@ namespace AppFlickCliente.Reports.DataSets.DSFacturaDatosTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AppFlickCliente.Properties.Settings.Default.cinedbConnectionString;
+            this._connection.ConnectionString = global::Controllers.Properties.Settings.Default.cinedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2953,7 +2953,7 @@ SELECT id, empresa_razon_social, empresa_numero_contribuyente, empresa_numero_au
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AppFlickCliente.Properties.Settings.Default.cinedbConnectionString;
+            this._connection.ConnectionString = global::Controllers.Properties.Settings.Default.cinedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
