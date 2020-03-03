@@ -1,4 +1,5 @@
 ﻿using System;
+using AppXamarin.Init;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace AppXamarin
         {
             XF.Material.Forms.Material.Init(this);
             InitializeComponent();
-            MainPage = new MainPage();
+            MainPage = new Login();
         }
 
         protected override void OnStart()

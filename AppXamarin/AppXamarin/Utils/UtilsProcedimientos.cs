@@ -1,21 +1,38 @@
 ﻿using System.IO;
+using AppXamarin.Models;
 using Xamarin.Forms;
 
 namespace AppFlickCliente.Utils
 {
     public class UtilsProcedimientos
     {
-        public static ImageSource generarImageSourcen(byte[] pelicula_ImageSource)
+        public static ImageSource generarImagenBytes(byte[] sourceStream, System.Type clase)
         {
-            if (pelicula_ImageSource == null)
+            if (clase == typeof(VistaFuncionesModel))
             {
-                return ImageSource.FromFile("pelicula_muestra.jpg");
+                if (sourceStream == null)
+                {
+                    return ImageSource.FromFile("pelicula_muestra.jpg");
+                }
+                else
+                {
+                    MemoryStream stream = new MemoryStream(sourceStream);
+                    return ImageSource.FromStream(() => stream);
+                }
             }
-            else
+            if (clase == typeof(VistaClienteModel))
             {
-                MemoryStream stream = new MemoryStream(pelicula_ImageSource);
-                return ImageSource.FromStream(() => stream);
+                if (sourceStream == null)
+                {
+                    return ImageSource.FromFile("usuario_muestra.jpg");
+                }
+                else
+                {
+                    MemoryStream stream = new MemoryStream(sourceStream);
+                    return ImageSource.FromStream(() => stream);
+                }
             }
+            return null;
         }
     }
 }

@@ -32,7 +32,7 @@
                     </Image>
                 </Frame>
                 <!-- INFORMACION DE LA CUENTA -->
-                <StackLayout Padding="30,0,30,0" BindingContext="Cliente">
+                <StackLayout Padding="30,0,30,0">
                     <material:MaterialTextField 
                     HeightRequest="50"
                     BackgroundColor="#1D1D1D"
@@ -43,8 +43,7 @@
                     InputType="Plain"
                     Placeholder="Cedula" 
                     x:Name="txtCedula"
-                        BindingContext="{Binding Cliente}"
-                        Text="{Binding cliente_cedula}"
+                    Text="{Binding cliente_cedula}"
                 />
                     <material:MaterialTextField 
                     HeightRequest="50"
@@ -56,6 +55,7 @@
                     InputType="Plain"
                     Placeholder="Apellidos" 
                     x:Name="txtApellido"
+                    Text="{Binding cliente_apellidos}"
                 />
                     <material:MaterialTextField 
                     HeightRequest="50"
@@ -67,6 +67,7 @@
                     InputType="Plain"
                     Placeholder="Nombres" 
                     x:Name="txtNombres"
+                    Text="{Binding cliente_nombres}"
                 />
                     <material:MaterialTextField 
                     HeightRequest="50"
@@ -78,6 +79,7 @@
                     InputType="Plain"
                     Placeholder="Telefono" 
                     x:Name="txtTelefono"
+                    Text="{Binding cliente_telefono}"
                 />
                     <material:MaterialTextField 
                     HeightRequest="50"
@@ -89,6 +91,7 @@
                     InputType="Plain"
                     Placeholder="Email" 
                     x:Name="txtEmail"
+                    Text="{Binding cliente_email}"
                 />
                     <material:MaterialTextField 
                     HeightRequest="50"
@@ -100,6 +103,7 @@
                     InputType="Plain"
                     Placeholder="Direccion" 
                     x:Name="txtDireccion"
+                    Text="{Binding cliente_direccion}"
                 />
                 </StackLayout>
             </StackLayout>
