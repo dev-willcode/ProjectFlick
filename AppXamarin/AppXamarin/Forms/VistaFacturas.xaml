@@ -1,14 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppXamarin.Forms.VistaFacturas"
-             Title="Facturas"
-             IconImageSource="R.drawable/icon_factura">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AppXamarin.Forms.VistaFacturas" Title="Facturas" BackgroundColor="#1D1D1D" IconImageSource="R.drawable/icon_factura">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Facturas!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <!-- BARRA SUPERIOR -->
+            <StackLayout Padding="20,10,0,15" Orientation="Horizontal" BackgroundColor="#1E4B8C">
+                <Image HeightRequest="18.5" Source="R.drawable/icon_funciones"></Image>
+                <Label Text="Funciones" TextColor="White" FontSize="18.5" VerticalTextAlignment="Center" Padding="8,0,0,0">
+                </Label>
+            </StackLayout>
+            <!-- LISTADO -->
+            <ListView x:Name="ListadoFunciones" ItemsSource="{Binding Items}" SeparatorVisibility="Default" SeparatorColor="##333333" RowHeight="110" CachingStrategy="RecycleElement">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="20,10,0,15" Orientation="Horizontal">
+                                <Image Source="{Binding imagen_generada}" HeightRequest="100.0">
+                                </Image>
+                                <!--DATOS DE LA FUNCION -->
+                                <StackLayout Spacing="0" Margin="8,0,10,0">
+                                    <Label Text="{Binding pelicula_titulo}" TextColor="#FFBD2E" FontSize="16.0">
+                                    </Label>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout>
+                                            <Label TextColor="Gray" FontSize="16.0">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="Fecha: " />
+                                                        <Span Text="{Binding funcion_fecha_evento}"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                            <Label TextColor="White" FontSize="14.0">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="{Binding horario_inicio}"/>
+                                                        <Span Text=" - "/>
+                                                        <Span Text="{Binding idioma_abreviatura}"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                            <Label TextColor="White" FontSize="14.0">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="N° Factura: " />
+                                                        <Span Text="{Binding factura_numero}"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Label Text="Valor total"></Label>
+                                            <Label TextColor="White" FontSize="14.0">
+                                                <Label.FormattedText>
+                                                    <FormattedString>
+                                                        <Span Text="$" />
+                                                        <Span Text="{Binding valor_total}"/>
+                                                    </FormattedString>
+                                                </Label.FormattedText>
+                                            </Label>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
