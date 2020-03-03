@@ -89,10 +89,10 @@
       <DependentUpon>DSFacturaDatos.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reports\RPFacturaDatos.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>RPFacturaDatos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="Utils\PropiedadesGenerales.cs" />
     <Compile Include="Utils\UtilsProcedimientos.cs" />

@@ -20,6 +20,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
 
         string pdfFile = "D:\\ProyectoPA\\Reportes\\ReporteFactura.pdf";
 
+
         public FormFacturaDatos_Cliente()
         {
             InitializeComponent();
