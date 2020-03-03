@@ -5,6 +5,7 @@ namespace Entity.Entidades.EntidadesPersonalizadas
 {
     public class VistaFunciones : Entidad
     {
+        public VistaFunciones() { }
         public VistaFunciones(SqlDataReader data)
         {
             id = (int)data["id"];
