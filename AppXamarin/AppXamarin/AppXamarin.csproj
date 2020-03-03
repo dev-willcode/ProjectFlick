@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Forms\NewFolder\**" />
+    <EmbeddedResource Remove="Forms\NewFolder\**" />
+    <None Remove="Forms\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
   </ItemGroup>
 
@@ -28,9 +34,5 @@
     <EmbeddedResource Update="Forms\VistaFunciones.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Forms\NewFolder\" />
   </ItemGroup>
 </Project>

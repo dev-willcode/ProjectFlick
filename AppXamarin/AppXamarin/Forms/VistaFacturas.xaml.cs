@@ -30,14 +30,14 @@ namespace AppXamarin.Forms
                 {
                     id = 1
                 };
-
+                Items = new ObservableCollection<VistaFacturaModel>();
                 List<VistaFacturaFuncion> lista = PropiedadesGenerales.VFacturaFuncionController
                     .ListarFacturas(PropiedadesGenerales.ClienteActual.id);
                 lista.ForEach(factura =>
                 {
                     Items.Add(new VistaFacturaModel(factura));
                 });
-                ListadoFunciones.ItemsSource = Items;
+                ListadoFacturas.ItemsSource = Items;
             }
             catch (ControllerException ex)
             {
