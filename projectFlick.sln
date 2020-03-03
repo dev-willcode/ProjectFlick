@@ -16,9 +16,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickAdministrador", "AppFlickAdministrador\AppFlickAdministrador.csproj", "{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickMovil.Android", "AppFlickMovil\AppFlickMovil.Android\AppFlickMovil.Android.csproj", "{5C7191CB-93DD-4656-9535-384A7CAA2887}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppXamarin.Android", "AppXamarin\AppXamarin.Android\AppXamarin.Android.csproj", "{2CD3CA4E-0468-4D0E-A958-E8F48AEB4189}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickMovil", "AppFlickMovil\AppFlickMovil\AppFlickMovil.csproj", "{6B25FD9F-F475-4E44-8594-652B5CBE3C26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppXamarin", "AppXamarin\AppXamarin\AppXamarin.csproj", "{96FA2995-E215-49B5-944E-917B9FDB8FFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,16 +46,16 @@ Global
 		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C7191CB-93DD-4656-9535-384A7CAA2887}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{6B25FD9F-F475-4E44-8594-652B5CBE3C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B25FD9F-F475-4E44-8594-652B5CBE3C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B25FD9F-F475-4E44-8594-652B5CBE3C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B25FD9F-F475-4E44-8594-652B5CBE3C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD3CA4E-0468-4D0E-A958-E8F48AEB4189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD3CA4E-0468-4D0E-A958-E8F48AEB4189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD3CA4E-0468-4D0E-A958-E8F48AEB4189}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2CD3CA4E-0468-4D0E-A958-E8F48AEB4189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD3CA4E-0468-4D0E-A958-E8F48AEB4189}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD3CA4E-0468-4D0E-A958-E8F48AEB4189}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{96FA2995-E215-49B5-944E-917B9FDB8FFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96FA2995-E215-49B5-944E-917B9FDB8FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96FA2995-E215-49B5-944E-917B9FDB8FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96FA2995-E215-49B5-944E-917B9FDB8FFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

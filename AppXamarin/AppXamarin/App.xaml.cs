@@ -1,18 +1,15 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using AppFlickMovil.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace AppFlickMovil
+namespace AppXamarin
 {
     public partial class App : Application
     {
-
         public App()
         {
             InitializeComponent();
-
 
             MainPage = new MainPage();
         }
