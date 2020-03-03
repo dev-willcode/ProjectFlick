@@ -10,7 +10,6 @@ namespace AppXamarin
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 

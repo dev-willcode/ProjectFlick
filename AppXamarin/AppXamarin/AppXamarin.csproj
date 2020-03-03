@@ -12,4 +12,16 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
   </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Forms\VistaCuenta.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\VistaFacturas.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Forms\VistaFunciones.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
