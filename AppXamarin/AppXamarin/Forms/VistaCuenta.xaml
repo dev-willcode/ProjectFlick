@@ -1,14 +1,103 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:material="clr-namespace:XF.Material.Forms.UI;assembly=XF.Material"
              x:Class="AppXamarin.Forms.VistaCuenta"
              Title="Cuenta"
+             BackgroundColor="#1D1D1D"
              IconImageSource="R.drawable/icon_home">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Cuenta!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+            <!-- BARRA SUPERIOR -->
+            <StackLayout Padding="20,10,0,15" Orientation="Horizontal" BackgroundColor="#1E4B8C">
+                <Image HeightRequest="18.5" Source="R.drawable/icon_home"></Image>
+                <Label Text="Mi cuenta" TextColor="White" FontSize="18.5" VerticalTextAlignment="Center" Padding="8,0,0,0">
+                </Label>
+            </StackLayout>
+
+            <Frame Margin="0,20,0,0"
+                   Padding="0"
+                   BackgroundColor="#1D1D1D"
+                   CornerRadius="200"
+                   WidthRequest="200"
+                   HeightRequest="200"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   IsClippedToBounds="True">
+                <Image Source="R.drawable/usuario_muestra"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center">
+                </Image>
+            </Frame>
+            <StackLayout Padding="30,0,30,0">
+                <material:MaterialTextField 
+                    HeightRequest="50"
+                    BackgroundColor="#1D1D1D"
+                    TextColor="White"
+                    TintColor="#1E4B8C"
+                    PlaceholderColor="Gray"
+                    FloatingPlaceholderColor="#1E4B8C"
+                    InputType="Plain"
+                    Placeholder="Cedula" 
+                    Text="{Binding cliente_cedula}"
+                />
+                <material:MaterialTextField 
+                    HeightRequest="50"
+                    BackgroundColor="#1D1D1D"
+                    TextColor="White"
+                    TintColor="#1E4B8C"
+                    PlaceholderColor="Gray"
+                    FloatingPlaceholderColor="#1E4B8C"
+                    InputType="Plain"
+                    Placeholder="Apellidos" 
+                    Text="{Binding cliente_apellidos}"
+                />
+                <material:MaterialTextField 
+                    HeightRequest="50"
+                    BackgroundColor="#1D1D1D"
+                    TextColor="White"
+                    TintColor="#1E4B8C"
+                    PlaceholderColor="Gray"
+                    FloatingPlaceholderColor="#1E4B8C"
+                    InputType="Plain"
+                    Placeholder="Nombres" 
+                    Text="{Binding cliente_nombres}"
+                />
+                <material:MaterialTextField 
+                    HeightRequest="50"
+                    BackgroundColor="#1D1D1D"
+                    TextColor="White"
+                    TintColor="#1E4B8C"
+                    PlaceholderColor="Gray"
+                    FloatingPlaceholderColor="#1E4B8C"
+                    InputType="Plain"
+                    Placeholder="Telefono" 
+                    Text="{Binding cliente_telefono}"
+                />
+                <material:MaterialTextField 
+                    HeightRequest="50"
+                    BackgroundColor="#1D1D1D"
+                    TextColor="White"
+                    TintColor="#1E4B8C"
+                    PlaceholderColor="Gray"
+                    FloatingPlaceholderColor="#1E4B8C"
+                    InputType="Plain"
+                    Placeholder="Email" 
+                    Text="{Binding cliente_email}"
+                />
+                <material:MaterialTextField 
+                    HeightRequest="50"
+                    BackgroundColor="#1D1D1D"
+                    TextColor="White"
+                    TintColor="#1E4B8C"
+                    PlaceholderColor="Gray"
+                    FloatingPlaceholderColor="#1E4B8C"
+                    InputType="Plain"
+                    Placeholder="Direccion" 
+                    Text="{Binding cliente_direccion}"
+                />
+            </StackLayout>
+            <Button BackgroundColor="#206FBA" TextColor="White" Text="Cerrar sesión" CornerRadius="20" Margin="20,10"></Button>
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>

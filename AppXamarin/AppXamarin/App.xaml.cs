@@ -9,6 +9,7 @@ namespace AppXamarin
     {
         public App()
         {
+            XF.Material.Forms.Material.Init(this);
             InitializeComponent();
             MainPage = new MainPage();
         }
