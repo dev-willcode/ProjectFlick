@@ -1,4 +1,5 @@
 ﻿using AppXamarin.Models;
+using AppXamarin.Utils;
 using Controllers;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,10 @@ namespace AppXamarin.Forms
         public VistaFunciones()
         {
             InitializeComponent();
-            cargarFunciones();
+            CargarFunciones();
         }
 
-        private void cargarFunciones()
+        private async void CargarFunciones()
         {
             try
             {
@@ -34,7 +35,7 @@ namespace AppXamarin.Forms
             }
             catch (ControllerException ex)
             {
-                // hacer validacion
+                await UtilsNotificaciones.NotificarFallo(this,ex);
             }
         }
 

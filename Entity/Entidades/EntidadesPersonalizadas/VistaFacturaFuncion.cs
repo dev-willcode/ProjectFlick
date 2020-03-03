@@ -5,6 +5,10 @@ namespace Entity.Entidades.EntidadesPersonalizadas
 {
     public class VistaFacturaFuncion : Entidad
     {
+        public VistaFacturaFuncion()
+        {
+        }
+
         public VistaFacturaFuncion(SqlDataReader data)
         {
             id = (int)data["id"];
