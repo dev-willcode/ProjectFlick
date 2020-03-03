@@ -7,7 +7,7 @@ namespace Controllers.Utilidades
     public class Configuraciones
     {
         public const string cadenaConexion =
-            "Server=34.73.156.254;Database=cinedb;Uid=sqlserver;Pwd=admin;";
+            "Server=34.74.3.129;Database=cinedb;Uid=sqlserver;Pwd=admin123!;";
 
         public const string cadenaConexionLocal =
             "Data Source=.;Initial Catalog=cinedb;User ID=will;Password=admin123!";

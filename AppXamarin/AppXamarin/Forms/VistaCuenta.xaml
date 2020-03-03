@@ -14,8 +14,10 @@
                 <Label Text="Mi cuenta" TextColor="White" FontSize="18.5" VerticalTextAlignment="Center" Padding="8,0,0,0">
                 </Label>
             </StackLayout>
-
-            <Frame Margin="0,20,0,0"
+            <!-- CUENTA -->
+            <StackLayout>
+                <!-- IMAGEN -->
+                <Frame Margin="0,20,0,0"
                    Padding="0"
                    BackgroundColor="#1D1D1D"
                    CornerRadius="200"
@@ -24,13 +26,14 @@
                    VerticalOptions="Center"
                    HorizontalOptions="Center"
                    IsClippedToBounds="True">
-                <Image Source="R.drawable/usuario_muestra"
+                    <Image Source="R.drawable/usuario_muestra"
                        VerticalOptions="Center"
                        HorizontalOptions="Center">
-                </Image>
-            </Frame>
-            <StackLayout Padding="30,0,30,0">
-                <material:MaterialTextField 
+                    </Image>
+                </Frame>
+                <!-- INFORMACION DE LA CUENTA -->
+                <StackLayout Padding="30,0,30,0" BindingContext="Cliente">
+                    <material:MaterialTextField 
                     HeightRequest="50"
                     BackgroundColor="#1D1D1D"
                     TextColor="White"
@@ -39,9 +42,11 @@
                     FloatingPlaceholderColor="#1E4B8C"
                     InputType="Plain"
                     Placeholder="Cedula" 
-                    Text="{Binding cliente_cedula}"
+                    x:Name="txtCedula"
+                        BindingContext="{Binding Cliente}"
+                        Text="{Binding cliente_cedula}"
                 />
-                <material:MaterialTextField 
+                    <material:MaterialTextField 
                     HeightRequest="50"
                     BackgroundColor="#1D1D1D"
                     TextColor="White"
@@ -50,9 +55,9 @@
                     FloatingPlaceholderColor="#1E4B8C"
                     InputType="Plain"
                     Placeholder="Apellidos" 
-                    Text="{Binding cliente_apellidos}"
+                    x:Name="txtApellido"
                 />
-                <material:MaterialTextField 
+                    <material:MaterialTextField 
                     HeightRequest="50"
                     BackgroundColor="#1D1D1D"
                     TextColor="White"
@@ -61,9 +66,9 @@
                     FloatingPlaceholderColor="#1E4B8C"
                     InputType="Plain"
                     Placeholder="Nombres" 
-                    Text="{Binding cliente_nombres}"
+                    x:Name="txtNombres"
                 />
-                <material:MaterialTextField 
+                    <material:MaterialTextField 
                     HeightRequest="50"
                     BackgroundColor="#1D1D1D"
                     TextColor="White"
@@ -72,9 +77,9 @@
                     FloatingPlaceholderColor="#1E4B8C"
                     InputType="Plain"
                     Placeholder="Telefono" 
-                    Text="{Binding cliente_telefono}"
+                    x:Name="txtTelefono"
                 />
-                <material:MaterialTextField 
+                    <material:MaterialTextField 
                     HeightRequest="50"
                     BackgroundColor="#1D1D1D"
                     TextColor="White"
@@ -83,9 +88,9 @@
                     FloatingPlaceholderColor="#1E4B8C"
                     InputType="Plain"
                     Placeholder="Email" 
-                    Text="{Binding cliente_email}"
+                    x:Name="txtEmail"
                 />
-                <material:MaterialTextField 
+                    <material:MaterialTextField 
                     HeightRequest="50"
                     BackgroundColor="#1D1D1D"
                     TextColor="White"
@@ -94,9 +99,11 @@
                     FloatingPlaceholderColor="#1E4B8C"
                     InputType="Plain"
                     Placeholder="Direccion" 
-                    Text="{Binding cliente_direccion}"
+                    x:Name="txtDireccion"
                 />
+                </StackLayout>
             </StackLayout>
+            
             <Button BackgroundColor="#206FBA" TextColor="White" Text="Cerrar sesión" CornerRadius="20" Margin="20,10"></Button>
             </StackLayout>
     </ContentPage.Content>
