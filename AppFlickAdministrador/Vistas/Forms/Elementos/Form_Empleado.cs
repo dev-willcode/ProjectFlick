@@ -138,11 +138,13 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             if (ValidarCamposEmpleado())
             {
                 Empleado empleadoTemp = generarEmpleado();
+                Usuario usuarioTemp = generarUsuario();
                 if (!empleadoTemp.Equals(PropiedadesGenerales.EmpleadoActual))
                 {
                     try
                     {
-                        if (PropiedadesGenerales.EmpleadoController.Update(empleadoTemp))
+                        if (PropiedadesGenerales.EmpleadoController.Update(empleadoTemp) &&
+                            PropiedadesGenerales.UsuarioController.Update(usuarioTemp))
                         {
                             VistaEmpleados_Admin.RellenarEmpleados();
                             PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Empleado actualizado");
@@ -184,6 +186,18 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 empleado_usuario = EmpleadoActual.empleado_usuario
             };
             return empleado;
+        }
+
+        private Usuario generarUsuario()
+        {
+            Usuario usuario = new Usuario()
+            {
+                id = EmpleadoActual.empleado_usuario,
+                usuario_username = txtUsuario.Text,
+                usuario_password = txtContraseña.Text,
+                usuario_perfil = PropiedadesGenerales.UsuarioController.Get(EmpleadoActual.empleado_usuario).usuario_perfil
+            };
+            return usuario;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)

@@ -45,6 +45,7 @@ namespace AppFlickAdministrador.Vistas.Init
                 try
                 {
                     PropiedadesGenerales.EmpleadoController.Delete(empleado.id);
+                    PropiedadesGenerales.UsuarioController.Delete(empleado.empleado_usuario);
                     PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado el empleado");
                     VistaEmpleados_Admin.RellenarEmpleados();
                 }

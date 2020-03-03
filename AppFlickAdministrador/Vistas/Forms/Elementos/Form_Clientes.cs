@@ -145,11 +145,13 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             if (ValidarCamposCliente())
             {
                 Cliente clienteTemp = generarCliente();
+                Usuario usuarioTemp = generarUsuario();
                 if (!clienteTemp.Equals(PropiedadesGenerales.EmpleadoActual))
                 {
                     try
                     {
-                        if (PropiedadesGenerales.ClienteController.Update(clienteTemp))
+                        if (PropiedadesGenerales.ClienteController.Update(clienteTemp) && 
+                            PropiedadesGenerales.UsuarioController.Update(usuarioTemp))
                         {
                             PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Cliente actualizado");
                             VistaClientes_Admin.RellenarClientes();
@@ -193,6 +195,18 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 cliente_imagen = ClienteActual.cliente_imagen
             };
             return cliente;
+        }
+
+        private Usuario generarUsuario()
+        {
+            Usuario usuario = new Usuario()
+            {
+                id = ClienteActual.cliente_usuario,
+                usuario_username = txtUsuario.Text,
+                usuario_password = txtContraseña.Text,
+                usuario_perfil = PropiedadesGenerales.UsuarioController.Get(ClienteActual.cliente_usuario).usuario_perfil
+        };
+            return usuario;
         }
 
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)

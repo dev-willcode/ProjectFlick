@@ -83,6 +83,7 @@ namespace Controllers.DAO
                 {
                     Procedimientos.agregarParametros(cmd,
                         new List<object>() {
+                        "@id",
                         "@empleado_nombres",
                         "@empleado_cedula",
                         "@empleado_apellidos",
@@ -91,6 +92,7 @@ namespace Controllers.DAO
                         "@empleado_direccion",
                         "@empleado_usuario" },
                         new List<object>() {
+                        Entidad.id,
                         Entidad.empleado_nombres,
                         Entidad.empleado_cedula,
                         Entidad.empleado_apellidos,

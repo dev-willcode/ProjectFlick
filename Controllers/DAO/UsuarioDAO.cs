@@ -83,7 +83,7 @@ namespace Controllers.DAO
                         Entidad.id,
                         Entidad.usuario_username,
                         Entidad.usuario_password,
-                        Entidad.usuario_perfil}
+                         Entidad.usuario_perfil == 0 ? DBNull.Value : (object)Entidad.usuario_perfil }
                         );
 
                     return Procedimientos.evaluarActualizacion(cmd);

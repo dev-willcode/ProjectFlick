@@ -45,6 +45,7 @@ namespace AppFlickAdministrador.Vistas.Init
                 try
                 {
                     PropiedadesGenerales.ClienteController.Delete(cliente.id);
+                    PropiedadesGenerales.UsuarioController.Delete(cliente.cliente_usuario);
                     PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Se ha eliminado el cliente");
                     VistaClientes_Admin.RellenarClientes();
                 }
