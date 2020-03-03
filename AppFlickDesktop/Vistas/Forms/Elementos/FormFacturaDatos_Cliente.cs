@@ -2,6 +2,7 @@
 using AppFlickCliente.Reports;
 using AppFlickCliente.Reports.DataSets;
 using Controllers;
+using DataEmail;
 using Entity.Entidades;
 using Entity.Entidades.EntidadesPersonalizadas;
 using Utils;
@@ -78,6 +79,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                 );
                 rPFactura.SetDataSource(dsFacturaDatos);
                 crystalReportViewer1.ReportSource = rPFactura;
+                EmailSender.EnviarCorreoConArchivo(vistaFactura.cliente_email,vistaFactura.cliente_nombres+" "+vistaFactura.cliente_apellidos,"Factura Electrónica","D:\\ProyectoPA\\Reportes");
             }
             catch (ControllerException ex)
             {

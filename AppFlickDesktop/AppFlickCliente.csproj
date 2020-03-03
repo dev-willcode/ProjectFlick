@@ -363,6 +363,10 @@
       <Project>{A117B98B-A93C-4D27-9062-B54BA2C40E50}</Project>
       <Name>Controllers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataEmail\DataEmail.csproj">
+      <Project>{9D770152-506D-4C8D-9A7E-87F8558A4B7A}</Project>
+      <Name>DataEmail</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{997d0bfd-c9ab-4376-9e0a-cc0d10c0860f}</Project>
       <Name>Entity</Name>

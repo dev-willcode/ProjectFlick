@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1022
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickCliente", "AppFlickDesktop\AppFlickCliente.csproj", "{150D7B97-48EE-4FAF-BAFF-F63C24568628}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -18,7 +18,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickAdministrador", "Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppXamarin.Android", "AppXamarin\AppXamarin.Android\AppXamarin.Android.csproj", "{2CD3CA4E-0468-4D0E-A958-E8F48AEB4189}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppXamarin", "AppXamarin\AppXamarin\AppXamarin.csproj", "{96FA2995-E215-49B5-944E-917B9FDB8FFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppXamarin", "AppXamarin\AppXamarin\AppXamarin.csproj", "{96FA2995-E215-49B5-944E-917B9FDB8FFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataEmail", "DataEmail\DataEmail.csproj", "{9D770152-506D-4C8D-9A7E-87F8558A4B7A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{96FA2995-E215-49B5-944E-917B9FDB8FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96FA2995-E215-49B5-944E-917B9FDB8FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96FA2995-E215-49B5-944E-917B9FDB8FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D770152-506D-4C8D-9A7E-87F8558A4B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D770152-506D-4C8D-9A7E-87F8558A4B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D770152-506D-4C8D-9A7E-87F8558A4B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D770152-506D-4C8D-9A7E-87F8558A4B7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
