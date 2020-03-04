@@ -25,6 +25,5 @@ namespace Controllers.Controller.Vistas
                 throw new ControllerException("No se consiguió obtener los datos de la factura", ex);
             }
         }
-
     }
 }

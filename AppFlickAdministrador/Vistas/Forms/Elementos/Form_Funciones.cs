@@ -100,7 +100,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void cargarDatos()
         {
-            txtidPelícula.Text = VFuncionActual.id.ToString();
+            txtidPelícula.Text = VFuncionActual.funcion_pelicula.ToString();
             txtTituloP.Text = VFuncionActual.pelicula_titulo;
             txtEstado.Text = VFuncionActual.funcion_estado;
             txtPrecioB.Text = VFuncionActual.funcion_precio_boleto.ToString();

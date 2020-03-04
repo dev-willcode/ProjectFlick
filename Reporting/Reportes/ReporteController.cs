@@ -9,6 +9,7 @@ using Entity.Entidades.EntidadesPersonalizadas;
 using System.Net;
 using System.Net.Mail;
 using Controllers;
+using System.IO;
 
 namespace Reporting.Reportes
 {
@@ -41,7 +42,7 @@ namespace Reporting.Reportes
                 exportOptions.ExportDestinationOptions = diskFileDestinationOptions;
                 exportOptions.FormatOptions = pdfRtfWordFormatOptions;
                 reportDocument.Export();
-                smtpCliente();
+
             }
             catch (ControllerException ex)
             {
@@ -62,7 +63,7 @@ namespace Reporting.Reportes
                 mensaje.To.Add(vistaFactura.cliente_email);
                 mensaje.From = new MailAddress("cineflick2020@gmail.com");
                 mensaje.Subject = "Factura Electrónica";
-                mensaje.Body = "Señor(a): " + vistaFactura.cliente_nombres + " " + vistaFactura.cliente_apellidos;
+                mensaje.Body = "Señor(a): " + vistaFactura.cliente_nombres + " " + vistaFactura.cliente_apellidos;              
                 mensaje.Attachments.Add(new Attachment(pdfFile));
                 cliente.Send(mensaje);
             }
@@ -135,7 +136,6 @@ namespace Reporting.Reportes
             {
                 throw new ControllerException("No se consiguío generar el reporte", ex);
             }
-        }
-        
+        }    
     }
 }

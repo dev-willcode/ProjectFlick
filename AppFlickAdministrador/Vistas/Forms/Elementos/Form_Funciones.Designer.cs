@@ -72,7 +72,8 @@
             this.txtAsientos.BorderColor = System.Drawing.Color.White;
             this.txtAsientos.BorderSize = 0;
             this.txtAsientos.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAsientos.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
+            this.txtAsientos.Enabled = false;
+            this.txtAsientos.FocusedBaseColor = System.Drawing.Color.White;
             this.txtAsientos.FocusedBorderColor = System.Drawing.Color.White;
             this.txtAsientos.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
             this.txtAsientos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,6 +86,7 @@
             this.txtAsientos.Radius = 10;
             this.txtAsientos.Size = new System.Drawing.Size(179, 39);
             this.txtAsientos.TabIndex = 170;
+            this.txtAsientos.Text = "180";
             this.txtAsientos.TextOffsetX = 2;
             this.txtAsientos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAsientos_KeyPress);
             // 
