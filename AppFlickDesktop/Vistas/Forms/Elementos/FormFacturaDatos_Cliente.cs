@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 using Controllers;
-using Controllers.Reportes;
+using Reporting.Reportes;
 using Utils;
 
 namespace AppFlickCliente.Vistas.Forms.Elementos

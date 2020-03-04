@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A117B98B-A93C-4D27-9062-B54BA2C40E50}</ProjectGuid>
+    <ProjectGuid>{BDFC272E-F3C7-4434-83AB-FB9A83945626}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Controllers</RootNamespace>
-    <AssemblyName>Controllers</AssemblyName>
+    <RootNamespace>Reporting</RootNamespace>
+    <AssemblyName>Reporting</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,8 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,70 +45,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControllerException.cs" />
-    <Compile Include="Controller\BancoController.cs" />
-    <Compile Include="Controller\BoletoController.cs" />
-    <Compile Include="Controller\CategoriaController.cs" />
-    <Compile Include="Controller\ClienteController.cs" />
-    <Compile Include="Controller\EmpleadoController.cs" />
-    <Compile Include="Controller\EmpresaController.cs" />
-    <Compile Include="Controller\FacturaController.cs" />
-    <Compile Include="Controller\FuncionesController.cs" />
-    <Compile Include="Controller\Vistas\PeliculaPController.cs" />
-    <Compile Include="Controller\Vistas\vFacturaAdminController.cs" />
-    <Compile Include="DAO\FuncionesDAO.cs" />
-    <Compile Include="Controller\HorarioController.cs" />
-    <Compile Include="Controller\IdiomaController.cs" />
-    <Compile Include="Controller\PeliculaController.cs" />
-    <Compile Include="Controller\Sala_CineController.cs" />
-    <Compile Include="Controller\TarjetasController.cs" />
-    <Compile Include="Controller\UsuarioController.cs" />
-    <Compile Include="Controller\BoletosFacturaController.cs" />
-    <Compile Include="Controller\Vistas\vFacturaDatosController.cs" />
-    <Compile Include="Controller\Vistas\vFacturaFuncionController.cs" />
-    <Compile Include="Controller\Vistas\vFuncionesController.cs" />
-    <Compile Include="Controller\Vistas\vPeliculasController.cs" />
-    <Compile Include="DAO\BancoDAO.cs" />
-    <Compile Include="DAO\BoletosFacturaDAO.cs" />
-    <Compile Include="DAO\CategoriaDAO.cs" />
-    <Compile Include="DAO\ClienteDAO.cs" />
-    <Compile Include="DAO\EmpleadoDAO.cs" />
-    <Compile Include="DAO\EmpresaDAO.cs" />
-    <Compile Include="DAO\FacturaDAO.cs" />
-    <Compile Include="DAO\BoletoDAO.cs" />
-    <Compile Include="DAO\HorariosDAO.cs" />
-    <Compile Include="DAO\IdiomaDAO.cs" />
-    <Compile Include="DAO\PeliculaDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="DAO\Sala_CineDAO.cs" />
-    <Compile Include="IDataAccess.cs" />
-    <Compile Include="DAO\TarjetasDAO.cs" />
-    <Compile Include="DAO\UsuarioDAO.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\CRObjects\RPFacturaDatos.cs">
+      <DependentUpon>RPFacturaDatos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reportes\DataSets\DSFacturaDatos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSFacturaDatos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\ReporteController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{679a19d4-f893-47cd-a50e-1756fa8ca44f}</Project>
-      <Name>DataAccess</Name>
+    <EmbeddedResource Include="Reportes\CRObjects\RPFacturaDatos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPFacturaDatos.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{a117b98b-a93c-4d27-9062-b54ba2c40e50}</Project>
+      <Name>Controllers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Entity\Entity.csproj">
       <Project>{997d0bfd-c9ab-4376-9e0a-cc0d10c0860f}</Project>
       <Name>Entity</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
-  </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSets\DSFacturaDatos.xsc">
+      <DependentUpon>DSFacturaDatos.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\DataSets\DSFacturaDatos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSFacturaDatos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\DataSets\DSFacturaDatos.xss">
+      <DependentUpon>DSFacturaDatos.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,15 +1,16 @@
 ﻿using Controllers.Controller;
 using Controllers.Controller.Vistas;
-using Controllers.Reportes.CRObjects;
-using Controllers.Reportes.DataSets;
+using Reporting.Reportes.CRObjects;
+using Reporting.Reportes.DataSets;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using Entity.Entidades;
 using Entity.Entidades.EntidadesPersonalizadas;
 using System.Net;
 using System.Net.Mail;
+using Controllers;
 
-namespace Controllers.Reportes
+namespace Reporting.Reportes
 {
     public class ReporteController
     {
@@ -87,7 +88,6 @@ namespace Controllers.Reportes
 
                 dsFacturaDatos.Empresa.AddEmpresaRow
                     (
-                    empresa.id,
                     empresa.empresa_razon_social,
                     empresa.empresa_numero_contribuyente,
                     empresa.empresa_numero_autorizacion,

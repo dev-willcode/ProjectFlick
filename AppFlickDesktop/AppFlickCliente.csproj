@@ -338,6 +338,10 @@
       <Project>{997d0bfd-c9ab-4376-9e0a-cc0d10c0860f}</Project>
       <Name>Entity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Reporting\Reporting.csproj">
+      <Project>{bdfc272e-f3c7-4434-83ab-fb9a83945626}</Project>
+      <Name>Reporting</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />

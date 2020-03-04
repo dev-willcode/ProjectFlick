@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
 using System.Threading.Tasks;
 using Controllers;
+using Xamarin.Forms;
 
 namespace AppXamarin.Utils
 {
@@ -12,6 +10,11 @@ namespace AppXamarin.Utils
         internal static Task NotificarFallo(Page vista, ControllerException ex)
         {
             return vista.DisplayAlert("ALERTA!", ex.Message, "OK");
+        }
+
+        internal static Task NotificarError(Page vista, string titulo, string descripcion)
+        {
+            return vista.DisplayAlert(titulo, descripcion, "OK");
         }
     }
 }

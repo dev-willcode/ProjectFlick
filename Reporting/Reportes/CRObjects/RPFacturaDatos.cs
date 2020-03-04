@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Controllers.Reportes.CRObjects {
+namespace Reporting.Reportes.CRObjects {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace Controllers.Reportes.CRObjects {
         
         public override string FullResourceName {
             get {
-                return "Controllers.Reportes.CRObjects.RPFacturaDatos.rpt";
+                return "Reporting.Reportes.CRObjects.RPFacturaDatos.rpt";
             }
             set {
                 // Do nothing

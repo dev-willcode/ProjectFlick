@@ -25,11 +25,6 @@ namespace AppXamarin.Forms
         {
             try
             {
-                // Codigo exclusivo para pruebas
-                PropiedadesGenerales.ClienteActual = new Entity.Entidades.Cliente()
-                {
-                    id = 1
-                };
                 Items = new ObservableCollection<VistaFacturaModel>();
                 List<VistaFacturaFuncion> lista = PropiedadesGenerales.VFacturaFuncionController
                     .ListarFacturas(PropiedadesGenerales.ClienteActual.id);

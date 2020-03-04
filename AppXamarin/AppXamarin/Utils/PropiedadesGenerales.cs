@@ -1,4 +1,5 @@
-﻿using Controllers.Controller;
+﻿using AppXamarin.Models;
+using Controllers.Controller;
 using Controllers.Controller.Vistas;
 using Entity.Entidades;
 
@@ -6,8 +7,6 @@ namespace Utils
 {
     public static class PropiedadesGenerales
     {
-        public static Cliente ClienteActual { get; set; }
-
         private static ClienteController clienteController = new ClienteController();
         private static UsuarioController usuarioController = new UsuarioController();
         private static FuncionesController funcionesController = new FuncionesController();
@@ -36,5 +35,6 @@ namespace Utils
         public static vFacturaDatosController VFacturaDatosController { get => vFacturaDatosController; set => vFacturaDatosController = value; }
         public static EmpresaController EmpresaController { get => empresaController; set => empresaController = value; }
         public static BoletosFacturaController BoletosFacturaController { get => boletosFacturaController; set => boletosFacturaController = value; }
+        public static VistaClienteModel ClienteActual { get; set; }
     }
 }

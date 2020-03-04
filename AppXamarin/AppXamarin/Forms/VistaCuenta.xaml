@@ -11,7 +11,7 @@
             <StackLayout>
                 <!-- IMAGEN -->
                 <Frame Margin="0,20,0,0" Padding="0" BackgroundColor="#1D1D1D" CornerRadius="200" WidthRequest="200" HeightRequest="200" VerticalOptions="Center" HorizontalOptions="Center" IsClippedToBounds="True">
-                    <Image Source="R.drawable/usuario_muestra" VerticalOptions="Center" HorizontalOptions="Center"></Image>
+                    <Image Source="{Binding imagen_generada}" VerticalOptions="Center" HorizontalOptions="Center"></Image>
                 </Frame>
                 <!-- INFORMACION DE LA CUENTA -->
                 <StackLayout Padding="30,0,30,0">
@@ -24,7 +24,7 @@
                 </StackLayout>
             </StackLayout>
 
-            <Button BackgroundColor="#206FBA" TextColor="White" Text="Cerrar sesión" CornerRadius="20" Margin="20,10"></Button>
+            <Button BackgroundColor="#206FBA" TextColor="White" Text="Cerrar sesión" CornerRadius="20" Margin="20,10" Clicked="Button_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

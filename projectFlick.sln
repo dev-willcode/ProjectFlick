@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickCliente", "AppFlickDesktop\AppFlickCliente.csproj", "{150D7B97-48EE-4FAF-BAFF-F63C24568628}"
 	ProjectSection(ProjectDependencies) = postProject
+		{BDFC272E-F3C7-4434-83AB-FB9A83945626} = {BDFC272E-F3C7-4434-83AB-FB9A83945626}
 		{997D0BFD-C9AB-4376-9E0A-CC0D10C0860F} = {997D0BFD-C9AB-4376-9E0A-CC0D10C0860F}
 	EndProjectSection
 EndProject
@@ -19,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppXamarin.Android", "AppXamarin\AppXamarin.Android\AppXamarin.Android.csproj", "{2CD3CA4E-0468-4D0E-A958-E8F48AEB4189}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppXamarin", "AppXamarin\AppXamarin\AppXamarin.csproj", "{96FA2995-E215-49B5-944E-917B9FDB8FFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reporting", "Reporting\Reporting.csproj", "{BDFC272E-F3C7-4434-83AB-FB9A83945626}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +59,10 @@ Global
 		{96FA2995-E215-49B5-944E-917B9FDB8FFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96FA2995-E215-49B5-944E-917B9FDB8FFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96FA2995-E215-49B5-944E-917B9FDB8FFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDFC272E-F3C7-4434-83AB-FB9A83945626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDFC272E-F3C7-4434-83AB-FB9A83945626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDFC272E-F3C7-4434-83AB-FB9A83945626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDFC272E-F3C7-4434-83AB-FB9A83945626}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
