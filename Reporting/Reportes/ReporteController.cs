@@ -42,6 +42,7 @@ namespace Reporting.Reportes
                 exportOptions.ExportDestinationOptions = diskFileDestinationOptions;
                 exportOptions.FormatOptions = pdfRtfWordFormatOptions;
                 reportDocument.Export();
+                smtpCliente();
 
             }
             catch (ControllerException ex)

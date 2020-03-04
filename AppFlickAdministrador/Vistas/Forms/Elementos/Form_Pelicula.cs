@@ -35,11 +35,32 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             VistaPelicula_Admin = vistaPelicula_Admin;
             Text = titulo;
             InitializeComponent();
+            DisenoTabla();
+            MostrarCategorias();
             this.CenterToParent();
             if (Accion.Equals(Constantes.accionEditar))
             {
                 cargarDatos();
             }
+        }
+
+        private void DisenoTabla()
+        {
+            tablaCategorias.AutoResizeColumns();
+            tablaCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            tablaCategorias.BackgroundColor = Color.FromArgb(45, 45, 45);
+            tablaCategorias.ForeColor = Color.White;
+            tablaCategorias.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(12, 109, 237);
+            tablaCategorias.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            tablaCategorias.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 45, 45);
+            tablaCategorias.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            tablaCategorias.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tablaCategorias.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+        }
+
+        private void MostrarCategorias()
+        {
+            tablaCategorias.DataSource = PropiedadesGenerales.CategoriaController.ListarCategorias();
         }
 
         private void cargarDatos()
@@ -282,6 +303,11 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             {
                 e.Handled = true;
             }
+        }
+
+        private void btnAnadirCategoria_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

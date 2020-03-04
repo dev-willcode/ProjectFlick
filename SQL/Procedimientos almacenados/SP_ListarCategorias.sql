@@ -1,0 +1,6 @@
+CREATE PROCEDURE SP_ListarCategorias
+AS
+BEGIN
+SELECT * FROM Categoria
+END
+

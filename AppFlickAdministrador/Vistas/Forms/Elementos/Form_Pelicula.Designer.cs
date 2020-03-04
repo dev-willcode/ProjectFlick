@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel = new System.Windows.Forms.Panel();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.txtReparto = new Guna.UI.WinForms.GunaTextBox();
@@ -52,7 +55,16 @@
             this.var_imagen_pelicula = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.btnGuardar = new Guna.UI.WinForms.GunaButton();
             this.txtSinopsis = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.btnAnadirCategoria = new Guna.UI.WinForms.GunaButton();
+            this.btnEliminarCategoria = new Guna.UI.WinForms.GunaButton();
+            this.tablaCategorias = new System.Windows.Forms.DataGridView();
+            this.categoriaSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categorianombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaCategorias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -388,7 +400,7 @@
             this.btnCambiarImagen.ForeColor = System.Drawing.Color.White;
             this.btnCambiarImagen.Image = global::AppFlickAdministrador.Properties.Resources.icon_cambiar;
             this.btnCambiarImagen.ImageSize = new System.Drawing.Size(38, 38);
-            this.btnCambiarImagen.Location = new System.Drawing.Point(218, 356);
+            this.btnCambiarImagen.Location = new System.Drawing.Point(229, 323);
             this.btnCambiarImagen.Margin = new System.Windows.Forms.Padding(4);
             this.btnCambiarImagen.Name = "btnCambiarImagen";
             this.btnCambiarImagen.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -407,7 +419,7 @@
             this.var_imagen_pelicula.BackColor = System.Drawing.Color.Transparent;
             this.var_imagen_pelicula.BaseColor = System.Drawing.Color.Transparent;
             this.var_imagen_pelicula.Image = global::AppFlickAdministrador.Properties.Resources.icon_peliculas;
-            this.var_imagen_pelicula.Location = new System.Drawing.Point(31, 184);
+            this.var_imagen_pelicula.Location = new System.Drawing.Point(31, 124);
             this.var_imagen_pelicula.Margin = new System.Windows.Forms.Padding(4);
             this.var_imagen_pelicula.Name = "var_imagen_pelicula";
             this.var_imagen_pelicula.Size = new System.Drawing.Size(267, 246);
@@ -432,7 +444,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.Image = global::AppFlickAdministrador.Properties.Resources.icon_mas;
             this.btnGuardar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnGuardar.Location = new System.Drawing.Point(298, 653);
+            this.btnGuardar.Location = new System.Drawing.Point(298, 704);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
@@ -469,12 +481,143 @@
             this.txtSinopsis.TabIndex = 162;
             this.txtSinopsis.TextOffsetX = 2;
             // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.gunaLabel4.CausesValidation = false;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.ForeColor = System.Drawing.Color.LightGray;
+            this.gunaLabel4.Location = new System.Drawing.Point(26, 415);
+            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(295, 31);
+            this.gunaLabel4.TabIndex = 175;
+            this.gunaLabel4.Text = "Categoría";
+            // 
+            // btnAnadirCategoria
+            // 
+            this.btnAnadirCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAnadirCategoria.Animated = true;
+            this.btnAnadirCategoria.AnimationHoverSpeed = 0.07F;
+            this.btnAnadirCategoria.AnimationSpeed = 0.03F;
+            this.btnAnadirCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.btnAnadirCategoria.BaseColor = System.Drawing.Color.Transparent;
+            this.btnAnadirCategoria.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnAnadirCategoria.BorderSize = 1;
+            this.btnAnadirCategoria.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAnadirCategoria.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAnadirCategoria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnadirCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnAnadirCategoria.Image = global::AppFlickAdministrador.Properties.Resources.icon_mas;
+            this.btnAnadirCategoria.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAnadirCategoria.Location = new System.Drawing.Point(180, 415);
+            this.btnAnadirCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAnadirCategoria.Name = "btnAnadirCategoria";
+            this.btnAnadirCategoria.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnAnadirCategoria.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnAnadirCategoria.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAnadirCategoria.OnHoverImage = null;
+            this.btnAnadirCategoria.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAnadirCategoria.Radius = 10;
+            this.btnAnadirCategoria.Size = new System.Drawing.Size(40, 36);
+            this.btnAnadirCategoria.TabIndex = 176;
+            this.btnAnadirCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAnadirCategoria.Click += new System.EventHandler(this.btnAnadirCategoria_Click);
+            // 
+            // btnEliminarCategoria
+            // 
+            this.btnEliminarCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminarCategoria.Animated = true;
+            this.btnEliminarCategoria.AnimationHoverSpeed = 0.07F;
+            this.btnEliminarCategoria.AnimationSpeed = 0.03F;
+            this.btnEliminarCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.btnEliminarCategoria.BaseColor = System.Drawing.Color.Transparent;
+            this.btnEliminarCategoria.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnEliminarCategoria.BorderSize = 1;
+            this.btnEliminarCategoria.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnEliminarCategoria.FocusedColor = System.Drawing.Color.Empty;
+            this.btnEliminarCategoria.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarCategoria.Image = global::AppFlickAdministrador.Properties.Resources.icon_menos;
+            this.btnEliminarCategoria.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(244, 415);
+            this.btnEliminarCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
+            this.btnEliminarCategoria.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnEliminarCategoria.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(109)))), ((int)(((byte)(237)))));
+            this.btnEliminarCategoria.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnEliminarCategoria.OnHoverImage = null;
+            this.btnEliminarCategoria.OnPressedColor = System.Drawing.Color.Black;
+            this.btnEliminarCategoria.Radius = 10;
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(40, 36);
+            this.btnEliminarCategoria.TabIndex = 177;
+            this.btnEliminarCategoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tablaCategorias
+            // 
+            this.tablaCategorias.AutoGenerateColumns = false;
+            this.tablaCategorias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tablaCategorias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tablaCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tablaCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tablaCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.categorianombreDataGridViewTextBoxColumn});
+            this.tablaCategorias.DataSource = this.categoriaSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaCategorias.DefaultCellStyle = dataGridViewCellStyle2;
+            this.tablaCategorias.EnableHeadersVisualStyles = false;
+            this.tablaCategorias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.tablaCategorias.Location = new System.Drawing.Point(12, 468);
+            this.tablaCategorias.Name = "tablaCategorias";
+            this.tablaCategorias.RowHeadersWidth = 10;
+            this.tablaCategorias.RowTemplate.Height = 24;
+            this.tablaCategorias.Size = new System.Drawing.Size(309, 212);
+            this.tablaCategorias.TabIndex = 178;
+            // 
+            // categoriaSource
+            // 
+            this.categoriaSource.DataSource = typeof(Entity.Entidades.Categoria);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // categorianombreDataGridViewTextBoxColumn
+            // 
+            this.categorianombreDataGridViewTextBoxColumn.DataPropertyName = "categoria_nombre";
+            this.categorianombreDataGridViewTextBoxColumn.HeaderText = "categoria_nombre";
+            this.categorianombreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categorianombreDataGridViewTextBoxColumn.Name = "categorianombreDataGridViewTextBoxColumn";
+            this.categorianombreDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Form_Pelicula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(863, 722);
+            this.ClientSize = new System.Drawing.Size(863, 766);
+            this.Controls.Add(this.tablaCategorias);
+            this.Controls.Add(this.btnEliminarCategoria);
+            this.Controls.Add(this.btnAnadirCategoria);
+            this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.txtURL);
             this.Controls.Add(this.txtTituloOriginal);
@@ -502,6 +645,8 @@
             this.Name = "Form_Pelicula";
             this.Text = "Form_Pelicula";
             ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaCategorias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriaSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -533,5 +678,12 @@
         private Guna.UI.WinForms.GunaTextBox txtURL;
         private System.Windows.Forms.OpenFileDialog SelectorArchivo;
         private Guna.UI.WinForms.GunaTextBox txtSinopsis;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
+        private Guna.UI.WinForms.GunaButton btnAnadirCategoria;
+        private Guna.UI.WinForms.GunaButton btnEliminarCategoria;
+        private System.Windows.Forms.DataGridView tablaCategorias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categorianombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource categoriaSource;
     }
 }

@@ -8,6 +8,22 @@ namespace Controllers.Controller
 {
     public class CategoriaController : CategoriaDAO
     {
+        public List<Categoria> ListarCategorias()
+        {
+            try
+            {
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_ListarCategorias"))
+                {
+                    return Procedimientos.ListarEntidades<Categoria>(cmd);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new ControllerException("No se consiguió listar Categorias", ex);
+            }
+        }
+
         public string ListarCategoriasString(int id)
         {
 
