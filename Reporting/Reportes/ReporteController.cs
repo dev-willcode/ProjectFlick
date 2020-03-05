@@ -9,7 +9,6 @@ using Entity.Entidades.EntidadesPersonalizadas;
 using System.Net;
 using System.Net.Mail;
 using Controllers;
-using System.IO;
 
 namespace Reporting.Reportes
 {
@@ -43,7 +42,6 @@ namespace Reporting.Reportes
                 exportOptions.FormatOptions = pdfRtfWordFormatOptions;
                 reportDocument.Export();
                 smtpCliente();
-
             }
             catch (ControllerException ex)
             {
@@ -130,7 +128,7 @@ namespace Reporting.Reportes
                     boletoFactura.total
                 );
                 rPFactura.SetDataSource(dsFacturaDatos);
-                reporte = rPFactura; // añade a la propiedad el doc generado
+                reporte = rPFactura; // añade a la propiedad el doc generado               
                 return true; // finalizo correct
             }
             catch (ControllerException ex)

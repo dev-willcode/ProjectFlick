@@ -11,7 +11,7 @@ namespace Entity.Entidades.EntidadesPersonalizadas
     {
         public PeliculaP(IDataReader data)
         {
-            ID = (int)data["funcion_pelicula"];
+            ID = (int)data["id"];
             Titulo = data["pelicula_titulo"].ToString();
             Titulo_Original = data["pelicula_titulo_original"].ToString();
             Duracion = data["pelicula_duracion"].ToString();

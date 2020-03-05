@@ -14,6 +14,9 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private readonly Pelicula PeliculaActual;
         private VistaPelicula_Admin VistaPelicula_Admin { get; set; }
+
+        private  List<Categoria> lista { get; set; }
+
         public string Accion { get; set; }
         public bool cambioImagen { get; set; }
 
@@ -177,12 +180,19 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             if (ValidarCamposPelicula())
             {
                 Pelicula peliculaTemp = generarPelicula();
-                if (!peliculaTemp.Equals(PeliculaActual))
+                if (!peliculaTemp.Equals(PeliculaActual) && !categoriaActual())
                 {
                     try
                     {
+                        
                         if (PropiedadesGenerales.PeliculaController.Update(peliculaTemp))
                         {
+                            PropiedadesGenerales.PeliculaCategoriaController.Delete(PeliculaActual.id);
+                            List<Pelicula_Categoria> lista = CrearListadoCategoria(PeliculaActual.id);
+                            lista.ForEach(pelicula_categoria =>
+                            {
+                                PropiedadesGenerales.PeliculaCategoriaController.Create(pelicula_categoria);
+                            });
                             PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Pelicula actualizada");
                             VistaPelicula_Admin.RellenarPeliculas();
                             Close();
@@ -207,6 +217,23 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             {
                 PropiedadesGenerales.Notificar.notificarFallo("Error al ingresar la pelicula", "Ingrese bien los datos");
             }
+        }
+
+        private bool categoriaActual()
+        {
+            bool cambio = false;
+            lista = PropiedadesGenerales.CategoriaController.ListarCategorias(PeliculaActual.id);
+            foreach (Categoria item in lista)
+            {
+                foreach (Categoria iteem in categoriaSource)
+                {
+                    if (item.id == iteem.id)
+                    {
+                        cambio = true;
+                    }
+                }
+            }
+            return cambio;
         }
 
         private List<Pelicula_Categoria> CrearListadoCategoria(int id)

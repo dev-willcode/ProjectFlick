@@ -37,7 +37,7 @@ namespace Controllers.DAO
             {
                 using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_BorrarPeliculaCategoria"))
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@idPelicula", id);
                     return Procedimientos.evaluarEliminacion<Pelicula_Categoria>(cmd);
                 }
             }
