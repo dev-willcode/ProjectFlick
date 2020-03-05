@@ -39,6 +39,8 @@
             // 
             // tablaCategoria2
             // 
+            this.tablaCategoria2.AllowUserToAddRows = false;
+            this.tablaCategoria2.AllowUserToDeleteRows = false;
             this.tablaCategoria2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tablaCategoria2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -62,6 +64,7 @@
             this.tablaCategoria2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tablaCategoria2.Location = new System.Drawing.Point(51, 105);
             this.tablaCategoria2.Name = "tablaCategoria2";
+            this.tablaCategoria2.ReadOnly = true;
             this.tablaCategoria2.RowHeadersWidth = 10;
             this.tablaCategoria2.RowTemplate.Height = 24;
             this.tablaCategoria2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

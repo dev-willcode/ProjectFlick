@@ -118,6 +118,7 @@
             this.tablaPeliculas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tablaPeliculas.Location = new System.Drawing.Point(44, 110);
             this.tablaPeliculas.Name = "tablaPeliculas";
+            this.tablaPeliculas.ReadOnly = true;
             this.tablaPeliculas.RowHeadersWidth = 10;
             this.tablaPeliculas.RowTemplate.Height = 24;
             this.tablaPeliculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

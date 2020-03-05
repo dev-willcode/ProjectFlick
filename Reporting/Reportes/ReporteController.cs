@@ -63,8 +63,12 @@ namespace Reporting.Reportes
                 mensaje.From = new MailAddress("cineflick2020@gmail.com");
                 mensaje.Subject = "Factura Electrónica";
                 mensaje.Body = "Señor(a): " + vistaFactura.cliente_nombres + " " + vistaFactura.cliente_apellidos;              
-                mensaje.Attachments.Add(new Attachment(pdfFile));
-                cliente.Send(mensaje);
+                
+                using(Attachment att = new Attachment(pdfFile))
+                {
+                    mensaje.Attachments.Add(att);
+                    cliente.Send(mensaje);
+                }
             }
             catch (ControllerException ex)
             {

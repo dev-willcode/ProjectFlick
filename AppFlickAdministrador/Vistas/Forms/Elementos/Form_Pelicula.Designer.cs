@@ -53,6 +53,8 @@
             this.txtSinopsis = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.tablaCategoria = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categorianombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoriaSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnEliminarCategoria = new Guna.UI.WinForms.GunaButton();
             this.btnAnadirCategoria = new Guna.UI.WinForms.GunaButton();
@@ -60,8 +62,6 @@
             this.var_imagen_pelicula = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.btnGuardar = new Guna.UI.WinForms.GunaButton();
             this.btnCerrar = new Guna.UI.WinForms.GunaImageButton();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categorianombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tablaCategoria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriaSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.var_imagen_pelicula)).BeginInit();
@@ -409,6 +409,8 @@
             // 
             // tablaCategoria
             // 
+            this.tablaCategoria.AllowUserToAddRows = false;
+            this.tablaCategoria.AllowUserToDeleteRows = false;
             this.tablaCategoria.AutoGenerateColumns = false;
             this.tablaCategoria.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tablaCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -437,10 +439,30 @@
             this.tablaCategoria.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
             this.tablaCategoria.Location = new System.Drawing.Point(48, 469);
             this.tablaCategoria.Name = "tablaCategoria";
+            this.tablaCategoria.ReadOnly = true;
             this.tablaCategoria.RowHeadersWidth = 10;
             this.tablaCategoria.RowTemplate.Height = 24;
+            this.tablaCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tablaCategoria.Size = new System.Drawing.Size(261, 212);
             this.tablaCategoria.TabIndex = 178;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // categorianombreDataGridViewTextBoxColumn
+            // 
+            this.categorianombreDataGridViewTextBoxColumn.DataPropertyName = "categoria_nombre";
+            this.categorianombreDataGridViewTextBoxColumn.HeaderText = "Categoría";
+            this.categorianombreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categorianombreDataGridViewTextBoxColumn.Name = "categorianombreDataGridViewTextBoxColumn";
+            this.categorianombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categorianombreDataGridViewTextBoxColumn.Width = 125;
             // 
             // categoriaSource
             // 
@@ -590,22 +612,6 @@
             this.btnCerrar.Size = new System.Drawing.Size(43, 39);
             this.btnCerrar.TabIndex = 151;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categorianombreDataGridViewTextBoxColumn
-            // 
-            this.categorianombreDataGridViewTextBoxColumn.DataPropertyName = "categoria_nombre";
-            this.categorianombreDataGridViewTextBoxColumn.HeaderText = "Categoría";
-            this.categorianombreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categorianombreDataGridViewTextBoxColumn.Name = "categorianombreDataGridViewTextBoxColumn";
-            this.categorianombreDataGridViewTextBoxColumn.Width = 125;
             // 
             // Form_Pelicula
             // 

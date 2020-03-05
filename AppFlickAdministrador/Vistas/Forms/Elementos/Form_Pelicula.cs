@@ -68,20 +68,26 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void cargarDatos()
         {
-            txtTitulo.Text = PeliculaActual.pelicula_titulo.ToString();
-            txtTituloOriginal.Text = PeliculaActual.pelicula_titulo_original.ToString();
-            txtDuracion.Text = PeliculaActual.pelicula_duracion.ToString();
-            txtCensura.Text = PeliculaActual.pelicula_tipo_censura.ToString();
-            txtSinopsis.Text = PeliculaActual.pelicula_sinopsis.ToString();
-            txtDirector.Text = PeliculaActual.pelicula_director.ToString();
-            txtReparto.Text = PeliculaActual.pelicula_reparto.ToString();
-            txtURL.Text = PeliculaActual.pelicula_url_trailer.ToString();
-            //categoria source, es un listado de Categorias, ListarPeliculacategoria , 
-            //devuelve un listado de Pelicula_categoria
-            categoriaSource.DataSource = PropiedadesGenerales.CategoriaController.ListarCategorias(PeliculaActual.id);
-            if (PeliculaActual.pelicula_imagen != null)
+            try
             {
-                var_imagen_pelicula.Image = UtilsProcedimientos.generarImagen(PeliculaActual.pelicula_imagen);
+                txtTitulo.Text = PeliculaActual.pelicula_titulo.ToString();
+                txtTituloOriginal.Text = PeliculaActual.pelicula_titulo_original.ToString();
+                txtDuracion.Text = PeliculaActual.pelicula_duracion.ToString();
+                txtCensura.Text = PeliculaActual.pelicula_tipo_censura.ToString();
+                txtSinopsis.Text = PeliculaActual.pelicula_sinopsis.ToString();
+                txtDirector.Text = PeliculaActual.pelicula_director.ToString();
+                txtReparto.Text = PeliculaActual.pelicula_reparto.ToString();
+                txtURL.Text = PeliculaActual.pelicula_url_trailer.ToString();
+                categoriaSource.DataSource = PropiedadesGenerales.CategoriaController.ListarCategorias(PeliculaActual.id);
+                if (PeliculaActual.pelicula_imagen != null)
+                {
+                    var_imagen_pelicula.Image = UtilsProcedimientos.generarImagen(PeliculaActual.pelicula_imagen);
+                }
+            }
+            catch (ControllerException ex)
+            {
+
+                PropiedadesGenerales.Notificar.notificarError(ex);
             }
         }
 
@@ -180,19 +186,13 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             if (ValidarCamposPelicula())
             {
                 Pelicula peliculaTemp = generarPelicula();
-                if (!peliculaTemp.Equals(PeliculaActual) && !categoriaActual())
+                if (!peliculaTemp.Equals(PeliculaActual))
                 {
                     try
                     {
                         
                         if (PropiedadesGenerales.PeliculaController.Update(peliculaTemp))
                         {
-                            PropiedadesGenerales.PeliculaCategoriaController.Delete(PeliculaActual.id);
-                            List<Pelicula_Categoria> lista = CrearListadoCategoria(PeliculaActual.id);
-                            lista.ForEach(pelicula_categoria =>
-                            {
-                                PropiedadesGenerales.PeliculaCategoriaController.Create(pelicula_categoria);
-                            });
                             PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Pelicula actualizada");
                             VistaPelicula_Admin.RellenarPeliculas();
                             Close();
@@ -208,9 +208,25 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                         PropiedadesGenerales.Notificar.notificarError(ex);
                     }
                 }
-                else
+                if (ocurrioCambioCategoria())
                 {
-                    PropiedadesGenerales.Notificar.notificarFallo("No se consiguio actualizar", "No cambio ningun dato!");
+                    try
+                    {
+                        PropiedadesGenerales.PeliculaCategoriaController.Delete(PeliculaActual.id);
+                        List<Pelicula_Categoria> lista = CrearListadoCategoria(PeliculaActual.id);
+                        lista.ForEach(pelicula_categoria =>
+                        {
+                            PropiedadesGenerales.PeliculaCategoriaController.Create(pelicula_categoria);
+                        });
+                        PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Pelicula actualizada");
+                        VistaPelicula_Admin.RellenarPeliculas();
+                        Close();
+                    }
+                    catch (ControllerException ex)
+                    {
+
+                        PropiedadesGenerales.Notificar.notificarError(ex);
+                    }
                 }
             }
             else
@@ -219,21 +235,28 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             }
         }
 
-        private bool categoriaActual()
+        private bool ocurrioCambioCategoria()
         {
-            bool cambio = false;
-            lista = PropiedadesGenerales.CategoriaController.ListarCategorias(PeliculaActual.id);
-            foreach (Categoria item in lista)
+            try
             {
-                foreach (Categoria iteem in categoriaSource)
+                lista = PropiedadesGenerales.CategoriaController.ListarCategorias(PeliculaActual.id);
+                foreach (Categoria item in lista)
                 {
-                    if (item.id == iteem.id)
+                    foreach (Categoria categoriaActual in categoriaSource)
                     {
-                        cambio = true;
+                        if (item.id != categoriaActual.id)
+                        {
+                            return true; //ocurrio un cambio
+                        }
                     }
                 }
+                return false; //no ocurrieron cambios
             }
-            return cambio;
+            catch (ControllerException ex)
+            {
+                PropiedadesGenerales.Notificar.notificarError(ex);
+                return false;
+            }
         }
 
         private List<Pelicula_Categoria> CrearListadoCategoria(int id)
