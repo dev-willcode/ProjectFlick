@@ -36,7 +36,6 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             Text = titulo;
             InitializeComponent();
             DisenoTabla();
-            MostrarCategorias();
             this.CenterToParent();
             if (Accion.Equals(Constantes.accionEditar))
             {
@@ -46,21 +45,21 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void DisenoTabla()
         {
-            tablaCategorias.AutoResizeColumns();
-            tablaCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-            tablaCategorias.BackgroundColor = Color.FromArgb(45, 45, 45);
-            tablaCategorias.ForeColor = Color.White;
-            tablaCategorias.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(12, 109, 237);
-            tablaCategorias.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            tablaCategorias.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 45, 45);
-            tablaCategorias.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            tablaCategorias.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            tablaCategorias.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tablaCategoria.AutoResizeColumns();
+            tablaCategoria.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            tablaCategoria.BackgroundColor = Color.FromArgb(45, 45, 45);
+            tablaCategoria.ForeColor = Color.White;
+            tablaCategoria.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(12, 109, 237);
+            tablaCategoria.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            tablaCategoria.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 45, 45);
+            tablaCategoria.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            tablaCategoria.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            tablaCategoria.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
         }
 
-        private void MostrarCategorias()
+        internal void AnadirCategoria(Categoria categoriaNueva)
         {
-            tablaCategorias.DataSource = PropiedadesGenerales.CategoriaController.ListarCategorias();
+            categoriaSource.Add(categoriaNueva);
         }
 
         private void cargarDatos()
@@ -307,7 +306,13 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void btnAnadirCategoria_Click(object sender, EventArgs e)
         {
-            
+            Form_ListadoCategoria form = new Form_ListadoCategoria(this);
+            form.ShowDialog();
+        }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            tablaCategoria.Rows.Remove(tablaCategoria.CurrentRow);
         }
     }
 }
