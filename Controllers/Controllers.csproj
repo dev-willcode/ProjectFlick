@@ -50,6 +50,7 @@
     <Compile Include="Controller\EmpresaController.cs" />
     <Compile Include="Controller\FacturaController.cs" />
     <Compile Include="Controller\FuncionesController.cs" />
+    <Compile Include="Controller\PeliculaCategoriaController.cs" />
     <Compile Include="Controller\Vistas\PeliculaPController.cs" />
     <Compile Include="Controller\Vistas\vFacturaAdminController.cs" />
     <Compile Include="DAO\FuncionesDAO.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="DAO\BoletoDAO.cs" />
     <Compile Include="DAO\HorariosDAO.cs" />
     <Compile Include="DAO\IdiomaDAO.cs" />
+    <Compile Include="DAO\PeliculaCategoriaDAO.cs" />
     <Compile Include="DAO\PeliculaDAO.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>

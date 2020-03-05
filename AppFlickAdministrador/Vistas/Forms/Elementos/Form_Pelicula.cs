@@ -2,6 +2,7 @@
 using Controllers;
 using Entity.Entidades;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using Utils;
@@ -72,6 +73,9 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             txtDirector.Text = PeliculaActual.pelicula_director.ToString();
             txtReparto.Text = PeliculaActual.pelicula_reparto.ToString();
             txtURL.Text = PeliculaActual.pelicula_url_trailer.ToString();
+            //categoria source, es un listado de Categorias, ListarPeliculacategoria , 
+            //devuelve un listado de Pelicula_categoria
+            categoriaSource.DataSource = PropiedadesGenerales.CategoriaController.ListarCategorias(PeliculaActual.id);
             if (PeliculaActual.pelicula_imagen != null)
             {
                 var_imagen_pelicula.Image = UtilsProcedimientos.generarImagen(PeliculaActual.pelicula_imagen);
@@ -133,11 +137,23 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                     pelicula.pelicula_url_trailer = txtURL.Text.ToString();
                     pelicula.pelicula_imagen = UtilsProcedimientos.ImageToByteArray(var_imagen_pelicula.Image);
                     try
-                    {
-                        PropiedadesGenerales.PeliculaController.Create(pelicula);
-                        PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Pelicula Ingresada");
-                        VistaPelicula_Admin.RellenarPeliculas();
-                        Close();
+                    {                      
+                        if (categoriaSource.Count == 0)
+                        {
+                            PropiedadesGenerales.Notificar.notificarFallo("Error", "Ingrese una categoria como mínimo");
+                        }
+                        else
+                        {
+                            int idInsertada = PropiedadesGenerales.PeliculaController.Create(pelicula);
+                            List<Pelicula_Categoria> lista = CrearListadoCategoria(idInsertada);
+                            lista.ForEach(pelicula_categoria =>
+                            {
+                                PropiedadesGenerales.PeliculaCategoriaController.Create(pelicula_categoria);
+                            });
+                            PropiedadesGenerales.Notificar.notificarCorrecto("Completado", "Pelicula Ingresada");
+                            VistaPelicula_Admin.RellenarPeliculas();
+                            Close();
+                        }                        
                     }
                     catch (ControllerException ex)
                     {
@@ -193,6 +209,20 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
             }
         }
 
+        private List<Pelicula_Categoria> CrearListadoCategoria(int id)
+        {
+            List<Pelicula_Categoria> listado = new List<Pelicula_Categoria>();
+            Pelicula_Categoria categoria;
+        
+            foreach (Categoria item in categoriaSource)
+            {
+                categoria = new Pelicula_Categoria();
+                categoria.id_Pelicula = id;
+                categoria.id_Categoria = item.id;
+                listado.Add(categoria);
+            }           
+            return listado;
+        }
 
         private Pelicula generarPelicula()
         {
@@ -209,7 +239,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
                 pelicula_url_trailer = txtURL.Text                
             };
             if (cambioImagen) pelicula.pelicula_imagen = UtilsProcedimientos.ImageToByteArray(var_imagen_pelicula.Image);
-            else pelicula.pelicula_imagen = PeliculaActual.pelicula_imagen;
+            else pelicula.pelicula_imagen = PeliculaActual.pelicula_imagen;          
             return pelicula;
         }
 

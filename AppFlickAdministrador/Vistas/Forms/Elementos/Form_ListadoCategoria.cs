@@ -1,12 +1,6 @@
 ﻿using Entity.Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utils;
 
@@ -45,7 +39,7 @@ namespace AppFlickAdministrador.Vistas.Forms.Elementos
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            if (tablaCategoria2.CurrentRow != null) //sleecciono una fila
+            if (tablaCategoria2.CurrentRow != null) //selecciono una fila
             {
                 bool estaRepetido = false;
                 Categoria categoriaSeleccionada = (Categoria)tablaCategoria2.CurrentRow.DataBoundItem;
