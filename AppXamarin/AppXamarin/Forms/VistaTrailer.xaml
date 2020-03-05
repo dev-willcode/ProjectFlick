@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppXamarin.Forms.VistaTrailer" BackgroundColor="#1D1D1D" IconImageSource="R.drawable/icon_funciones">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- BARRA SUPERIOR -->
+            <StackLayout Padding="20,10,0,15" Orientation="Horizontal" BackgroundColor="#1E4B8C">
+                <Image HeightRequest="18.5" Source="R.drawable/icon_funciones"></Image>
+                <Label Text="Trailer" TextColor="White" FontSize="18.5" 
+                       VerticalTextAlignment="Center" Padding="8,0,0,0">
+                </Label>
+            </StackLayout>
+            <StackLayout>
+                <WebView HeightRequest="200"
+                     Margin="10,80,10,10"
+                     BackgroundColor="White"
+                     x:Name="vistaWeb">
+                </WebView>
+            </StackLayout>
+            <Button BackgroundColor="#206FBA" TextColor="White" Text="Volver" CornerRadius="20" Margin="20,10" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

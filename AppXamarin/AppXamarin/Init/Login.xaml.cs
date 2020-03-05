@@ -57,7 +57,7 @@ namespace AppXamarin.Init
         private void abrirInicio(Cliente cliente)
         {
             PropiedadesGenerales.ClienteActual = new Models.VistaClienteModel(cliente);
-            Navigation.PushModalAsync(new MainPage());
+            Application.Current.MainPage = new MainPage();
         }
 
         private bool validarCamposLogin()

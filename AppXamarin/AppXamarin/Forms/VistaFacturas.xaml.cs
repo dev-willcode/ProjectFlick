@@ -5,6 +5,8 @@ using Entity.Entidades.EntidadesPersonalizadas;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
+using System.Windows.Input;
 using Utils;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -19,6 +21,12 @@ namespace AppXamarin.Forms
         {
             InitializeComponent();
             CargarFacturas();
+            asignarRefresh();
+        }
+
+        private void asignarRefresh()
+        {
+            ListadoFacturas.RefreshCommand = new Command(() => CargarFacturas());
         }
 
         private async void CargarFacturas()
@@ -33,6 +41,7 @@ namespace AppXamarin.Forms
                     Items.Add(new VistaFacturaModel(factura));
                 });
                 ListadoFacturas.ItemsSource = Items;
+                ListadoFacturas.IsRefreshing = false;
             }
             catch (ControllerException ex)
             {

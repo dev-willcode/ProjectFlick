@@ -26,7 +26,6 @@ namespace AppXamarin.Forms
 		{
 			PropiedadesGenerales.ClienteActual = null;
 			Application.Current.MainPage = new Login();
-			GC.Collect();
 		}
 	}
 }

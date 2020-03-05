@@ -1,9 +1,8 @@
-﻿using AppXamarin.Models;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using AppXamarin.Models;
 using AppXamarin.Utils;
 using Controllers;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using Utils;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -18,35 +17,42 @@ namespace AppXamarin.Forms
         {
             InitializeComponent();
             CargarFunciones();
+            asignarRefresh();
+        }
+
+        private void asignarRefresh()
+        {
+            ListadoFunciones.RefreshCommand = new Command(() => CargarFunciones());
         }
 
         private async void CargarFunciones()
         {
             try
             {
-                List<Entity.Entidades.EntidadesPersonalizadas.VistaFunciones> listaFuncionesActivas = 
-                    PropiedadesGenerales.VFuncionesController.ListarFuncionesActivas();
                 Items = new ObservableCollection<VistaFuncionesModel>();
+                List<Entity.Entidades.EntidadesPersonalizadas.VistaFunciones> listaFuncionesActivas =
+                    PropiedadesGenerales.VFuncionesController.ListarFuncionesActivas();
                 listaFuncionesActivas.ForEach(funcion =>
                 {
                     Items.Add(new VistaFuncionesModel(funcion));
                 });
                 ListadoFunciones.ItemsSource = Items;
+                ListadoFunciones.IsRefreshing = false;
             }
+
             catch (ControllerException ex)
             {
-                await UtilsNotificaciones.NotificarFallo(this,ex);
+                await UtilsNotificaciones.NotificarFallo(this, ex);
             }
         }
 
-        private async void ListadoFunciones_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void ListadoFunciones_ItemSelected(object sender, ItemTappedEventArgs e)
         {
             if (e.Item == null)
+            {
                 return;
-
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
-
-            //Deselect Item
+            }
+            Navigation.PushModalAsync(new VistaFuncion((VistaFuncionesModel)e.Item));
             ((ListView)sender).SelectedItem = null;
         }
     }

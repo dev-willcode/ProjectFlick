@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using AppXamarin.Models;
 using Xamarin.Forms;
 
@@ -8,31 +9,39 @@ namespace AppFlickCliente.Utils
     {
         public static ImageSource generarImagenBytes(byte[] sourceStream, System.Type clase)
         {
-            if (clase == typeof(VistaFuncionesModel))
+            try
             {
-                if (sourceStream == null)
+                if (clase == typeof(VistaFuncionesModel))
                 {
-                    return ImageSource.FromFile("pelicula_muestra.jpg");
+                    if (sourceStream == null)
+                    {
+                        return ImageSource.FromFile("pelicula_muestra.jpg");
+                    }
+                    else
+                    {
+                        Stream  stream = new MemoryStream(sourceStream);
+                        return ImageSource.FromStream(() => stream);
+                    }
                 }
-                else
+                if (clase == typeof(VistaClienteModel))
                 {
-                    MemoryStream stream = new MemoryStream(sourceStream);
-                    return ImageSource.FromStream(() => stream);
+                    if (sourceStream == null)
+                    {
+                        return ImageSource.FromFile("usuario_muestra.jpg");
+                    }
+                    else
+                    {
+                        MemoryStream stream = new MemoryStream(sourceStream);
+                        return ImageSource.FromStream(() => stream);
+                    }
                 }
+                return null;
             }
-            if (clase == typeof(VistaClienteModel))
+            catch (Exception ex)
             {
-                if (sourceStream == null)
-                {
-                    return ImageSource.FromFile("usuario_muestra.jpg");
-                }
-                else
-                {
-                    MemoryStream stream = new MemoryStream(sourceStream);
-                    return ImageSource.FromStream(() => stream);
-                }
+                Console.WriteLine(ex.Message);
+                return null;
             }
-            return null;
         }
     }
 }

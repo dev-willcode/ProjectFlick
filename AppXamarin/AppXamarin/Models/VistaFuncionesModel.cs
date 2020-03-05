@@ -31,6 +31,11 @@ namespace AppXamarin.Models
             funcion_asientos_disponibles = funcion.funcion_asientos_disponibles;
             funcion_fecha_creacion = funcion.funcion_fecha_creacion;
             pelicula_imagen = funcion.pelicula_imagen;
+            generarImagen();
+        }
+
+        public void generarImagen()
+        {
             imagen_generada = UtilsProcedimientos.generarImagenBytes(pelicula_imagen, GetType());
         }
 

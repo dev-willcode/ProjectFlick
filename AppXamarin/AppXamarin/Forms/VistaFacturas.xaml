@@ -10,7 +10,9 @@
                 </Label>
             </StackLayout>
             <!-- LISTADO -->
-            <ListView x:Name="ListadoFacturas" ItemsSource="{Binding Items}" SeparatorVisibility="Default" SeparatorColor="##333333" RowHeight="110" CachingStrategy="RecycleElement">
+            <ListView x:Name="ListadoFacturas"
+                      IsPullToRefreshEnabled="True"
+                      ItemsSource="{Binding Items}" SeparatorVisibility="Default" SeparatorColor="##333333" RowHeight="110" CachingStrategy="RecycleElement">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

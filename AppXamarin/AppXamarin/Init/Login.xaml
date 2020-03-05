@@ -57,6 +57,11 @@
                     >
                 </material:MaterialButton>
             </StackLayout>
+            <Label Text="ProjectFlick 2019 © GPL v3.0"
+                       Margin="0,50,0,0"
+                       HorizontalOptions="Center"
+                       TextColor="Gray">
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
