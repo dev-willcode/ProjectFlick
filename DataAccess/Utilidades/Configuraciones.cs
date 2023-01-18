@@ -16,7 +16,7 @@ namespace Controllers.Utilidades
         {
             try
             {
-                SqlConnection Connection = new SqlConnection(cadenaConexion);
+                SqlConnection Connection = new SqlConnection(cadenaConexionLocal);
                 Connection.Open();
                 Console.WriteLine("Conectado correctamente: Conexión exitosa:" + DateTime.Now.ToString());
                 return Connection;

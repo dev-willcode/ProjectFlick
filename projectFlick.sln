@@ -17,10 +17,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controllers", "Controllers\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFlickAdministrador", "AppFlickAdministrador\AppFlickAdministrador.csproj", "{7F13B05D-7754-4BFB-A7C9-C5788EA73D23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppXamarin.Android", "AppXamarin\AppXamarin.Android\AppXamarin.Android.csproj", "{2CD3CA4E-0468-4D0E-A958-E8F48AEB4189}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppXamarin", "AppXamarin\AppXamarin\AppXamarin.csproj", "{96FA2995-E215-49B5-944E-917B9FDB8FFA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reporting", "Reporting\Reporting.csproj", "{BDFC272E-F3C7-4434-83AB-FB9A83945626}"
 EndProject
 Global
