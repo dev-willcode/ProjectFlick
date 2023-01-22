@@ -457,7 +457,7 @@
             // 
             // categorianombreDataGridViewTextBoxColumn
             // 
-            this.categorianombreDataGridViewTextBoxColumn.DataPropertyName = "categoria_nombre";
+            this.categorianombreDataGridViewTextBoxColumn.DataPropertyName = "nombre_categoria";
             this.categorianombreDataGridViewTextBoxColumn.HeaderText = "Categoría";
             this.categorianombreDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.categorianombreDataGridViewTextBoxColumn.Name = "categorianombreDataGridViewTextBoxColumn";

@@ -29,7 +29,7 @@ namespace Controllers.Controller.Vistas
         {
             try
             {
-                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_VistaFuncionesActivas"))
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_FuncionesActivas"))
                 {
                     return Procedimientos.ListarEntidades<VistaFunciones>(cmd);
                 }
@@ -44,7 +44,7 @@ namespace Controllers.Controller.Vistas
         {
             try
             {
-                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_VistaFuncionesActivas"))
+                using (SqlCommand cmd = Procedimientos.CrearComandoSP("SP_FuncionesActivas"))
                 {
                     return Procedimientos.ListarEntidades<VistaFunciones>(cmd);
                 }

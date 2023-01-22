@@ -10,7 +10,7 @@ namespace Controllers.Utilidades
             "Server=34.74.3.129;Database=cinedb;Uid=sqlserver;Pwd=admin123!;";
 
         public const string cadenaConexionLocal =
-            "Data Source=.;Initial Catalog=cinedb;User ID=will;Password=admin123!";
+            "Data Source=.;Initial Catalog=cinedb;User ID=sa;Password=admin123!";
 
         public static SqlConnection CrearConexion()
         {
