@@ -38,7 +38,7 @@ namespace AppFlickCliente.Vistas.Forms.Elementos
                     for (int j = 0; j < tablaAsientos.RowCount - 1; j++)
                     {
                         nombre = (char)letra-- + i.ToString();
-                        if (boletosComprados.FindIndex(e => (e.boleto_asiento.Equals(nombre))) == -1)
+                        if (boletosComprados.FindIndex(e => (e.boleto_asiento.Trim().Equals(nombre))) == -1)
                         {
                             tablaAsientos.Controls.Add(new Elem_asiento(this, nombre, true), i, j);
                         }

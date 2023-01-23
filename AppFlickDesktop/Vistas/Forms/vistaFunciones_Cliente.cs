@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using AppFlickCliente.Vistas.Init;
 using Controllers;
 using Entity.Entidades.EntidadesPersonalizadas;
@@ -88,19 +89,20 @@ namespace AppFlickCliente.Vistas.Forms
 
         private void FiltroFunciones()
         {
-            if (string.IsNullOrEmpty(txtBuscarFuncion.Text))
+                var busqueda = txtBuscarFuncion.Text.ToLower();
+            if (string.IsNullOrEmpty(busqueda))
             {
-                listaControles.ForEach(elemento => elemento.Visible = true);
+                vlistaControles.ForEach(elemento => elemento.Visible = true);
             }
             else
             {
+                string peliculaTitulo;
+                string peliculaTituloOriginal;
                 foreach (Elem_funcion elemento in listaControles)
                 {
-                    if (!(elemento.funcion.pelicula_titulo.Contains(txtBuscarFuncion.Text.ToUpper()) ||
-                        elemento.funcion.pelicula_titulo_original.Contains(txtBuscarFuncion.Text.ToUpper())))
-                    {
-                        elemento.Visible = false;
-                    }
+                    peliculaTitulo = elemento.funcion.pelicula_titulo.ToLower();
+                    peliculaTituloOriginal = elemento.funcion.pelicula_titulo.ToLower();
+                    elemento.Visible = peliculaTitulo.Contains(busqueda) || peliculaTituloOriginal.Contains(busqueda);
                 }
             }
         }
@@ -121,6 +123,11 @@ namespace AppFlickCliente.Vistas.Forms
             {
                 FiltroFunciones();
             }
+        }
+
+        private void txtBuscarFuncion_KeyDown(object sender, KeyEventArgs e)
+        {
+            FiltroFunciones();
         }
     }
 }

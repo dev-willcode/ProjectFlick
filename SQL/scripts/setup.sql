@@ -66,7 +66,7 @@ ALTER DATABASE [cinedb] SET QUERY_STORE = OFF
 GO
 USE [cinedb]
 GO
-/****** Object:  Table [dbo].[Funcion]    Script Date: 17/01/2020 20:43:20 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -89,7 +89,7 @@ CREATE TABLE [dbo].[Funcion]
             ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Pelicula]    Script Date: 17/01/2020 20:43:20 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[Pelicula]
             ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  View [dbo].[Vista_Funciones]    Script Date: 17/01/2020 20:43:20 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -133,7 +133,7 @@ GROUP BY dbo.Pelicula.id, dbo.Pelicula.pelicula_titulo, dbo.Pelicula.pelicula_ti
          dbo.Pelicula.pelicula_tipo_censura, dbo.Pelicula.pelicula_duracion, dbo.Pelicula.pelicula_url_trailer,
          dbo.Funcion.funcion_estado
 GO
-/****** Object:  Table [dbo].[Boleto]    Script Date: 17/01/2020 20:43:20 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -145,15 +145,13 @@ CREATE TABLE [dbo].[Boleto]
     [boleto_funcion]      [int]                NOT NULL,
     [boleto_asiento]      [nchar](5)           NOT NULL,
     [boleto_tipo_asiento] [nvarchar](25)       NOT NULL,
-    [boleto_medio_compra] [nvarchar](25)       NOT NULL,
-    [boleto_descuento]    [decimal](18, 0)     NOT NULL,
     CONSTRAINT [PK_Boleto] PRIMARY KEY CLUSTERED
         (
          [id] ASC
             ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Categoria]    Script Date: 17/01/2020 20:43:20 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -168,7 +166,7 @@ CREATE TABLE [dbo].[Categoria]
             ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Cliente]    Script Date: 17/01/2020 20:43:20 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -182,6 +180,7 @@ CREATE TABLE [dbo].[Cliente]
     [cliente_telefono]  [nvarchar](50)       NULL,
     [cliente_email]     [nvarchar](50)       NULL,
     [cliente_direccion] [nvarchar](50)       NULL,
+    [cliente_imagen]    [image]              NULL,
     [cliente_usuario]   [int]                NOT NULL,
     CONSTRAINT [PK_tb_cliente] PRIMARY KEY CLUSTERED
         (
@@ -189,7 +188,7 @@ CREATE TABLE [dbo].[Cliente]
             ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Empleado]    Script Date: 17/01/2020 20:43:20 ******/
+
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -364,12 +363,11 @@ CREATE TABLE [dbo].[Tarjetas]
     [id]                  [int] IDENTITY (1,1) NOT NULL,
     [tarjeta_cliente]     [int]                NOT NULL,
     [tarjeta_tipo]        [nvarchar](50)       NOT NULL,
-    [tarjeta_banco]       [nvarchar](50)       NOT NULL,
+    [tarjeta_banco]       [int]                NOT NULL,
     [tarjeta_numero]      [nchar](16)          NOT NULL,
     [tarjeta_ccv]         [nvarchar](50)       NOT NULL,
     [tarjeta_ano]         [int]                NOT NULL,
-    [tarjeta_mes]         [int]                NOT NULL,
-    [tarjeta_dia]         [int]                NOT NULL,
+    [tarjeta_mes]         [nvarchar](50)       NOT NULL,
     [tarjeta_propietario] [nvarchar](50)       NOT NULL,
     CONSTRAINT [PK_Tarjetas] PRIMARY KEY CLUSTERED
         (
@@ -507,119 +505,6 @@ ALTER TABLE [dbo].[Usuario]
     CHECK CONSTRAINT [FK_Usuario_Perfil_Usuario]
 GO
 
-CREATE VIEW Vista_FuncionesActivas
-AS
-SELECT dbo.Funcion.id,
-       dbo.Funcion.funcion_pelicula,
-       dbo.Pelicula.pelicula_titulo,
-       dbo.Pelicula.pelicula_titulo_original,
-       dbo.Pelicula.pelicula_duracion,
-       dbo.Pelicula.pelicula_tipo_censura,
-       dbo.Pelicula.pelicula_imagen,
-       dbo.Pelicula.pelicula_url_trailer,
-       dbo.Pelicula.pelicula_sinopsis,
-       dbo.Pelicula.pelicula_director,
-       dbo.Pelicula.pelicula_reparto,
-       dbo.Funcion.funcion_fecha_evento,
-       dbo.Funcion.funcion_estado,
-       dbo.Funcion.funcion_precio_boleto,
-       dbo.Funcion.funcion_asientos_disponibles,
-       dbo.Funcion.funcion_fecha_creacion,
-       dbo.Sala_Cine.sala_nombre,
-       dbo.Idiomas.idioma_abreviatura,
-       dbo.Idiomas.idioma_descripcion,
-       dbo.Horarios.horario_inicio
-FROM dbo.Funcion
-         INNER JOIN dbo.Pelicula ON dbo.Funcion.funcion_pelicula = dbo.Pelicula.id
-         INNER JOIN dbo.Idiomas ON dbo.Funcion.funcion_idioma = dbo.Idiomas.id
-         INNER JOIN dbo.Sala_Cine ON dbo.Funcion.funcion_sala = dbo.Sala_Cine.id
-         INNER JOIN dbo.Horarios ON dbo.Funcion.funcion_horario = dbo.Horarios.id
-GROUP BY dbo.Funcion.id, dbo.Funcion.funcion_pelicula, dbo.Pelicula.pelicula_titulo,
-         dbo.Pelicula.pelicula_titulo_original, dbo.Pelicula.pelicula_duracion, dbo.Pelicula.pelicula_tipo_censura,
-         dbo.Pelicula.pelicula_url_trailer, dbo.Pelicula.pelicula_sinopsis, dbo.Pelicula.pelicula_director,
-         dbo.Pelicula.pelicula_reparto, dbo.Funcion.funcion_fecha_evento, dbo.Funcion.funcion_estado,
-         dbo.Funcion.funcion_precio_boleto, dbo.Funcion.funcion_asientos_disponibles,
-         dbo.Funcion.funcion_fecha_creacion, dbo.Sala_Cine.sala_nombre, dbo.Idiomas.idioma_abreviatura,
-         dbo.Idiomas.idioma_descripcion, dbo.Horarios.horario_inicio;
-GO
-
-CREATE VIEW Vista_FacturaDatos
-AS
-SELECT dbo.Factura.id,
-       dbo.Cliente.cliente_cedula,
-       dbo.Cliente.cliente_apellidos,
-       dbo.Cliente.cliente_nombres,
-       dbo.Cliente.cliente_telefono,
-       dbo.Cliente.cliente_email,
-       dbo.Cliente.cliente_direccion,
-       dbo.Factura.factura_numero,
-       dbo.Factura.factura_fecha_emision,
-       dbo.Factura.factura_metodo_pago,
-       dbo.Funcion.funcion_fecha_evento,
-       dbo.Funcion.funcion_precio_boleto,
-       dbo.Sala_Cine.sala_nombre,
-       dbo.Horarios.horario_inicio,
-       dbo.Idiomas.idioma_abreviatura,
-       dbo.Pelicula.pelicula_titulo,
-       dbo.Pelicula.pelicula_tipo_censura,
-       dbo.Pelicula.pelicula_duracion
-FROM dbo.Factura
-         INNER JOIN dbo.Cliente ON dbo.Factura.factura_cliente = dbo.Cliente.id
-         INNER JOIN dbo.Funcion ON dbo.Factura.factura_funcion = dbo.Funcion.id
-         INNER JOIN dbo.Pelicula ON dbo.Funcion.funcion_pelicula = dbo.Pelicula.id
-         INNER JOIN dbo.Idiomas ON dbo.Funcion.funcion_idioma = dbo.Idiomas.id
-         INNER JOIN dbo.Sala_Cine ON dbo.Funcion.funcion_sala = dbo.Sala_Cine.id
-         INNER JOIN dbo.Horarios ON dbo.Funcion.funcion_horario = dbo.Horarios.id;
-
-GO
-
-CREATE VIEW Vista_FacturaFuncion
-AS
-SELECT dbo.Factura.id,
-       dbo.Factura.factura_funcion,
-       dbo.Factura.factura_cliente,
-       dbo.Factura.factura_numero,
-       dbo.Factura.factura_fecha_emision,
-       dbo.Funcion.funcion_precio_boleto,
-       dbo.Funcion.funcion_fecha_evento,
-       dbo.Pelicula.pelicula_titulo,
-       dbo.Idiomas.idioma_abreviatura,
-       dbo.Horarios.horario_inicio
-FROM dbo.Factura
-         INNER JOIN dbo.Cliente ON dbo.Factura.factura_cliente = dbo.Cliente.id
-         INNER JOIN dbo.Funcion ON dbo.Factura.factura_funcion = dbo.Funcion.id
-         INNER JOIN dbo.Pelicula ON dbo.Funcion.funcion_pelicula = dbo.Pelicula.id
-         INNER JOIN dbo.Idiomas ON dbo.Funcion.funcion_idioma = dbo.Idiomas.id
-         INNER JOIN dbo.Sala_Cine ON dbo.Funcion.funcion_sala = dbo.Sala_Cine.id
-         INNER JOIN dbo.Horarios ON dbo.Funcion.funcion_horario = dbo.Horarios.id;
-GO
-
-CREATE VIEW Vista_FacturaAdmin
-AS
-SELECT dbo.Factura.id,
-       dbo.Factura.factura_numero,
-       dbo.Factura.factura_fecha_emision,
-       dbo.Factura.factura_estado,
-       dbo.Cliente.cliente_nombres,
-       dbo.Cliente.cliente_apellidos,
-       dbo.Funcion.funcion_precio_boleto,
-       dbo.Pelicula.pelicula_titulo
-FROM dbo.Factura
-         INNER JOIN dbo.Cliente ON dbo.Factura.factura_cliente = dbo.Cliente.id
-         INNER JOIN dbo.Funcion ON dbo.Factura.factura_funcion = dbo.Funcion.id
-         INNER JOIN dbo.Pelicula ON dbo.Funcion.funcion_pelicula = dbo.Pelicula.id
-;
-
-CREATE VIEW V_PeliculaP
-AS
-SELECT dbo.Pelicula.id,
-       dbo.Pelicula.pelicula_titulo,
-       dbo.Pelicula.pelicula_titulo_original,
-       dbo.Pelicula.pelicula_duracion,
-       dbo.Pelicula.pelicula_tipo_censura,
-       dbo.Pelicula.pelicula_director
-FROM [dbo].[Pelicula];
-
 CREATE PROCEDURE SP_ActualizarCliente @id int,
                                       @cliente_cedula varchar(50),
                                       @cliente_apellidos varchar(50),
@@ -649,7 +534,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE SP_ListarHorarios 
+CREATE PROCEDURE SP_ListarHorarios
 AS
 BEGIN
     SELECT *
@@ -684,7 +569,7 @@ CREATE PROCEDURE SP_ActualizarFactura @id int,
                                       @factura_cliente int,
                                       @factura_funcion int,
                                       @factura_metodo_pago varchar(25),
-                                      @factura_fecha_emision datetime,
+                                      @factura_fecha_emision date,
                                       @factura_estado varchar(25)
 AS
 BEGIN
@@ -740,11 +625,22 @@ END
 GO
 
 CREATE PROCEDURE SP_ActualizarImagenPelicula @id int,
-                                             @imagen image
+                                             @imagen varbinary(max)
 AS
 BEGIN
     UPDATE Pelicula
     SET pelicula_imagen = @imagen
+    OUTPUT 'CORRECTO' AS 'RESPONSE'
+    WHERE id = @id
+END
+GO
+
+CREATE PROCEDURE SP_ActualizarImagenCliente @id int,
+                                            @imagen varbinary(max)
+AS
+BEGIN
+    UPDATE Cliente
+    SET cliente_imagen = @imagen
     OUTPUT 'CORRECTO' AS 'RESPONSE'
     WHERE id = @id
 END
@@ -759,7 +655,7 @@ CREATE PROCEDURE SP_ActualizarPelicula @id int,
                                        @pelicula_director nvarchar(50),
                                        @pelicula_reparto nvarchar(255),
                                        @pelicula_url_trailer nvarchar(255),
-                                       @pelicula_imagen image
+                                       @pelicula_imagen varbinary(max)
 AS
 BEGIN
     UPDATE [Pelicula]
@@ -927,7 +823,7 @@ BEGIN
             @cliente_telefono,
             @cliente_email,
             @cliente_direccion,
-            @cliente_usuario)
+            @cliente_usuario, null)
 END
 GO
 
@@ -960,20 +856,19 @@ END
 GO
 
 CREATE PROCEDURE SP_CrearFactura @factura_cliente int,
-                                 @factura_funcion int,
-                                 @factura_metodo_pago varchar(25),
-                                 @factura_fecha_emision datetime,
-                                 @factura_estado varchar(25)
+                                @factura_funcion int,
+                                @factura_metodo_pago varchar(25),
+                                @factura_fecha_emision date,
+                                @factura_estado varchar(25)
 AS
 BEGIN
 
     DECLARE @factura_numero as int;
     SET @factura_numero = (SELECT COUNT(id) FROM Factura) + 1;
-
     INSERT INTO Factura
     OUTPUT inserted.id
-    VALUES (@factura_cliente, @factura_funcion, @factura_numero, @factura_fecha_emision, @factura_metodo_pago,
-            @factura_estado)
+    VALUES (@factura_cliente, @factura_funcion, @factura_numero, @factura_estado, @factura_metodo_pago,
+            @factura_fecha_emision)
 END
 GO
 
@@ -1022,7 +917,7 @@ CREATE PROCEDURE SP_CrearPelicula @pelicula_titulo nvarchar(50),
                                   @pelicula_director nvarchar(50),
                                   @pelicula_reparto nvarchar(255),
                                   @pelicula_url_trailer nvarchar(255),
-                                  @pelicula_imagen image
+                                  @pelicula_imagen varbinary(max)
 AS
 BEGIN
     INSERT INTO [Pelicula]
@@ -1065,7 +960,6 @@ CREATE PROCEDURE SP_CrearTarjeta(
     @tarjeta_ccv nvarchar(3),
     @tarjeta_ano int,
     @tarjeta_mes nvarchar(50),
-    @tarjeta_dia nvarchar(50),
     @tarjeta_propietario nvarchar(50)
 )
 AS
@@ -1078,7 +972,6 @@ BEGIN
      tarjeta_ccv,
      tarjeta_ano,
      tarjeta_mes,
-     tarjeta_dia,
      tarjeta_propietario)
     OUTPUT inserted.id
     values (@tarjeta_cliente,
@@ -1088,7 +981,6 @@ BEGIN
             @tarjeta_ccv,
             @tarjeta_ano,
             @tarjeta_mes,
-            @tarjeta_dia,
             @tarjeta_propietario)
 END
 GO
@@ -1116,14 +1008,6 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE SP_FuncionesActivas
-AS
-BEGIN
-    SELECT *
-    FROM [dbo].[Vista_FuncionesActivas]
-    WHERE funcion_estado = 'ACTIVO'
-END
-GO
 
 CREATE PROCEDURE SP_GetBanco @id int
 AS
@@ -1186,7 +1070,7 @@ END
 GO
 
 CREATE PROCEDURE SP_IniciarSesionCliente @usuario_username varchar(25),
-                                  @usuario_password varchar(25)
+                                         @usuario_password varchar(25)
 AS
 BEGIN
     SELECT *
@@ -1201,7 +1085,7 @@ END
 GO
 
 CREATE PROCEDURE SP_IniciarSesionEmpleado @usuario_username varchar(25),
-                                  @usuario_password varchar(25)
+                                          @usuario_password varchar(25)
 AS
 BEGIN
     SELECT *
@@ -1209,9 +1093,9 @@ BEGIN
 
 /*Subconsulta a tabla de usuarios*/
     WHERE empleado.[empleado_usuario] = (SELECT [dbo].[Usuario].[id]
-                                       FROM [dbo].[Usuario]
-                                       WHERE [usuario_username] = @usuario_username
-                                         AND [usuario_password] = @usuario_password)
+                                         FROM [dbo].[Usuario]
+                                         WHERE [usuario_username] = @usuario_username
+                                           AND [usuario_password] = @usuario_password)
 END
 GO
 
@@ -1280,15 +1164,6 @@ BEGIN
     SELECT * FROM Usuario
 END
 GO
-
-CREATE PROCEDURE SP_BoletosFuncion
-    AS
-    DECLARE @id int;
-    BEGIN
-    SELECT * FROM dbo.Boletos
-    WHERE id
-        END
-    GO
 
 CREATE PROCEDURE SP_ObtenerBoletosFacturaGeneral
 AS
@@ -1361,3 +1236,158 @@ BEGIN
     SELECT * FROM Vista_FuncionesActivas
 END
 GO
+
+CREATE PROCEDURE SP_FuncionesActivas
+AS
+BEGIN
+    SELECT *
+    FROM [dbo].[Vista_FuncionesActivas]
+    WHERE funcion_estado = 'ACTIVO'
+END
+GO
+
+CREATE PROCEDURE SP_ObtenerCategorias @idPelicula as int
+AS
+BEGIN
+    SELECT STRING_AGG(CONVERT(NVARCHAR(max), nombre_categoria),
+                      ', ') AS categorias
+    FROM (SELECT Categoria.nombre_categoria
+          FROM [dbo].[rel_Pelicula_Categoria]
+                   inner join Categoria on Categoria.id = rel_Pelicula_Categoria.id_Categoria
+          WHERE id_Pelicula = @idPelicula) as cat
+END
+GO
+
+
+alter PROCEDURE SP_BoletosFuncion @id as int
+AS
+BEGIN
+    SELECT *
+    FROM [dbo].[Boleto]
+          WHERE Boleto.boleto_funcion = @id
+END
+GO
+
+CREATE PROCEDURE SP_CrearBoleto @boleto_factura int,
+                                @boleto_funcion int,
+                                @boleto_asiento nchar(5),
+                                @boleto_tipo_asiento varchar(25)
+AS
+BEGIN
+    INSERT INTO Boleto
+    OUTPUT inserted.id
+    VALUES (@boleto_factura, @boleto_funcion, @boleto_asiento, @boleto_tipo_asiento)
+END
+GO
+
+-- VISTAS
+
+CREATE VIEW Vista_FacturaDatos
+AS
+SELECT dbo.Factura.id,
+       dbo.Cliente.cliente_cedula,
+       dbo.Cliente.cliente_apellidos,
+       dbo.Cliente.cliente_nombres,
+       dbo.Cliente.cliente_telefono,
+       dbo.Cliente.cliente_email,
+       dbo.Cliente.cliente_direccion,
+       dbo.Factura.factura_numero,
+       dbo.Factura.factura_fecha_emision,
+       dbo.Factura.factura_metodo_pago,
+       dbo.Funcion.funcion_fecha_evento,
+       dbo.Funcion.funcion_precio_boleto,
+       dbo.Sala_Cine.sala_nombre,
+       dbo.Horarios.horario_inicio,
+       dbo.Idiomas.idioma_abreviatura,
+       dbo.Pelicula.pelicula_titulo,
+       dbo.Pelicula.pelicula_tipo_censura,
+       dbo.Pelicula.pelicula_duracion
+FROM dbo.Factura
+         INNER JOIN dbo.Cliente ON dbo.Factura.factura_cliente = dbo.Cliente.id
+         INNER JOIN dbo.Funcion ON dbo.Factura.factura_funcion = dbo.Funcion.id
+         INNER JOIN dbo.Pelicula ON dbo.Funcion.funcion_pelicula = dbo.Pelicula.id
+         INNER JOIN dbo.Idiomas ON dbo.Funcion.funcion_idioma = dbo.Idiomas.id
+         INNER JOIN dbo.Sala_Cine ON dbo.Funcion.funcion_sala = dbo.Sala_Cine.id
+         INNER JOIN dbo.Horarios ON dbo.Funcion.funcion_horario = dbo.Horarios.id;
+GO
+
+CREATE VIEW Vista_FacturaFuncion
+AS
+SELECT dbo.Factura.id,
+       dbo.Factura.factura_funcion,
+       dbo.Factura.factura_cliente,
+       dbo.Factura.factura_numero,
+       dbo.Factura.factura_fecha_emision,
+       dbo.Funcion.funcion_precio_boleto,
+       dbo.Funcion.funcion_fecha_evento,
+       dbo.Pelicula.pelicula_titulo,
+       dbo.Idiomas.idioma_abreviatura,
+       dbo.Horarios.horario_inicio
+FROM dbo.Factura
+         INNER JOIN dbo.Cliente ON dbo.Factura.factura_cliente = dbo.Cliente.id
+         INNER JOIN dbo.Funcion ON dbo.Factura.factura_funcion = dbo.Funcion.id
+         INNER JOIN dbo.Pelicula ON dbo.Funcion.funcion_pelicula = dbo.Pelicula.id
+         INNER JOIN dbo.Idiomas ON dbo.Funcion.funcion_idioma = dbo.Idiomas.id
+         INNER JOIN dbo.Sala_Cine ON dbo.Funcion.funcion_sala = dbo.Sala_Cine.id
+         INNER JOIN dbo.Horarios ON dbo.Funcion.funcion_horario = dbo.Horarios.id;
+GO
+
+CREATE VIEW Vista_FacturaAdmin
+AS
+SELECT dbo.Factura.id,
+       dbo.Factura.factura_numero,
+       dbo.Factura.factura_fecha_emision,
+       dbo.Factura.factura_estado,
+       dbo.Cliente.cliente_nombres,
+       dbo.Cliente.cliente_apellidos,
+       dbo.Funcion.funcion_precio_boleto,
+       dbo.Pelicula.pelicula_titulo
+FROM dbo.Factura
+         INNER JOIN dbo.Cliente ON dbo.Factura.factura_cliente = dbo.Cliente.id
+         INNER JOIN dbo.Funcion ON dbo.Factura.factura_funcion = dbo.Funcion.id
+         INNER JOIN dbo.Pelicula ON dbo.Funcion.funcion_pelicula = dbo.Pelicula.id;
+GO
+
+CREATE VIEW V_PeliculaP
+AS
+SELECT dbo.Pelicula.id,
+       dbo.Pelicula.pelicula_titulo,
+       dbo.Pelicula.pelicula_titulo_original,
+       dbo.Pelicula.pelicula_duracion,
+       dbo.Pelicula.pelicula_tipo_censura,
+       dbo.Pelicula.pelicula_director
+FROM [dbo].[Pelicula];
+GO
+
+
+CREATE VIEW Vista_FuncionesActivas
+AS
+SELECT dbo.Funcion.id as id,
+       dbo.Funcion.funcion_pelicula,
+       dbo.Pelicula.pelicula_titulo,
+       dbo.Pelicula.pelicula_titulo_original,
+       dbo.Pelicula.pelicula_duracion,
+       dbo.Pelicula.pelicula_tipo_censura,
+       dbo.Pelicula.pelicula_url_trailer,
+       dbo.Pelicula.pelicula_sinopsis,
+       dbo.Pelicula.pelicula_director,
+       dbo.Pelicula.pelicula_reparto,
+       dbo.Funcion.funcion_estado,
+       dbo.Funcion.funcion_precio_boleto,
+       dbo.Funcion.funcion_asientos_disponibles,
+       dbo.Funcion.funcion_fecha_creacion,
+       dbo.Sala_Cine.sala_nombre,
+       dbo.Idiomas.idioma_abreviatura,
+       dbo.Idiomas.idioma_descripcion,
+       dbo.Horarios.horario_inicio,
+       dbo.Pelicula.pelicula_imagen,
+       dbo.Funcion.funcion_fecha_evento
+FROM dbo.Funcion
+         INNER JOIN
+     dbo.Pelicula ON dbo.Funcion.funcion_pelicula = dbo.Pelicula.id
+         INNER JOIN
+     dbo.Idiomas ON dbo.Funcion.funcion_idioma = dbo.Idiomas.id
+         INNER JOIN
+     dbo.Sala_Cine ON dbo.Funcion.funcion_sala = dbo.Sala_Cine.id
+         INNER JOIN
+     dbo.Horarios ON dbo.Funcion.funcion_horario = dbo.Horarios.id

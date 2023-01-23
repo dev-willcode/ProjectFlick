@@ -95,8 +95,8 @@
             this.txtBuscarFuncion.TabIndex = 63;
             this.txtBuscarFuncion.Text = "Buscar....";
             this.txtBuscarFuncion.TextOffsetX = 10;
-            this.txtBuscarFuncion.TextChanged += new System.EventHandler(this.TxtBuscarFuncion_TextChanged);
             this.txtBuscarFuncion.Enter += new System.EventHandler(this.TxtBuscarFuncion_Enter);
+            this.txtBuscarFuncion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuscarFuncion_KeyDown);
             this.txtBuscarFuncion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarFuncion_KeyPress);
             // 
             // container
