@@ -817,13 +817,8 @@ AS
 BEGIN
     INSERT INTO [Cliente]
     OUTPUT inserted.id
-    values (@cliente_cedula,
-            @cliente_apellidos,
-            @cliente_nombres,
-            @cliente_telefono,
-            @cliente_email,
-            @cliente_direccion,
-            @cliente_usuario, null)
+    values (@cliente_cedula, @cliente_apellidos, @cliente_nombres, @cliente_telefono, @cliente_email,
+            @cliente_direccion, null, @cliente_usuario)
 END
 GO
 
@@ -856,10 +851,10 @@ END
 GO
 
 CREATE PROCEDURE SP_CrearFactura @factura_cliente int,
-                                @factura_funcion int,
-                                @factura_metodo_pago varchar(25),
-                                @factura_fecha_emision date,
-                                @factura_estado varchar(25)
+                                 @factura_funcion int,
+                                 @factura_metodo_pago varchar(25),
+                                 @factura_fecha_emision date,
+                                 @factura_estado varchar(25)
 AS
 BEGIN
 
@@ -965,22 +960,8 @@ CREATE PROCEDURE SP_CrearTarjeta(
 AS
 BEGIN
     INSERT INTO [Tarjetas]
-    (tarjeta_cliente,
-     tarjeta_tipo,
-     tarjeta_banco,
-     tarjeta_numero,
-     tarjeta_ccv,
-     tarjeta_ano,
-     tarjeta_mes,
-     tarjeta_propietario)
     OUTPUT inserted.id
-    values (@tarjeta_cliente,
-            @tarjeta_tipo,
-            @tarjeta_banco,
-            @tarjeta_numero,
-            @tarjeta_ccv,
-            @tarjeta_ano,
-            @tarjeta_mes,
+    values (@tarjeta_cliente, @tarjeta_tipo, @tarjeta_banco, @tarjeta_numero, @tarjeta_ccv, @tarjeta_ano, @tarjeta_mes,
             @tarjeta_propietario)
 END
 GO
@@ -1237,15 +1218,6 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE SP_FuncionesActivas
-AS
-BEGIN
-    SELECT *
-    FROM [dbo].[Vista_FuncionesActivas]
-    WHERE funcion_estado = 'ACTIVO'
-END
-GO
-
 CREATE PROCEDURE SP_ObtenerCategorias @idPelicula as int
 AS
 BEGIN
@@ -1259,12 +1231,12 @@ END
 GO
 
 
-alter PROCEDURE SP_BoletosFuncion @id as int
+CREATE PROCEDURE SP_BoletosFuncion @id as int
 AS
 BEGIN
     SELECT *
     FROM [dbo].[Boleto]
-          WHERE Boleto.boleto_funcion = @id
+    WHERE Boleto.boleto_funcion = @id
 END
 GO
 
@@ -1390,4 +1362,48 @@ FROM dbo.Funcion
          INNER JOIN
      dbo.Sala_Cine ON dbo.Funcion.funcion_sala = dbo.Sala_Cine.id
          INNER JOIN
-     dbo.Horarios ON dbo.Funcion.funcion_horario = dbo.Horarios.id
+     dbo.Horarios ON dbo.Funcion.funcion_horario = dbo.Horarios.id;
+GO
+
+
+CREATE PROCEDURE SP_FuncionesActivas
+AS
+BEGIN
+    SELECT *
+    FROM Vista_FuncionesActivas
+    WHERE funcion_estado = 'ACTIVO'
+END
+GO
+
+INSERT INTO Banco
+VALUES ('BANCO PICHINCHA', 1);
+INSERT INTO Banco
+VALUES ('BANCO GUAYAQUILL', 1);
+INSERT INTO Banco
+VALUES ('BANCO MACHALA', 1);
+
+SP_CrearUsuario 'admin', 'admin', null;
+SP_CrearCliente '0700457816', 'Carreno Tejada', 'Willy Alvaro', '0986137723', 'willy@gmail.com',
+        'Av. Americas y calle 13', 1;
+
+SP_CrearUsuario 'admin', 'root', null;
+SP_CrearEmpleado 'Administrador', '0700999999', '', '09999999', 'admin@cineflick.com',
+        'Av. Pasaje y km 23', 2;
+
+SP_CrearHorario '07:00:00','09:30:00';
+SP_CrearHorario '12:00:00','14:30:00';
+SP_CrearHorario '17:00:00','19:30:00';
+
+INSERT INTO Categoria VALUES ('CIENCIA FICCION');
+INSERT INTO Categoria VALUES ('SUPERHEROES');
+INSERT INTO Categoria VALUES ('TERROR');
+INSERT INTO Categoria VALUES ('THRILLER');
+
+INSERT INTO Idiomas VALUES ('ESPANOL LAT', 'LAT');
+INSERT INTO Idiomas VALUES ('ESPANOL ESP', 'ESP');
+INSERT INTO Idiomas VALUES ('INGLES', 'ENG');
+
+INSERT INTO Sala_Cine VALUES ('VIP 1', 180);
+INSERT INTO Sala_Cine VALUES ('VIP 2', 180);
+INSERT INTO Sala_Cine VALUES ('NORMAL 1', 180);
+INSERT INTO Sala_Cine VALUES ('IMAX 1', 180);
