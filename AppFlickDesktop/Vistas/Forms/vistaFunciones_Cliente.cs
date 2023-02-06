@@ -92,7 +92,7 @@ namespace AppFlickCliente.Vistas.Forms
                 var busqueda = txtBuscarFuncion.Text.ToLower();
             if (string.IsNullOrEmpty(busqueda))
             {
-                vlistaControles.ForEach(elemento => elemento.Visible = true);
+                listaControles.ForEach(elemento => elemento.Visible = true);
             }
             else
             {
